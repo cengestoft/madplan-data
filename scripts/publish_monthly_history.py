@@ -41,6 +41,7 @@ offers=[o for o in current.get("offers",[]) if str(o.get("category") or "").lowe
 offer_keys={normalized_product_key(o) for o in offers}
 brands=sorted({str(o.get("brand")).strip() for o in offers if o.get("brand")},key=len,reverse=True)
 brand_lut={slug(b):b for b in brands}
+KEY_CACHE={}
 
 idx=defaultdict(list)
 for o in offers:
@@ -60,10 +61,14 @@ def hprobe(p,h):
     return {"name":name,"brand":brand,"variant":p.get("variant"),"package_count":h.get("package_count",1),"package_amount":h.get("quantity"),"package_unit":h.get("unit")}
 
 def choose_key(p,h):
+    ck=(p.get("name"),p.get("brand"),p.get("variant"),h.get("package_count",1),h.get("quantity"),h.get("unit"))
+    if ck in KEY_CACHE: return KEY_CACHE[ck]
     pr=hprobe(p,h); k=normalized_product_key(pr)
-    if k in offer_keys: return k
+    if k in offer_keys:
+        KEY_CACHE[ck]=k; return k
     candidates=idx.get(sig(pr) or (),[])
-    if not candidates: return k
+    if not candidates:
+        KEY_CACHE[ck]=k; return k
     ht=toks(pr["name"]); hb=slug(pr.get("brand"))
     scored=[]
     for ck,ct,cb in candidates:
@@ -74,8 +79,8 @@ def choose_key(p,h):
         scored.append((score,ck))
     scored.sort(reverse=True)
     if scored and scored[0][0]>=.85 and (len(scored)==1 or scored[0][0]-scored[1][0]>=.10):
-        return scored[0][1]
-    return k
+        KEY_CACHE[ck]=scored[0][1]; return KEY_CACHE[ck]
+    KEY_CACHE[ck]=k; return k
 
 def enc(rows,nkeys,nmatch):
     d={"schema_version":3,"source":"dagligepriser.dk","aggregation":"normalized_product_key + store + month","food_only":True,"raw_data_included":False,"generated_at":dt.datetime.now(dt.timezone.utc).isoformat(),"record_count":len(rows),"offer_key_count":nkeys,"matched_offer_keys":nmatch,"offer_key_overlap":round(nmatch/max(1,nkeys),4),"records":rows}

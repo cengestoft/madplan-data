@@ -49,7 +49,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=kartofler|variant=standard|count=1|size=1kg"
+      "normalized_product_key": "brand=gestus|product=kartofler|variant=standard|count=1|size=1kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342975",
@@ -91,7 +98,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=aebler|variant=standard|count=1|size=1-5kg"
+      "normalized_product_key": "brand=gestus|product=aebler|variant=standard|count=1|size=1-5kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342977",
@@ -133,7 +147,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=broccoli|variant=standard|count=1|size=1stk"
+      "normalized_product_key": "brand=gestus|product=broccoli|variant=standard|count=1|size=1stk",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1,
+        "unit": "stk"
+      }
     },
     {
       "id": "tilbudsugen-11342980",
@@ -175,7 +196,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=cocktailpoelser|variant=standard|count=1|size=0-2kg"
+      "normalized_product_key": "brand=gestus|product=cocktailpoelser|variant=standard|count=1|size=0-2kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.2,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342979",
@@ -217,7 +245,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=bacontern|variant=standard|count=1|size=0-15kg"
+      "normalized_product_key": "brand=gestus|product=bacontern|variant=standard|count=1|size=0-15kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.15,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342935",
@@ -259,7 +294,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=flaeskesteg|variant=standard|count=1|size=0-5kg"
+      "normalized_product_key": "brand=generic|product=flaeskesteg|variant=standard|count=1|size=0-5kg",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342932",
@@ -302,7 +344,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=nakkekoteletter|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=gestus|product=nakkekoteletter|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342936",
@@ -344,7 +393,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=karbonader|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=gestus|product=karbonader|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342950",
@@ -386,7 +442,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=forloren-hare|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=gestus|product=forloren-hare|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342934",
@@ -426,7 +489,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=hakket-oksekoed-8-12|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=gestus|product=hakket-oksekoed-8-12|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343052",
@@ -468,7 +538,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=christiansfeld|product=hamburgerryg|variant=standard|count=1|size=0-1kg"
+      "normalized_product_key": "brand=christiansfeld|product=hamburgerryg|variant=standard|count=1|size=0-1kg",
+      "normalized_brand": "Christiansfeld",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.1,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343053",
@@ -510,7 +587,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=christiansfeld|product=roeget-rullepoelse|variant=standard|count=1|size=0-09kg"
+      "normalized_product_key": "brand=christiansfeld|product=roeget-rullepoelse|variant=standard|count=1|size=0-09kg",
+      "normalized_brand": "Christiansfeld",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.09,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342974",
@@ -552,7 +636,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=yoggi|product=paere-banan-yoghurt|variant=standard|count=1|size=1l"
+      "normalized_product_key": "brand=yoggi|product=paere-banan-yoghurt|variant=standard|count=1|size=1l",
+      "normalized_brand": "Yoggi",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342933",
@@ -592,7 +683,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=klovborg|product=skaereost-danbo-mellemlagret|variant=standard|count=1|size=0-65kg"
+      "normalized_product_key": "brand=klovborg|product=skaereost-danbo-mellemlagret|variant=standard|count=1|size=0-65kg",
+      "normalized_brand": "Klovborg",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.65,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342944",
@@ -634,7 +732,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=first-price|product=skiveost-mild|variant=standard|count=1|size=0-3kg"
+      "normalized_product_key": "brand=first-price|product=skiveost-mild|variant=standard|count=1|size=0-3kg",
+      "normalized_brand": "First Price",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.3,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342943",
@@ -676,7 +781,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=first-price|product=skiveost-samsoe-mellemlagret|variant=standard|count=1|size=0-3kg"
+      "normalized_product_key": "brand=first-price|product=skiveost-samsoe-mellemlagret|variant=standard|count=1|size=0-3kg",
+      "normalized_brand": "First Price",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.3,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342945",
@@ -718,7 +830,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=first-price|product=skiveost-mellemlagret|variant=standard|count=1|size=0-3kg"
+      "normalized_product_key": "brand=first-price|product=skiveost-mellemlagret|variant=standard|count=1|size=0-3kg",
+      "normalized_brand": "First Price",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.3,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342967",
@@ -760,7 +879,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=milkslice|product=cool-snacks|variant=standard|count=1|size=0-28kg"
+      "normalized_product_key": "brand=milkslice|product=cool-snacks|variant=standard|count=1|size=0-28kg",
+      "normalized_brand": "MilkSlice",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.28,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11346556",
@@ -802,7 +928,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=pingui|product=cool-snacks|variant=standard|count=1|size=0-24kg"
+      "normalized_product_key": "brand=pingui|product=cool-snacks|variant=standard|count=1|size=0-24kg",
+      "normalized_brand": "Pingui",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.24,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343024",
@@ -844,7 +977,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=mirinda|product=appelsinsodavand|variant=standard|count=1|size=1-5l"
+      "normalized_product_key": "brand=mirinda|product=appelsinsodavand|variant=standard|count=1|size=1-5l",
+      "normalized_brand": "Mirinda",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343023",
@@ -890,7 +1030,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=pepsi-max|product=cola|variant=max|count=1|size=1-5l"
+      "normalized_product_key": "brand=pepsi-max|product=cola|variant=max|count=1|size=1-5l",
+      "normalized_brand": "Pepsi Max",
+      "normalized_variant": "max",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343025",
@@ -933,7 +1080,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=0-kalorier|product=sportssodavand|variant=standard|count=1|size=1-5l"
+      "normalized_product_key": "brand=0-kalorier|product=sportssodavand|variant=standard|count=1|size=1-5l",
+      "normalized_brand": "0 Kalorier",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343020",
@@ -976,7 +1130,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=ultra-energy|product=energidrik|variant=standard|count=1|size=0-5l"
+      "normalized_product_key": "brand=ultra-energy|product=energidrik|variant=standard|count=1|size=0-5l",
+      "normalized_brand": "Ultra Energy",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343021",
@@ -1018,7 +1179,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=energy|product=energidrik|variant=standard|count=1|size=0-5l"
+      "normalized_product_key": "brand=energy|product=energidrik|variant=standard|count=1|size=0-5l",
+      "normalized_brand": "Energy",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343018",
@@ -1058,7 +1226,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=mellemristet|product=kaffe-formalet|variant=standard|count=1|size=0-5kg"
+      "normalized_product_key": "brand=mellemristet|product=kaffe-formalet|variant=standard|count=1|size=0-5kg",
+      "normalized_brand": "Mellemristet",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343019",
@@ -1098,7 +1273,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=koffeinlet|product=kaffe-formalet|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=koffeinlet|product=kaffe-formalet|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Koffeinlet",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11346552",
@@ -1141,7 +1323,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=godmorgen|product=aeblejuice-hyldeblomst|variant=standard|count=1|size=0-85l"
+      "normalized_product_key": "brand=godmorgen|product=aeblejuice-hyldeblomst|variant=standard|count=1|size=0-85l",
+      "normalized_brand": "GodMorgen",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.85,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342930",
@@ -1181,7 +1370,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=ribena|product=solbaer-frugtsaft|variant=light|count=1|size=0-85l"
+      "normalized_product_key": "brand=ribena|product=solbaer-frugtsaft|variant=light|count=1|size=0-85l",
+      "normalized_brand": "Ribena",
+      "normalized_variant": "light",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.85,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342931",
@@ -1221,7 +1417,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=ribena|product=solbaer-frugtsaft|variant=standard|count=1|size=0-85l"
+      "normalized_product_key": "brand=ribena|product=solbaer-frugtsaft|variant=standard|count=1|size=0-85l",
+      "normalized_brand": "Ribena",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.85,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342961",
@@ -1264,7 +1467,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=godmorgen|product=appelsin-nektar-juice|variant=standard|count=1|size=0-85l"
+      "normalized_product_key": "brand=godmorgen|product=appelsin-nektar-juice|variant=standard|count=1|size=0-85l",
+      "normalized_brand": "GodMorgen",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.85,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343057",
@@ -1304,7 +1514,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=absolut|product=vodka|variant=standard|count=1|size=0-7l"
+      "normalized_product_key": "brand=absolut|product=vodka|variant=standard|count=1|size=0-7l",
+      "normalized_brand": "Absolut",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.7,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343058",
@@ -1344,7 +1561,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=london-dry|product=gin|variant=standard|count=1|size=0-7l"
+      "normalized_product_key": "brand=london-dry|product=gin|variant=standard|count=1|size=0-7l",
+      "normalized_brand": "London Dry",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.7,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343059",
@@ -1384,7 +1608,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=ballantines|product=whisky|variant=standard|count=1|size=0-7l"
+      "normalized_product_key": "brand=ballantines|product=whisky|variant=standard|count=1|size=0-7l",
+      "normalized_brand": "Ballantines",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.7,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343006",
@@ -1424,7 +1655,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=linie-aquavit|product=akvavit|variant=standard|count=1|size=0-7l"
+      "normalized_product_key": "brand=linie-aquavit|product=akvavit|variant=standard|count=1|size=0-7l",
+      "normalized_brand": "Linie Aquavit",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.7,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343005",
@@ -1464,7 +1702,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=jameson|product=whisky|variant=standard|count=1|size=0-7l"
+      "normalized_product_key": "brand=jameson|product=whisky|variant=standard|count=1|size=0-7l",
+      "normalized_brand": "Jameson",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.7,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343013",
@@ -1506,7 +1751,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=australsk-roedvin|variant=standard|count=1|size=3l"
+      "normalized_product_key": "brand=generic|product=australsk-roedvin|variant=standard|count=1|size=3l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 3,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343014",
@@ -1548,7 +1800,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=spansk-hvidvin|variant=standard|count=1|size=3l"
+      "normalized_product_key": "brand=generic|product=spansk-hvidvin|variant=standard|count=1|size=3l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 3,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343004",
@@ -1588,7 +1847,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=australsk-roedvin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=australsk-roedvin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343003",
@@ -1628,7 +1894,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=australsk-rosevin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=australsk-rosevin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343002",
@@ -1668,7 +1941,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=australsk-hvidvin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=australsk-hvidvin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343009",
@@ -1708,7 +1988,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=italiensk-mousserende-vin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=italiensk-mousserende-vin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343007",
@@ -1748,7 +2035,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=tysk-hvidvin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=tysk-hvidvin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343008",
@@ -1788,7 +2082,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=fransk-roedvin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=fransk-roedvin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343011",
@@ -1828,7 +2129,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343012",
@@ -1868,7 +2176,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=italiensk-hvidvin|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=generic|product=italiensk-hvidvin|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342948",
@@ -1910,7 +2225,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=pilsner|product=oel-6-pk|variant=standard|count=6|size=0-33l"
+      "normalized_product_key": "brand=pilsner|product=oel-6-pk|variant=standard|count=6|size=0-33l",
+      "normalized_brand": "Pilsner",
+      "normalized_variant": "standard",
+      "normalized_package_count": 6,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342949",
@@ -1953,7 +2275,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=classic|product=oel-6-pk|variant=classic|count=6|size=0-33l"
+      "normalized_product_key": "brand=classic|product=oel-6-pk|variant=classic|count=6|size=0-33l",
+      "normalized_brand": "Classic",
+      "normalized_variant": "classic",
+      "normalized_package_count": 6,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342947",
@@ -1995,7 +2324,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=heineken|product=oel-6-pk|variant=standard|count=6|size=0-33l"
+      "normalized_product_key": "brand=heineken|product=oel-6-pk|variant=standard|count=6|size=0-33l",
+      "normalized_brand": "Heineken",
+      "normalized_variant": "standard",
+      "normalized_package_count": 6,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342946",
@@ -2037,7 +2373,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=export|product=oel-6-pk|variant=standard|count=6|size=0-33l"
+      "normalized_product_key": "brand=export|product=oel-6-pk|variant=standard|count=6|size=0-33l",
+      "normalized_brand": "Export",
+      "normalized_variant": "standard",
+      "normalized_package_count": 6,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11346563",
@@ -2079,7 +2422,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=pilsner|product=oel-12-pk|variant=standard|count=12|size=0-33l"
+      "normalized_product_key": "brand=pilsner|product=oel-12-pk|variant=standard|count=12|size=0-33l",
+      "normalized_brand": "Pilsner",
+      "normalized_variant": "standard",
+      "normalized_package_count": 12,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11346564",
@@ -2121,7 +2471,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=groen|product=oel-12-pk|variant=standard|count=12|size=0-33l"
+      "normalized_product_key": "brand=groen|product=oel-12-pk|variant=standard|count=12|size=0-33l",
+      "normalized_brand": "Grøn",
+      "normalized_variant": "standard",
+      "normalized_package_count": 12,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343026",
@@ -2161,7 +2518,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=classic|product=oel-12-pk|variant=classic|count=12|size=0-33l"
+      "normalized_product_key": "brand=classic|product=oel-12-pk|variant=classic|count=12|size=0-33l",
+      "normalized_brand": "Classic",
+      "normalized_variant": "classic",
+      "normalized_package_count": 12,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343017",
@@ -2203,7 +2567,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=oktoberfest|product=specialoel|variant=standard|count=1|size=0-5l"
+      "normalized_product_key": "brand=oktoberfest|product=specialoel|variant=standard|count=1|size=0-5l",
+      "normalized_brand": "Oktoberfest",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343016",
@@ -2245,7 +2616,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=boegebryg|product=specialoel|variant=standard|count=1|size=0-5l"
+      "normalized_product_key": "brand=boegebryg|product=specialoel|variant=standard|count=1|size=0-5l",
+      "normalized_brand": "BøgeBryg",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343015",
@@ -2287,7 +2665,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=humlebryg|product=specialoel|variant=standard|count=1|size=0-5l"
+      "normalized_product_key": "brand=humlebryg|product=specialoel|variant=standard|count=1|size=0-5l",
+      "normalized_brand": "HumleBryg",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342972",
@@ -2327,7 +2712,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=blanc|product=specialoel-6-pk|variant=standard|count=6|size=0-33l"
+      "normalized_product_key": "brand=blanc|product=specialoel-6-pk|variant=standard|count=6|size=0-33l",
+      "normalized_brand": "Blanc",
+      "normalized_variant": "standard",
+      "normalized_package_count": 6,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343022",
@@ -2369,7 +2761,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=golden-naked-christmas-ale|product=specialoel|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=golden-naked-christmas-ale|product=specialoel|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "Golden Naked Christmas Ale",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343027",
@@ -2411,7 +2810,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=brassin-de-noel|product=specialoel|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=brassin-de-noel|product=specialoel|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "Brassin De Noél",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343028",
@@ -2453,7 +2859,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=blanc|product=specialoel|variant=standard|count=1|size=0-75l"
+      "normalized_product_key": "brand=blanc|product=specialoel|variant=standard|count=1|size=0-75l",
+      "normalized_brand": "Blanc",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342999",
@@ -2496,7 +2909,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kohberg|product=yoghurtboller|variant=standard|count=1|size=0-49kg"
+      "normalized_product_key": "brand=kohberg|product=yoghurtboller|variant=standard|count=1|size=0-49kg",
+      "normalized_brand": "Kohberg",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.49,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343000",
@@ -2536,7 +2956,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=wasa|product=kanel-knaekbroed|variant=standard|count=1|size=0-33kg"
+      "normalized_product_key": "brand=wasa|product=kanel-knaekbroed|variant=standard|count=1|size=0-33kg",
+      "normalized_brand": "Wasa",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343001",
@@ -2576,7 +3003,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=wasa|product=sesam-havsalt-knaekbroed|variant=standard|count=1|size=0-29kg"
+      "normalized_product_key": "brand=wasa|product=sesam-havsalt-knaekbroed|variant=standard|count=1|size=0-29kg",
+      "normalized_brand": "Wasa",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.29,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343038",
@@ -2619,7 +3053,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=dan-cake|product=halloween-roulade|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=dan-cake|product=halloween-roulade|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "Dan Cake",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343037",
@@ -2662,7 +3103,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=dan-cake|product=halloweenkage|variant=standard|count=1|size=0-25kg"
+      "normalized_product_key": "brand=dan-cake|product=halloweenkage|variant=standard|count=1|size=0-25kg",
+      "normalized_brand": "Dan Cake",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.25,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343039",
@@ -2705,7 +3153,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=dan-cake|product=kakaokugler|variant=standard|count=1|size=0-15kg"
+      "normalized_product_key": "brand=dan-cake|product=kakaokugler|variant=standard|count=1|size=0-15kg",
+      "normalized_brand": "Dan Cake",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.15,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342998",
@@ -2748,7 +3203,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=mestervaerk|product=rugbroedsskiver|variant=standard|count=1|size=0-6kg"
+      "normalized_product_key": "brand=mestervaerk|product=rugbroedsskiver|variant=standard|count=1|size=0-6kg",
+      "normalized_brand": "Mesterværk",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.6,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342997",
@@ -2791,7 +3253,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=bagernes-bedste|product=rugbroedsskiver|variant=standard|count=1|size=0-6kg"
+      "normalized_product_key": "brand=bagernes-bedste|product=rugbroedsskiver|variant=standard|count=1|size=0-6kg",
+      "normalized_brand": "Bagernes Bedste",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.6,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342985",
@@ -2831,7 +3300,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=steff-houlberg|product=forloren-hare|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=steff-houlberg|product=forloren-hare|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "Steff Houlberg",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342984",
@@ -2871,7 +3347,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=steff-houlberg|product=boller-i-karry|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=steff-houlberg|product=boller-i-karry|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "Steff Houlberg",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342939",
@@ -2911,7 +3394,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=kyllingebidder|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=generic|product=kyllingebidder|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342938",
@@ -2951,7 +3441,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=kyllingenuggets|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=generic|product=kyllingenuggets|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342937",
@@ -2991,7 +3488,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=generic|product=kyllingefilet|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=generic|product=kyllingefilet|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11346555",
@@ -3034,7 +3538,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=torpedorejer|variant=standard|count=1|size=0-2kg"
+      "normalized_product_key": "brand=gestus|product=torpedorejer|variant=standard|count=1|size=0-2kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.2,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342989",
@@ -3079,7 +3590,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=groen-balance|product=tomater|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=groen-balance|product=tomater|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Grøn Balance",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342958",
@@ -3122,7 +3640,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=santa-maria|product=tortillawraps|variant=original|count=1|size=0-371kg"
+      "normalized_product_key": "brand=santa-maria|product=tortillawraps|variant=original|count=1|size=0-371kg",
+      "normalized_brand": "Santa Maria",
+      "normalized_variant": "original",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.371,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342959",
@@ -3165,7 +3690,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=santa-maria|product=taco-sauce-medium|variant=standard|count=1|size=0-35kg"
+      "normalized_product_key": "brand=santa-maria|product=taco-sauce-medium|variant=standard|count=1|size=0-35kg",
+      "normalized_brand": "Santa Maria",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342991",
@@ -3205,7 +3737,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=k-salat|product=mayonnaise-klassisk|variant=standard|count=1|size=0-375kg"
+      "normalized_product_key": "brand=k-salat|product=mayonnaise-klassisk|variant=standard|count=1|size=0-375kg",
+      "normalized_brand": "K-salat",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.375,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342990",
@@ -3245,7 +3784,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=k-salat|product=remoulade-klassisk|variant=standard|count=1|size=0-375kg"
+      "normalized_product_key": "brand=k-salat|product=remoulade-klassisk|variant=standard|count=1|size=0-375kg",
+      "normalized_brand": "K-salat",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.375,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342981",
@@ -3285,7 +3831,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=jensens-koekken|product=bearnaisesauce|variant=standard|count=1|size=0-35l"
+      "normalized_product_key": "brand=jensens-koekken|product=bearnaisesauce|variant=standard|count=1|size=0-35l",
+      "normalized_brand": "Jensens Køkken",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.35,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342996",
@@ -3327,7 +3880,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=bahncke|product=sennep|variant=standard|count=1|size=0-425kg"
+      "normalized_product_key": "brand=bahncke|product=sennep|variant=standard|count=1|size=0-425kg",
+      "normalized_brand": "Bähncke",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.425,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342994",
@@ -3369,7 +3929,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=beauvais|product=roedkal-syltet|variant=standard|count=1|size=0-375kg"
+      "normalized_product_key": "brand=beauvais|product=roedkal-syltet|variant=standard|count=1|size=0-375kg",
+      "normalized_brand": "Beauvais",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.375,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342992",
@@ -3409,7 +3976,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=beauvais|product=spaghetti-napoli|variant=standard|count=1|size=0-56kg"
+      "normalized_product_key": "brand=beauvais|product=spaghetti-napoli|variant=standard|count=1|size=0-56kg",
+      "normalized_brand": "Beauvais",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.56,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342993",
@@ -3449,7 +4023,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=beauvais|product=tarteletfyld-med-kylling|variant=standard|count=1|size=0-55kg"
+      "normalized_product_key": "brand=beauvais|product=tarteletfyld-med-kylling|variant=standard|count=1|size=0-55kg",
+      "normalized_brand": "Beauvais",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.55,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342995",
@@ -3491,7 +4072,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=beauvais|product=roedbeder-syltet|variant=standard|count=1|size=0-3kg"
+      "normalized_product_key": "brand=beauvais|product=roedbeder-syltet|variant=standard|count=1|size=0-3kg",
+      "normalized_brand": "Beauvais",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.3,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342960",
@@ -3534,7 +4122,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=santa-maria|product=spice-mix-for-taco|variant=original|count=1|size=0-028kg"
+      "normalized_product_key": "brand=santa-maria|product=spice-mix-for-taco|variant=original|count=1|size=0-028kg",
+      "normalized_brand": "Santa Maria",
+      "normalized_variant": "original",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.028,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342952",
@@ -3574,7 +4169,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=axa|product=gold-musli|variant=original|count=1|size=0-75kg"
+      "normalized_product_key": "brand=axa|product=gold-musli|variant=original|count=1|size=0-75kg",
+      "normalized_brand": "Axa",
+      "normalized_variant": "original",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342951",
@@ -3614,7 +4216,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=axa|product=crunchy-havre-granola|variant=standard|count=1|size=0-75kg"
+      "normalized_product_key": "brand=axa|product=crunchy-havre-granola|variant=standard|count=1|size=0-75kg",
+      "normalized_brand": "Axa",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.75,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343031",
@@ -3657,7 +4266,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kims|product=kanonkugler|variant=standard|count=1|size=0-135kg"
+      "normalized_product_key": "brand=kims|product=kanonkugler|variant=standard|count=1|size=0-135kg",
+      "normalized_brand": "Kims",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.135,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343030",
@@ -3700,7 +4316,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kims|product=mega-mix-krydret|variant=standard|count=1|size=0-135kg"
+      "normalized_product_key": "brand=kims|product=mega-mix-krydret|variant=standard|count=1|size=0-135kg",
+      "normalized_brand": "Kims",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.135,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343029",
@@ -3743,7 +4366,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kims|product=cheeeese-vampyr-bites|variant=standard|count=1|size=0-11kg"
+      "normalized_product_key": "brand=kims|product=cheeeese-vampyr-bites|variant=standard|count=1|size=0-11kg",
+      "normalized_brand": "Kims",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.11,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342927",
@@ -3785,7 +4415,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=matador-mix|product=slikposer|variant=standard|count=1|size=0-12kg"
+      "normalized_product_key": "brand=matador-mix|product=slikposer|variant=standard|count=1|size=0-12kg",
+      "normalized_brand": "Matador Mix",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.12,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342928",
@@ -3827,7 +4464,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=stjernemix|product=slikposer|variant=standard|count=1|size=0-12kg"
+      "normalized_product_key": "brand=stjernemix|product=slikposer|variant=standard|count=1|size=0-12kg",
+      "normalized_brand": "Stjernemix",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.12,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342929",
@@ -3869,7 +4513,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=click-mix|product=slikposer|variant=standard|count=1|size=0-12kg"
+      "normalized_product_key": "brand=click-mix|product=slikposer|variant=standard|count=1|size=0-12kg",
+      "normalized_brand": "Click Mix",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.12,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343056",
@@ -3909,7 +4560,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=galle-jessen|product=palaegschokolade-moerk|variant=standard|count=1|size=0-216kg"
+      "normalized_product_key": "brand=galle-jessen|product=palaegschokolade-moerk|variant=standard|count=1|size=0-216kg",
+      "normalized_brand": "Galle & Jessen",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.216,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343055",
@@ -3949,7 +4607,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=galle-jessen|product=palaegschokolade-maelk|variant=standard|count=1|size=0-216kg"
+      "normalized_product_key": "brand=galle-jessen|product=palaegschokolade-maelk|variant=standard|count=1|size=0-216kg",
+      "normalized_brand": "Galle & Jessen",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.216,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11346542",
@@ -3992,7 +4657,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kaempe-skildpadder|product=chokoladeskildpadder|variant=standard|count=1|size=0-028kg"
+      "normalized_product_key": "brand=kaempe-skildpadder|product=chokoladeskildpadder|variant=standard|count=1|size=0-028kg",
+      "normalized_brand": "Kæmpe Skildpadder",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.028,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342957",
@@ -4035,7 +4707,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=chocofant|product=slikstaenger|variant=standard|count=1|size=0-027kg"
+      "normalized_product_key": "brand=chocofant|product=slikstaenger|variant=standard|count=1|size=0-027kg",
+      "normalized_brand": "Chocofant",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.027,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343032",
@@ -4075,7 +4754,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=m-ms|product=chokoladepastiller-peanut|variant=standard|count=1|size=0-15kg"
+      "normalized_product_key": "brand=m-ms|product=chokoladepastiller-peanut|variant=standard|count=1|size=0-15kg",
+      "normalized_brand": "M&Ms",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.15,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342955",
@@ -4118,7 +4804,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=spunk|product=pastiller-vingummi|variant=standard|count=1|size=0-023kg"
+      "normalized_product_key": "brand=spunk|product=pastiller-vingummi|variant=standard|count=1|size=0-023kg",
+      "normalized_brand": "Spunk",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.023,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343040",
@@ -4160,7 +4853,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=ritter-sport|product=chokoladeplade-nougat|variant=standard|count=1|size=0-1kg"
+      "normalized_product_key": "brand=ritter-sport|product=chokoladeplade-nougat|variant=standard|count=1|size=0-1kg",
+      "normalized_brand": "Ritter Sport",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.1,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343041",
@@ -4202,7 +4902,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=ritter-sport|product=chokoladeplade-marzipan|variant=standard|count=1|size=0-1kg"
+      "normalized_product_key": "brand=ritter-sport|product=chokoladeplade-marzipan|variant=standard|count=1|size=0-1kg",
+      "normalized_brand": "Ritter Sport",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.1,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343043",
@@ -4244,7 +4951,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=maxi|product=chokoladestaenger|variant=max|count=1|size=0-126kg"
+      "normalized_product_key": "brand=maxi|product=chokoladestaenger|variant=max|count=1|size=0-126kg",
+      "normalized_brand": "Maxi",
+      "normalized_variant": "max",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.126,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343033",
@@ -4287,7 +5001,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=m-ms|product=chokoladepastiller-chocolate|variant=standard|count=1|size=0-125kg"
+      "normalized_product_key": "brand=m-ms|product=chokoladepastiller-chocolate|variant=standard|count=1|size=0-125kg",
+      "normalized_brand": "M&Ms",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.125,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343035",
@@ -4329,7 +5050,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=yankie|product=chokoladebar|variant=standard|count=1|size=0-045kg"
+      "normalized_product_key": "brand=yankie|product=chokoladebar|variant=standard|count=1|size=0-045kg",
+      "normalized_brand": "Yankie",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.045,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343036",
@@ -4371,7 +5099,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=guldbarre|product=chokoladebar-maelkechokolade|variant=standard|count=1|size=0-045kg"
+      "normalized_product_key": "brand=guldbarre|product=chokoladebar-maelkechokolade|variant=standard|count=1|size=0-045kg",
+      "normalized_brand": "Guldbarre",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.045,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343054",
@@ -4411,7 +5146,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=collection|product=dessertchokolade|variant=standard|count=1|size=0-359kg"
+      "normalized_product_key": "brand=collection|product=dessertchokolade|variant=standard|count=1|size=0-359kg",
+      "normalized_brand": "Collection",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.359,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343034",
@@ -4451,7 +5193,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=maltesers|product=chokoladepastiller|variant=standard|count=1|size=0-093kg"
+      "normalized_product_key": "brand=maltesers|product=chokoladepastiller|variant=standard|count=1|size=0-093kg",
+      "normalized_brand": "Maltesers",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.093,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343042",
@@ -4493,7 +5242,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=surprise|product=chokoladeaeg|variant=standard|count=1|size=0-06kg"
+      "normalized_product_key": "brand=surprise|product=chokoladeaeg|variant=standard|count=1|size=0-06kg",
+      "normalized_brand": "Surprise",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.06,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342982",
@@ -4536,7 +5292,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=blomkalsblanding|variant=standard|count=1|size=0-7kg"
+      "normalized_product_key": "brand=gestus|product=blomkalsblanding|variant=standard|count=1|size=0-7kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.7,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342983",
@@ -4579,7 +5342,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=ekstra-fine-aerter|variant=standard|count=1|size=0-4kg"
+      "normalized_product_key": "brand=gestus|product=ekstra-fine-aerter|variant=standard|count=1|size=0-4kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.4,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342941",
@@ -4621,7 +5391,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=anton|product=and|variant=standard|count=1|size=2-8kg"
+      "normalized_product_key": "brand=anton|product=and|variant=standard|count=1|size=2-8kg",
+      "normalized_brand": "Anton",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 2.8,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11346554",
@@ -4665,7 +5442,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=fiskefileter|variant=standard|count=1|size=0-5kg"
+      "normalized_product_key": "brand=gestus|product=fiskefileter|variant=standard|count=1|size=0-5kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.5,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342940",
@@ -4707,7 +5491,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=anton|product=andebryststeg|variant=standard|count=1|size=1-2kg"
+      "normalized_product_key": "brand=anton|product=andebryststeg|variant=standard|count=1|size=1-2kg",
+      "normalized_brand": "Anton",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.2,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342963",
@@ -4751,7 +5542,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=gestus|product=rejer|variant=standard|count=1|size=0-2kg"
+      "normalized_product_key": "brand=gestus|product=rejer|variant=standard|count=1|size=0-2kg",
+      "normalized_brand": "Gestus",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.2,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342986",
@@ -4793,7 +5591,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=magnum|product=ispinde|variant=classic|count=1|size=3stk"
+      "normalized_product_key": "brand=magnum|product=ispinde|variant=classic|count=1|size=3stk",
+      "normalized_brand": "Magnum",
+      "normalized_variant": "classic",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 3,
+        "unit": "stk"
+      }
     },
     {
       "id": "tilbudsugen-11342987",
@@ -4835,7 +5640,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=magnum|product=almond-ispinde|variant=standard|count=1|size=3stk"
+      "normalized_product_key": "brand=magnum|product=almond-ispinde|variant=standard|count=1|size=3stk",
+      "normalized_brand": "Magnum",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 3,
+        "unit": "stk"
+      }
     },
     {
       "id": "tilbudsugen-11342988",
@@ -4877,7 +5689,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=originals|product=vanilje-is|variant=original|count=1|size=1l"
+      "normalized_product_key": "brand=originals|product=vanilje-is|variant=original|count=1|size=1l",
+      "normalized_brand": "Originals",
+      "normalized_variant": "original",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11342953",
@@ -4917,7 +5736,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=mou|product=tomatsuppe|variant=standard|count=1|size=1kg"
+      "normalized_product_key": "brand=mou|product=tomatsuppe|variant=standard|count=1|size=1kg",
+      "normalized_brand": "Mou",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11342954",
@@ -4957,7 +5783,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=mou|product=aspargessuppe|variant=standard|count=1|size=1kg"
+      "normalized_product_key": "brand=mou|product=aspargessuppe|variant=standard|count=1|size=1kg",
+      "normalized_brand": "Mou",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343048",
@@ -5001,7 +5834,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=care|product=toiletpapir|variant=standard|count=1|size=6stk"
+      "normalized_product_key": "brand=care|product=toiletpapir|variant=standard|count=1|size=6stk",
+      "normalized_brand": "Care",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 6,
+        "unit": "stk"
+      }
     },
     {
       "id": "tilbudsugen-11343049",
@@ -5043,7 +5883,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=care|product=koekkenrulle|variant=standard|count=1|size=3stk"
+      "normalized_product_key": "brand=care|product=koekkenrulle|variant=standard|count=1|size=3stk",
+      "normalized_brand": "Care",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 3,
+        "unit": "stk"
+      }
     },
     {
       "id": "tilbudsugen-11343050",
@@ -5085,7 +5932,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=zendium|product=tandpasta|variant=standard|count=1|size=0-1l"
+      "normalized_product_key": "brand=zendium|product=tandpasta|variant=standard|count=1|size=0-1l",
+      "normalized_brand": "Zendium",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.1,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343061",
@@ -5127,7 +5981,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kosan|product=gasflaske|variant=standard|count=1|size=11kg"
+      "normalized_product_key": "brand=kosan|product=gasflaske|variant=standard|count=1|size=11kg",
+      "normalized_brand": "Kosan",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 11,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343063",
@@ -5169,7 +6030,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=norbro|product=gasflaske|variant=standard|count=1|size=11kg"
+      "normalized_product_key": "brand=norbro|product=gasflaske|variant=standard|count=1|size=11kg",
+      "normalized_brand": "Norbro",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 11,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343060",
@@ -5211,7 +6079,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=kosan|product=gasflaske|variant=standard|count=1|size=10kg"
+      "normalized_product_key": "brand=kosan|product=gasflaske|variant=standard|count=1|size=10kg",
+      "normalized_brand": "Kosan",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 10,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343062",
@@ -5253,7 +6128,14 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=norbro|product=gasflaske|variant=standard|count=1|size=10kg"
+      "normalized_product_key": "brand=norbro|product=gasflaske|variant=standard|count=1|size=10kg",
+      "normalized_brand": "Norbro",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 10,
+        "unit": "kg"
+      }
     }
   ],
   "offer_count": 126,

@@ -67,7 +67,14 @@
       "super_deal_rule": "cola_large_bottle",
       "super_deal_reason": "8 kr./l < 11 kr./l",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l"
+      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l",
+      "normalized_brand": "Coca-Cola",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11350985",
@@ -110,7 +117,14 @@
       "super_deal_rule": "real_butter",
       "super_deal_reason": "39.8 kr./kg <= 40 kr./kg",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=milbona|product=smoer-saltet|variant=standard|count=1|size=0-25kg"
+      "normalized_product_key": "brand=milbona|product=smoer-saltet|variant=standard|count=1|size=0-25kg",
+      "normalized_brand": "Milbona",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 0.25,
+        "unit": "kg"
+      }
     },
     {
       "id": "tilbudsugen-11343711",
@@ -153,7 +167,14 @@
       "super_deal_rule": "cola_24_cans",
       "super_deal_reason": "63.63 kr. < 69 kr. for 24 dåser",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l"
+      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l",
+      "normalized_brand": "Coca-Cola",
+      "normalized_variant": "standard",
+      "normalized_package_count": 24,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11344893",
@@ -198,7 +219,14 @@
       "super_deal_rule": "cola_large_bottle",
       "super_deal_reason": "6.63 kr./l < 11 kr./l",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l"
+      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l",
+      "normalized_brand": "Coca-Cola",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11349016",
@@ -243,7 +271,14 @@
       "super_deal_rule": "cola_24_cans",
       "super_deal_reason": "59 kr. < 69 kr. for 24 dåser",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l"
+      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l",
+      "normalized_brand": "Coca-Cola",
+      "normalized_variant": "standard",
+      "normalized_package_count": 24,
+      "normalized_package_size": {
+        "amount": 0.33,
+        "unit": "l"
+      }
     },
     {
       "id": "tilbudsugen-11343064",
@@ -288,7 +323,14 @@
       "super_deal_rule": "cola_large_bottle",
       "super_deal_reason": "6.67 kr./l < 11 kr./l",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l"
+      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l",
+      "normalized_brand": "Coca-Cola",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 1.5,
+        "unit": "l"
+      }
     }
   ]
 }

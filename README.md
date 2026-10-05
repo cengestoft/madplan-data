@@ -26,7 +26,10 @@ Følgende kæder indgår:
 
 ## Automatik
 
-ChatGPT opdaterer tilbudsdata automatisk hver søndag kl. 08:00 dansk tid.
+ChatGPT opdaterer tilbudsdata automatisk tre gange om ugen dansk tid:
+- onsdag kl. 13:00: første scan af næste uges offentliggjorte tilbud
+- fredag kl. 08:00: hovedscan efter flere kæder har skiftet/offentliggjort ny avis
+- søndag kl. 08:00: endelig synkronisering efter bl.a. Lidl og resterende uge-skift
 
 Ved hver kørsel:
 1. aktuelle tilbud gennemgås
@@ -34,9 +37,10 @@ Ved hver kørsel:
 3. fødevarer og relevante dagligvarer normaliseres
 4. kg-/literpris beregnes, når data tillader det
 5. butiksspecifikke filer opdateres
-6. `current_offers.json` opdateres
-7. et historisk uge-snapshot gemmes
-8. `price_history.json` opdateres med nye observationer
+6. `current_offers.json` opdateres med tilbud, der er gyldige nu
+7. `next_week_offers.json` opdateres med offentliggjorte tilbud, der først bliver gyldige senere
+8. et historisk uge-snapshot gemmes
+9. `price_history.json` opdateres med nye observationer
 
 Manglende priser eller størrelser må ikke gættes. De skal være `null` eller tydeligt markeret som ikke-verificerede.
 
@@ -60,6 +64,13 @@ Vigtige felter:
 - `food_relevance`
 
 Claude skal kun behandle et tilbud som aktuelt, hvis dags dato ligger inden for `valid_from` og `valid_to`.
+
+### next_week_offers.json
+Samlet datasæt med tilbud, som allerede er offentliggjort, men først bliver gyldige senere.
+
+Claude må bruge denne fil til planlægning af kommende uge, men må ikke behandle tilbuddene som aktuelle før `valid_from`.
+
+Hvis brugeren spørger om "næste uge", skal Claude læse både `current_offers.json` og `next_week_offers.json` og vælge tilbud efter de konkrete gyldighedsdatoer.
 
 ### stores/
 Butiksspecifikke filer:
@@ -144,13 +155,14 @@ Når Claude laver en madplan, bør rækkefølgen være:
 1. læs `household_profile.json`
 2. læs `pantry.json`
 3. læs `current_offers.json`
-4. filtrér ugyldige tilbud fra
-5. sammenlign `unit_price_dkk`, når muligt
-6. brug `price_history.json` som sekundær vurdering
-7. match aktuelle tilbud mod `recipes/recipes.json`
-8. prioriter retter, der bruger samme råvarer på tværs af flere dage
-9. begræns antal butikker
-10. beregn samlet indkøbspris
+4. læs `next_week_offers.json` hvis planen gælder en kommende periode
+5. filtrér tilbud efter de konkrete datoer for madplanen
+6. sammenlign `unit_price_dkk`, når muligt
+7. brug `price_history.json` som sekundær vurdering
+8. match relevante tilbud mod `recipes/recipes.json`
+9. prioriter retter, der bruger samme råvarer på tværs af flere dage
+10. begræns antal butikker
+11. beregn samlet indkøbspris
 
 ## Standard madplans-output
 
@@ -208,6 +220,10 @@ Hvis `completeness: false`:
 Claude kan læse den samlede aktuelle fil her:
 
 https://raw.githubusercontent.com/cengestoft/madplan-data/main/current_offers.json
+
+Næste uges offentliggjorte tilbud:
+
+https://raw.githubusercontent.com/cengestoft/madplan-data/main/next_week_offers.json
 
 Supplerende filer ligger i samme repository og bør bruges sammen med denne fil.
 

@@ -5,55 +5,37 @@ on:
     paths:
       - ".github/workflows/data-quality.yml"
       - "current_offers.json"
-      - "current_offers.previous.json"
       - "import_status.json"
-      - "price_history.json"
       - "monthly_price_history.json"
+      - "price_history.json"
       - "super_deals_current.json"
       - "store_preferences.json"
+      - "data_quality_errors.json"
       - "scripts/**"
       - "tests/**"
   pull_request:
     paths:
       - "current_offers.json"
       - "import_status.json"
-      - "price_history.json"
       - "monthly_price_history.json"
+      - "price_history.json"
       - "scripts/**"
       - "tests/**"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build-and-accept:
+  acceptance:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Build normalized data on ChatGPT migration branch
-        if: github.event_name == 'push' && github.ref_name == 'chatgpt/data-pipeline-v2'
-        run: python scripts/build_data_pipeline.py --write
-
+      - name: Python syntax check
+        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py
       - name: Run acceptance tests
         run: python -m unittest discover -s tests -v
-
-      - name: Commit generated normalized data
-        if: github.event_name == 'push' && github.ref_name == 'chatgpt/data-pipeline-v2'
-        run: |
-          if git diff --quiet; then
-            echo "No generated changes"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add current_offers.json current_offers.previous.json import_status.json price_history.json monthly_price_history.json data_quality_errors.json stores next_week_offers.json super_deals.json super_deals_current.json
-          git commit -m "Build normalized Superkøb data [skip ci]"
-          git push origin HEAD:chatgpt/data-pipeline-v2
-
-# migration-run: 2026-10-05-final
+      - name: Validate pipeline without writing
+        run: python scripts/build_data_pipeline.py

@@ -23,11 +23,12 @@ def aggregate(products):
                 skipped+=1; continue
             if isinstance(price,bool) or not isinstance(price,(int,float)) or price<=0:
                 skipped+=1; continue
+            # Historical package size must come from the historical row itself.
+            # Never backfill missing historical size from today's product size.
             hist=dict(base)
-            if h.get("quantity") is not None:
-                hist["package_amount"]=h.get("quantity")
-                hist["package_unit"]=h.get("unit")
-                hist["package_count"]=h.get("package_count",base["package_count"])
+            hist["package_amount"]=h.get("quantity")
+            hist["package_unit"]=h.get("unit")
+            hist["package_count"]=h.get("package_count", 1)
             key=normalized_product_key(hist)
             b=buckets.setdefault((key,store_code,date[:7]),{
                 "normalized_product_key":key,"normalized_brand":infer_brand(hist),

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_at": "2026-10-05T13:45:00+02:00",
   "currency": "DKK",
   "country": "Denmark",
@@ -28,7 +28,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-002",
@@ -45,7 +48,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-003",
@@ -62,7 +68,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-004",
@@ -79,7 +88,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-005",
@@ -96,7 +108,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-006",
@@ -113,7 +128,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-007",
@@ -130,7 +148,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-008",
@@ -147,7 +168,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-009",
@@ -164,7 +188,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-010",
@@ -181,7 +208,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-011",
@@ -198,7 +228,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-012",
@@ -215,7 +248,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-013",
@@ -232,7 +268,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-014",
@@ -249,7 +288,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-015",
@@ -266,7 +308,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-016",
@@ -283,7 +328,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-017",
@@ -300,7 +348,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-018",
@@ -317,7 +368,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-019",
@@ -334,7 +388,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-020",
@@ -351,7 +408,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-021",
@@ -368,7 +428,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-022",
@@ -385,7 +448,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-023",
@@ -402,7 +468,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-024",
@@ -419,7 +488,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-025",
@@ -436,7 +508,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-026",
@@ -453,7 +528,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-027",
@@ -470,7 +548,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-028",
@@ -487,7 +568,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-029",
@@ -504,7 +588,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-030",
@@ -521,7 +608,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-031",
@@ -538,7 +628,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-032",
@@ -555,7 +648,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-033",
@@ -572,7 +668,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-034",
@@ -589,7 +688,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-035",
@@ -606,7 +708,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-036",
@@ -623,7 +728,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-037",
@@ -640,7 +748,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-038",
@@ -657,7 +768,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-039",
@@ -674,7 +788,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-040",
@@ -691,7 +808,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-041",
@@ -708,7 +828,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-042",
@@ -725,7 +848,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-043",
@@ -742,7 +868,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-044",
@@ -759,7 +888,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-045",
@@ -776,7 +908,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-046",
@@ -793,7 +928,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-047",
@@ -810,7 +948,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-048",
@@ -827,7 +968,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-049",
@@ -844,7 +988,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-050",
@@ -861,7 +1008,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-051",
@@ -878,7 +1028,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-052",
@@ -895,7 +1048,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-053",
@@ -912,7 +1068,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-054",
@@ -929,7 +1088,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-055",
@@ -946,7 +1108,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-056",
@@ -963,7 +1128,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-057",
@@ -980,7 +1148,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-058",
@@ -997,7 +1168,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-059",
@@ -1014,7 +1188,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-060",
@@ -1031,7 +1208,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-061",
@@ -1048,7 +1228,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-062",
@@ -1065,7 +1248,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-063",
@@ -1082,7 +1268,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-064",
@@ -1099,7 +1288,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-065",
@@ -1116,7 +1308,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-066",
@@ -1133,7 +1328,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-067",
@@ -1150,7 +1348,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-068",
@@ -1167,7 +1368,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-069",
@@ -1184,7 +1388,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-070",
@@ -1201,7 +1408,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-071",
@@ -1218,7 +1428,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-072",
@@ -1235,7 +1448,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-073",
@@ -1252,7 +1468,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-074",
@@ -1269,7 +1488,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-075",
@@ -1286,7 +1508,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-076",
@@ -1303,7 +1528,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-077",
@@ -1320,7 +1548,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-078",
@@ -1337,7 +1568,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-079",
@@ -1354,7 +1588,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-080",
@@ -1371,7 +1608,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-081",
@@ -1388,7 +1628,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-082",
@@ -1405,7 +1648,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-083",
@@ -1422,7 +1668,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-084",
@@ -1439,7 +1688,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-085",
@@ -1456,7 +1708,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-086",
@@ -1473,7 +1728,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-087",
@@ -1490,7 +1748,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-088",
@@ -1507,7 +1768,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-089",
@@ -1524,7 +1788,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-090",
@@ -1541,7 +1808,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-091",
@@ -1558,7 +1828,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-092",
@@ -1575,7 +1848,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-093",
@@ -1592,7 +1868,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-094",
@@ -1609,7 +1888,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-095",
@@ -1626,7 +1908,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-096",
@@ -1643,7 +1928,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-097",
@@ -1660,7 +1948,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-098",
@@ -1677,7 +1968,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-099",
@@ -1694,7 +1988,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-100",
@@ -1711,7 +2008,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-101",
@@ -1728,7 +2028,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-102",
@@ -1745,7 +2048,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-103",
@@ -1762,7 +2068,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-104",
@@ -1779,7 +2088,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-105",
@@ -1796,7 +2108,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-106",
@@ -1813,7 +2128,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-107",
@@ -1830,7 +2148,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-108",
@@ -1847,7 +2168,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-109",
@@ -1864,7 +2188,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-110",
@@ -1881,7 +2208,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-111",
@@ -1898,7 +2228,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-112",
@@ -1915,7 +2248,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-113",
@@ -1932,7 +2268,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-114",
@@ -1949,7 +2288,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-115",
@@ -1966,7 +2308,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-116",
@@ -1983,7 +2328,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-117",
@@ -2000,7 +2348,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-118",
@@ -2017,7 +2368,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-119",
@@ -2034,7 +2388,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-120",
@@ -2051,7 +2408,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-121",
@@ -2068,7 +2428,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-122",
@@ -2085,7 +2448,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-123",
@@ -2102,7 +2468,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-124",
@@ -2119,7 +2488,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-125",
@@ -2136,7 +2508,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-126",
@@ -2153,7 +2528,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-127",
@@ -2170,7 +2548,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-128",
@@ -2187,7 +2568,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-129",
@@ -2204,7 +2588,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-130",
@@ -2221,7 +2608,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-131",
@@ -2238,7 +2628,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-132",
@@ -2255,7 +2648,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-133",
@@ -2272,7 +2668,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-134",
@@ -2289,7 +2688,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-135",
@@ -2306,7 +2708,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-136",
@@ -2323,7 +2728,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-137",
@@ -2340,7 +2748,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-138",
@@ -2357,7 +2768,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-139",
@@ -2374,7 +2788,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-140",
@@ -2391,7 +2808,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-141",
@@ -2408,7 +2828,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-142",
@@ -2425,7 +2848,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-143",
@@ -2442,7 +2868,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-144",
@@ -2459,7 +2888,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-145",
@@ -2476,7 +2908,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-146",
@@ -2493,7 +2928,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-147",
@@ -2510,7 +2948,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-148",
@@ -2527,7 +2968,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-149",
@@ -2544,7 +2988,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-150",
@@ -2561,7 +3008,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-151",
@@ -2578,7 +3028,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-152",
@@ -2595,7 +3048,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-153",
@@ -2612,7 +3068,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-154",
@@ -2629,7 +3088,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-155",
@@ -2646,7 +3108,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-156",
@@ -2663,7 +3128,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-157",
@@ -2680,7 +3148,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-158",
@@ -2697,7 +3168,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-159",
@@ -2714,7 +3188,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-160",
@@ -2731,7 +3208,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-161",
@@ -2748,7 +3228,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-162",
@@ -2765,7 +3248,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-163",
@@ -2782,7 +3268,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-164",
@@ -2799,7 +3288,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-165",
@@ -2816,7 +3308,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-166",
@@ -2833,7 +3328,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-167",
@@ -2850,7 +3348,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-168",
@@ -2867,7 +3368,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-169",
@@ -2884,7 +3388,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-170",
@@ -2901,7 +3408,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-171",
@@ -2918,7 +3428,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-172",
@@ -2935,7 +3448,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-173",
@@ -2952,7 +3468,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-174",
@@ -2969,7 +3488,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-175",
@@ -2986,7 +3508,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-176",
@@ -3003,7 +3528,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-177",
@@ -3020,7 +3548,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-178",
@@ -3037,7 +3568,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-179",
@@ -3054,7 +3588,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-180",
@@ -3071,7 +3608,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-181",
@@ -3088,7 +3628,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-182",
@@ -3105,7 +3648,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-183",
@@ -3122,7 +3668,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-184",
@@ -3139,7 +3688,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-185",
@@ -3156,7 +3708,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-186",
@@ -3173,7 +3728,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-187",
@@ -3190,7 +3748,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-188",
@@ -3207,7 +3768,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-189",
@@ -3224,7 +3788,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-190",
@@ -3241,7 +3808,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-191",
@@ -3258,7 +3828,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-192",
@@ -3275,7 +3848,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-193",
@@ -3292,7 +3868,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-194",
@@ -3309,7 +3888,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-195",
@@ -3326,7 +3908,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-196",
@@ -3343,7 +3928,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-197",
@@ -3360,7 +3948,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-198",
@@ -3377,7 +3968,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-199",
@@ -3394,7 +3988,10 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     },
     {
       "id": "ref-200",
@@ -3411,7 +4008,18 @@
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-05",
+      "previous_reference_price_dkk": null,
+      "change_percent": null,
+      "source_count": 1
     }
-  ]
+  ],
+  "refresh_policy": {
+    "schedule": "weekly",
+    "day": "Monday",
+    "time_local": "06:00",
+    "timezone": "Europe/Copenhagen",
+    "rule": "Only update an item's reference price when there is a reasonable current data basis. Otherwise keep the previous value.",
+    "history_file": "reference_price_history.json"
+  }
 }

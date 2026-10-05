@@ -24,7 +24,9 @@ class AcceptanceTests(unittest.TestCase):
         self.assertFalse([e for e in errs if e["type"]=="category_uncertain"])
     def test_04_abc_is_videbaek(self):
         prefs=json.loads((ROOT/"store_preferences.json").read_text(encoding="utf-8"))
-        self.assertEqual(prefs["preferred_store_locations"]["ABC Lavpris"],"Videbæk")
+        abc=prefs["preferred_store_locations"]["ABC Lavpris"]
+        location=abc.get("city") if isinstance(abc,dict) else abc
+        self.assertEqual(location,"Videbæk")
     def test_05_expired_offer_not_active(self):
         import datetime as dt
         self.assertFalse(is_active_offer({"valid_from":"2025-01-01","valid_to":"2025-01-07"},dt.date(2026,10,5)))

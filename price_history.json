@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-05T12:20:00+02:00",
+  "currency": "DKK",
+  "methodology": {
+    "source": "archive weekly snapshots in this repository",
+    "comparison_basis": "unit_price_dkk when available; otherwise package price",
+    "minimum_observations_for_reliable_score": 4,
+    "scoring": {
+      "exceptional": "current price <= 80% of recent median",
+      "very_good": "current price > 80% and <= 90% of recent median",
+      "good": "current price > 90% and <= 97% of recent median",
+      "normal": "current price > 97% and <= 105% of recent median",
+      "weak": "current price > 105% of recent median"
+    }
+  },
+  "products": [],
+  "note": "Starter file. Historical scores become meaningful as weekly archive snapshots accumulate. Claude must not claim a reliable historical deal score until minimum observations are met."
+}

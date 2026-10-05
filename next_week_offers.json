@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T12:30:00+02:00",
+  "generated_at": "2026-10-05T15:43:00+02:00",
   "timezone": "Europe/Copenhagen",
   "currency": "DKK",
   "purpose": "Offers published for a future validity period",
@@ -8,5 +8,19 @@
   "stores": [],
   "offers": [],
   "offer_count": 0,
-  "note": "Populated by scheduled Wednesday/Friday/Sunday scans when future offers are publicly available. Claude must not use these as current offers before valid_from."
+  "note": "Future offers only. New chains must be added here when a publicly verifiable future validity period is available. No guessed prices. Current rollout added new chains to current_offers.json; no verified future-period starter offers were added in this pass.",
+  "pending_stores": [
+    "REMA 1000",
+    "ABC Lavpris",
+    "føtex",
+    "Kvickly",
+    "MENY",
+    "Brugsen",
+    "Dagli'Brugsen",
+    "Min Købmand",
+    "Løvbjerg",
+    "Let-Køb",
+    "Nemlig.com",
+    "Wolt Market"
+  ]
 }

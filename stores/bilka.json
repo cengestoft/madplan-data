@@ -48,7 +48,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=porrer|variant=standard|count=1|size=5stk"
     },
     {
       "id": "tilbudsugen-11345618",
@@ -89,7 +90,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=kartofler|variant=standard|count=1|size=5kg"
     },
     {
       "id": "tilbudsugen-11345621",
@@ -130,7 +132,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=loeg|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345614",
@@ -171,7 +174,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=guleroedder|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345617",
@@ -213,7 +217,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=graeskar|variant=standard|count=1|size=1stk"
     },
     {
       "id": "tilbudsugen-11345622",
@@ -254,7 +259,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-oeko|product=knoldselleri|variant=oeko|count=1|size=1stk"
     },
     {
       "id": "tilbudsugen-11345233",
@@ -293,7 +299,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=vindruer|variant=standard|count=1|size=0-75kg"
     },
     {
       "id": "tilbudsugen-11345189",
@@ -332,7 +339,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=tulip|product=baconskiver|variant=standard|count=1|size=0-3kg"
     },
     {
       "id": "tilbudsugen-11345190",
@@ -371,7 +379,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=tulip|product=bacontern|variant=standard|count=1|size=0-3kg"
     },
     {
       "id": "tilbudsugen-11345556",
@@ -413,7 +422,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rose|product=kylling|variant=standard|count=1|size=1-6kg"
     },
     {
       "id": "tilbudsugen-11345549",
@@ -455,7 +465,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=danpo|product=hakket-kylling-3-7|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345542",
@@ -496,7 +507,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=kylling|variant=standard|count=1|size=1-1kg"
     },
     {
       "id": "tilbudsugen-11345310",
@@ -538,7 +550,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=danpo|product=kyllingebrystfilet|variant=standard|count=1|size=2-6kg"
     },
     {
       "id": "tilbudsugen-11345311",
@@ -580,7 +593,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=danpo|product=kyllingeinderfileter|variant=standard|count=1|size=2-6kg"
     },
     {
       "id": "tilbudsugen-11345646",
@@ -622,7 +636,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=danpo|product=kyllingebrystfilet|variant=standard|count=1|size=1-5kg"
     },
     {
       "id": "tilbudsugen-11345544",
@@ -664,7 +679,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rose|product=kyllingelarfilet|variant=standard|count=1|size=0-8kg"
     },
     {
       "id": "tilbudsugen-11345470",
@@ -705,7 +721,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=stegeben|variant=standard|count=1|size=2-2kg"
     },
     {
       "id": "tilbudsugen-11345293",
@@ -746,7 +763,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=hakket-grisekoed-8-12|variant=standard|count=1|size=2-5kg"
     },
     {
       "id": "tilbudsugen-11345322",
@@ -785,7 +803,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=hamburgerryg|variant=standard|count=1|size=2-9kg"
     },
     {
       "id": "tilbudsugen-11345290",
@@ -826,7 +845,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=hakket-kalv-og-grisekoed-14-18|variant=standard|count=1|size=1-8kg"
     },
     {
       "id": "tilbudsugen-11345303",
@@ -865,7 +885,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=nakkekoteletter|variant=standard|count=1|size=2-6kg"
     },
     {
       "id": "tilbudsugen-11345320",
@@ -904,7 +925,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=flaesk-i-skiver|variant=standard|count=1|size=2-6kg"
     },
     {
       "id": "tilbudsugen-11345299",
@@ -945,7 +967,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=ribbensteg|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345302",
@@ -986,7 +1009,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=nakkefilet|variant=standard|count=1|size=1-9kg"
     },
     {
       "id": "tilbudsugen-11345492",
@@ -1027,7 +1051,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=koedpakke|variant=standard|count=1|size=10-85kg"
     },
     {
       "id": "tilbudsugen-11345473",
@@ -1069,7 +1094,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-mester|product=hakket-grisekoed-3-7|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345294",
@@ -1110,7 +1136,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=hakket-grisekoed-8-12|variant=standard|count=1|size=0-9kg"
     },
     {
       "id": "tilbudsugen-11345643",
@@ -1149,7 +1176,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-ludvig|product=osso-buco|variant=standard|count=1|size=1-8kg"
     },
     {
       "id": "tilbudsugen-11345628",
@@ -1190,7 +1218,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=hakket-oksekoed-4-7|variant=standard|count=1|size=1-1kg"
     },
     {
       "id": "tilbudsugen-11345967",
@@ -1232,7 +1261,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=nakkefilet|variant=standard|count=2|size=1kg"
     },
     {
       "id": "tilbudsugen-11345965",
@@ -1274,7 +1304,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=grisekam|variant=standard|count=2|size=1kg"
     },
     {
       "id": "tilbudsugen-11345968",
@@ -1316,7 +1347,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=kamben|variant=standard|count=2|size=1kg"
     },
     {
       "id": "tilbudsugen-11345464",
@@ -1355,7 +1387,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=oksehaler|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345313",
@@ -1394,7 +1427,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=lammekoelle|variant=standard|count=1|size=1-6kg"
     },
     {
       "id": "tilbudsugen-11345336",
@@ -1433,7 +1467,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=oksestriploin|variant=standard|count=1|size=4kg"
     },
     {
       "id": "tilbudsugen-11345642",
@@ -1472,7 +1507,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-ludvig|product=oksetykkam|variant=standard|count=1|size=1-2kg"
     },
     {
       "id": "tilbudsugen-11345639",
@@ -1511,7 +1547,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-ludvig|product=oksebov|variant=standard|count=1|size=1-2kg"
     },
     {
       "id": "tilbudsugen-11345467",
@@ -1550,7 +1587,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-ludvig|product=roastbeef|variant=standard|count=1|size=0-8kg"
     },
     {
       "id": "tilbudsugen-11345295",
@@ -1589,7 +1627,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=okseentrecotes|variant=standard|count=1|size=0-6kg"
     },
     {
       "id": "tilbudsugen-11345298",
@@ -1628,7 +1667,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=ribeye|variant=standard|count=1|size=0-6kg"
     },
     {
       "id": "tilbudsugen-11345312",
@@ -1667,7 +1707,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=okseculotte|variant=standard|count=1|size=1-2kg"
     },
     {
       "id": "tilbudsugen-11345476",
@@ -1706,7 +1747,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=oksefilet|variant=standard|count=1|size=1-5kg"
     },
     {
       "id": "tilbudsugen-11345627",
@@ -1748,7 +1790,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-ludvig|product=bouef-onglet|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345973",
@@ -1789,7 +1832,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=saeby|product=makrelfilet-i-tomat|variant=standard|count=1|size=0-75kg"
     },
     {
       "id": "tilbudsugen-11345562",
@@ -1830,7 +1874,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=sild|variant=standard|count=1|size=0-25kg"
     },
     {
       "id": "tilbudsugen-11345972",
@@ -1872,7 +1917,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=glyngoere|product=tun-i-vand|variant=standard|count=1|size=0-42kg"
     },
     {
       "id": "tilbudsugen-11345576",
@@ -1914,7 +1960,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=rejer|variant=standard|count=1|size=0-17kg"
     },
     {
       "id": "tilbudsugen-11345552",
@@ -1955,7 +2002,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=laks|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345553",
@@ -1996,7 +2044,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=oerred|variant=standard|count=1|size=0-45kg"
     },
     {
       "id": "tilbudsugen-11345563",
@@ -2038,7 +2087,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=laks-i-skiver|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345551",
@@ -2080,7 +2130,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=laks-i-skiver|variant=standard|count=1|size=0-3kg"
     },
     {
       "id": "tilbudsugen-11345512",
@@ -2121,7 +2172,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=grovhakket|product=leverpostej|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345516",
@@ -2162,7 +2214,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fransk-postej|product=leverpostej|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345533",
@@ -2205,7 +2258,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=hanegal|product=plantepostej|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345522",
@@ -2246,7 +2300,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bacon-peber|product=leverpostej|variant=standard|count=1|size=0-275kg"
     },
     {
       "id": "tilbudsugen-11345509",
@@ -2289,7 +2344,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=soenderjyske-fristelser|product=rejesalat|variant=standard|count=1|size=0-14kg"
     },
     {
       "id": "tilbudsugen-11345510",
@@ -2331,7 +2387,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=soenderjyske-fristelser|product=hoensesalat|variant=standard|count=1|size=0-14kg"
     },
     {
       "id": "tilbudsugen-11345539",
@@ -2372,7 +2429,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=aalbaek-specialiteter|product=chorizo-jalapenos|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345534",
@@ -2411,7 +2469,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=aalbaek-specialiteter|product=landspegepoelse|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345540",
@@ -2450,7 +2509,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=aalbaek-specialiteter|product=kartoffelspegepoelse|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345528",
@@ -2492,7 +2552,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=friland-oekologi|product=spegepoelse-af-okse|variant=oeko|count=1|size=0-07kg"
     },
     {
       "id": "tilbudsugen-11345527",
@@ -2536,7 +2597,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=friland-oekologi|product=spegepoelse|variant=oeko|count=1|size=0-07kg"
     },
     {
       "id": "tilbudsugen-11345523",
@@ -2580,7 +2642,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=friland-oekologi|product=hamburgerryg|variant=oeko|count=1|size=0-07kg"
     },
     {
       "id": "tilbudsugen-11345526",
@@ -2624,7 +2687,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=friland-oekologi|product=rullepoelse|variant=oeko|count=1|size=0-07kg"
     },
     {
       "id": "tilbudsugen-11345644",
@@ -2665,7 +2729,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=hotdogpoelser|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345645",
@@ -2706,7 +2771,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=grillpoelser|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345499",
@@ -2747,7 +2813,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=steff-houlberg|product=frankfurter|variant=standard|count=1|size=0-45kg"
     },
     {
       "id": "tilbudsugen-11345497",
@@ -2788,7 +2855,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=steff-houlberg|product=hotdogpoelser|variant=standard|count=1|size=0-375kg"
     },
     {
       "id": "tilbudsugen-11345505",
@@ -2832,7 +2900,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=naturli|product=smoerbar|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345212",
@@ -2874,7 +2943,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=matilde|product=kakaomaelk|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345631",
@@ -2917,7 +2987,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cultura|product=a-38-mild-hindbaer-0-4|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345635",
@@ -2961,7 +3032,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cultura|product=a-38-naturel-0-4|variant=oeko|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345385",
@@ -3002,7 +3074,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=actimel|product=drikkeyoghurt-skovbaer|variant=standard|count=1|size=1-2kg"
     },
     {
       "id": "tilbudsugen-11345223",
@@ -3043,7 +3116,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=athena|product=graesk-yoghurt-2|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345224",
@@ -3082,7 +3156,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=athena|product=graesk-yoghurt-0|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345222",
@@ -3123,7 +3198,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=athena|product=graesk-yoghurt-10|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345225",
@@ -3162,7 +3238,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=athena|product=graesk-yoghurt-mango-lime-0|variant=standard|count=1|size=0-9kg"
     },
     {
       "id": "tilbudsugen-11345496",
@@ -3201,7 +3278,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cremefine|product=floedealternativ-19|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345494",
@@ -3240,7 +3318,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cremefine|product=madlavningsfloede-15|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345495",
@@ -3279,7 +3358,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cremefine|product=madlavningsfloede-7|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345216",
@@ -3320,7 +3400,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=dr-oetker|product=citronfromage|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345507",
@@ -3359,7 +3440,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=hc-andersen|product=skaereost-mellemlagret-45|variant=standard|count=1|size=1-26kg"
     },
     {
       "id": "tilbudsugen-11345506",
@@ -3403,7 +3485,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=naturli|product=smoerbar-blok|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345630",
@@ -3444,7 +3527,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=protein-lab|product=mozarella-revet|variant=standard|count=1|size=0-14kg"
     },
     {
       "id": "tilbudsugen-11345598",
@@ -3486,7 +3570,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=arla|product=smoer|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345599",
@@ -3527,7 +3612,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kaergarden|product=smoerbar|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345384",
@@ -3568,7 +3654,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=milkslice|product=cool-snacks|variant=standard|count=1|size=0-28kg"
     },
     {
       "id": "tilbudsugen-11345192",
@@ -3609,7 +3696,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=skrabeaeg-m-l|variant=standard|count=1|size=10stk"
     },
     {
       "id": "tilbudsugen-11346116",
@@ -3653,7 +3741,8 @@
       "super_deal": true,
       "super_deal_rule": "cola_large_bottle",
       "super_deal_reason": "8 kr./l < 11 kr./l",
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=1|size=1-5l"
     },
     {
       "id": "tilbudsugen-11346118",
@@ -3695,7 +3784,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=elderflower-lemon|product=sodavand|variant=standard|count=1|size=1-5l"
     },
     {
       "id": "tilbudsugen-11346117",
@@ -3737,7 +3827,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=zero|product=fanta-orange|variant=zero|count=1|size=1-5l"
     },
     {
       "id": "tilbudsugen-11345265",
@@ -3779,7 +3870,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l"
     },
     {
       "id": "tilbudsugen-11345267",
@@ -3823,7 +3915,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=coca-cola-zero|product=cola-24-pk|variant=zero|count=24|size=0-33l"
     },
     {
       "id": "tilbudsugen-11345280",
@@ -3868,7 +3961,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=pepsi-max|product=cola-24-pk|variant=max|count=24|size=0-33l"
     },
     {
       "id": "tilbudsugen-11345278",
@@ -3909,7 +4003,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=faxe-kondi|product=sportssodavand-24-pk|variant=standard|count=24|size=0-33l"
     },
     {
       "id": "tilbudsugen-11346095",
@@ -3950,7 +4045,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rynkeby|product=frugtbrus-lime-citron|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345658",
@@ -3989,7 +4085,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=booster-original|product=energidrik-8-pk|variant=original|count=8|size=0-5l"
     },
     {
       "id": "tilbudsugen-11345217",
@@ -4030,7 +4127,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=coffee-milk|product=iskaffe-latte-macchiato|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345637",
@@ -4069,7 +4167,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=energy|product=energidrik-8-pk|variant=standard|count=8|size=0-25l"
     },
     {
       "id": "tilbudsugen-11346090",
@@ -4110,7 +4209,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=the-summer-edition|product=energidrik|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11346088",
@@ -4151,7 +4251,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=energy|product=energidrik|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345398",
@@ -4192,7 +4293,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=pickwick|product=forest-fruit-tebreve|variant=standard|count=1|size=20stk"
     },
     {
       "id": "tilbudsugen-11345393",
@@ -4234,7 +4336,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fredsted|product=lakrids-mint-urtete-tebreve|variant=standard|count=1|size=16stk"
     },
     {
       "id": "tilbudsugen-11345371",
@@ -4275,7 +4378,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=qualita-oro|product=kaffekapsler|variant=standard|count=1|size=10stk"
     },
     {
       "id": "tilbudsugen-11345379",
@@ -4317,7 +4421,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=lungo-peru|product=kaffekapsler|variant=standard|count=1|size=10stk"
     },
     {
       "id": "tilbudsugen-11345375",
@@ -4358,7 +4463,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=espresso-lungo-profondo|product=kaffekapsler|variant=standard|count=1|size=10stk"
     },
     {
       "id": "tilbudsugen-11345377",
@@ -4399,7 +4505,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=chai-latte|product=instant-te|variant=standard|count=1|size=8stk"
     },
     {
       "id": "tilbudsugen-11345376",
@@ -4440,7 +4547,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=senseo|product=kaffepuder|variant=standard|count=1|size=8stk"
     },
     {
       "id": "tilbudsugen-11345380",
@@ -4481,7 +4589,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=choco-hot|product=creamy-kakaopulver|variant=standard|count=1|size=8stk"
     },
     {
       "id": "tilbudsugen-11345378",
@@ -4522,7 +4631,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=gold|product=instant-kaffe-latte|variant=standard|count=1|size=8stk"
     },
     {
       "id": "tilbudsugen-11345230",
@@ -4561,7 +4671,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=specialristet|product=kaffe-formalet|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345231",
@@ -4600,7 +4711,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=original|product=kaffe-formalet|variant=original|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345971",
@@ -4641,7 +4753,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=mellemristet|product=kaffe-formalet|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345987",
@@ -4684,7 +4797,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=merrild|product=kaffe-formalet|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345226",
@@ -4723,7 +4837,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=qualita-oro|product=kaffe-formalet|variant=standard|count=1|size=0-25kg"
     },
     {
       "id": "tilbudsugen-11345232",
@@ -4762,7 +4877,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=qualita-rossa|product=kaffe-formalet|variant=standard|count=1|size=0-25kg"
     },
     {
       "id": "tilbudsugen-11345188",
@@ -4803,7 +4919,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=espresso-barista-intenso|product=kaffeboenner|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345185",
@@ -4844,7 +4961,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=qualita-oro|product=kaffeboenner|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345985",
@@ -4885,7 +5003,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=qualita-oro|product=kaffe-formalet|variant=standard|count=1|size=0-34kg"
     },
     {
       "id": "tilbudsugen-11346109",
@@ -4927,7 +5046,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=toerst|product=rabarberdrik|variant=standard|count=1|size=0-85l"
     },
     {
       "id": "tilbudsugen-11346110",
@@ -4968,7 +5088,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsoelille|product=vitamin-water-citron-lime|variant=standard|count=1|size=0-5l"
     },
     {
       "id": "tilbudsugen-11345381",
@@ -5010,7 +5131,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsoelille|product=appelsinjuice|variant=standard|count=1|size=0-85l"
     },
     {
       "id": "tilbudsugen-11345383",
@@ -5051,7 +5173,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsoelille|product=vitamin-smoothie|variant=standard|count=1|size=0-85l"
     },
     {
       "id": "tilbudsugen-11346094",
@@ -5092,7 +5215,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=somersby|product=apple-cider|variant=standard|count=1|size=0-33l"
     },
     {
       "id": "tilbudsugen-11346092",
@@ -5133,7 +5257,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=breezer|product=zesty-orange-rtd|variant=standard|count=1|size=0-275l"
     },
     {
       "id": "tilbudsugen-11346126",
@@ -5174,7 +5299,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sma-sure|product=shots-sour-peach|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11346130",
@@ -5215,7 +5341,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=strawberry|product=shots|variant=standard|count=1|size=0-5l"
     },
     {
       "id": "tilbudsugen-11346147",
@@ -5254,7 +5381,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=original|product=likoer|variant=original|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345655",
@@ -5293,7 +5421,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=the-famous-grouse|product=whisky|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11345638",
@@ -5332,7 +5461,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=carta-blanca|product=rom|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11345653",
@@ -5371,7 +5501,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=strawberry-rhubarb|product=shots|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11345654",
@@ -5410,7 +5541,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=skyy|product=vodka|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346153",
@@ -5449,7 +5581,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fernet-branca|product=bitter|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346163",
@@ -5488,7 +5621,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=the-famous-grouse|product=whisky|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346166",
@@ -5527,7 +5661,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=silver|product=tequila|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346156",
@@ -5566,7 +5701,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=jameson|product=whisky|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346159",
@@ -5605,7 +5741,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=gran-anejo|product=rom|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346152",
@@ -5644,7 +5781,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=london-dry|product=gin|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346165",
@@ -5683,7 +5821,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=linie-aquavit|product=akvavit|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346169",
@@ -5722,7 +5861,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sambuca|product=likoer|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346177",
@@ -5761,7 +5901,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=villa-massa|product=likoer|variant=standard|count=1|size=0-7l"
     },
     {
       "id": "tilbudsugen-11346128",
@@ -5805,7 +5946,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=pina-colada|product=drinkmix|variant=standard|count=1|size=0-1l"
     },
     {
       "id": "tilbudsugen-11345270",
@@ -5844,7 +5986,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=chilensk-hvidvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345275",
@@ -5883,7 +6026,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-hvidvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345277",
@@ -5922,7 +6066,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=chilensk-rosevin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345274",
@@ -5961,7 +6106,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-rosevin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345272",
@@ -6000,7 +6146,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-rosevin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345268",
@@ -6039,7 +6186,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345271",
@@ -6078,7 +6226,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-hvidvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345273",
@@ -6117,7 +6266,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-roedvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11345276",
@@ -6156,7 +6306,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=chilensk-roedvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346050",
@@ -6195,7 +6346,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=californisk-hvidvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346045",
@@ -6234,7 +6386,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=tysk-hvidvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346049",
@@ -6273,7 +6426,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=tysk-roedvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346046",
@@ -6312,7 +6466,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=sydafrikansk-roedvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346048",
@@ -6351,7 +6506,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=sydafrikansk-hvidvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346051",
@@ -6390,7 +6546,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=californisk-roedvin|variant=standard|count=1|size=3l"
     },
     {
       "id": "tilbudsugen-11346035",
@@ -6429,7 +6586,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=chilensk-rosevin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346034",
@@ -6468,7 +6626,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=chilensk-roedvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346036",
@@ -6507,7 +6666,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=chilensk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346055",
@@ -6549,7 +6709,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=spansk-roedvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346057",
@@ -6591,7 +6752,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=spansk-rosevin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346058",
@@ -6633,7 +6795,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=spansk-hvidvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346060",
@@ -6675,7 +6838,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346061",
@@ -6717,7 +6881,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-hvidvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346063",
@@ -6759,7 +6924,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-rosevin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346041",
@@ -6801,7 +6967,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=spansk-roedvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346039",
@@ -6843,7 +7010,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=ish|product=hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345324",
@@ -6885,7 +7053,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345329",
@@ -6927,7 +7096,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-hvidvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345330",
@@ -6969,7 +7139,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-hvidvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345332",
@@ -7011,7 +7182,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-mousserende-vin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345331",
@@ -7053,7 +7225,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=6|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346052",
@@ -7092,7 +7265,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-mousserende-vin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346054",
@@ -7131,7 +7305,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=spansk-mousserende-vin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346064",
@@ -7172,7 +7347,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=tysk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346078",
@@ -7211,7 +7387,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346067",
@@ -7250,7 +7427,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-roedvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346068",
@@ -7289,7 +7467,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346075",
@@ -7328,7 +7507,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-roedvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346076",
@@ -7367,7 +7547,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=italiensk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346083",
@@ -7406,7 +7587,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346085",
@@ -7445,7 +7627,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=fransk-hvidvin|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345659",
@@ -7488,7 +7671,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kohberg|product=rugbroedsboller|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345660",
@@ -7530,7 +7714,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kohberg|product=rugmildsboller|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345641",
@@ -7573,7 +7758,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kohberg|product=cafe-sandwich-protein|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345585",
@@ -7612,7 +7798,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=dan-cake|product=halloween-roulade|variant=standard|count=1|size=0-35kg"
     },
     {
       "id": "tilbudsugen-11345565",
@@ -7651,7 +7838,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=belgiske-vafler|variant=standard|count=1|size=0-275kg"
     },
     {
       "id": "tilbudsugen-11345567",
@@ -7690,7 +7878,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nordthy|product=party-bar-biscuit|variant=standard|count=1|size=0-162kg"
     },
     {
       "id": "tilbudsugen-11345592",
@@ -7729,7 +7918,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=pickup|product=kiks|variant=original|count=1|size=0-14kg"
     },
     {
       "id": "tilbudsugen-11345537",
@@ -7771,7 +7961,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=herkules|product=rugbroedsskiver|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345529",
@@ -7813,7 +8004,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kohberg|product=solsikkerugbroed|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345532",
@@ -7854,7 +8046,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bagernes-bedste|product=rugbroedsskiver|variant=standard|count=1|size=0-6kg"
     },
     {
       "id": "tilbudsugen-11345262",
@@ -7893,7 +8086,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=morliny|product=hot-wings|variant=classic|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345264",
@@ -7932,7 +8126,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=morliny|product=hot-wings-crispy|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11345978",
@@ -7973,7 +8168,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=daloon|product=forarsruller|variant=classic|count=1|size=0-8kg"
     },
     {
       "id": "tilbudsugen-11345543",
@@ -8014,7 +8210,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rose|product=hot-wings|variant=standard|count=1|size=2-5kg"
     },
     {
       "id": "tilbudsugen-11345314",
@@ -8056,7 +8253,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=kyllingebrystfilet|variant=standard|count=1|size=2-85kg"
     },
     {
       "id": "tilbudsugen-11345982",
@@ -8095,7 +8293,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=poelsehorn|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345316",
@@ -8137,7 +8336,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=kyllingespyd|variant=standard|count=1|size=2-5kg"
     },
     {
       "id": "tilbudsugen-11346011",
@@ -8176,7 +8376,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=pizzasnegle|variant=standard|count=1|size=0-35kg"
     },
     {
       "id": "tilbudsugen-11345996",
@@ -8217,7 +8418,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=thai-cube|product=panang-curry-chicken|variant=standard|count=1|size=0-35kg"
     },
     {
       "id": "tilbudsugen-11346014",
@@ -8256,7 +8458,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=mini-focaccia|variant=standard|count=1|size=0-32kg"
     },
     {
       "id": "tilbudsugen-11345980",
@@ -8297,7 +8500,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=ristorante|product=pizza-salame|variant=standard|count=1|size=0-32kg"
     },
     {
       "id": "tilbudsugen-11345997",
@@ -8340,7 +8544,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=urtekram|product=falafel|variant=standard|count=1|size=0-285kg"
     },
     {
       "id": "tilbudsugen-11345570",
@@ -8381,7 +8586,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=fiskefrikadeller|variant=standard|count=1|size=0-26kg"
     },
     {
       "id": "tilbudsugen-11345558",
@@ -8427,7 +8633,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=karaage-chicken-chunks|variant=standard|count=3|size=0-3kg"
     },
     {
       "id": "tilbudsugen-11345545",
@@ -8473,7 +8680,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=kyllingespyd-med-teriyaki|variant=standard|count=3|size=0-3kg"
     },
     {
       "id": "tilbudsugen-11345649",
@@ -8515,7 +8723,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsemoellen|product=tipo-00-hvedemel|variant=standard|count=1|size=1-7kg"
     },
     {
       "id": "tilbudsugen-11345648",
@@ -8557,7 +8766,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsemoellen|product=kage-hvedemel|variant=standard|count=1|size=1-7kg"
     },
     {
       "id": "tilbudsugen-11345442",
@@ -8598,7 +8808,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=dansukker|product=sukker|variant=standard|count=1|size=1stk"
     },
     {
       "id": "tilbudsugen-11345461",
@@ -8639,7 +8850,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=amo|product=hvedemel|variant=standard|count=1|size=1-8kg"
     },
     {
       "id": "tilbudsugen-11345501",
@@ -8682,7 +8894,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=oat-barista|product=havredrik|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345446",
@@ -8723,7 +8936,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=amo|product=brunchboller-koldhaevet-melblanding|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345440",
@@ -8764,7 +8978,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=dansukker|product=farin|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345974",
@@ -8803,7 +9018,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=mutti|product=tomater|variant=standard|count=1|size=1-2kg"
     },
     {
       "id": "tilbudsugen-11345460",
@@ -8844,7 +9060,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=amo|product=chokoladekageblanding|variant=standard|count=1|size=0-7kg"
     },
     {
       "id": "tilbudsugen-11345421",
@@ -8885,7 +9102,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=beauvais|product=ketchup|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345650",
@@ -8926,7 +9144,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsemoellen|product=chokoladekageblanding|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345597",
@@ -8967,7 +9186,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsemoellen|product=brunsviger|variant=standard|count=1|size=0-475kg"
     },
     {
       "id": "tilbudsugen-11345423",
@@ -9009,7 +9229,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=den-gamle-fabrik|product=boysenbaermarmelade|variant=standard|count=1|size=0-27kg"
     },
     {
       "id": "tilbudsugen-11345424",
@@ -9051,7 +9272,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=den-gamle-fabrik|product=jordbaermarmelade|variant=standard|count=1|size=0-27kg"
     },
     {
       "id": "tilbudsugen-11345640",
@@ -9093,7 +9315,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bonduelle|product=majs|variant=standard|count=1|size=0-42kg"
     },
     {
       "id": "tilbudsugen-11345420",
@@ -9134,7 +9357,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=beauvais|product=tomatpure|variant=standard|count=1|size=0-475kg"
     },
     {
       "id": "tilbudsugen-11345419",
@@ -9175,7 +9399,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-oeko|product=honning|variant=oeko|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345656",
@@ -9217,7 +9442,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=svansoe|product=mandler|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345931",
@@ -9256,7 +9482,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=piccardo|product=olivenolie|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11345636",
@@ -9300,7 +9527,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bonduelle|product=majs|variant=standard|count=1|size=0-28kg"
     },
     {
       "id": "tilbudsugen-11345924",
@@ -9341,7 +9569,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=zelected|product=cremet-basilikum-pesto|variant=standard|count=1|size=0-19kg"
     },
     {
       "id": "tilbudsugen-11345925",
@@ -9382,7 +9611,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=zelected|product=cremet-peberfrugt-pesto|variant=standard|count=1|size=0-19kg"
     },
     {
       "id": "tilbudsugen-11345928",
@@ -9421,7 +9651,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=glaze|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345929",
@@ -9462,7 +9693,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=piccardo|product=olivenolie|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345657",
@@ -9504,7 +9736,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=svansoe|product=cashewnoedder|variant=standard|count=1|size=0-65kg"
     },
     {
       "id": "tilbudsugen-11345436",
@@ -9546,7 +9779,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=frugtstaenger|product=jordbaer|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345651",
@@ -9587,7 +9821,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsemoellen|product=kerner|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345926",
@@ -9628,7 +9863,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=zelected|product=oliven|variant=standard|count=1|size=0-25kg"
     },
     {
       "id": "tilbudsugen-11345454",
@@ -9671,7 +9907,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=frugtstaenger|product=blabaer|variant=standard|count=1|size=0-08kg"
     },
     {
       "id": "tilbudsugen-11345652",
@@ -9712,7 +9949,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=valsemoellen|product=froeblandinger|variant=standard|count=1|size=0-09kg"
     },
     {
       "id": "tilbudsugen-11345445",
@@ -9753,7 +9991,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sunshine-delights|product=ferskner|variant=light|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345443",
@@ -9794,7 +10033,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sunshine-delights|product=mango|variant=light|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345213",
@@ -9835,7 +10075,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=jasminris|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345933",
@@ -9877,7 +10118,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=il-fornaio|product=fuldkornsfusilli|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345953",
@@ -9919,7 +10161,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=il-fornaio|product=fuldkornsrigatoni|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345955",
@@ -9961,7 +10204,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=il-fornaio|product=fuldkornsspaghetti|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345963",
@@ -10003,7 +10247,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=il-fornaio|product=fuldkornslinguine|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345932",
@@ -10044,7 +10289,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=il-fornaio|product=risottoris|variant=standard|count=1|size=0-5kg"
     },
     {
       "id": "tilbudsugen-11345951",
@@ -10085,7 +10331,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=il-fornaio|product=pappardelle|variant=standard|count=1|size=0-25kg"
     },
     {
       "id": "tilbudsugen-11345252",
@@ -10129,7 +10376,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=popz|product=popcorn-salted|variant=standard|count=3|size=0-27kg"
     },
     {
       "id": "tilbudsugen-11345248",
@@ -10173,7 +10421,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kims|product=sour-cream-onion-chips|variant=standard|count=3|size=0-17kg"
     },
     {
       "id": "tilbudsugen-11345251",
@@ -10217,7 +10466,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kims|product=snack-chips|variant=original|count=3|size=0-16kg"
     },
     {
       "id": "tilbudsugen-11345261",
@@ -10261,7 +10511,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kims|product=snack-chips-sour-cream-onion|variant=standard|count=3|size=0-16kg"
     },
     {
       "id": "tilbudsugen-11345647",
@@ -10303,7 +10554,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=salattopping-snack|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345451",
@@ -10344,7 +10596,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=taffel|product=peanut-crunch-cheddar|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345438",
@@ -10385,7 +10638,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=taffel|product=honningristet-cashew-mix|variant=standard|count=1|size=0-11kg"
     },
     {
       "id": "tilbudsugen-11345422",
@@ -10427,7 +10681,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-oeko|product=snacks|variant=oeko|count=1|size=0-02kg"
     },
     {
       "id": "tilbudsugen-11345426",
@@ -10468,7 +10723,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=vampyrer|product=slikpose-sour|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345428",
@@ -10509,7 +10765,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=goldbears|product=slikposer|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345406",
@@ -10550,7 +10807,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=butterflies|product=slikposer|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345414",
@@ -10591,7 +10849,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=matador-mix|product=slikposer|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345390",
@@ -10632,7 +10891,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=familie-guf|product=slikposer|variant=standard|count=1|size=0-12kg"
     },
     {
       "id": "tilbudsugen-11345416",
@@ -10675,7 +10935,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=tappsy|product=slikposer|variant=standard|count=1|size=0-175kg"
     },
     {
       "id": "tilbudsugen-11345415",
@@ -10718,7 +10979,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salte-fisk|product=slikposer|variant=standard|count=1|size=0-175kg"
     },
     {
       "id": "tilbudsugen-11345386",
@@ -10759,7 +11021,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=lakridshits|product=slikstaenger|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345388",
@@ -10800,7 +11063,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=malaco|product=sliksnoerer-karamel|variant=standard|count=1|size=0-094kg"
     },
     {
       "id": "tilbudsugen-11345389",
@@ -10841,7 +11105,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=malaco|product=slikstjerner-karamel|variant=standard|count=1|size=0-092kg"
     },
     {
       "id": "tilbudsugen-11345850",
@@ -10880,7 +11145,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bebeto|product=halloween-mix|variant=standard|count=1|size=0-396kg"
     },
     {
       "id": "tilbudsugen-11345848",
@@ -10921,7 +11187,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=scary-mix|product=slik|variant=standard|count=1|size=0-375kg"
     },
     {
       "id": "tilbudsugen-11345605",
@@ -10962,7 +11229,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=chewit-blue-raspberry|product=slikposer|variant=standard|count=1|size=0-115kg"
     },
     {
       "id": "tilbudsugen-11345600",
@@ -11003,7 +11271,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sprinkled-foamies|product=slikpose-sour-bubblegum|variant=standard|count=1|size=0-11kg"
     },
     {
       "id": "tilbudsugen-11345846",
@@ -11044,7 +11313,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fini|product=tyggegummi-zombie|variant=standard|count=1|size=0-08kg"
     },
     {
       "id": "tilbudsugen-11345844",
@@ -11085,7 +11355,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fini|product=tyggegummi-vampire|variant=standard|count=1|size=0-08kg"
     },
     {
       "id": "tilbudsugen-11345387",
@@ -11126,7 +11397,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kexchoklad|product=chokoladebar|variant=standard|count=1|size=0-06kg"
     },
     {
       "id": "tilbudsugen-11345418",
@@ -11167,7 +11439,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=lindt-excellence|product=chokoladeplade-70-cocoa-dark|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11345417",
@@ -11208,7 +11481,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=lindt-excellence|product=chokoladeplade-a-touch-of-sea-salt-dark|variant=standard|count=1|size=0-1kg"
     },
     {
       "id": "tilbudsugen-11346000",
@@ -11247,7 +11521,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=pommes-gigant|variant=standard|count=1|size=0-7kg"
     },
     {
       "id": "tilbudsugen-11346001",
@@ -11286,7 +11561,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=madbroed-grillede|variant=standard|count=1|size=0-6kg"
     },
     {
       "id": "tilbudsugen-11345334",
@@ -11327,7 +11603,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=grisemoerbrad|variant=standard|count=1|size=5kg"
     },
     {
       "id": "tilbudsugen-11345634",
@@ -11368,7 +11645,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=kyllingestrimler|variant=standard|count=1|size=2-5kg"
     },
     {
       "id": "tilbudsugen-11345333",
@@ -11409,7 +11687,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=kyllingebrystfilet|variant=standard|count=1|size=4kg"
     },
     {
       "id": "tilbudsugen-11346009",
@@ -11448,7 +11727,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=ciabatta-med-chokolade|variant=standard|count=1|size=0-36kg"
     },
     {
       "id": "tilbudsugen-11346013",
@@ -11487,7 +11767,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=croissant|variant=standard|count=1|size=0-28kg"
     },
     {
       "id": "tilbudsugen-11345475",
@@ -11526,7 +11807,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=grisekaeber|variant=standard|count=1|size=0-95kg"
     },
     {
       "id": "tilbudsugen-11345976",
@@ -11567,7 +11849,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-princip|product=citrontaerte-med-marengs|variant=standard|count=1|size=0-48kg"
     },
     {
       "id": "tilbudsugen-11345491",
@@ -11608,7 +11891,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=lam|variant=standard|count=1|size=8kg"
     },
     {
       "id": "tilbudsugen-11345236",
@@ -11649,7 +11933,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=minecraft|product=ispinde|variant=standard|count=1|size=4stk"
     },
     {
       "id": "tilbudsugen-11345220",
@@ -11690,7 +11975,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=magnum|product=la-pistachie-ispinde|variant=standard|count=1|size=3stk"
     },
     {
       "id": "tilbudsugen-11345991",
@@ -11732,7 +12018,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=hansens|product=pistacie-is|variant=standard|count=1|size=0-6l"
     },
     {
       "id": "tilbudsugen-11345633",
@@ -11774,7 +12061,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=ben-jerry-s|product=cookie-dough-is|variant=standard|count=1|size=0-465l"
     },
     {
       "id": "tilbudsugen-11345632",
@@ -11816,7 +12104,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=ben-jerry-s|product=half-baked-is|variant=standard|count=1|size=0-465l"
     },
     {
       "id": "tilbudsugen-11345995",
@@ -11857,7 +12146,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=mou|product=tomatsuppe|variant=standard|count=1|size=1kg"
     },
     {
       "id": "tilbudsugen-11345892",
@@ -11898,7 +12188,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=raakraft|product=hundefoder|variant=standard|count=1|size=4kg"
     },
     {
       "id": "tilbudsugen-11345876",
@@ -11939,7 +12230,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=brit-fresh|product=hundefoder|variant=standard|count=1|size=0-4kg"
     },
     {
       "id": "tilbudsugen-11345872",
@@ -11978,7 +12270,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=whiskas|product=kattefoder|variant=standard|count=1|size=3-8kg"
     },
     {
       "id": "tilbudsugen-11345881",
@@ -12022,7 +12315,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=whiskas|product=kattefoder|variant=standard|count=3|size=1-02kg"
     },
     {
       "id": "tilbudsugen-11345895",
@@ -12063,7 +12357,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=brit-premium|product=kattefoder|variant=standard|count=1|size=1-2kg"
     },
     {
       "id": "tilbudsugen-11345874",
@@ -12102,7 +12397,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=frolic|product=hundefoder|variant=standard|count=1|size=2-6kg"
     },
     {
       "id": "tilbudsugen-11345878",
@@ -12146,7 +12442,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=perfect-fit|product=kattefoder|variant=standard|count=2|size=0-75kg"
     },
     {
       "id": "tilbudsugen-11345890",
@@ -12187,7 +12484,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sheba|product=kattefoder|variant=standard|count=1|size=0-3kg"
     },
     {
       "id": "tilbudsugen-11345871",
@@ -12231,7 +12529,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cesar|product=hundefoder|variant=standard|count=2|size=0-15kg"
     },
     {
       "id": "tilbudsugen-11345880",
@@ -12275,7 +12574,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cesar|product=hundefoder|variant=standard|count=2|size=0-6kg"
     },
     {
       "id": "tilbudsugen-11345885",
@@ -12319,7 +12619,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sheba|product=kattefoder|variant=standard|count=3|size=0-06kg"
     },
     {
       "id": "tilbudsugen-11345903",
@@ -12360,7 +12661,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=latz|product=kattesnacks|variant=standard|count=1|size=0-2kg"
     },
     {
       "id": "tilbudsugen-11345875",
@@ -12401,7 +12703,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=best-friend|product=hundesnacks|variant=standard|count=1|size=0-08kg"
     },
     {
       "id": "tilbudsugen-11345902",
@@ -12442,7 +12745,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=faunakram|product=hundesnacks|variant=standard|count=1|size=0-17kg"
     },
     {
       "id": "tilbudsugen-11345882",
@@ -12486,7 +12790,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=dreamies|product=kattesnacks|variant=standard|count=3|size=0-18kg"
     },
     {
       "id": "tilbudsugen-11345904",
@@ -12527,7 +12832,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=vitakraft|product=hundesnacks|variant=standard|count=1|size=0-06kg"
     },
     {
       "id": "tilbudsugen-11345906",
@@ -12568,7 +12874,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=vitakraft|product=kattesnacks|variant=standard|count=1|size=0-06kg"
     },
     {
       "id": "tilbudsugen-11346026",
@@ -12609,7 +12916,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=bagepapir|variant=standard|count=1|size=30stk"
     },
     {
       "id": "tilbudsugen-11346024",
@@ -12650,7 +12958,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=skrald-let|product=affaldsposer|variant=standard|count=1|size=15stk"
     },
     {
       "id": "tilbudsugen-11346260",
@@ -12691,7 +13000,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=affaldsposer|variant=standard|count=1|size=12stk"
     },
     {
       "id": "tilbudsugen-11346023",
@@ -12730,7 +13040,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=tornado|product=maskinopvask-tabs|variant=standard|count=1|size=150stk"
     },
     {
       "id": "tilbudsugen-11346226",
@@ -12769,7 +13080,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=neophos|product=maskinopvask-tabs|variant=standard|count=1|size=70stk"
     },
     {
       "id": "tilbudsugen-11345258",
@@ -12813,7 +13125,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=soft|product=toiletpapir|variant=standard|count=1|size=24stk"
     },
     {
       "id": "tilbudsugen-11345254",
@@ -12855,7 +13168,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=classic|product=koekkenrulle|variant=classic|count=1|size=6stk"
     },
     {
       "id": "tilbudsugen-11346022",
@@ -12896,7 +13210,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bref|product=wc-flush|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11346031",
@@ -12937,7 +13252,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=swiffer|product=duster-refill|variant=standard|count=1|size=5stk"
     },
     {
       "id": "tilbudsugen-11346018",
@@ -12978,7 +13294,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=naturkraft|product=opvaskemiddel|variant=standard|count=1|size=0-5l"
     },
     {
       "id": "tilbudsugen-11346020",
@@ -13019,7 +13336,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=naturkraft|product=rengoering-universal|variant=standard|count=1|size=0-5l"
     },
     {
       "id": "tilbudsugen-11346021",
@@ -13060,7 +13378,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=duck|product=wc-rens|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11346230",
@@ -13101,7 +13420,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=biotex|product=vaskepulver|variant=standard|count=1|size=3-39kg"
     },
     {
       "id": "tilbudsugen-11346210",
@@ -13142,7 +13462,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bamseline|product=skyllemiddel|variant=standard|count=1|size=0-762l"
     },
     {
       "id": "tilbudsugen-11346233",
@@ -13183,7 +13504,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=biotex|product=vaskemiddel-flydende|variant=standard|count=1|size=2-4l"
     },
     {
       "id": "tilbudsugen-11346222",
@@ -13222,7 +13544,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=biotex|product=vaskemiddel-flydende|variant=standard|count=1|size=1-48l"
     },
     {
       "id": "tilbudsugen-11346032",
@@ -13261,7 +13584,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=swiffer|product=moppe|variant=standard|count=1|size=1stk"
     },
     {
       "id": "tilbudsugen-11346274",
@@ -13303,7 +13627,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling|product=servietter|variant=standard|count=1|size=50stk"
     },
     {
       "id": "tilbudsugen-11345858",
@@ -13345,7 +13670,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=windsor|product=servietter|variant=standard|count=1|size=20stk"
     },
     {
       "id": "tilbudsugen-11345778",
@@ -13386,7 +13712,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=kleenex|product=lommetoerklaeder|variant=standard|count=1|size=112stk"
     },
     {
       "id": "tilbudsugen-11345829",
@@ -13427,7 +13754,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-oeko|product=vatrondeller|variant=oeko|count=1|size=35stk"
     },
     {
       "id": "tilbudsugen-11346249",
@@ -13466,7 +13794,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=venus-comfort-glide|product=barberblade|variant=standard|count=1|size=12stk"
     },
     {
       "id": "tilbudsugen-11346247",
@@ -13505,7 +13834,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fusion-5|product=barberblade|variant=standard|count=1|size=10stk"
     },
     {
       "id": "tilbudsugen-11346472",
@@ -13544,7 +13874,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=braun-oral-b|product=boerstehoveder|variant=standard|count=1|size=10stk"
     },
     {
       "id": "tilbudsugen-11345402",
@@ -13585,7 +13916,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nordic-spirit|product=flydende-saebe|variant=standard|count=1|size=0-5l"
     },
     {
       "id": "tilbudsugen-11345400",
@@ -13626,7 +13958,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=palmolive|product=handsaebe|variant=standard|count=1|size=0-27kg"
     },
     {
       "id": "tilbudsugen-11345787",
@@ -13665,7 +13998,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=loreal-paris|product=mascara|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11345664",
@@ -13706,7 +14040,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=gliss|product=shampoo|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345746",
@@ -13747,7 +14082,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nivea-men|product=bodyshampoo|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345678",
@@ -13788,7 +14124,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=respons|product=shampoo|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345683",
@@ -13829,7 +14166,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fructis|product=shampoo|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345665",
@@ -13870,7 +14208,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=gliss|product=balsam|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345671",
@@ -13911,7 +14250,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=poly-swing|product=harspray|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345836",
@@ -13952,7 +14292,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=shampoo|variant=standard|count=1|size=0-05l"
     },
     {
       "id": "tilbudsugen-11345219",
@@ -13993,7 +14334,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rexona|product=deospray|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345680",
@@ -14034,7 +14376,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=respons|product=balsam|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345685",
@@ -14075,7 +14418,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=fructis|product=balsam|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345669",
@@ -14117,7 +14461,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=stuhr|product=shampoo|variant=standard|count=1|size=1l"
     },
     {
       "id": "tilbudsugen-11331607",
@@ -14156,7 +14501,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=oneblade|product=barberblade|variant=standard|count=1|size=3stk"
     },
     {
       "id": "tilbudsugen-11345725",
@@ -14197,7 +14543,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bed-head|product=shampoo|variant=standard|count=1|size=0-4l"
     },
     {
       "id": "tilbudsugen-11345723",
@@ -14238,7 +14585,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bed-head|product=balsam|variant=standard|count=1|size=0-4l"
     },
     {
       "id": "tilbudsugen-11345744",
@@ -14279,7 +14627,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nivea-men|product=deospray|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345667",
@@ -14320,7 +14669,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=stuhr|product=balsam|variant=standard|count=1|size=0-75l"
     },
     {
       "id": "tilbudsugen-11345831",
@@ -14359,7 +14709,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=head-shoulders|product=shampoo|variant=standard|count=1|size=0-09l"
     },
     {
       "id": "tilbudsugen-11345677",
@@ -14400,7 +14751,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=batiste|product=toershampoo|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345697",
@@ -14441,7 +14793,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=maui-moisture|product=balsam|variant=standard|count=1|size=0-385l"
     },
     {
       "id": "tilbudsugen-11345696",
@@ -14482,7 +14835,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=maui-moisture|product=shampoo|variant=standard|count=1|size=0-385l"
     },
     {
       "id": "tilbudsugen-11345821",
@@ -14523,7 +14877,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=got2b|product=harspray|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11346255",
@@ -14564,7 +14919,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=colgate|product=tandpasta|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345397",
@@ -14605,7 +14961,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=palmolive-men|product=deo-roll-on|variant=standard|count=1|size=0-05l"
     },
     {
       "id": "tilbudsugen-11345698",
@@ -14646,7 +15003,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=aussie|product=harmousse|variant=standard|count=1|size=0-15stk"
     },
     {
       "id": "tilbudsugen-11345743",
@@ -14687,7 +15045,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=david-beckham|product=deospray|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345741",
@@ -14728,7 +15087,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bruno-banani|product=deospray|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345742",
@@ -14769,7 +15129,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cr7|product=deospray|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345218",
@@ -14810,7 +15171,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rexona|product=deo-roll-on|variant=standard|count=1|size=0-05l"
     },
     {
       "id": "tilbudsugen-11345704",
@@ -14851,7 +15213,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=go-blonder|product=shampoo|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345712",
@@ -14892,7 +15255,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=go-blonder|product=balsam|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345735",
@@ -14933,7 +15297,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bed-head|product=harmousse|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345771",
@@ -14972,7 +15337,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bioderma|product=renseprodukter|variant=standard|count=1|size=0-3l"
     },
     {
       "id": "tilbudsugen-11345705",
@@ -15013,7 +15379,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=go-blonder|product=harmaske|variant=standard|count=1|size=0-25l"
     },
     {
       "id": "tilbudsugen-11345662",
@@ -15054,7 +15421,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=stuhr|product=saltvandsspray|variant=standard|count=1|size=0-15l"
     },
     {
       "id": "tilbudsugen-11345690",
@@ -15095,7 +15463,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=umberto-giannini|product=harmousse|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345686",
@@ -15136,7 +15505,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=umberto-giannini|product=curl-cream|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345773",
@@ -15175,7 +15545,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=cerave|product=renseprodukter|variant=standard|count=1|size=0-236l"
     },
     {
       "id": "tilbudsugen-11345701",
@@ -15216,7 +15587,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=aussie|product=harolie|variant=standard|count=1|size=0-095l"
     },
     {
       "id": "tilbudsugen-11345753",
@@ -15257,7 +15629,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=shoe-shoe-blue|product=eau-de-parfum|variant=standard|count=1|size=0-1l"
     },
     {
       "id": "tilbudsugen-11345747",
@@ -15298,7 +15671,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=acqua-di|product=eau-de-toilette|variant=standard|count=1|size=0-1l"
     },
     {
       "id": "tilbudsugen-11345661",
@@ -15339,7 +15713,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=stuhr|product=harvoks|variant=standard|count=1|size=0-08l"
     },
     {
       "id": "tilbudsugen-11345726",
@@ -15380,7 +15755,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bed-head|product=stylingcreme|variant=standard|count=1|size=0-113l"
     },
     {
       "id": "tilbudsugen-11345703",
@@ -15421,7 +15797,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=go-blonder|product=harspray|variant=standard|count=1|size=0-1l"
     },
     {
       "id": "tilbudsugen-11345820",
@@ -15460,7 +15837,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=licener|product=luseshampoo|variant=standard|count=1|size=0-1l"
     },
     {
       "id": "tilbudsugen-11345789",
@@ -15499,7 +15877,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=infaillible|product=setting-spray|variant=standard|count=1|size=0-075l"
     },
     {
       "id": "tilbudsugen-11345673",
@@ -15540,7 +15919,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=taft|product=harpudder|variant=standard|count=1|size=0-01kg"
     },
     {
       "id": "tilbudsugen-11345783",
@@ -15579,7 +15959,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nivea|product=creme|variant=standard|count=1|size=0-05kg"
     },
     {
       "id": "tilbudsugen-11345794",
@@ -15620,7 +16001,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=elizabeth-arden|product=creme|variant=standard|count=1|size=0-05l"
     },
     {
       "id": "tilbudsugen-11345782",
@@ -15659,7 +16041,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nivea|product=serum|variant=standard|count=1|size=0-03l"
     },
     {
       "id": "tilbudsugen-11345825",
@@ -15700,7 +16083,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=got2b|product=harpudder|variant=standard|count=1|size=0-01kg"
     },
     {
       "id": "tilbudsugen-11345740",
@@ -15739,7 +16123,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=man|product=eau-de-toilette|variant=standard|count=1|size=0-075l"
     },
     {
       "id": "tilbudsugen-11345781",
@@ -15778,7 +16163,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=nivea|product=serum|variant=standard|count=1|size=0-03l"
     },
     {
       "id": "tilbudsugen-11345739",
@@ -15817,7 +16203,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=idole|product=eau-de-parfum|variant=standard|count=1|size=0-025l"
     },
     {
       "id": "tilbudsugen-11345774",
@@ -15856,7 +16243,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sanzi-beauty|product=oejenvippeserum|variant=standard|count=1|size=0-005l"
     },
     {
       "id": "tilbudsugen-11345797",
@@ -15900,7 +16288,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=comfort|product=bleer-str-3-5|variant=standard|count=1|size=129stk"
     },
     {
       "id": "tilbudsugen-11345799",
@@ -15944,7 +16333,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=comfort|product=bleer-str-4-7|variant=standard|count=1|size=111stk"
     },
     {
       "id": "tilbudsugen-11345811",
@@ -15991,7 +16381,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=touch|product=bleer-str-1-2|variant=standard|count=3|size=22stk"
     },
     {
       "id": "tilbudsugen-11345800",
@@ -16035,7 +16426,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=comfort|product=bleer-str-5-9|variant=standard|count=1|size=102stk"
     },
     {
       "id": "tilbudsugen-11345817",
@@ -16082,7 +16474,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=touch|product=bleer-str-2-3|variant=standard|count=2|size=32stk"
     },
     {
       "id": "tilbudsugen-11345803",
@@ -16126,7 +16519,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=up-go|product=bleer-str-4-pants-7|variant=standard|count=1|size=99stk"
     },
     {
       "id": "tilbudsugen-11345801",
@@ -16170,7 +16564,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=comfort|product=bleer-str-6-13|variant=standard|count=1|size=96stk"
     },
     {
       "id": "tilbudsugen-11345804",
@@ -16214,7 +16609,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=up-go|product=bleer-str-5-pants-9|variant=standard|count=1|size=87stk"
     },
     {
       "id": "tilbudsugen-11345802",
@@ -16258,7 +16654,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=comfort|product=bleer-str-7-16|variant=standard|count=1|size=84stk"
     },
     {
       "id": "tilbudsugen-11345805",
@@ -16302,7 +16699,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=up-go|product=bleer-str-6-pants-13|variant=standard|count=1|size=81stk"
     },
     {
       "id": "tilbudsugen-11345806",
@@ -16346,7 +16744,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=up-go|product=bleer-str-7-pants-16|variant=standard|count=1|size=72stk"
     },
     {
       "id": "tilbudsugen-11345807",
@@ -16390,7 +16789,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=up-go|product=bleer-str-8-pants-19|variant=standard|count=1|size=60stk"
     },
     {
       "id": "tilbudsugen-11345433",
@@ -16432,7 +16832,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=salling-oeko|product=smoothie|variant=oeko|count=1|size=0-09kg"
     },
     {
       "id": "tilbudsugen-11345808",
@@ -16476,7 +16877,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=libero|product=baby-bubble-bath|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11345810",
@@ -16520,7 +16922,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=libero|product=baby-wash-shampoo|variant=standard|count=1|size=0-2l"
     },
     {
       "id": "tilbudsugen-11346229",
@@ -16564,7 +16967,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=bibs|product=sut|variant=standard|count=2|size=2stk"
     },
     {
       "id": "tilbudsugen-11346315",
@@ -16605,7 +17009,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=udstiksforme|variant=standard|count=1|size=5stk"
     },
     {
       "id": "tilbudsugen-11346223",
@@ -16647,7 +17052,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=koekkenchef|product=bestik|variant=standard|count=1|size=65stk"
     },
     {
       "id": "tilbudsugen-11346213",
@@ -16688,7 +17094,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=rosti|product=skalesaet|variant=standard|count=1|size=6stk"
     },
     {
       "id": "tilbudsugen-11324333",
@@ -16727,7 +17134,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=jamie-oliver|product=gryde|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11314724",
@@ -16766,7 +17174,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=jamie-oliver|product=gryde|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11332241",
@@ -16805,7 +17214,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=jamie-oliver|product=gryde|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11346270",
@@ -16844,7 +17254,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=dekorationsler|variant=standard|count=1|size=2kg"
     },
     {
       "id": "tilbudsugen-11346325",
@@ -16883,7 +17294,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sco|product=cykellygtesaet|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11346323",
@@ -16922,7 +17334,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=sco|product=cykellygtesaet|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11347425",
@@ -16961,7 +17374,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=puma|product=t-shirt|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11347402",
@@ -17003,7 +17417,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=vrs-woman|product=trusser|variant=standard|count=4|size=2stk"
     },
     {
       "id": "tilbudsugen-11347396",
@@ -17042,7 +17457,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=vrs-woman|product=trusser|variant=standard|count=1|size=6stk"
     },
     {
       "id": "tilbudsugen-11347394",
@@ -17081,7 +17497,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=vrs-woman|product=bh|variant=standard|count=1|size=3stk"
     },
     {
       "id": "tilbudsugen-11332126",
@@ -17120,7 +17537,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=kuffertsaet|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11347456",
@@ -17161,7 +17579,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=blomsterloeg|variant=standard|count=1|size=3stk"
     },
     {
       "id": "tilbudsugen-11345896",
@@ -17200,7 +17619,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=buket|variant=standard|count=1|size=1stk"
     },
     {
       "id": "tilbudsugen-11347471",
@@ -17241,7 +17661,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=generic|product=planter|variant=standard|count=1|size=2stk"
     },
     {
       "id": "tilbudsugen-11346395",
@@ -17282,7 +17703,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=hot-wheels|product=biler|variant=standard|count=1|size=1stk"
     },
     {
       "id": "tilbudsugen-11345897",
@@ -17321,7 +17743,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=premium-heat|product=traepiller|variant=standard|count=1|size=15kg"
     },
     {
       "id": "tilbudsugen-11346017",
@@ -17364,7 +17787,8 @@
       "super_deal": false,
       "super_deal_rule": null,
       "super_deal_reason": null,
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00"
+      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
+      "normalized_product_key": "brand=dyrup|product=maling|variant=standard|count=1|size=9l"
     }
   ],
   "super_deal_count": 1,

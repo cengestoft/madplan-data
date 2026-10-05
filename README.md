@@ -243,3 +243,11 @@ Claude:
 - foreslår alternativer og bytter retter ud efter behov
 
 Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede og sammenlignelige data.
+
+
+## Referencepriser
+- `reference_prices.json`: estimerede normal-/referencepriser for 200 almindelige danske dagligvarer.
+- Bruges til budgettering, når en nødvendig vare ikke har en verificeret tilbudspris.
+- En gyldig verificeret tilbudspris har altid højere prioritet.
+- Referencepriser må ikke præsenteres som aktuelle butikpriser.
+- `claude_reference_prices.md`: instruktion til Claude om brug af referenceprisdatabasen.

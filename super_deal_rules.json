@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05T15:43:00+02:00",
+  "updated_at": "2026-10-05T17:04:00+02:00",
   "currency": "DKK",
   "applies_to": "all stores present in current_offers.json and next_week_offers.json",
   "rules": [
@@ -65,8 +65,10 @@
       "label": "Piskefløde",
       "active": true,
       "match": {
-        "category": "mejeri",
         "product_type": "whipping_cream",
+        "name_contains": [
+          "piskefløde"
+        ],
         "fat_pct_min": 36
       },
       "threshold": {
@@ -74,7 +76,8 @@
         "operator": "<=",
         "value": 25
       },
-      "equivalent": "500 ml <= 12,50 kr."
+      "equivalent": "500 ml <= 12,50 kr.",
+      "notes": "Match piskefløde by product/name, not by category, so a source-category error cannot hide the offer."
     },
     {
       "id": "dishwasher_tabs",

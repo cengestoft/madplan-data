@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-05T12:20:00+02:00",
+  "defaults": {
+    "servings": 4,
+    "family_friendly": true,
+    "spice_level": "mild"
+  },
+  "recipes": [
+    {
+      "id": "mild-bolognese-veg",
+      "name": "Mild grøntsagsbolognese",
+      "categories": [
+        "pasta",
+        "family",
+        "leftovers"
+      ],
+      "protein_type": "beef_or_pork",
+      "ingredients": [
+        {
+          "name": "hakket kød",
+          "category": "kød",
+          "amount": 0.4,
+          "unit": "kg",
+          "offer_match_terms": [
+            "hakket oksekød",
+            "hakket kalv og gris",
+            "hakket grisekød"
+          ]
+        },
+        {
+          "name": "gulerødder",
+          "category": "frugt_og_gront",
+          "amount": 0.3,
+          "unit": "kg",
+          "offer_match_terms": [
+            "gulerødder"
+          ]
+        },
+        {
+          "name": "løg",
+          "category": "frugt_og_gront",
+          "amount": 0.15,
+          "unit": "kg",
+          "offer_match_terms": [
+            "løg",
+            "rødløg"
+          ]
+        },
+        {
+          "name": "tomat",
+          "category": "kolonial",
+          "amount": 2,
+          "unit": "dåse",
+          "offer_match_terms": [
+            "hakkede tomater",
+            "tomater"
+          ]
+        },
+        {
+          "name": "pasta",
+          "category": "pasta_ris_korn",
+          "amount": 0.4,
+          "unit": "kg",
+          "offer_match_terms": [
+            "pasta"
+          ]
+        }
+      ],
+      "attributes": {
+        "vegetable_level": "high",
+        "freezer_friendly": true,
+        "leftover_friendly": true,
+        "weekday_easy": true
+      }
+    },
+    {
+      "id": "oven-chicken-veg",
+      "name": "Ovnbagt kylling med kartofler og grønt",
+      "categories": [
+        "oven",
+        "family",
+        "easy"
+      ],
+      "protein_type": "chicken",
+      "ingredients": [
+        {
+          "name": "kylling",
+          "category": "fjerkræ",
+          "amount": 0.7,
+          "unit": "kg",
+          "offer_match_terms": [
+            "kyllingebryst",
+            "kyllingeinderfilet",
+            "kyllingeoverlår",
+            "kyllingeunderlår",
+            "hel kylling"
+          ]
+        },
+        {
+          "name": "kartofler",
+          "category": "frugt_og_gront",
+          "amount": 1,
+          "unit": "kg",
+          "offer_match_terms": [
+            "kartofler"
+          ]
+        },
+        {
+          "name": "broccoli",
+          "category": "frugt_og_gront",
+          "amount": 1,
+          "unit": "stk",
+          "offer_match_terms": [
+            "broccoli"
+          ]
+        },
+        {
+          "name": "gulerødder",
+          "category": "frugt_og_gront",
+          "amount": 0.3,
+          "unit": "kg",
+          "offer_match_terms": [
+            "gulerødder"
+          ]
+        }
+      ],
+      "attributes": {
+        "vegetable_level": "high",
+        "freezer_friendly": false,
+        "leftover_friendly": true,
+        "weekday_easy": true
+      }
+    },
+    {
+      "id": "fish-potatoes-peas",
+      "name": "Fisk med kartofler, ærter og gulerødder",
+      "categories": [
+        "fish",
+        "family",
+        "classic"
+      ],
+      "protein_type": "fish",
+      "ingredients": [
+        {
+          "name": "fiskefileter",
+          "category": "fisk",
+          "amount": 0.6,
+          "unit": "kg",
+          "offer_match_terms": [
+            "rødspætte",
+            "kulmule",
+            "laks",
+            "fiskefileter"
+          ]
+        },
+        {
+          "name": "kartofler",
+          "category": "frugt_og_gront",
+          "amount": 1,
+          "unit": "kg",
+          "offer_match_terms": [
+            "kartofler"
+          ]
+        },
+        {
+          "name": "gulerødder",
+          "category": "frugt_og_gront",
+          "amount": 0.3,
+          "unit": "kg",
+          "offer_match_terms": [
+            "gulerødder"
+          ]
+        },
+        {
+          "name": "ærter",
+          "category": "frost",
+          "amount": 0.3,
+          "unit": "kg",
+          "offer_match_terms": [
+            "ærter"
+          ]
+        }
+      ],
+      "attributes": {
+        "vegetable_level": "medium",
+        "freezer_friendly": false,
+        "leftover_friendly": false,
+        "weekday_easy": true
+      }
+    },
+    {
+      "id": "falafel-bowl",
+      "name": "Falafel-bowl med couscous og grønt",
+      "categories": [
+        "vegetarian",
+        "bowl",
+        "family"
+      ],
+      "protein_type": "vegetarian",
+      "ingredients": [
+        {
+          "name": "falafel",
+          "category": "vegetar",
+          "amount": 0.4,
+          "unit": "kg",
+          "offer_match_terms": [
+            "falafel"
+          ]
+        },
+        {
+          "name": "couscous",
+          "category": "pasta_ris_korn",
+          "amount": 0.3,
+          "unit": "kg",
+          "offer_match_terms": [
+            "couscous"
+          ]
+        },
+        {
+          "name": "agurk",
+          "category": "frugt_og_gront",
+          "amount": 1,
+          "unit": "stk",
+          "offer_match_terms": [
+            "agurk"
+          ]
+        },
+        {
+          "name": "tomater",
+          "category": "frugt_og_gront",
+          "amount": 0.4,
+          "unit": "kg",
+          "offer_match_terms": [
+            "tomater"
+          ]
+        },
+        {
+          "name": "gulerødder",
+          "category": "frugt_og_gront",
+          "amount": 0.25,
+          "unit": "kg",
+          "offer_match_terms": [
+            "gulerødder"
+          ]
+        }
+      ],
+      "attributes": {
+        "vegetable_level": "high",
+        "freezer_friendly": false,
+        "leftover_friendly": true,
+        "weekday_easy": true
+      }
+    },
+    {
+      "id": "chicken-wraps-leftovers",
+      "name": "Kyllingewraps med sprødt grønt",
+      "categories": [
+        "wraps",
+        "leftovers",
+        "family"
+      ],
+      "protein_type": "chicken",
+      "ingredients": [
+        {
+          "name": "tilberedt kylling",
+          "category": "fjerkræ",
+          "amount": 0.4,
+          "unit": "kg",
+          "offer_match_terms": [
+            "kylling"
+          ]
+        },
+        {
+          "name": "wraps",
+          "category": "brød",
+          "amount": 8,
+          "unit": "stk",
+          "offer_match_terms": [
+            "wraps",
+            "tortilla"
+          ]
+        },
+        {
+          "name": "spidskål",
+          "category": "frugt_og_gront",
+          "amount": 0.4,
+          "unit": "kg",
+          "offer_match_terms": [
+            "spidskål",
+            "kålsalat"
+          ]
+        },
+        {
+          "name": "gulerødder",
+          "category": "frugt_og_gront",
+          "amount": 0.2,
+          "unit": "kg",
+          "offer_match_terms": [
+            "gulerødder"
+          ]
+        },
+        {
+          "name": "yoghurt",
+          "category": "mejeri",
+          "amount": 0.3,
+          "unit": "kg",
+          "offer_match_terms": [
+            "yoghurt",
+            "skyr"
+          ]
+        }
+      ],
+      "attributes": {
+        "vegetable_level": "high",
+        "freezer_friendly": false,
+        "leftover_friendly": true,
+        "weekday_easy": true
+      }
+    },
+    {
+      "id": "pumpkin-soup",
+      "name": "Hokkaidosuppe med brød",
+      "categories": [
+        "vegetarian",
+        "soup",
+        "seasonal"
+      ],
+      "protein_type": "vegetarian",
+      "ingredients": [
+        {
+          "name": "hokkaido",
+          "category": "frugt_og_gront",
+          "amount": 1,
+          "unit": "stk",
+          "offer_match_terms": [
+            "hokkaido",
+            "græskar"
+          ]
+        },
+        {
+          "name": "løg",
+          "category": "frugt_og_gront",
+          "amount": 0.15,
+          "unit": "kg",
+          "offer_match_terms": [
+            "løg",
+            "rødløg"
+          ]
+        },
+        {
+          "name": "gulerødder",
+          "category": "frugt_og_gront",
+          "amount": 0.2,
+          "unit": "kg",
+          "offer_match_terms": [
+            "gulerødder"
+          ]
+        },
+        {
+          "name": "brød",
+          "category": "brød",
+          "amount": 1,
+          "unit": "stk",
+          "offer_match_terms": [
+            "brød",
+            "franskbrød",
+            "rugbrød"
+          ]
+        }
+      ],
+      "attributes": {
+        "vegetable_level": "high",
+        "freezer_friendly": true,
+        "leftover_friendly": true,
+        "weekday_easy": true
+      }
+    }
+  ],
+  "matching_rules": {
+    "prefer_recipes_with_multiple_current_offer_matches": true,
+    "prefer_reuse_of_same_ingredient_across_recipes": true,
+    "prefer_recipes_using_pantry_inventory": true,
+    "penalize_recipes_requiring_many_non_offer_specialty_items": true,
+    "never_assume_a_match_without_name_or_category_evidence": true
+  }
+}

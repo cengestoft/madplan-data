@@ -14,13 +14,14 @@ Dette er den eneste kanoniske implementeringsfil for Superkøb. Hvis andre ældr
 
 ## Autoritative filer
 
-- current_offers.json: aktuelle tilbud.
+- current_offers.json: letvægtsindeks over alle aktuelle tilbud med pris, pakning, gyldighed, kategori og normalized_product_key. Fuld kilde-/billedmetadata ligger i stores/*.json.
 - current_offers.previous.json: seneste publicerede snapshot før nuværende.
 - import_status.json: skal genereres ud fra samme tilbud som current_offers.json.
 - super_deal_rules.json: centrale Supertilbud-regler.
 - super_deals_current.json: kanonisk feed til Supertilbud-fanen.
 - data_quality_errors.json: poster der kræver kontrol.
-- monthly_price_history.json: aggregeret historik fra data vi må publicere.
+- monthly_price_history.json: kanonisk aggregeret historik fra data vi må publicere, én række pr. normalized_product_key + butik + måned.
+- price_history.json: lille manifest, ikke rå historik.
 - data_sources/dagligepriser_manifest.json: kilde-/rettighedsstatus for dagligepriser.dk.
 
 ## Normaliseret produktidentitet
@@ -111,3 +112,7 @@ CI skal køre tests ved data-/pipelineændringer.
 ## Arbejdsregel
 
 Datakvalitet og sporbarhed har prioritet over flere features. Nye scripts skal genbruge product_normalization.py og validation-funktionerne, så frontend, aktuelle tilbud og historik ikke udvikler hver sin produktidentitet.
+
+### Bevar rige butiksposter
+
+Pipeline må ikke erstatte poster i `stores/*.json` med det lettere `current_offers.json`-indeks. Butikfiler normaliseres i place, så kilde-URL, billeder og øvrig dokumentation bevares.

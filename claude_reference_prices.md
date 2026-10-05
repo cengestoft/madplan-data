@@ -86,3 +86,23 @@ Continue using:
 README.md remains the primary system documentation.
 
 Goal: produce complete, realistic meal plans and shopping lists even when only some ingredients are on offer.
+
+
+## Automatic refresh
+
+`reference_prices.json` is updated automatically every Monday at 06:00 Europe/Copenhagen.
+
+Before creating a new meal plan, shopping budget, or normal-price comparison:
+1. fetch the latest `reference_prices.json` from GitHub
+2. do not rely on a cached local copy if fresh GitHub data is available
+3. read `updated_at`, `previous_reference_price_dkk`, `change_percent`, `source_count`, and `confidence` when present
+
+A reference price may only be changed when there is a reasonable current evidence base. If not, retain the previous value.
+
+Historical reference-price snapshots are stored in:
+`reference_price_history.json`
+
+Use that history for trend context, but use `price_history.json` for verified offer-history claims.
+
+Priority remains:
+verified current offer > verified future offer valid for target date > verified store-specific price > current reference price estimate.

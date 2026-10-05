@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05T17:04:00+02:00",
+  "updated_at": "2026-10-05T20:15:00+02:00",
   "currency": "DKK",
   "applies_to": "all stores present in current_offers.json and next_week_offers.json",
   "rules": [
@@ -12,14 +12,21 @@
         "category": "drikkevarer",
         "product_type": "cola",
         "container": "can",
-        "package_count": 24
+        "package_count": 24,
+        "allowed_brands": [
+          "Coca Cola",
+          "Coca-Cola",
+          "Pepsi",
+          "Pepsi Max",
+          "Fanta"
+        ]
       },
       "threshold": {
         "metric": "package_price_dkk",
         "operator": "<",
         "value": 69
       },
-      "notes": "Pant må ikke indgå i price_dkk."
+      "notes": "Pant må ikke indgå i price_dkk. Only these soda brands qualify; unrelated products containing 'cola' must not match."
     },
     {
       "id": "cola_large_bottle",
@@ -30,14 +37,21 @@
         "product_type": "cola",
         "container": "bottle",
         "volume_l_min": 1.5,
-        "volume_l_max": 2
+        "volume_l_max": 2,
+        "allowed_brands": [
+          "Coca Cola",
+          "Coca-Cola",
+          "Pepsi",
+          "Pepsi Max",
+          "Fanta"
+        ]
       },
       "threshold": {
         "metric": "unit_price_dkk_per_l",
         "operator": "<",
         "value": 11
       },
-      "notes": "Gælder både 1,5 L og 2 L. Pant holdes separat."
+      "notes": "Gælder både 1,5 L og 2 L. Pant holdes separat. Only these soda brands qualify; unrelated products containing 'cola' must not match."
     },
     {
       "id": "real_butter",
@@ -51,14 +65,15 @@
           "blandingsprodukt",
           "spread",
           "Kærgården"
-        ]
+        ],
+        "require_product_type": "butter"
       },
       "threshold": {
         "metric": "unit_price_dkk_per_kg",
         "operator": "<=",
         "value": 40
       },
-      "notes": "Kun rigtigt smør. Smørbar/blandingsprodukter må ikke matche."
+      "notes": "Kun egentlige smørprodukter med product_type=butter. Smørbar/blandingsprodukter og andre varer med ordet 'smør' i navnet må ikke matche."
     },
     {
       "id": "whipping_cream",

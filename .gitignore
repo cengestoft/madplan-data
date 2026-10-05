@@ -1,0 +1,7 @@
+# Large/raw imports must never be committed
+latest-canonical.json
+latest-canonical.json.gz
+data/raw/
+data/private/
+data/history/raw/
+*.ndjson.raw

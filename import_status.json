@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T17:04:00+02:00",
+  "generated_at": "2026-10-05T22:29:00+02:00",
   "current_total": 5184,
   "counts": {
     "REMA 1000": 305,
@@ -112,6 +112,18 @@
   },
   "notes": [
     "ABC broad-search candidates: 107; verified active ABC Videbæk offers: 0.",
-    "Piskefløde entries in store data are normalized to category 'mejeri' and food_relevance 'high'."
-  ]
+    "Piskefløde entries in store data are normalized to category 'mejeri' and food_relevance 'high'.",
+    "Publication guard: PASS — current offers and import_status both contain 5,184 active offers; 0 hard data-quality errors."
+  ],
+  "publication_guard": {
+    "status": "pass",
+    "current_offer_count": 5184,
+    "previous_offer_count": 5184,
+    "hard_error_count": 0,
+    "hard_error_rate": 0,
+    "blocks_empty_import": true,
+    "blocks_drop_over_pct": 25,
+    "blocks_hard_error_rate_over_pct": 10,
+    "previous_snapshot": "current_offers.previous.json"
+  }
 }

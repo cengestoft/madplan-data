@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-10-05T22:29:00+02:00",
+  "branch": "chatgpt/data-pipeline-v2",
+  "passed": 13,
+  "total": 13,
+  "all_pass": true,
+  "results": [
+    {
+      "id": 1,
+      "name": "Coca-Cola 24x33 cl under threshold becomes Supertilbud",
+      "status": "PASS",
+      "detail": "Canonical feed contains a cola_24_cans offer below 69 DKK."
+    },
+    {
+      "id": 2,
+      "name": "Corny is not matched as Coca-Cola",
+      "status": "PASS",
+      "detail": "0 Corny records in canonical Supertilbud feed."
+    },
+    {
+      "id": 3,
+      "name": "Piskefløde categorized as mejeri",
+      "status": "PASS",
+      "detail": "6/6 current piskefløde offers are mejeri."
+    },
+    {
+      "id": 4,
+      "name": "ABC default location is Videbæk",
+      "status": "PASS",
+      "detail": "store_preferences and import_status resolve ABC Lavpris to Videbæk."
+    },
+    {
+      "id": 5,
+      "name": "No expired offers in current index",
+      "status": "PASS",
+      "detail": "0 current rows expired on 2026-10-05."
+    },
+    {
+      "id": 6,
+      "name": "No duplicate current offers",
+      "status": "PASS",
+      "detail": "0 duplicate identities using store+location+key+price+validity+member flag."
+    },
+    {
+      "id": 7,
+      "name": "import_status matches current_offers",
+      "status": "PASS",
+      "detail": "5,184 current rows; status total 5,184; per-store sum 5,184."
+    },
+    {
+      "id": 8,
+      "name": "Unit price calculation",
+      "status": "PASS",
+      "detail": "59 DKK / 7.92 L = 7.4495 DKK/L."
+    },
+    {
+      "id": 9,
+      "name": "Historic low gets stronger deal score",
+      "status": "PASS",
+      "detail": "Synthetic low-price score exceeds high-price score."
+    },
+    {
+      "id": 10,
+      "name": "Bad/empty imports are blocked",
+      "status": "PASS",
+      "detail": "Guard blocks empty imports, >25% count drops and >10% hard-error rate."
+    },
+    {
+      "id": 11,
+      "name": "All current/history rows have normalized_product_key",
+      "status": "PASS",
+      "detail": "5,184/5,184 current; 4,958/4,958 monthly history."
+    },
+    {
+      "id": 12,
+      "name": "No hard data-quality errors",
+      "status": "PASS",
+      "detail": "hard_error_count=0."
+    },
+    {
+      "id": 13,
+      "name": "History is aggregated and raw history is not in Git",
+      "status": "PASS",
+      "detail": "price_history.json is manifest; monthly_price_history.json has 4,958 aggregate rows; raw_history_in_git=false."
+    }
+  ],
+  "automation": {
+    "workflow": ".github/workflows/data-quality.yml",
+    "tests": "tests/test_data_acceptance.py",
+    "behavior": "Validation only; CI does not write or commit data."
+  },
+  "note": "GitHub-hosted workflow runs were queued without an assigned runner during migration. The same acceptance conditions were evaluated directly against branch data; CI remains installed for future pushes/PRs."
+}

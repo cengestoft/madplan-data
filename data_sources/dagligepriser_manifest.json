@@ -16,5 +16,11 @@
     "spar": 15192
   },
   "contains_nonfood": true,
-  "current_prices_not_necessarily_fresh": true
+  "current_prices_not_necessarily_fresh": true,
+  "redistribution_status": "unresolved",
+  "code_license": "MIT",
+  "data_license": null,
+  "public_derived_dataset_allowed": false,
+  "rights_reviewed_at": "2026-10-05",
+  "rights_note": "Raw feed is publicly downloadable and the source code is MIT, but no separate data redistribution license was found. Public derived dataset publication remains blocked pending explicit permission."
 }

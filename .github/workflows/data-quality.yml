@@ -1,0 +1,41 @@
+name: Superkøb data quality
+
+on:
+  push:
+    paths:
+      - ".github/workflows/data-quality.yml"
+      - "current_offers.json"
+      - "import_status.json"
+      - "monthly_price_history.json"
+      - "price_history.json"
+      - "super_deals_current.json"
+      - "store_preferences.json"
+      - "data_quality_errors.json"
+      - "scripts/**"
+      - "tests/**"
+  pull_request:
+    paths:
+      - "current_offers.json"
+      - "import_status.json"
+      - "monthly_price_history.json"
+      - "price_history.json"
+      - "scripts/**"
+      - "tests/**"
+
+permissions:
+  contents: read
+
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python syntax check
+        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py
+      - name: Run acceptance tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate pipeline without writing
+        run: python scripts/build_data_pipeline.py

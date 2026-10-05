@@ -15,7 +15,8 @@ import argparse, json, re
 from pathlib import Path
 from datetime import datetime
 
-COLA_BRANDS = ("coca cola", "coca-cola")\nCOLA_EXCLUDE = ("zero", "light", "pepsi", "fanta")
+COLA_BRANDS = ("coca cola", "coca-cola")
+COLA_EXCLUDE = ("zero", "light", "pepsi", "fanta")
 
 def low(v):
     return str(v or "").lower()

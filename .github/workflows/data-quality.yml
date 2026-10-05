@@ -1,0 +1,32 @@
+name: Superkøb data quality
+
+on:
+  push:
+    paths:
+      - "current_offers.json"
+      - "current_offers.previous.json"
+      - "import_status.json"
+      - "price_history.json"
+      - "monthly_price_history.json"
+      - "super_deals_current.json"
+      - "store_preferences.json"
+      - "scripts/**"
+      - "tests/**"
+  pull_request:
+    paths:
+      - "current_offers.json"
+      - "import_status.json"
+      - "price_history.json"
+      - "monthly_price_history.json"
+      - "scripts/**"
+      - "tests/**"
+
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -v

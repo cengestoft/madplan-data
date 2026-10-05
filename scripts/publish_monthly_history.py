@@ -78,7 +78,7 @@ def choose_key(p,h):
         if cb and hb==cb: score+=.15
         scored.append((score,ck))
     scored.sort(reverse=True)
-    if scored and scored[0][0]>=.65 and (len(scored)==1 or scored[0][0]-scored[1][0]>=.03):
+    if scored and scored[0][0]>=.60 and (len(scored)==1 or scored[0][0]-scored[1][0]>=.02):
         KEY_CACHE[ck]=scored[0][1]; return KEY_CACHE[ck]
     KEY_CACHE[ck]=k; return k
 

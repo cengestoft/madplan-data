@@ -44,7 +44,11 @@
       "package_count": 1,
       "single_package_amount": 6,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341785",
@@ -81,7 +85,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 13
+      "single_package_price_dkk": 13,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341578",
@@ -118,7 +126,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 13
+      "single_package_price_dkk": 13,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341647",
@@ -156,7 +168,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 10
+      "single_package_price_dkk": 10,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342105",
@@ -191,7 +207,11 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 28
+      "single_package_price_dkk": 28,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341569",
@@ -228,7 +248,11 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 28
+      "single_package_price_dkk": 28,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341563",
@@ -266,7 +290,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341559",
@@ -303,7 +331,11 @@
       "package_count": 1,
       "single_package_amount": 1.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 21
+      "single_package_price_dkk": 21,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341648",
@@ -341,7 +373,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342107",
@@ -378,7 +414,11 @@
       "package_count": 1,
       "single_package_amount": 0.65,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341567",
@@ -416,7 +456,11 @@
       "package_count": 1,
       "single_package_amount": 0.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341570",
@@ -454,7 +498,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342108",
@@ -489,7 +537,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341577",
@@ -527,7 +579,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 17
+      "single_package_price_dkk": 17,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342143",
@@ -562,7 +618,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341618",
@@ -597,7 +657,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341620",
@@ -632,7 +696,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352439",
@@ -670,7 +738,11 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341582",
@@ -708,7 +780,11 @@
       "package_count": 1,
       "single_package_amount": 1.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341791",
@@ -746,7 +822,11 @@
       "package_count": 1,
       "single_package_amount": 0.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341722",
@@ -784,7 +864,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341792",
@@ -823,7 +907,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341790",
@@ -861,7 +949,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328642",
@@ -899,7 +991,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 79
+      "single_package_price_dkk": 79,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328860",
@@ -937,7 +1033,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 79
+      "single_package_price_dkk": 79,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341876",
@@ -975,7 +1075,11 @@
       "package_count": 1,
       "single_package_amount": 0.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341529",
@@ -1013,7 +1117,11 @@
       "package_count": 1,
       "single_package_amount": 0.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341583",
@@ -1051,7 +1159,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342111",
@@ -1089,7 +1201,11 @@
       "package_count": 1,
       "single_package_amount": 1.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 115
+      "single_package_price_dkk": 115,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341784",
@@ -1126,7 +1242,11 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352643",
@@ -1163,7 +1283,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341783",
@@ -1200,7 +1324,11 @@
       "package_count": 1,
       "single_package_amount": 1.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328861",
@@ -1237,7 +1365,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 79
+      "single_package_price_dkk": 79,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341782",
@@ -1275,7 +1407,11 @@
       "package_count": 1,
       "single_package_amount": 1.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341779",
@@ -1312,7 +1448,11 @@
       "package_count": 1,
       "single_package_amount": 1.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341781",
@@ -1349,7 +1489,11 @@
       "package_count": 1,
       "single_package_amount": 1.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342122",
@@ -1386,7 +1530,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341778",
@@ -1423,7 +1571,11 @@
       "package_count": 1,
       "single_package_amount": 1.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341777",
@@ -1460,7 +1612,11 @@
       "package_count": 1,
       "single_package_amount": 1.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341780",
@@ -1497,7 +1653,11 @@
       "package_count": 1,
       "single_package_amount": 1.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341571",
@@ -1532,7 +1692,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341776",
@@ -1569,7 +1733,11 @@
       "package_count": 1,
       "single_package_amount": 1.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341787",
@@ -1609,7 +1777,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341572",
@@ -1647,7 +1819,11 @@
       "package_count": 1,
       "single_package_amount": 0.9,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341560",
@@ -1684,7 +1860,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55
+      "single_package_price_dkk": 55,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341580",
@@ -1724,7 +1904,11 @@
       "package_count": 1,
       "single_package_amount": 0.22,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342123",
@@ -1761,7 +1945,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341573",
@@ -1798,7 +1986,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75
+      "single_package_price_dkk": 75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341575",
@@ -1835,7 +2027,11 @@
       "package_count": 1,
       "single_package_amount": 0.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341775",
@@ -1872,7 +2068,11 @@
       "package_count": 1,
       "single_package_amount": 0.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342109",
@@ -1909,7 +2109,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 134.96
+      "single_package_price_dkk": 134.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342117",
@@ -1946,7 +2150,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 134.96
+      "single_package_price_dkk": 134.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341574",
@@ -1981,7 +2189,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341774",
@@ -2016,7 +2228,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342120",
@@ -2051,7 +2267,11 @@
       "package_count": 1,
       "single_package_amount": 0.18,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342121",
@@ -2086,7 +2306,11 @@
       "package_count": 1,
       "single_package_amount": 0.18,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342119",
@@ -2121,7 +2345,11 @@
       "package_count": 1,
       "single_package_amount": 0.18,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342118",
@@ -2158,7 +2386,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 179.95
+      "single_package_price_dkk": 179.95,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342116",
@@ -2195,7 +2427,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 251.96
+      "single_package_price_dkk": 251.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341812",
@@ -2234,7 +2470,11 @@
       "package_count": 1,
       "single_package_amount": 0.23,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341584",
@@ -2271,7 +2511,11 @@
       "package_count": 1,
       "single_package_amount": 0.225,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341793",
@@ -2308,7 +2552,11 @@
       "package_count": 1,
       "single_package_amount": 0.225,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341794",
@@ -2345,7 +2593,11 @@
       "package_count": 1,
       "single_package_amount": 0.225,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342097",
@@ -2380,7 +2632,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341604",
@@ -2419,7 +2675,11 @@
       "package_count": 1,
       "single_package_amount": 0.1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341600",
@@ -2456,7 +2716,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341601",
@@ -2491,7 +2755,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341810",
@@ -2526,7 +2794,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341754",
@@ -2564,7 +2836,11 @@
       "package_count": 1,
       "single_package_amount": 0.09,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341589",
@@ -2601,7 +2877,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341796",
@@ -2638,7 +2918,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341753",
@@ -2676,7 +2960,11 @@
       "package_count": 1,
       "single_package_amount": 0.08,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341752",
@@ -2714,7 +3002,11 @@
       "package_count": 1,
       "single_package_amount": 0.07,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341554",
@@ -2752,7 +3044,11 @@
       "package_count": 1,
       "single_package_amount": 0.07,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341619",
@@ -2787,7 +3083,11 @@
       "package_count": 1,
       "single_package_amount": 0.1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341568",
@@ -2825,7 +3125,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341773",
@@ -2863,7 +3167,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341772",
@@ -2901,7 +3209,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341897",
@@ -2940,7 +3252,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341898",
@@ -2979,7 +3295,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341663",
@@ -3018,7 +3338,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341720",
@@ -3057,7 +3381,11 @@
       "package_count": 1,
       "single_package_amount": 0.95,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341528",
@@ -3096,7 +3424,11 @@
       "package_count": 1,
       "single_package_amount": 0.95,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341886",
@@ -3135,7 +3467,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341656",
@@ -3173,7 +3509,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341887",
@@ -3211,7 +3551,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341660",
@@ -3250,7 +3594,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341659",
@@ -3289,7 +3637,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341890",
@@ -3328,7 +3680,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341561",
@@ -3368,7 +3724,11 @@
       "single_package_amount": 0.5,
       "single_package_unit": "l",
       "single_package_price_dkk": 20,
-      "product_type": "whipping_cream"
+      "product_type": "whipping_cream",
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341891",
@@ -3407,7 +3767,11 @@
       "package_count": 1,
       "single_package_amount": 0.17,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341892",
@@ -3446,7 +3810,11 @@
       "package_count": 1,
       "single_package_amount": 0.17,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352655",
@@ -3485,7 +3853,11 @@
       "package_count": 1,
       "single_package_amount": 0.585,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342131",
@@ -3524,7 +3896,11 @@
       "package_count": 1,
       "single_package_amount": 0.585,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341751",
@@ -3561,7 +3937,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341899",
@@ -3596,7 +3976,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341750",
@@ -3633,7 +4017,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342101",
@@ -3668,7 +4056,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341896",
@@ -3707,7 +4099,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341895",
@@ -3746,7 +4142,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341553",
@@ -3783,7 +4183,11 @@
       "package_count": 1,
       "single_package_amount": 0.125,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341662",
@@ -3822,7 +4226,11 @@
       "package_count": 1,
       "single_package_amount": 0.18,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341664",
@@ -3857,7 +4265,11 @@
       "package_count": 1,
       "single_package_amount": 0.12,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341893",
@@ -3892,7 +4304,11 @@
       "package_count": 1,
       "single_package_amount": 0.22,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342100",
@@ -3927,7 +4343,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341661",
@@ -3962,7 +4382,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341894",
@@ -3999,7 +4423,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341603",
@@ -4034,7 +4462,11 @@
       "package_count": 1,
       "single_package_amount": 15,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 36
+      "single_package_price_dkk": 36,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341853",
@@ -4072,7 +4504,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 7
+      "single_package_price_dkk": 7,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341852",
@@ -4110,7 +4546,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 7
+      "single_package_price_dkk": 7,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342126",
@@ -4151,7 +4591,11 @@
       "single_package_price_dkk": 3.29,
       "product_type": "cola",
       "container": "can",
-      "volume_l": 0.33
+      "volume_l": 0.33,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342127",
@@ -4191,7 +4635,11 @@
       "single_package_price_dkk": 3.29,
       "product_type": "cola",
       "container": "can",
-      "volume_l": 0.33
+      "volume_l": 0.33,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328871",
@@ -4233,7 +4681,11 @@
       "single_package_price_dkk": 4,
       "product_type": "cola",
       "container": null,
-      "volume_l": 0.33
+      "volume_l": 0.33,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328874",
@@ -4272,7 +4724,11 @@
       "package_count": 20,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 4
+      "single_package_price_dkk": 4,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341844",
@@ -4309,7 +4765,11 @@
       "package_count": 1,
       "single_package_amount": 1.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 19
+      "single_package_price_dkk": 19,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341846",
@@ -4350,7 +4810,11 @@
       "single_package_price_dkk": 19,
       "product_type": "cola",
       "container": "bottle",
-      "volume_l": 1.5
+      "volume_l": 1.5,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341845",
@@ -4391,7 +4855,11 @@
       "single_package_price_dkk": 19,
       "product_type": "cola",
       "container": "bottle",
-      "volume_l": 1.5
+      "volume_l": 1.5,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341624",
@@ -4429,7 +4897,11 @@
       "package_count": 1,
       "single_package_amount": 1.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 19
+      "single_package_price_dkk": 19,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341927",
@@ -4467,7 +4939,11 @@
       "package_count": 8,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 9.88
+      "single_package_price_dkk": 9.88,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328872",
@@ -4505,7 +4981,11 @@
       "package_count": 8,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 10
+      "single_package_price_dkk": 10,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341850",
@@ -4542,7 +5022,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341626",
@@ -4580,7 +5064,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341851",
@@ -4617,7 +5105,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341849",
@@ -4654,7 +5146,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342082",
@@ -4692,7 +5188,11 @@
       "package_count": 1,
       "single_package_amount": 17,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342083",
@@ -4730,7 +5230,11 @@
       "package_count": 1,
       "single_package_amount": 17,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328643",
@@ -4768,7 +5272,11 @@
       "package_count": 1,
       "single_package_amount": 10,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328863",
@@ -4807,7 +5315,11 @@
       "package_count": 1,
       "single_package_amount": 10,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328865",
@@ -4845,7 +5357,11 @@
       "package_count": 1,
       "single_package_amount": 10,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328862",
@@ -4883,7 +5399,11 @@
       "package_count": 1,
       "single_package_amount": 10,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328864",
@@ -4921,7 +5441,11 @@
       "package_count": 1,
       "single_package_amount": 10,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341860",
@@ -4956,7 +5480,11 @@
       "package_count": 1,
       "single_package_amount": 8,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341858",
@@ -4993,7 +5521,11 @@
       "package_count": 1,
       "single_package_amount": 8,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341859",
@@ -5028,7 +5560,11 @@
       "package_count": 1,
       "single_package_amount": 8,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341630",
@@ -5065,7 +5601,11 @@
       "package_count": 1,
       "single_package_amount": 8,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341530",
@@ -5102,7 +5642,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342086",
@@ -5140,7 +5684,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341724",
@@ -5177,7 +5725,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341725",
@@ -5214,7 +5766,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342087",
@@ -5253,7 +5809,11 @@
       "package_count": 1,
       "single_package_amount": 0.45,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341723",
@@ -5290,7 +5850,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341861",
@@ -5327,7 +5891,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75
+      "single_package_price_dkk": 75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341631",
@@ -5364,7 +5932,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75
+      "single_package_price_dkk": 75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342085",
@@ -5403,7 +5975,11 @@
       "package_count": 1,
       "single_package_amount": 0.35,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341862",
@@ -5440,7 +6016,11 @@
       "package_count": 1,
       "single_package_amount": 0.24,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75
+      "single_package_price_dkk": 75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341863",
@@ -5477,7 +6057,11 @@
       "package_count": 1,
       "single_package_amount": 0.24,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75
+      "single_package_price_dkk": 75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342080",
@@ -5515,7 +6099,11 @@
       "package_count": 1,
       "single_package_amount": 0.08,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342081",
@@ -5553,7 +6141,11 @@
       "package_count": 1,
       "single_package_amount": 0.08,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341627",
@@ -5590,7 +6182,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 7
+      "single_package_price_dkk": 7,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341628",
@@ -5627,7 +6223,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341855",
@@ -5664,7 +6264,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341854",
@@ -5701,7 +6305,11 @@
       "package_count": 1,
       "single_package_amount": 0.85,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328858",
@@ -5739,7 +6347,11 @@
       "package_count": 1,
       "single_package_amount": 0.85,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328641",
@@ -5777,7 +6389,11 @@
       "package_count": 1,
       "single_package_amount": 0.85,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328859",
@@ -5815,7 +6431,11 @@
       "package_count": 1,
       "single_package_amount": 0.85,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341857",
@@ -5852,7 +6472,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341856",
@@ -5889,7 +6513,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341629",
@@ -5926,7 +6554,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341928",
@@ -5963,7 +6595,11 @@
       "package_count": 12,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 6.58
+      "single_package_price_dkk": 6.58,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328742",
@@ -5998,7 +6634,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 8
+      "single_package_price_dkk": 8,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329032",
@@ -6033,7 +6673,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 8
+      "single_package_price_dkk": 8,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341842",
@@ -6070,7 +6714,11 @@
       "package_count": 1,
       "single_package_amount": 0.275,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341843",
@@ -6107,7 +6755,11 @@
       "package_count": 1,
       "single_package_amount": 0.275,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341841",
@@ -6144,7 +6796,11 @@
       "package_count": 1,
       "single_package_amount": 0.275,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341623",
@@ -6181,7 +6837,11 @@
       "package_count": 1,
       "single_package_amount": 0.275,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328726",
@@ -6216,7 +6876,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329020",
@@ -6251,7 +6915,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329021",
@@ -6286,7 +6954,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329019",
@@ -6321,7 +6993,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341609",
@@ -6356,7 +7032,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329054",
@@ -6391,7 +7071,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329055",
@@ -6426,7 +7110,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328751",
@@ -6461,7 +7149,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329053",
@@ -6496,7 +7188,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329052",
@@ -6531,7 +7227,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341818",
@@ -6566,7 +7266,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341820",
@@ -6603,7 +7307,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341608",
@@ -6638,7 +7346,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341819",
@@ -6673,7 +7385,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329061",
@@ -6708,7 +7424,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329064",
@@ -6743,7 +7463,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329065",
@@ -6780,7 +7504,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329059",
@@ -6815,7 +7543,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329057",
@@ -6850,7 +7582,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329060",
@@ -6885,7 +7621,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329063",
@@ -6920,7 +7660,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329056",
@@ -6955,7 +7699,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328750",
@@ -6990,7 +7738,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329050",
@@ -7025,7 +7777,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329051",
@@ -7060,7 +7816,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341821",
@@ -7095,7 +7855,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 135
+      "single_package_price_dkk": 135,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341822",
@@ -7130,7 +7894,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 135
+      "single_package_price_dkk": 135,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341610",
@@ -7165,7 +7933,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 135
+      "single_package_price_dkk": 135,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329048",
@@ -7200,7 +7972,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 159
+      "single_package_price_dkk": 159,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328749",
@@ -7235,7 +8011,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 159
+      "single_package_price_dkk": 159,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329047",
@@ -7270,7 +8050,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 159
+      "single_package_price_dkk": 159,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329062",
@@ -7305,7 +8089,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329058",
@@ -7340,7 +8128,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329049",
@@ -7375,7 +8167,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329046",
@@ -7410,7 +8206,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 185
+      "single_package_price_dkk": 185,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329044",
@@ -7445,7 +8245,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 185
+      "single_package_price_dkk": 185,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329045",
@@ -7480,7 +8284,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 185
+      "single_package_price_dkk": 185,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328748",
@@ -7515,7 +8323,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 185
+      "single_package_price_dkk": 185,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329067",
@@ -7550,7 +8362,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 199
+      "single_package_price_dkk": 199,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328753",
@@ -7585,7 +8401,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 199
+      "single_package_price_dkk": 199,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329068",
@@ -7620,7 +8440,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 199
+      "single_package_price_dkk": 199,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329066",
@@ -7655,7 +8479,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 199
+      "single_package_price_dkk": 199,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329043",
@@ -7690,7 +8518,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 249
+      "single_package_price_dkk": 249,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328747",
@@ -7725,7 +8557,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 249
+      "single_package_price_dkk": 249,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329042",
@@ -7760,7 +8596,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 249
+      "single_package_price_dkk": 249,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329041",
@@ -7795,7 +8635,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 249
+      "single_package_price_dkk": 249,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341823",
@@ -7830,7 +8674,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 289
+      "single_package_price_dkk": 289,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341611",
@@ -7865,7 +8713,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 289
+      "single_package_price_dkk": 289,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341825",
@@ -7900,7 +8752,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 289
+      "single_package_price_dkk": 289,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341824",
@@ -7935,7 +8791,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "l",
-      "single_package_price_dkk": 289
+      "single_package_price_dkk": 289,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328752",
@@ -7970,7 +8830,11 @@
       "package_count": 1,
       "single_package_amount": 0.24,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328740",
@@ -8005,7 +8869,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341908",
@@ -8040,7 +8908,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341910",
@@ -8075,7 +8947,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341669",
@@ -8110,7 +8986,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341909",
@@ -8145,7 +9025,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328730",
@@ -8182,7 +9066,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329023",
@@ -8219,7 +9107,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329024",
@@ -8256,7 +9148,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328727",
@@ -8291,7 +9187,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329022",
@@ -8326,7 +9226,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 109
+      "single_package_price_dkk": 109,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341527",
@@ -8361,7 +9265,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328725",
@@ -8398,7 +9306,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329018",
@@ -8433,7 +9345,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341665",
@@ -8468,7 +9384,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 149
+      "single_package_price_dkk": 149,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341900",
@@ -8503,7 +9423,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 149
+      "single_package_price_dkk": 149,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341901",
@@ -8538,7 +9462,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 149
+      "single_package_price_dkk": 149,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341668",
@@ -8573,7 +9501,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341906",
@@ -8610,7 +9542,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341907",
@@ -8645,7 +9581,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342113",
@@ -8680,7 +9620,11 @@
       "package_count": 1,
       "single_package_amount": 2.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342112",
@@ -8715,7 +9659,11 @@
       "package_count": 1,
       "single_package_amount": 2.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341916",
@@ -8750,7 +9698,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341673",
@@ -8787,7 +9739,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341917",
@@ -8824,7 +9780,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328736",
@@ -8859,7 +9819,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329029",
@@ -8894,7 +9858,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341915",
@@ -8929,7 +9897,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341914",
@@ -8964,7 +9936,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341672",
@@ -8999,7 +9975,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328738",
@@ -9034,7 +10014,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 45
+      "single_package_price_dkk": 45,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342053",
@@ -9072,7 +10056,11 @@
       "package_count": 6,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 46.5
+      "single_package_price_dkk": 46.5,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342066",
@@ -9110,7 +10098,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342067",
@@ -9147,7 +10139,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341904",
@@ -9182,7 +10178,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341905",
@@ -9217,7 +10217,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341667",
@@ -9252,7 +10256,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341789",
@@ -9290,7 +10298,11 @@
       "package_count": 6,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49.83
+      "single_package_price_dkk": 49.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341581",
@@ -9328,7 +10340,11 @@
       "package_count": 6,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49.83
+      "single_package_price_dkk": 49.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341788",
@@ -9366,7 +10382,11 @@
       "package_count": 6,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49.83
+      "single_package_price_dkk": 49.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328724",
@@ -9406,7 +10426,11 @@
       "package_count": 6,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 49.83
+      "single_package_price_dkk": 49.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342070",
@@ -9441,7 +10465,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 50
+      "single_package_price_dkk": 50,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342072",
@@ -9476,7 +10504,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 50
+      "single_package_price_dkk": 50,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342071",
@@ -9511,7 +10543,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 50
+      "single_package_price_dkk": 50,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328729",
@@ -9548,7 +10584,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 50
+      "single_package_price_dkk": 50,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328735",
@@ -9585,7 +10625,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328741",
@@ -9620,7 +10664,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341671",
@@ -9657,7 +10705,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329025",
@@ -9692,7 +10744,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329031",
@@ -9727,7 +10783,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341913",
@@ -9762,7 +10822,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 59
+      "single_package_price_dkk": 59,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328732",
@@ -9797,7 +10861,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341912",
@@ -9832,7 +10900,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341666",
@@ -9867,7 +10939,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341670",
@@ -9902,7 +10978,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328739",
@@ -9939,7 +11019,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329030",
@@ -9976,7 +11060,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341903",
@@ -10011,7 +11099,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342075",
@@ -10048,7 +11140,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329028",
@@ -10083,7 +11179,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341902",
@@ -10118,7 +11218,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342077",
@@ -10155,7 +11259,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 79
+      "single_package_price_dkk": 79,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328728",
@@ -10195,7 +11303,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 79
+      "single_package_price_dkk": 79,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341813",
@@ -10232,7 +11344,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341605",
@@ -10269,7 +11385,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341814",
@@ -10306,7 +11426,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 89
+      "single_package_price_dkk": 89,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328733",
@@ -10341,7 +11465,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341815",
@@ -10378,7 +11506,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328754",
@@ -10413,7 +11545,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342069",
@@ -10448,7 +11584,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329069",
@@ -10483,7 +11623,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342068",
@@ -10518,7 +11662,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329026",
@@ -10553,7 +11701,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341606",
@@ -10590,7 +11742,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342079",
@@ -10625,7 +11781,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341816",
@@ -10660,7 +11820,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341817",
@@ -10695,7 +11859,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341607",
@@ -10730,7 +11898,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 119
+      "single_package_price_dkk": 119,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342073",
@@ -10765,7 +11937,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 129
+      "single_package_price_dkk": 129,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342074",
@@ -10800,7 +11976,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 159
+      "single_package_price_dkk": 159,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342078",
@@ -10837,7 +12017,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 239
+      "single_package_price_dkk": 239,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328873",
@@ -10875,7 +12059,11 @@
       "package_count": 20,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 4
+      "single_package_price_dkk": 4,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328870",
@@ -10913,7 +12101,11 @@
       "package_count": 20,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 4
+      "single_package_price_dkk": 4,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328743",
@@ -10951,7 +12143,11 @@
       "package_count": 6,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 4.17
+      "single_package_price_dkk": 4.17,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329033",
@@ -10989,7 +12185,11 @@
       "package_count": 6,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 4.17
+      "single_package_price_dkk": 4.17,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341847",
@@ -11024,7 +12224,11 @@
       "package_count": 18,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 5.83
+      "single_package_price_dkk": 5.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341848",
@@ -11059,7 +12263,11 @@
       "package_count": 18,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 5.83
+      "single_package_price_dkk": 5.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342130",
@@ -11096,7 +12304,11 @@
       "package_count": 12,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 6.58
+      "single_package_price_dkk": 6.58,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341625",
@@ -11131,7 +12343,11 @@
       "package_count": 15,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 7
+      "single_package_price_dkk": 7,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328755",
@@ -11166,7 +12382,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329072",
@@ -11203,7 +12423,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329070",
@@ -11238,7 +12462,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329071",
@@ -11275,7 +12503,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329034",
@@ -11310,7 +12542,11 @@
       "package_count": 1,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329035",
@@ -11345,7 +12581,11 @@
       "package_count": 1,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329036",
@@ -11382,7 +12622,11 @@
       "package_count": 1,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328744",
@@ -11417,7 +12661,11 @@
       "package_count": 1,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341828",
@@ -11458,7 +12706,11 @@
       "package_count": 5,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341831",
@@ -11498,7 +12750,11 @@
       "package_count": 5,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341827",
@@ -11539,7 +12795,11 @@
       "package_count": 5,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341829",
@@ -11580,7 +12840,11 @@
       "package_count": 5,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341830",
@@ -11620,7 +12884,11 @@
       "package_count": 5,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329037",
@@ -11657,7 +12925,11 @@
       "package_count": 6,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14.83
+      "single_package_price_dkk": 14.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328745",
@@ -11692,7 +12964,11 @@
       "package_count": 6,
       "single_package_amount": 0.33,
       "single_package_unit": "l",
-      "single_package_price_dkk": 14.83
+      "single_package_price_dkk": 14.83,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341612",
@@ -11732,7 +13008,11 @@
       "package_count": 5,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341832",
@@ -11772,7 +13052,11 @@
       "package_count": 5,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341833",
@@ -11812,7 +13096,11 @@
       "package_count": 5,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328746",
@@ -11847,7 +13135,11 @@
       "package_count": 1,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329039",
@@ -11884,7 +13176,11 @@
       "package_count": 1,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329038",
@@ -11921,7 +13217,11 @@
       "package_count": 1,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11329040",
@@ -11958,7 +13258,11 @@
       "package_count": 1,
       "single_package_amount": 0.44,
       "single_package_unit": "l",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341646",
@@ -11998,7 +13302,11 @@
       "package_count": 1,
       "single_package_amount": 0.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341874",
@@ -12038,7 +13346,11 @@
       "package_count": 1,
       "single_package_amount": 0.55,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341565",
@@ -12073,7 +13385,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341741",
@@ -12111,7 +13427,11 @@
       "package_count": 1,
       "single_package_amount": 0.35,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341543",
@@ -12149,7 +13469,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341743",
@@ -12186,7 +13510,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341742",
@@ -12224,7 +13552,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341539",
@@ -12263,7 +13595,11 @@
       "package_count": 1,
       "single_package_amount": 0.154,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341545",
@@ -12300,7 +13636,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341744",
@@ -12337,7 +13677,11 @@
       "package_count": 1,
       "single_package_amount": 0.144,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342091",
@@ -12374,7 +13718,11 @@
       "package_count": 1,
       "single_package_amount": 0.18,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 50
+      "single_package_price_dkk": 50,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341875",
@@ -12414,7 +13762,11 @@
       "package_count": 1,
       "single_package_amount": 0.95,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341621",
@@ -12449,7 +13801,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341802",
@@ -12486,7 +13842,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342060",
@@ -12524,7 +13884,11 @@
       "package_count": 4,
       "single_package_amount": 0.45,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 24.75
+      "single_package_price_dkk": 24.75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342059",
@@ -12562,7 +13926,11 @@
       "package_count": 4,
       "single_package_amount": 0.45,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 24.75
+      "single_package_price_dkk": 24.75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342058",
@@ -12600,7 +13968,11 @@
       "package_count": 4,
       "single_package_amount": 0.42,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 24.75
+      "single_package_price_dkk": 24.75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342144",
@@ -12635,7 +14007,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341579",
@@ -12672,7 +14048,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341786",
@@ -12709,7 +14089,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 32
+      "single_package_price_dkk": 32,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341557",
@@ -12744,7 +14128,11 @@
       "package_count": 1,
       "single_package_amount": 1.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341760",
@@ -12779,7 +14167,11 @@
       "package_count": 1,
       "single_package_amount": 0.9,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341762",
@@ -12816,7 +14208,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341558",
@@ -12853,7 +14249,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341761",
@@ -12890,7 +14290,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "l",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341616",
@@ -12925,7 +14329,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 17
+      "single_package_price_dkk": 17,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341834",
@@ -12960,7 +14368,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "l",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341839",
@@ -12999,7 +14411,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341617",
@@ -13038,7 +14454,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341613",
@@ -13073,7 +14493,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341602",
@@ -13110,7 +14534,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341811",
@@ -13147,7 +14575,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 14
+      "single_package_price_dkk": 14,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341836",
@@ -13182,7 +14614,11 @@
       "package_count": 1,
       "single_package_amount": 0.23,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341835",
@@ -13217,7 +14653,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342110",
@@ -13254,7 +14694,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342106",
@@ -13291,7 +14735,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 28
+      "single_package_price_dkk": 28,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342102",
@@ -13328,7 +14776,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342096",
@@ -13365,7 +14817,11 @@
       "package_count": 1,
       "single_package_amount": 0.1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342095",
@@ -13402,7 +14858,11 @@
       "package_count": 1,
       "single_package_amount": 0.1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341889",
@@ -13439,7 +14899,11 @@
       "package_count": 1,
       "single_package_amount": 0.055,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341658",
@@ -13476,7 +14940,11 @@
       "package_count": 1,
       "single_package_amount": 0.055,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341888",
@@ -13513,7 +14981,11 @@
       "package_count": 1,
       "single_package_amount": 0.055,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341651",
@@ -13552,7 +15024,11 @@
       "package_count": 1,
       "single_package_amount": 0.375,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341615",
@@ -13589,7 +15065,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 24
+      "single_package_price_dkk": 24,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341622",
@@ -13624,7 +15104,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341840",
@@ -13659,7 +15143,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342098",
@@ -13694,7 +15182,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342099",
@@ -13729,7 +15221,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328867",
@@ -13766,7 +15262,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328868",
@@ -13803,7 +15303,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341837",
@@ -13838,7 +15342,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341838",
@@ -13873,7 +15381,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341614",
@@ -13908,7 +15420,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328866",
@@ -13946,7 +15462,11 @@
       "package_count": 1,
       "single_package_amount": 0.175,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328644",
@@ -13984,7 +15504,11 @@
       "package_count": 1,
       "single_package_amount": 0.14,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328869",
@@ -14021,7 +15545,11 @@
       "package_count": 1,
       "single_package_amount": 0.11,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342094",
@@ -14058,7 +15586,11 @@
       "package_count": 1,
       "single_package_amount": 0.1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341749",
@@ -14095,7 +15627,11 @@
       "package_count": 1,
       "single_package_amount": 0.351,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341748",
@@ -14132,7 +15668,11 @@
       "package_count": 1,
       "single_package_amount": 0.35,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341552",
@@ -14169,7 +15709,11 @@
       "package_count": 1,
       "single_package_amount": 0.35,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341551",
@@ -14206,7 +15750,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328875",
@@ -14244,7 +15792,11 @@
       "package_count": 1,
       "single_package_amount": 0.15,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341555",
@@ -14281,7 +15833,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341757",
@@ -14318,7 +15874,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341756",
@@ -14355,7 +15915,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341755",
@@ -14392,7 +15956,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342104",
@@ -14427,7 +15995,11 @@
       "package_count": 1,
       "single_package_amount": 0.2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328878",
@@ -14468,7 +16040,11 @@
       "single_package_price_dkk": 22,
       "product_type": "cola",
       "container": null,
-      "volume_l": null
+      "volume_l": null,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328646",
@@ -14506,7 +16082,11 @@
       "package_count": 1,
       "single_package_amount": 0.12,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342103",
@@ -14541,7 +16121,11 @@
       "package_count": 1,
       "single_package_amount": 0.19,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328877",
@@ -14579,7 +16163,11 @@
       "package_count": 1,
       "single_package_amount": 0.115,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341931",
@@ -14616,7 +16204,11 @@
       "package_count": 1,
       "single_package_amount": 0.129,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352446",
@@ -14653,7 +16245,11 @@
       "package_count": 1,
       "single_package_amount": 0.126,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341547",
@@ -14691,7 +16287,11 @@
       "package_count": 1,
       "single_package_amount": 0.075,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342142",
@@ -14728,7 +16328,11 @@
       "package_count": 1,
       "single_package_amount": 0.124,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352653",
@@ -14765,7 +16369,11 @@
       "package_count": 1,
       "single_package_amount": 0.124,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328876",
@@ -14803,7 +16411,11 @@
       "package_count": 1,
       "single_package_amount": 0.107,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341747",
@@ -14840,7 +16452,11 @@
       "package_count": 1,
       "single_package_amount": 0.17,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342088",
@@ -14877,7 +16493,11 @@
       "package_count": 1,
       "single_package_amount": 0.128,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342089",
@@ -14914,7 +16534,11 @@
       "package_count": 1,
       "single_package_amount": 0.128,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 30
+      "single_package_price_dkk": 30,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11328879",
@@ -14952,7 +16576,11 @@
       "package_count": 1,
       "single_package_amount": 0.093,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22
+      "single_package_price_dkk": 22,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341745",
@@ -14990,7 +16618,11 @@
       "package_count": 1,
       "single_package_amount": 0.075,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341550",
@@ -15027,7 +16659,11 @@
       "package_count": 1,
       "single_package_amount": 0.075,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341746",
@@ -15064,7 +16700,11 @@
       "package_count": 1,
       "single_package_amount": 0.125,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341932",
@@ -15101,7 +16741,11 @@
       "package_count": 1,
       "single_package_amount": 0.06,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341759",
@@ -15136,7 +16780,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341758",
@@ -15171,7 +16819,11 @@
       "package_count": 1,
       "single_package_amount": 0.72,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341593",
@@ -15208,7 +16860,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341594",
@@ -15245,7 +16901,11 @@
       "package_count": 1,
       "single_package_amount": 1.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341531",
@@ -15282,7 +16942,11 @@
       "package_count": 1,
       "single_package_amount": 2.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 69
+      "single_package_price_dkk": 69,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341799",
@@ -15319,7 +16983,11 @@
       "package_count": 1,
       "single_package_amount": 0.6,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341803",
@@ -15356,7 +17024,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341801",
@@ -15393,7 +17065,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 39
+      "single_package_price_dkk": 39,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341800",
@@ -15430,7 +17106,11 @@
       "package_count": 1,
       "single_package_amount": 0.45,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341556",
@@ -15465,7 +17145,11 @@
       "package_count": 1,
       "single_package_amount": 0.27,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342084",
@@ -15502,7 +17186,11 @@
       "package_count": 1,
       "single_package_amount": 0.336,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 28
+      "single_package_price_dkk": 28,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342092",
@@ -15537,7 +17225,11 @@
       "package_count": 1,
       "single_package_amount": 0.48,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55
+      "single_package_price_dkk": 55,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342093",
@@ -15572,7 +17264,11 @@
       "package_count": 1,
       "single_package_amount": 0.43,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55
+      "single_package_price_dkk": 55,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341592",
@@ -15609,7 +17305,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75
+      "single_package_price_dkk": 75,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352650",
@@ -15647,7 +17347,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341680",
@@ -15686,7 +17390,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342134",
@@ -15725,7 +17433,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341591",
@@ -15763,7 +17475,11 @@
       "package_count": 1,
       "single_package_amount": 0.725,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55
+      "single_package_price_dkk": 55,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341798",
@@ -15801,7 +17517,11 @@
       "package_count": 1,
       "single_package_amount": 0.725,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55
+      "single_package_price_dkk": 55,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341797",
@@ -15839,7 +17559,11 @@
       "package_count": 1,
       "single_package_amount": 0.725,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55
+      "single_package_price_dkk": 55,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341598",
@@ -15876,7 +17600,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341808",
@@ -15913,7 +17641,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341806",
@@ -15950,7 +17682,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341596",
@@ -15987,7 +17723,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341805",
@@ -16024,7 +17764,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341595",
@@ -16061,7 +17805,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35
+      "single_package_price_dkk": 35,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341599",
@@ -16098,7 +17846,11 @@
       "package_count": 1,
       "single_package_amount": 1,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341809",
@@ -16135,7 +17887,11 @@
       "package_count": 1,
       "single_package_amount": 0.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 40
+      "single_package_price_dkk": 40,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341597",
@@ -16173,7 +17929,11 @@
       "package_count": 1,
       "single_package_amount": 0.9,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341807",
@@ -16211,7 +17971,11 @@
       "package_count": 1,
       "single_package_amount": 0.7,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 49
+      "single_package_price_dkk": 49,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341566",
@@ -16248,7 +18012,11 @@
       "package_count": 1,
       "single_package_amount": 8,
       "single_package_unit": "l",
-      "single_package_price_dkk": 31.96
+      "single_package_price_dkk": 31.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341764",
@@ -16285,7 +18053,11 @@
       "package_count": 1,
       "single_package_amount": 1.5,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 22.36
+      "single_package_price_dkk": 22.36,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341763",
@@ -16322,7 +18094,11 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 75.96
+      "single_package_price_dkk": 75.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341770",
@@ -16359,7 +18135,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 15.96
+      "single_package_price_dkk": 15.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341767",
@@ -16396,7 +18176,11 @@
       "package_count": 1,
       "single_package_amount": 0.8,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 54.36
+      "single_package_price_dkk": 54.36,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341766",
@@ -16433,7 +18217,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 55.96
+      "single_package_price_dkk": 55.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341765",
@@ -16470,7 +18258,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 38.36
+      "single_package_price_dkk": 38.36,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341769",
@@ -16507,7 +18299,11 @@
       "package_count": 1,
       "single_package_amount": 0.4,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 42.36
+      "single_package_price_dkk": 42.36,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341768",
@@ -16545,7 +18341,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 31.96
+      "single_package_price_dkk": 31.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341771",
@@ -16582,7 +18382,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "kg",
-      "single_package_price_dkk": 35.96
+      "single_package_price_dkk": 35.96,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341969",
@@ -16617,7 +18421,11 @@
       "package_count": 1,
       "single_package_amount": 100,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341681",
@@ -16658,7 +18466,11 @@
       "single_package_unit": "stk",
       "single_package_price_dkk": 20,
       "product_type": "toilet_paper",
-      "roll_count": 8
+      "roll_count": 8,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341883",
@@ -16695,7 +18507,11 @@
       "package_count": 1,
       "single_package_amount": 10,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341653",
@@ -16732,7 +18548,11 @@
       "package_count": 1,
       "single_package_amount": 31,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 99
+      "single_package_price_dkk": 99,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341652",
@@ -16769,7 +18589,11 @@
       "package_count": 1,
       "single_package_amount": 4,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11352648",
@@ -16808,7 +18632,11 @@
       "package_count": 1,
       "single_package_amount": 4,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342065",
@@ -16843,7 +18671,11 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 39.95
+      "single_package_price_dkk": 39.95,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341882",
@@ -16880,7 +18712,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341879",
@@ -16917,7 +18753,11 @@
       "package_count": 1,
       "single_package_amount": 0.75,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341643",
@@ -16952,7 +18792,11 @@
       "package_count": 1,
       "single_package_amount": 0.85,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341642",
@@ -16989,7 +18833,11 @@
       "package_count": 1,
       "single_package_amount": 0.475,
       "single_package_unit": "l",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341880",
@@ -17026,7 +18874,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341881",
@@ -17063,7 +18915,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 16
+      "single_package_price_dkk": 16,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341884",
@@ -17100,7 +18956,11 @@
       "package_count": 1,
       "single_package_amount": 0.9,
       "single_package_unit": "l",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341654",
@@ -17137,7 +18997,11 @@
       "package_count": 1,
       "single_package_amount": 0.675,
       "single_package_unit": "l",
-      "single_package_price_dkk": 29
+      "single_package_price_dkk": 29,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341677",
@@ -17172,7 +19036,11 @@
       "package_count": 1,
       "single_package_amount": 50,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 10
+      "single_package_price_dkk": 10,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341918",
@@ -17207,7 +19075,11 @@
       "package_count": 1,
       "single_package_amount": 50,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 15
+      "single_package_price_dkk": 15,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341548",
@@ -17248,7 +19120,11 @@
       "package_count": 2,
       "single_package_amount": 20,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 12.5
+      "single_package_price_dkk": 12.5,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341657",
@@ -17285,7 +19161,11 @@
       "package_count": 1,
       "single_package_amount": 160,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 249
+      "single_package_price_dkk": 249,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342057",
@@ -17325,7 +19205,11 @@
       "package_count": 3,
       "single_package_amount": 100,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 26.33
+      "single_package_price_dkk": 26.33,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341640",
@@ -17362,7 +19246,11 @@
       "package_count": 1,
       "single_package_amount": 0.3,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341873",
@@ -17399,7 +19287,11 @@
       "package_count": 1,
       "single_package_amount": 0.65,
       "single_package_unit": "l",
-      "single_package_price_dkk": 26
+      "single_package_price_dkk": 26,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341872",
@@ -17436,7 +19328,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 26
+      "single_package_price_dkk": 26,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341645",
@@ -17473,7 +19369,11 @@
       "package_count": 1,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 26
+      "single_package_price_dkk": 26,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342055",
@@ -17513,7 +19413,11 @@
       "package_count": 3,
       "single_package_amount": 0.5,
       "single_package_unit": "l",
-      "single_package_price_dkk": 26.33
+      "single_package_price_dkk": 26.33,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341871",
@@ -17550,7 +19454,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341650",
@@ -17587,7 +19495,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341878",
@@ -17624,7 +19536,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341877",
@@ -17661,7 +19577,11 @@
       "package_count": 1,
       "single_package_amount": 0.25,
       "single_package_unit": "l",
-      "single_package_price_dkk": 25
+      "single_package_price_dkk": 25,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342054",
@@ -17701,7 +19621,11 @@
       "package_count": 3,
       "single_package_amount": 0.225,
       "single_package_unit": "l",
-      "single_package_price_dkk": 26.33
+      "single_package_price_dkk": 26.33,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341641",
@@ -17738,7 +19662,11 @@
       "package_count": 1,
       "single_package_amount": 0.05,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341869",
@@ -17775,7 +19703,11 @@
       "package_count": 1,
       "single_package_amount": 0.05,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341870",
@@ -17812,7 +19744,11 @@
       "package_count": 1,
       "single_package_amount": 0.05,
       "single_package_unit": "l",
-      "single_package_price_dkk": 12
+      "single_package_price_dkk": 12,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341644",
@@ -17849,7 +19785,11 @@
       "package_count": 1,
       "single_package_amount": 0.05,
       "single_package_unit": "l",
-      "single_package_price_dkk": 18
+      "single_package_price_dkk": 18,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11342064",
@@ -17884,7 +19824,11 @@
       "package_count": 1,
       "single_package_amount": 3,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 89.95
+      "single_package_price_dkk": 89.95,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     },
     {
       "id": "tilbudsugen-11341966",
@@ -17919,8 +19863,14 @@
       "package_count": 1,
       "single_package_amount": 2,
       "single_package_unit": "stk",
-      "single_package_price_dkk": 20
+      "single_package_price_dkk": 20,
+      "super_deal": false,
+      "super_deal_rule": null,
+      "super_deal_reason": null,
+      "super_deal_checked_at": "2026-10-05T20:12:00+02:00"
     }
   ],
-  "offer_count": 487
+  "offer_count": 487,
+  "super_deal_count": 0,
+  "super_deal_generated_at": "2026-10-05T20:12:00+02:00"
 }

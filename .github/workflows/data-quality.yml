@@ -3,6 +3,7 @@ name: Superkøb data quality
 on:
   push:
     paths:
+      - ".github/workflows/data-quality.yml"
       - "current_offers.json"
       - "current_offers.previous.json"
       - "import_status.json"
@@ -21,12 +22,36 @@ on:
       - "scripts/**"
       - "tests/**"
 
+permissions:
+  contents: write
+
 jobs:
-  acceptance:
+  build-and-accept:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m unittest discover -s tests -v
+
+      - name: Build normalized data on ChatGPT migration branch
+        if: github.event_name == 'push' && github.ref_name == 'chatgpt/data-pipeline-v2'
+        run: python scripts/build_data_pipeline.py --write
+
+      - name: Run acceptance tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Commit generated normalized data
+        if: github.event_name == 'push' && github.ref_name == 'chatgpt/data-pipeline-v2'
+        run: |
+          if git diff --quiet; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add current_offers.json current_offers.previous.json import_status.json price_history.json monthly_price_history.json data_quality_errors.json stores next_week_offers.json super_deals.json super_deals_current.json
+          git commit -m "Build normalized Superkøb data [skip ci]"
+          git push origin HEAD:chatgpt/data-pipeline-v2

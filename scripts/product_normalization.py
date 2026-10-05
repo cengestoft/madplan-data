@@ -149,13 +149,13 @@ def apply_category_rules(record: dict):
 
 def normalize_record(record: dict):
     out = dict(record)
-    out["brand"] = infer_brand(out) if not _text(out.get("brand")) else out.get("brand")
-    out["variant"] = infer_variant(out) if not _text(out.get("variant")) else out.get("variant")
+    brand = infer_brand(out)
+    variant = infer_variant(out)
     count, amount, unit = infer_pack(out)
-    out["package_count"] = count
-    if amount is not None:
-        out.setdefault("single_package_amount", amount)
-        out.setdefault("single_package_unit", unit)
+    out["normalized_brand"] = brand
+    out["normalized_variant"] = variant
+    out["normalized_package_count"] = count
+    out["normalized_package_size"] = {"amount": amount, "unit": unit}
     out["normalized_product_key"] = normalized_product_key(out)
     errors = apply_category_rules(out)
     return out, errors

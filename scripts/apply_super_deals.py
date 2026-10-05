@@ -15,7 +15,7 @@ import argparse, json, re
 from pathlib import Path
 from datetime import datetime
 
-COLA_BRANDS = ("coca cola", "coca-cola", "pepsi", "fanta")
+COLA_BRANDS = ("coca cola", "coca-cola", "pepsi", "pepsi max", "fanta")
 
 def low(v):
     return str(v or "").lower()
@@ -45,7 +45,7 @@ def annotate(o, checked_at):
     # 24-pack cola/soda cans. Beverage category/source category is mandatory;
     # this prevents names like "Corny Chocolate" from false-positive cola matches.
     is_soda = category == "drikkevarer" or "sodavand" in source_category
-    is_cola_family = product_type == "cola" or has_any(text, COLA_BRANDS)
+    is_cola_family = has_any(brand, COLA_BRANDS)
     if (
         is_soda and is_cola_family and container == "can"
         and count == 24 and isinstance(price,(int,float)) and price < 69
@@ -64,7 +64,7 @@ def annotate(o, checked_at):
 
     # Real butter only; explicitly exclude spread/blended products.
     exclude=("smørbar","blandingsprodukt","spread","kærgården")
-    if matched is None and category == "mejeri" and "smør" in text and not has_any(text,exclude):
+    if matched is None and category == "mejeri" and product_type == "butter" and "smør" in text and not has_any(text,exclude):
         if isinstance(unit,(int,float)) and unit <= 40:
             matched="real_butter"
             reason=f"{unit:g} kr./kg <= 40 kr./kg"

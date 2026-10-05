@@ -16,3 +16,10 @@ Bilka, SuperBrugsen, SPAR, Netto, 365discount og Lidl.
 
 ## Datakvalitet
 `completeness=false` betyder, at filen er et verificeret starter-datasæt og ikke nødvendigvis indeholder hver vare fra de JavaScript-baserede tilbudsaviser endnu. Claude bør kun bruge tilbud, hvis datoen ligger inden for `valid_from` og `valid_to`.
+
+
+## Household and pantry
+- `household_profile.json`: default household, meal-plan and shopping preferences
+- `pantry.json`: current pantry/fridge/freezer inventory
+
+Claude should combine these files with `current_offers.json` when generating meal plans and shopping lists. It must not assume pantry items that are not explicitly listed.

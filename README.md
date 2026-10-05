@@ -8,7 +8,7 @@ Maskinlæsbart datasæt med aktuelle dagligvaretilbud til brug i Claude/app.
 - `archive/YYYY/week-XX.json`: historiske snapshots
 
 ## Kæder
-Bilka, SuperBrugsen, SPAR, Netto og 365discount.
+Bilka, SuperBrugsen, SPAR, Netto, 365discount og Lidl.
 
 ## Felter
 `name`, `store`, `category`, `price_dkk`, `package_amount`, `package_unit`,

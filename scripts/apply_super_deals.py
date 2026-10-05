@@ -15,7 +15,7 @@ import argparse, json, re
 from pathlib import Path
 from datetime import datetime
 
-COLA_BRANDS = ("coca cola", "coca-cola", "pepsi", "pepsi max", "fanta")
+COLA_BRANDS = ("coca cola", "coca-cola")\nCOLA_EXCLUDE = ("zero", "light", "pepsi", "fanta")
 
 def low(v):
     return str(v or "").lower()
@@ -45,7 +45,7 @@ def annotate(o, checked_at):
     # 24-pack cola/soda cans. Beverage category/source category is mandatory;
     # this prevents names like "Corny Chocolate" from false-positive cola matches.
     is_soda = category == "drikkevarer" or "sodavand" in source_category
-    is_cola_family = has_any(brand, COLA_BRANDS)
+    is_cola_family = has_any(brand, COLA_BRANDS) and not has_any(text, COLA_EXCLUDE)
     if (
         is_soda and is_cola_family and container == "can"
         and count == 24 and isinstance(price,(int,float)) and price < 69
@@ -53,12 +53,12 @@ def annotate(o, checked_at):
         matched="cola_24_cans"
         reason=f"{price:g} kr. < 69 kr. for 24 dåser"
 
-    # 1.5-2 L cola/soda bottles below 11 DKK/L.
+    # 1.25-2 L regular Coca-Cola bottles below 11 DKK/L.
     if matched is None and is_soda and is_cola_family and container == "bottle":
         v=volume
         if v is None and package_unit == "l" and isinstance(package_amount,(int,float)):
             v=package_amount
-        if isinstance(v,(int,float)) and 1.5 <= v <= 2 and isinstance(unit,(int,float)) and unit < 11:
+        if isinstance(v,(int,float)) and 1.25 <= v <= 2 and isinstance(unit,(int,float)) and unit < 11:
             matched="cola_large_bottle"
             reason=f"{unit:g} kr./l < 11 kr./l"
 

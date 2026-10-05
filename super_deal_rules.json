@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05T20:15:00+02:00",
+  "updated_at": "2026-10-05T20:20:00+02:00",
   "currency": "DKK",
   "applies_to": "all stores present in current_offers.json and next_week_offers.json",
   "rules": [
     {
       "id": "cola_24_cans",
-      "label": "Cola 24 dåser",
+      "label": "Coca-Cola 24 dåser",
       "active": true,
       "match": {
         "category": "drikkevarer",
@@ -15,7 +15,11 @@
         "package_count": 24,
         "allowed_brands": [
           "Coca Cola",
-          "Coca-Cola",
+          "Coca-Cola"
+        ],
+        "exclude_terms": [
+          "Zero",
+          "Light",
           "Pepsi",
           "Pepsi Max",
           "Fanta"
@@ -26,21 +30,25 @@
         "operator": "<",
         "value": 69
       },
-      "notes": "Pant må ikke indgå i price_dkk. Only these soda brands qualify; unrelated products containing 'cola' must not match."
+      "notes": "Kun almindelig Coca-Cola. Zero, Light, Pepsi/Pepsi Max, Fanta og andre sodavand må ikke matche. Pant må ikke indgå i price_dkk."
     },
     {
       "id": "cola_large_bottle",
-      "label": "Cola 1,5-2 L flaske",
+      "label": "Coca-Cola 1,25-2 L flaske",
       "active": true,
       "match": {
         "category": "drikkevarer",
         "product_type": "cola",
         "container": "bottle",
-        "volume_l_min": 1.5,
+        "volume_l_min": 1.25,
         "volume_l_max": 2,
         "allowed_brands": [
           "Coca Cola",
-          "Coca-Cola",
+          "Coca-Cola"
+        ],
+        "exclude_terms": [
+          "Zero",
+          "Light",
           "Pepsi",
           "Pepsi Max",
           "Fanta"
@@ -51,7 +59,7 @@
         "operator": "<",
         "value": 11
       },
-      "notes": "Gælder både 1,5 L og 2 L. Pant holdes separat. Only these soda brands qualify; unrelated products containing 'cola' must not match."
+      "notes": "Kun almindelig Coca-Cola i flasker fra 1,25 til 2,0 liter. Zero, Light, Pepsi/Pepsi Max, Fanta og andre sodavand må ikke matche. Pant holdes separat."
     },
     {
       "id": "real_butter",

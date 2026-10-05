@@ -1,0 +1,1216 @@
+{
+  "schema_version": 1,
+  "currency": "DKK",
+  "timezone": "Europe/Copenhagen",
+  "purpose": "Historical snapshots of reference normal prices",
+  "snapshots": [
+    {
+      "date": "2026-10-05",
+      "generated_at": "2026-10-05T13:45:00+02:00",
+      "item_count": 200,
+      "source": "reference_prices.json initial baseline",
+      "prices": [
+        {
+          "id": "ref-001",
+          "name": "Letmælk 1,5%",
+          "estimated_reference_price_dkk": 13,
+          "estimated_unit_price_dkk": 13
+        },
+        {
+          "id": "ref-002",
+          "name": "Minimælk 0,4%",
+          "estimated_reference_price_dkk": 13,
+          "estimated_unit_price_dkk": 13
+        },
+        {
+          "id": "ref-003",
+          "name": "Sødmælk 3,5%",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 14
+        },
+        {
+          "id": "ref-004",
+          "name": "Økologisk letmælk",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 15
+        },
+        {
+          "id": "ref-005",
+          "name": "Kærnemælk",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 14
+        },
+        {
+          "id": "ref-006",
+          "name": "Piskefløde 38%",
+          "estimated_reference_price_dkk": 30,
+          "estimated_unit_price_dkk": 60
+        },
+        {
+          "id": "ref-007",
+          "name": "Madlavningsfløde",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 46
+        },
+        {
+          "id": "ref-008",
+          "name": "Creme fraiche 18%",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 44
+        },
+        {
+          "id": "ref-009",
+          "name": "Creme fraiche 9%",
+          "estimated_reference_price_dkk": 21,
+          "estimated_unit_price_dkk": 42
+        },
+        {
+          "id": "ref-010",
+          "name": "Græsk yoghurt",
+          "estimated_reference_price_dkk": 29,
+          "estimated_unit_price_dkk": 29
+        },
+        {
+          "id": "ref-011",
+          "name": "Yoghurt naturel",
+          "estimated_reference_price_dkk": 21,
+          "estimated_unit_price_dkk": 21
+        },
+        {
+          "id": "ref-012",
+          "name": "Skyr naturel",
+          "estimated_reference_price_dkk": 26,
+          "estimated_unit_price_dkk": 26
+        },
+        {
+          "id": "ref-013",
+          "name": "Frugtyoghurt",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 23
+        },
+        {
+          "id": "ref-014",
+          "name": "Smør",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 110
+        },
+        {
+          "id": "ref-015",
+          "name": "Smørbar blandingsprodukt",
+          "estimated_reference_price_dkk": 26,
+          "estimated_unit_price_dkk": 130
+        },
+        {
+          "id": "ref-016",
+          "name": "Mozzarella frisk",
+          "estimated_reference_price_dkk": 13,
+          "estimated_unit_price_dkk": 104
+        },
+        {
+          "id": "ref-017",
+          "name": "Revet mozzarella",
+          "estimated_reference_price_dkk": 19,
+          "estimated_unit_price_dkk": 95
+        },
+        {
+          "id": "ref-018",
+          "name": "Revet cheddar",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 115
+        },
+        {
+          "id": "ref-019",
+          "name": "Danbo skæreost",
+          "estimated_reference_price_dkk": 50,
+          "estimated_unit_price_dkk": 100
+        },
+        {
+          "id": "ref-020",
+          "name": "Skiveost",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 120
+        },
+        {
+          "id": "ref-021",
+          "name": "Feta/salatost",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 115
+        },
+        {
+          "id": "ref-022",
+          "name": "Hytteost",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 50
+        },
+        {
+          "id": "ref-023",
+          "name": "Flødeost naturel",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 100
+        },
+        {
+          "id": "ref-024",
+          "name": "Æg M/L 10 stk",
+          "estimated_reference_price_dkk": 30,
+          "estimated_unit_price_dkk": 3
+        },
+        {
+          "id": "ref-025",
+          "name": "Økologiske æg 10 stk",
+          "estimated_reference_price_dkk": 38,
+          "estimated_unit_price_dkk": 3.8
+        },
+        {
+          "id": "ref-026",
+          "name": "Hakket oksekød 8-12%",
+          "estimated_reference_price_dkk": 42,
+          "estimated_unit_price_dkk": 105
+        },
+        {
+          "id": "ref-027",
+          "name": "Hakket oksekød 4-7%",
+          "estimated_reference_price_dkk": 46,
+          "estimated_unit_price_dkk": 115
+        },
+        {
+          "id": "ref-028",
+          "name": "Hakket kalv og gris",
+          "estimated_reference_price_dkk": 36,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-029",
+          "name": "Hakket grisekød",
+          "estimated_reference_price_dkk": 31,
+          "estimated_unit_price_dkk": 62
+        },
+        {
+          "id": "ref-030",
+          "name": "Grisekoteletter",
+          "estimated_reference_price_dkk": 39,
+          "estimated_unit_price_dkk": 78
+        },
+        {
+          "id": "ref-031",
+          "name": "Nakkekoteletter",
+          "estimated_reference_price_dkk": 36,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-032",
+          "name": "Nakkefilet",
+          "estimated_reference_price_dkk": 95,
+          "estimated_unit_price_dkk": 63.33
+        },
+        {
+          "id": "ref-033",
+          "name": "Grisemørbrad",
+          "estimated_reference_price_dkk": 50,
+          "estimated_unit_price_dkk": 100
+        },
+        {
+          "id": "ref-034",
+          "name": "Flæskesteg",
+          "estimated_reference_price_dkk": 105,
+          "estimated_unit_price_dkk": 70
+        },
+        {
+          "id": "ref-035",
+          "name": "Stegeflæsk",
+          "estimated_reference_price_dkk": 41,
+          "estimated_unit_price_dkk": 82
+        },
+        {
+          "id": "ref-036",
+          "name": "Bacon i skiver",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 115
+        },
+        {
+          "id": "ref-037",
+          "name": "Bacontern",
+          "estimated_reference_price_dkk": 21,
+          "estimated_unit_price_dkk": 105
+        },
+        {
+          "id": "ref-038",
+          "name": "Medister",
+          "estimated_reference_price_dkk": 33,
+          "estimated_unit_price_dkk": 66
+        },
+        {
+          "id": "ref-039",
+          "name": "Leverpostej",
+          "estimated_reference_price_dkk": 19,
+          "estimated_unit_price_dkk": 47.5
+        },
+        {
+          "id": "ref-040",
+          "name": "Skinke pålæg",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 153.33
+        },
+        {
+          "id": "ref-041",
+          "name": "Kyllingebrystfilet",
+          "estimated_reference_price_dkk": 56,
+          "estimated_unit_price_dkk": 93.33
+        },
+        {
+          "id": "ref-042",
+          "name": "Kyllingeinderfilet",
+          "estimated_reference_price_dkk": 53,
+          "estimated_unit_price_dkk": 88.33
+        },
+        {
+          "id": "ref-043",
+          "name": "Kyllingeoverlår",
+          "estimated_reference_price_dkk": 39,
+          "estimated_unit_price_dkk": 48.75
+        },
+        {
+          "id": "ref-044",
+          "name": "Kyllingeunderlår",
+          "estimated_reference_price_dkk": 33,
+          "estimated_unit_price_dkk": 47.14
+        },
+        {
+          "id": "ref-045",
+          "name": "Hel kylling",
+          "estimated_reference_price_dkk": 59,
+          "estimated_unit_price_dkk": 42.14
+        },
+        {
+          "id": "ref-046",
+          "name": "Hakket kylling",
+          "estimated_reference_price_dkk": 35,
+          "estimated_unit_price_dkk": 87.5
+        },
+        {
+          "id": "ref-047",
+          "name": "Kalkunbryst",
+          "estimated_reference_price_dkk": 56,
+          "estimated_unit_price_dkk": 112
+        },
+        {
+          "id": "ref-048",
+          "name": "Laksefilet",
+          "estimated_reference_price_dkk": 72,
+          "estimated_unit_price_dkk": 180
+        },
+        {
+          "id": "ref-049",
+          "name": "Røget laks",
+          "estimated_reference_price_dkk": 43,
+          "estimated_unit_price_dkk": 215
+        },
+        {
+          "id": "ref-050",
+          "name": "Torskefilet",
+          "estimated_reference_price_dkk": 72,
+          "estimated_unit_price_dkk": 180
+        },
+        {
+          "id": "ref-051",
+          "name": "Sejfilet",
+          "estimated_reference_price_dkk": 49,
+          "estimated_unit_price_dkk": 122.5
+        },
+        {
+          "id": "ref-052",
+          "name": "Rødspættefilet",
+          "estimated_reference_price_dkk": 66,
+          "estimated_unit_price_dkk": 165
+        },
+        {
+          "id": "ref-053",
+          "name": "Fiskefileter panerede",
+          "estimated_reference_price_dkk": 39,
+          "estimated_unit_price_dkk": 97.5
+        },
+        {
+          "id": "ref-054",
+          "name": "Tun i vand 3-pak",
+          "estimated_reference_price_dkk": 39,
+          "estimated_unit_price_dkk": 92.86
+        },
+        {
+          "id": "ref-055",
+          "name": "Makrel i tomat 3-pak",
+          "estimated_reference_price_dkk": 33,
+          "estimated_unit_price_dkk": 88
+        },
+        {
+          "id": "ref-056",
+          "name": "Rejer frost",
+          "estimated_reference_price_dkk": 56,
+          "estimated_unit_price_dkk": 140
+        },
+        {
+          "id": "ref-057",
+          "name": "Fiskefrikadeller",
+          "estimated_reference_price_dkk": 36,
+          "estimated_unit_price_dkk": 90
+        },
+        {
+          "id": "ref-058",
+          "name": "Færdigstegte frikadeller",
+          "estimated_reference_price_dkk": 39,
+          "estimated_unit_price_dkk": 78
+        },
+        {
+          "id": "ref-059",
+          "name": "Pølser",
+          "estimated_reference_price_dkk": 36,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-060",
+          "name": "Salami",
+          "estimated_reference_price_dkk": 23,
+          "estimated_unit_price_dkk": 153.33
+        },
+        {
+          "id": "ref-061",
+          "name": "Kartofler",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 12.5
+        },
+        {
+          "id": "ref-062",
+          "name": "Gulerødder",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 14
+        },
+        {
+          "id": "ref-063",
+          "name": "Økologiske gulerødder",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 18
+        },
+        {
+          "id": "ref-064",
+          "name": "Løg",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 12
+        },
+        {
+          "id": "ref-065",
+          "name": "Rødløg",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 18.67
+        },
+        {
+          "id": "ref-066",
+          "name": "Hvidløg 3-pak",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 4
+        },
+        {
+          "id": "ref-067",
+          "name": "Broccoli",
+          "estimated_reference_price_dkk": 16,
+          "estimated_unit_price_dkk": 16
+        },
+        {
+          "id": "ref-068",
+          "name": "Blomkål",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 18
+        },
+        {
+          "id": "ref-069",
+          "name": "Spidskål",
+          "estimated_reference_price_dkk": 16,
+          "estimated_unit_price_dkk": 16
+        },
+        {
+          "id": "ref-070",
+          "name": "Hvidkål",
+          "estimated_reference_price_dkk": 17,
+          "estimated_unit_price_dkk": 17
+        },
+        {
+          "id": "ref-071",
+          "name": "Rødkål",
+          "estimated_reference_price_dkk": 17,
+          "estimated_unit_price_dkk": 17
+        },
+        {
+          "id": "ref-072",
+          "name": "Savoykål",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 20
+        },
+        {
+          "id": "ref-073",
+          "name": "Hokkaido græskar",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 22
+        },
+        {
+          "id": "ref-074",
+          "name": "Butternut squash",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 25
+        },
+        {
+          "id": "ref-075",
+          "name": "Agurk",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 12
+        },
+        {
+          "id": "ref-076",
+          "name": "Tomater",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 48
+        },
+        {
+          "id": "ref-077",
+          "name": "Cherrytomater",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-078",
+          "name": "Peberfrugt 3-pak",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 7.33
+        },
+        {
+          "id": "ref-079",
+          "name": "Champignon",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-080",
+          "name": "Porre 3-pak",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 6
+        },
+        {
+          "id": "ref-081",
+          "name": "Bladselleri",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 18
+        },
+        {
+          "id": "ref-082",
+          "name": "Knoldselleri",
+          "estimated_reference_price_dkk": 16,
+          "estimated_unit_price_dkk": 16
+        },
+        {
+          "id": "ref-083",
+          "name": "Squash",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 12
+        },
+        {
+          "id": "ref-084",
+          "name": "Aubergine",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 14
+        },
+        {
+          "id": "ref-085",
+          "name": "Avocado 2-pak",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 10
+        },
+        {
+          "id": "ref-086",
+          "name": "Salatmix",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 120
+        },
+        {
+          "id": "ref-087",
+          "name": "Iceberg",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 14
+        },
+        {
+          "id": "ref-088",
+          "name": "Æbler",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 22
+        },
+        {
+          "id": "ref-089",
+          "name": "Økologiske æbler",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 28
+        },
+        {
+          "id": "ref-090",
+          "name": "Bananer",
+          "estimated_reference_price_dkk": 16,
+          "estimated_unit_price_dkk": 16
+        },
+        {
+          "id": "ref-091",
+          "name": "Økologiske bananer",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 20
+        },
+        {
+          "id": "ref-092",
+          "name": "Appelsiner",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 18.67
+        },
+        {
+          "id": "ref-093",
+          "name": "Clementiner",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 24
+        },
+        {
+          "id": "ref-094",
+          "name": "Citroner 3-pak",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 5
+        },
+        {
+          "id": "ref-095",
+          "name": "Lime 3-pak",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 4.67
+        },
+        {
+          "id": "ref-096",
+          "name": "Pærer",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 24
+        },
+        {
+          "id": "ref-097",
+          "name": "Vindruer",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 50
+        },
+        {
+          "id": "ref-098",
+          "name": "Blåbær",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 160
+        },
+        {
+          "id": "ref-099",
+          "name": "Jordbær",
+          "estimated_reference_price_dkk": 32,
+          "estimated_unit_price_dkk": 80
+        },
+        {
+          "id": "ref-100",
+          "name": "Hindbær",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 192
+        },
+        {
+          "id": "ref-101",
+          "name": "Mango",
+          "estimated_reference_price_dkk": 13,
+          "estimated_unit_price_dkk": 13
+        },
+        {
+          "id": "ref-102",
+          "name": "Kiwi 6-pak",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 3.33
+        },
+        {
+          "id": "ref-103",
+          "name": "Ananas",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 20
+        },
+        {
+          "id": "ref-104",
+          "name": "Persille frisk",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 12
+        },
+        {
+          "id": "ref-105",
+          "name": "Basilikum frisk",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 15
+        },
+        {
+          "id": "ref-106",
+          "name": "Pasta spaghetti",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 24
+        },
+        {
+          "id": "ref-107",
+          "name": "Pasta penne",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 24
+        },
+        {
+          "id": "ref-108",
+          "name": "Fuldkornspasta",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 30
+        },
+        {
+          "id": "ref-109",
+          "name": "Basmati ris",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 25
+        },
+        {
+          "id": "ref-110",
+          "name": "Jasminris",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 25
+        },
+        {
+          "id": "ref-111",
+          "name": "Parboiled ris",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 20
+        },
+        {
+          "id": "ref-112",
+          "name": "Brune ris",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 24
+        },
+        {
+          "id": "ref-113",
+          "name": "Couscous",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-114",
+          "name": "Bulgur",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-115",
+          "name": "Quinoa",
+          "estimated_reference_price_dkk": 35,
+          "estimated_unit_price_dkk": 70
+        },
+        {
+          "id": "ref-116",
+          "name": "Havregryn",
+          "estimated_reference_price_dkk": 16,
+          "estimated_unit_price_dkk": 16
+        },
+        {
+          "id": "ref-117",
+          "name": "Müsli",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 37.33
+        },
+        {
+          "id": "ref-118",
+          "name": "Cornflakes",
+          "estimated_reference_price_dkk": 24,
+          "estimated_unit_price_dkk": 48
+        },
+        {
+          "id": "ref-119",
+          "name": "Hvedemel",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 9
+        },
+        {
+          "id": "ref-120",
+          "name": "Tipo 00 mel",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 20
+        },
+        {
+          "id": "ref-121",
+          "name": "Fuldkornshvedemel",
+          "estimated_reference_price_dkk": 16,
+          "estimated_unit_price_dkk": 16
+        },
+        {
+          "id": "ref-122",
+          "name": "Rugmel",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 15
+        },
+        {
+          "id": "ref-123",
+          "name": "Sukker",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 14
+        },
+        {
+          "id": "ref-124",
+          "name": "Brun farin",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-125",
+          "name": "Flormelis",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 28
+        },
+        {
+          "id": "ref-126",
+          "name": "Bagepulver",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 66.67
+        },
+        {
+          "id": "ref-127",
+          "name": "Natron",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 60
+        },
+        {
+          "id": "ref-128",
+          "name": "Vaniljesukker",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 150
+        },
+        {
+          "id": "ref-129",
+          "name": "Tørgær",
+          "estimated_reference_price_dkk": 10,
+          "estimated_unit_price_dkk": 200
+        },
+        {
+          "id": "ref-130",
+          "name": "Hakkede tomater dåse",
+          "estimated_reference_price_dkk": 9,
+          "estimated_unit_price_dkk": 22.5
+        },
+        {
+          "id": "ref-131",
+          "name": "Flåede tomater dåse",
+          "estimated_reference_price_dkk": 9,
+          "estimated_unit_price_dkk": 22.5
+        },
+        {
+          "id": "ref-132",
+          "name": "Tomatpuré",
+          "estimated_reference_price_dkk": 8,
+          "estimated_unit_price_dkk": 57.14
+        },
+        {
+          "id": "ref-133",
+          "name": "Kokosmælk",
+          "estimated_reference_price_dkk": 14,
+          "estimated_unit_price_dkk": 35
+        },
+        {
+          "id": "ref-134",
+          "name": "Kikærter dåse",
+          "estimated_reference_price_dkk": 9,
+          "estimated_unit_price_dkk": 22.5
+        },
+        {
+          "id": "ref-135",
+          "name": "Kidneybønner dåse",
+          "estimated_reference_price_dkk": 9,
+          "estimated_unit_price_dkk": 22.5
+        },
+        {
+          "id": "ref-136",
+          "name": "Sorte bønner dåse",
+          "estimated_reference_price_dkk": 10,
+          "estimated_unit_price_dkk": 25
+        },
+        {
+          "id": "ref-137",
+          "name": "Majs dåse",
+          "estimated_reference_price_dkk": 10,
+          "estimated_unit_price_dkk": 29.41
+        },
+        {
+          "id": "ref-138",
+          "name": "Grønne linser tørrede",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 40
+        },
+        {
+          "id": "ref-139",
+          "name": "Røde linser tørrede",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-140",
+          "name": "Olivenolie",
+          "estimated_reference_price_dkk": 55,
+          "estimated_unit_price_dkk": 110
+        },
+        {
+          "id": "ref-141",
+          "name": "Rapsolie",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 28
+        },
+        {
+          "id": "ref-142",
+          "name": "Solsikkeolie",
+          "estimated_reference_price_dkk": 30,
+          "estimated_unit_price_dkk": 30
+        },
+        {
+          "id": "ref-143",
+          "name": "Lagereddike",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 24
+        },
+        {
+          "id": "ref-144",
+          "name": "Balsamico",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 88
+        },
+        {
+          "id": "ref-145",
+          "name": "Sojasauce",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 56
+        },
+        {
+          "id": "ref-146",
+          "name": "Ketchup",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-147",
+          "name": "Mayonnaise",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 50
+        },
+        {
+          "id": "ref-148",
+          "name": "Remoulade",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 45
+        },
+        {
+          "id": "ref-149",
+          "name": "Sennep",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 60
+        },
+        {
+          "id": "ref-150",
+          "name": "Pesto grøn",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 94.74
+        },
+        {
+          "id": "ref-151",
+          "name": "Peanutbutter",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 71.43
+        },
+        {
+          "id": "ref-152",
+          "name": "Syltetøj",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 55
+        },
+        {
+          "id": "ref-153",
+          "name": "Honning",
+          "estimated_reference_price_dkk": 30,
+          "estimated_unit_price_dkk": 85.71
+        },
+        {
+          "id": "ref-154",
+          "name": "Salt fint",
+          "estimated_reference_price_dkk": 10,
+          "estimated_unit_price_dkk": 10
+        },
+        {
+          "id": "ref-155",
+          "name": "Sort peber kværnet",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 400
+        },
+        {
+          "id": "ref-156",
+          "name": "Paprika",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 300
+        },
+        {
+          "id": "ref-157",
+          "name": "Karry",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 300
+        },
+        {
+          "id": "ref-158",
+          "name": "Kanel",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 300
+        },
+        {
+          "id": "ref-159",
+          "name": "Tørret oregano",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 600
+        },
+        {
+          "id": "ref-160",
+          "name": "Bouillonterninger",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 1.25
+        },
+        {
+          "id": "ref-161",
+          "name": "Tortillawraps",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 2.25
+        },
+        {
+          "id": "ref-162",
+          "name": "Tacoskaller",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 1.67
+        },
+        {
+          "id": "ref-163",
+          "name": "Rasp",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 30
+        },
+        {
+          "id": "ref-164",
+          "name": "Nudler",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-165",
+          "name": "Rugbrød",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 27.5
+        },
+        {
+          "id": "ref-166",
+          "name": "Toastbrød",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 30
+        },
+        {
+          "id": "ref-167",
+          "name": "Franskbrød",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 33.33
+        },
+        {
+          "id": "ref-168",
+          "name": "Boller 6-pak",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 3.33
+        },
+        {
+          "id": "ref-169",
+          "name": "Pitabrød 6-pak",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 3
+        },
+        {
+          "id": "ref-170",
+          "name": "Burgerboller 4-pak",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 4.5
+        },
+        {
+          "id": "ref-171",
+          "name": "Frosne ærter",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 26.67
+        },
+        {
+          "id": "ref-172",
+          "name": "Frossen broccoli",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 29.33
+        },
+        {
+          "id": "ref-173",
+          "name": "Frossen wokmix",
+          "estimated_reference_price_dkk": 22,
+          "estimated_unit_price_dkk": 29.33
+        },
+        {
+          "id": "ref-174",
+          "name": "Frossen spinat",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 40
+        },
+        {
+          "id": "ref-175",
+          "name": "Pommes frites",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 25
+        },
+        {
+          "id": "ref-176",
+          "name": "Pizza frost",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 71.43
+        },
+        {
+          "id": "ref-177",
+          "name": "Vaniljeis",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 28
+        },
+        {
+          "id": "ref-178",
+          "name": "Bærmix frost",
+          "estimated_reference_price_dkk": 28,
+          "estimated_unit_price_dkk": 56
+        },
+        {
+          "id": "ref-179",
+          "name": "Falafel",
+          "estimated_reference_price_dkk": 32,
+          "estimated_unit_price_dkk": 80
+        },
+        {
+          "id": "ref-180",
+          "name": "Tofu",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 100
+        },
+        {
+          "id": "ref-181",
+          "name": "Hummus",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 90
+        },
+        {
+          "id": "ref-182",
+          "name": "Plantedrik havre",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 18
+        },
+        {
+          "id": "ref-183",
+          "name": "Appelsinjuice",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 20
+        },
+        {
+          "id": "ref-184",
+          "name": "Æblejuice",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 18
+        },
+        {
+          "id": "ref-185",
+          "name": "Kaffe formalet",
+          "estimated_reference_price_dkk": 55,
+          "estimated_unit_price_dkk": 110
+        },
+        {
+          "id": "ref-186",
+          "name": "Instant kaffe",
+          "estimated_reference_price_dkk": 45,
+          "estimated_unit_price_dkk": 225
+        },
+        {
+          "id": "ref-187",
+          "name": "Te 20 breve",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 1
+        },
+        {
+          "id": "ref-188",
+          "name": "Danskvand",
+          "estimated_reference_price_dkk": 12,
+          "estimated_unit_price_dkk": 8
+        },
+        {
+          "id": "ref-189",
+          "name": "Mineralvand sodavand",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 13.33
+        },
+        {
+          "id": "ref-190",
+          "name": "Kakao pulver",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 62.5
+        },
+        {
+          "id": "ref-191",
+          "name": "Mørk chokolade",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 180
+        },
+        {
+          "id": "ref-192",
+          "name": "Mælkechokolade",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 180
+        },
+        {
+          "id": "ref-193",
+          "name": "Nødder blandede",
+          "estimated_reference_price_dkk": 30,
+          "estimated_unit_price_dkk": 150
+        },
+        {
+          "id": "ref-194",
+          "name": "Rosiner",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-195",
+          "name": "Popcorn majs",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 36
+        },
+        {
+          "id": "ref-196",
+          "name": "Knækbrød",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 72
+        },
+        {
+          "id": "ref-197",
+          "name": "Riskiks",
+          "estimated_reference_price_dkk": 15,
+          "estimated_unit_price_dkk": 115.38
+        },
+        {
+          "id": "ref-198",
+          "name": "Frosne majs",
+          "estimated_reference_price_dkk": 18,
+          "estimated_unit_price_dkk": 40
+        },
+        {
+          "id": "ref-199",
+          "name": "Æblemos",
+          "estimated_reference_price_dkk": 20,
+          "estimated_unit_price_dkk": 28.57
+        },
+        {
+          "id": "ref-200",
+          "name": "Morgenboller frost",
+          "estimated_reference_price_dkk": 25,
+          "estimated_unit_price_dkk": 41.67
+        }
+      ]
+    }
+  ]
+}

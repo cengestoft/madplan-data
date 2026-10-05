@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-05T12:10:00+02:00",
+  "currency": "DKK",
+  "inventory": [],
+  "locations": [
+    "pantry",
+    "fridge",
+    "freezer"
+  ],
+  "item_schema_example": {
+    "name": "Basmati rice",
+    "category": "pasta_ris_korn",
+    "quantity": 1.5,
+    "unit": "kg",
+    "location": "pantry",
+    "opened": false,
+    "best_before": null,
+    "use_first": false,
+    "notes": null
+  },
+  "rules": {
+    "use_inventory_before_buying_duplicate": true,
+    "prioritize_items_marked_use_first": true,
+    "subtract_available_quantity_from_shopping_list": true,
+    "suggest_freezing_surplus_when_sensible": true,
+    "never_assume_inventory_not_listed_here": true
+  },
+  "note": "Starter pantry file. Add only items that are actually in the home; missing items must not be assumed."
+}

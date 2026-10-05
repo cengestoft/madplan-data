@@ -48,7 +48,7 @@ Netto-tilbuddet:
 
 skal vises som Supertilbud.
 
-Der ligger også en Coca-Cola Zero 24-pak til 59 kr., som skal vises.
+Coca-Cola Zero må ikke vises som Supertilbud under Coca-Cola-reglen.
 
 ## Reglernes kilde
 
@@ -60,8 +60,8 @@ Frontend skal ikke kopiere disse regler.
 
 Aktuelle grænser:
 
-- Cola 24 dåser: under 69 kr.
-- Cola 1,5–2,0 L: under 11 kr./liter
+- Almindelig Coca-Cola 24 dåser: under 69 kr. (ikke Zero, Light, Pepsi/Pepsi Max eller Fanta)
+- Almindelig Coca-Cola 1,25–2,0 L: under 11 kr./liter (ikke Zero, Light, Pepsi/Pepsi Max eller Fanta)
 - Rigtigt smør: højst 40 kr./kg, ikke smørbar/blandingsprodukt
 - Piskefløde 36%+: højst 25 kr./liter
 - Opvasketabs: højst 0,75 kr./tab
@@ -78,3 +78,10 @@ Klassificering foretages nu centralt. Match for cola kræver drikkevare/sodavand
 Kun **Supertilbud-fanen** bør skifte til den nye canonical feed `super_deals_current.json`.
 
 Efter ændringen: genindlæs uden cache og kontroller, at badge-tallet svarer til `super_deal_count`.
+
+
+## Rettelse 5. oktober 2026 kl. 20:20
+- Cola-reglerne gælder kun almindelig Coca-Cola.
+- Coca-Cola Zero, Coca-Cola Light, Pepsi, Pepsi Max og Fanta er udelukket.
+- Flaskeintervallet er 1,25–2,0 liter.
+- Frontend skal fortsat stole på `super_deals_current.json` og må ikke genberegne disse regler.

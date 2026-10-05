@@ -262,4 +262,8 @@ Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede o
 
 
 ## Opdatering 5. oktober 2026
-5.184 aktuelle tilbud fra 14 kæder. ABC-præference: Videbæk; Tarm er alene særskilt arkiv. Se `claude_data_update.md` for fuld implementeringsvejledning og `data_sources/dagligepriser_manifest.json` for det fundne historiske dump (226.142 vareposter, 2.336.261 historiske prisregistreringer). Kør `scripts/import_dagligepriser_history.py` for separat historikimport. Den store historik er ikke automatisk aktiveret i appen.
+5.184 aktuelle tilbud fra 14 kæder. ABC-præference: Videbæk; Tarm er alene særskilt arkiv. Se `SUPERKOEB_MASTER.md` for den kanoniske implementeringsvejledning og `data_sources/dagligepriser_manifest.json` for det fundne historiske dump (226.142 vareposter, 2.336.261 historiske prisregistreringer). Kør `scripts/import_dagligepriser_history.py` for lokal månedlig aggregering. Rådumpet må ikke ligge i Git, og offentlig afledt dagligepriser-historik er blokeret, mens datalicensen er uafklaret.
+
+## Kanonisk Superkøb-master
+
+`SUPERKOEB_MASTER.md` er den eneste masterfil for Superkøb-dataflow, ABC Videbæk, normalisering, Supertilbud, historik og accepttests. Ældre Claude-handoff-filer er fjernet for at undgå modstridende regler.

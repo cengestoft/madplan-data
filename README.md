@@ -251,3 +251,11 @@ Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede o
 - En gyldig verificeret tilbudspris har altid højere prioritet.
 - Referencepriser må ikke præsenteres som aktuelle butikpriser.
 - `claude_reference_prices.md`: instruktion til Claude om brug af referenceprisdatabasen.
+
+
+## Automatisk opdatering af referencepriser
+- Referencepriser opdateres automatisk hver mandag kl. 06:00 dansk tid.
+- `reference_prices.json` er den aktuelle normalpris-database.
+- `reference_price_history.json` gemmer historiske snapshots, så tidligere normalpris-estimater ikke mistes.
+- En referencepris må kun ændres, hvis der er et rimeligt aktuelt datagrundlag; ellers beholdes den eksisterende værdi.
+- Claude skal hente den nyeste `reference_prices.json` fra GitHub før nye budget- eller madplansberegninger.

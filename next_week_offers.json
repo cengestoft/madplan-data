@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-05T12:30:00+02:00",
+  "timezone": "Europe/Copenhagen",
+  "currency": "DKK",
+  "purpose": "Offers published for a future validity period",
+  "status": "placeholder",
+  "stores": [],
+  "offers": [],
+  "offer_count": 0,
+  "note": "Populated by scheduled Wednesday/Friday/Sunday scans when future offers are publicly available. Claude must not use these as current offers before valid_from."
+}

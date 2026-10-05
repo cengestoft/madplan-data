@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-05T15:43:00+02:00",
+  "currency": "DKK",
+  "applies_to": "all stores present in current_offers.json and next_week_offers.json",
+  "rules": [
+    {
+      "id": "cola_24_cans",
+      "label": "Cola 24 dåser",
+      "active": true,
+      "match": {
+        "category": "drikkevarer",
+        "product_type": "cola",
+        "container": "can",
+        "package_count": 24
+      },
+      "threshold": {
+        "metric": "package_price_dkk",
+        "operator": "<",
+        "value": 69
+      },
+      "notes": "Pant må ikke indgå i price_dkk."
+    },
+    {
+      "id": "cola_large_bottle",
+      "label": "Cola 1,5-2 L flaske",
+      "active": true,
+      "match": {
+        "category": "drikkevarer",
+        "product_type": "cola",
+        "container": "bottle",
+        "volume_l_min": 1.5,
+        "volume_l_max": 2
+      },
+      "threshold": {
+        "metric": "unit_price_dkk_per_l",
+        "operator": "<",
+        "value": 11
+      },
+      "notes": "Gælder både 1,5 L og 2 L. Pant holdes separat."
+    },
+    {
+      "id": "real_butter",
+      "label": "Rigtigt smør",
+      "active": true,
+      "match": {
+        "category": "mejeri",
+        "product_type": "butter",
+        "exclude_terms": [
+          "smørbar",
+          "blandingsprodukt",
+          "spread",
+          "Kærgården"
+        ]
+      },
+      "threshold": {
+        "metric": "unit_price_dkk_per_kg",
+        "operator": "<=",
+        "value": 40
+      },
+      "notes": "Kun rigtigt smør. Smørbar/blandingsprodukter må ikke matche."
+    },
+    {
+      "id": "whipping_cream",
+      "label": "Piskefløde",
+      "active": true,
+      "match": {
+        "category": "mejeri",
+        "product_type": "whipping_cream",
+        "fat_pct_min": 36
+      },
+      "threshold": {
+        "metric": "unit_price_dkk_per_l",
+        "operator": "<=",
+        "value": 25
+      },
+      "equivalent": "500 ml <= 12,50 kr."
+    },
+    {
+      "id": "dishwasher_tabs",
+      "label": "Opvasketabs",
+      "active": true,
+      "match": {
+        "category": "husholdning",
+        "product_type": "dishwasher_tabs"
+      },
+      "threshold": {
+        "metric": "unit_price_dkk_per_tab",
+        "operator": "<=",
+        "value": 0.75
+      }
+    },
+    {
+      "id": "toilet_paper",
+      "label": "Toiletpapir 3-lags",
+      "active": true,
+      "match": {
+        "category": "husholdning",
+        "product_type": "toilet_paper",
+        "plies": 3
+      },
+      "threshold": {
+        "metric": "unit_price_dkk_per_roll",
+        "operator": "<=",
+        "value": 2
+      }
+    }
+  ],
+  "behavior": {
+    "show_on_superdeals": true,
+    "show_on_homepage": true,
+    "allow_manual_rules": true,
+    "compare_normalized_units": true,
+    "exclude_deposit_from_price": true
+  }
+}

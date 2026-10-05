@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "household": {
+    "adults": 2,
+    "children": 2
+  },
+  "mealplan_defaults": {
+    "dinner_days": 4,
+    "target_style": "family_friendly",
+    "vegetables": "high",
+    "organic_priority": "prefer_when_reasonable",
+    "spice_level": "mild",
+    "weekday_effort": "easy_to_moderate",
+    "minimize_food_waste": true,
+    "reuse_ingredients_across_meals": true,
+    "use_leftovers": true
+  },
+  "shopping_preferences": {
+    "max_stores_preferred": 2,
+    "prefer_single_store_when_savings_are_small": true,
+    "extra_store_minimum_saving_dkk": 20,
+    "compare_unit_prices": true,
+    "prioritize_full_package_usage": true,
+    "allow_freezer_stocking_when_offer_is_exceptional": true
+  },
+  "meal_balance": {
+    "aim_for_fish_meals_per_4_days": 1,
+    "aim_for_vegetarian_or_vegetable_heavy_meals_per_4_days": 1,
+    "prioritize_variety": true
+  },
+  "budget": {
+    "currency": "DKK",
+    "weekly_dinner_budget_dkk": null,
+    "note": "Set a target when desired; Claude should otherwise optimize for value rather than lowest possible spend."
+  },
+  "dietary_preferences": {
+    "avoid_very_spicy_food": true,
+    "allergies": [],
+    "dislikes": [],
+    "favorites": []
+  },
+  "notes": [
+    "Use current_offers.json as the primary offer source.",
+    "Prefer organic produce, meat, eggs and dairy when the price premium is reasonable.",
+    "Make meals suitable for both adults and children.",
+    "When a pack is larger than needed, reuse the remainder in another meal or suggest freezing it."
+  ]
+}

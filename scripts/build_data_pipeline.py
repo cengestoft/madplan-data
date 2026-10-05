@@ -157,25 +157,38 @@ def main():
     if status["offer_count"] != current2["offer_count"]: raise RuntimeError("Publication blocked: status mismatch")
     quality={"generated_at":generated_at,"offer_count":len(offers),"error_count":len(errors),
              "hard_error_count":hard,"errors":errors}
-    history_path=root/"price_history.json"; history2,monthly=normalize_history(load_json(history_path))
+    # Canonical history is already monthly aggregated. Validate it; do not expand or
+    # rebuild it from price_history.json, which is only a manifest in schema v3.
+    history_manifest=load_json(root/"price_history.json")
+    monthly=load_json(root/"monthly_price_history.json")
+    if history_manifest.get("mode") != "monthly_aggregated":
+        raise RuntimeError("Publication blocked: price_history.json must be monthly_aggregated manifest")
+    if not isinstance(monthly.get("records"), list):
+        raise RuntimeError("Publication blocked: monthly_price_history.json missing records")
+    missing_history_keys=sum(1 for r in monthly["records"] if not r.get("normalized_product_key"))
+    if missing_history_keys:
+        raise RuntimeError(f"Publication blocked: {missing_history_keys} history rows lack normalized_product_key")
+
     print(json.dumps({"offers":len(offers),"quality_errors":len(errors),"hard_errors":hard,
                       "monthly_history_records":len(monthly["records"]),"duplicates":len(find_duplicates(offers))},
                      ensure_ascii=False))
     if not a.write: return
     shutil.copy2(current_path,previous_path)
     dump_json(current_path,current2); dump_json(status_path,status); dump_json(root/"data_quality_errors.json",quality)
-    dump_json(history_path,history2); dump_json(root/"monthly_price_history.json",monthly)
+
+    # Preserve rich store records: normalize them in place instead of replacing
+    # them with the lightweight current_offers index records.
     for path in sorted((root/"stores").glob("*.json")):
         doc=load_json(path)
         if isinstance(doc.get("offers"),list):
-            doc["offers"]=[by_id.get(o.get("id"),normalize_record(o)[0]) for o in doc["offers"]]
+            doc["offers"]=[normalize_record(o)[0] for o in doc["offers"]]
             doc["offer_count"]=len(doc["offers"]); dump_json(path,doc)
     for name in ("next_week_offers.json","super_deals.json","super_deals_current.json"):
         path=root/name
         if path.exists():
             doc=load_json(path)
             if isinstance(doc.get("offers"),list):
-                doc["offers"]=[by_id.get(o.get("id"),normalize_record(o)[0]) for o in doc["offers"]]
+                doc["offers"]=[normalize_record(o)[0] for o in doc["offers"]]
                 dump_json(path,doc)
 
 if __name__=="__main__": main()

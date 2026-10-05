@@ -58,10 +58,10 @@ def detect_brand(name):
 def hprobe(p,h):
     name=str(p.get("name") or "")
     brand=p.get("brand") or detect_brand(name)
-    return {"name":name,"brand":brand,"variant":p.get("variant"),"package_count":h.get("package_count",1),"package_amount":h.get("quantity"),"package_unit":h.get("unit")}
+    return {"name":name,"brand":brand,"variant":p.get("variant"),"package_count":h.get("package_count",p.get("package_count",1)),"package_amount":h.get("quantity",p.get("quantity")),"package_unit":h.get("unit",p.get("unit"))}
 
 def choose_key(p,h):
-    ck=(p.get("name"),p.get("brand"),p.get("variant"),h.get("package_count",1),h.get("quantity"),h.get("unit"))
+    ck=(p.get("name"),p.get("brand"),p.get("variant"),h.get("package_count",p.get("package_count",1)),h.get("quantity",p.get("quantity")),h.get("unit",p.get("unit")))
     if ck in KEY_CACHE: return KEY_CACHE[ck]
     pr=hprobe(p,h); k=normalized_product_key(pr)
     if k in offer_keys:
@@ -93,7 +93,7 @@ for p in products:
     if sc not in STORES or not food(p): continue
     for h in p.get("priceHistory",[]):
         try:
-            dt.date.fromisoformat(h.get("date")); price=float(h.get("price")); q=float(h.get("quantity")); unit=h.get("unit")
+            dt.date.fromisoformat(h.get("date")); price=float(h.get("price")); q=float(h.get("quantity",p.get("quantity"))); unit=h.get("unit",p.get("unit"))
             if price<=0 or q<=0 or not unit: continue
         except Exception: continue
         k=choose_key(p,h); m=h["date"][:7]; b[(k,STORES[sc],m)].append(price); months[k].add(m)

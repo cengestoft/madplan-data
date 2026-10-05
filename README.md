@@ -40,14 +40,14 @@ Ved hver kørsel:
 6. `current_offers.json` opdateres med tilbud, der er gyldige nu
 7. `next_week_offers.json` opdateres med offentliggjorte tilbud, der først bliver gyldige senere
 8. et historisk uge-snapshot gemmes
-9. `price_history.json` opdateres med nye observationer
+9. `monthly_price_history.json` opdateres med månedlige aggregater; `price_history.json` er kun manifest
 
 Manglende priser eller størrelser må ikke gættes. De skal være `null` eller tydeligt markeret som ikke-verificerede.
 
 ## Filer
 
 ### current_offers.json
-Samlet aktivt datasæt med aktuelle tilbud fra alle kæder.
+Letvægtsindeks over alle aktuelle tilbud fra alle kæder. Det indeholder de felter, der bruges til søgning/prissammenligning samt `normalized_product_key`. Fuld kilde-, billed- og øvrig detaljemetadata bevares i `stores/*.json`.
 
 Vigtige felter:
 - `name`
@@ -113,19 +113,11 @@ Regler:
 - træk lagerbeholdning fra indkøbslisten
 - foreslå frysning af overskud, når det giver mening
 
-### price_history.json
-Pris-intelligens og historiske prisobservationer.
+### price_history.json / monthly_price_history.json
+`price_history.json` er et lille manifest. Den publicerbare historik ligger i `monthly_price_history.json` og er aggregeret pr. `normalized_product_key`, butik og måned.
 
-Standard score:
-- `exceptional`: <= 80 % af seneste median
-- `very_good`: > 80 % og <= 90 %
-- `good`: > 90 % og <= 97 %
-- `normal`: > 97 % og <= 105 %
-- `weak`: > 105 %
+Rå prisdumps må ikke ligge i Git. Historiske rækker uden verificeret pakningsstørrelse må ikke få nutidens størrelse kopieret bagud.
 
-En pris-score er først pålidelig efter mindst 4 observationer.
-
-Claude må ikke kalde en pris historisk god uden tilstrækkelige observationer.
 
 ### recipes/recipes.json
 Opskriftsdatabase med:

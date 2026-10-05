@@ -57,6 +57,8 @@ def _float(value: Any):
 def infer_brand(record: dict) -> str:
     explicit = _text(record.get("brand"))
     if explicit:
+        if explicit.lower() in {"coca cola", "coca-cola"}:
+            return "Coca-Cola"
         return explicit
     name = _text(record.get("name"))
     lower = name.lower()

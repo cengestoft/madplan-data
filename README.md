@@ -259,3 +259,7 @@ Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede o
 - `reference_price_history.json` gemmer historiske snapshots, så tidligere normalpris-estimater ikke mistes.
 - En referencepris må kun ændres, hvis der er et rimeligt aktuelt datagrundlag; ellers beholdes den eksisterende værdi.
 - Claude skal hente den nyeste `reference_prices.json` fra GitHub før nye budget- eller madplansberegninger.
+
+
+## Opdatering 5. oktober 2026
+5.184 aktuelle tilbud fra 14 kæder. ABC-præference: Videbæk; Tarm er alene særskilt arkiv. Se `claude_data_update.md` for fuld implementeringsvejledning og `data_sources/dagligepriser_manifest.json` for det fundne historiske dump (226.142 vareposter, 2.336.261 historiske prisregistreringer). Kør `scripts/import_dagligepriser_history.py` for separat historikimport. Den store historik er ikke automatisk aktiveret i appen.

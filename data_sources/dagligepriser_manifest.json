@@ -1,0 +1,20 @@
+{
+  "source_url": "https://dagligepriser.dk/data/latest-canonical.json",
+  "downloaded_at": "2026-10-05",
+  "products": 226142,
+  "price_history_records": 2336261,
+  "earliest_date": "2023-10-29",
+  "latest_date": "2026-10-05",
+  "stores": {
+    "bilkatogo": 93305,
+    "fotex": 56911,
+    "meny": 22398,
+    "minkobmand": 10839,
+    "nemlig": 5464,
+    "netto": 10438,
+    "rema1000": 11595,
+    "spar": 15192
+  },
+  "contains_nonfood": true,
+  "current_prices_not_necessarily_fresh": true
+}

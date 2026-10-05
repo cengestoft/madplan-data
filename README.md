@@ -23,3 +23,12 @@ Bilka, SuperBrugsen, SPAR, Netto, 365discount og Lidl.
 - `pantry.json`: current pantry/fridge/freezer inventory
 
 Claude should combine these files with `current_offers.json` when generating meal plans and shopping lists. It must not assume pantry items that are not explicitly listed.
+
+
+## Price intelligence
+- `price_history.json`: historical price scoring rules and product history. Reliable scores require at least 4 observations.
+- Weekly archive snapshots are the raw source for future price-history calculations.
+
+## Recipe matching
+- `recipes/recipes.json`: starter recipe library with ingredient categories and offer-match terms.
+- Claude should prefer recipes with multiple active offer matches, pantry usage, ingredient reuse, and low waste.

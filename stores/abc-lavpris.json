@@ -1,10 +1,16 @@
 {
-  "generated_at": "2026-10-05T16:44:00+02:00",
+  "generated_at": "2026-10-06T13:30:00+02:00",
   "store": "ABC Lavpris",
   "store_location": "Videbæk",
+  "address": "Høgevej 2, 6920 Videbæk",
+  "official_source": "https://www.abc-lavpris.dk/butikker/videbaek",
+  "source_type": "official_store_specific_flyer",
+  "source_verification": "verified",
+  "source_verification_note": "Official ABC Lavpris Videbæk page explicitly labels the store as Videbæk and shows weekly offers. Broad third-party ABC/Tarm search results are not accepted as Videbæk.",
   "offer_count": 0,
   "offers": [],
-  "status": "pending_branch_verification",
+  "status": "pending_offer_extraction",
+  "pending_reason": "Official Videbæk source is verified, but the weekly flyer is currently exposed as images rather than a structured product feed. Do not publish Tarm or generic ABC offers as Videbæk.",
   "super_deal_count": 0,
   "super_deal_generated_at": "2026-10-05T20:20:00+02:00"
 }

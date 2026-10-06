@@ -116,3 +116,16 @@ Datakvalitet og sporbarhed har prioritet over flere features. Nye scripts skal g
 ### Bevar rige butiksposter
 
 Pipeline må ikke erstatte poster i `stores/*.json` med det lettere `current_offers.json`-indeks. Butikfiler normaliseres i place, så kilde-URL, billeder og øvrig dokumentation bevares.
+
+## Sekundære tilbudskilder og komplethedskontrol
+
+MineTilbud bruges som sekundær komplethedskilde/fallback, ikke som ukritisk primær kilde.
+
+Regler:
+- Eksisterende officielle eller strukturerede feeds er fortsat primære, når de er bedre dokumenteret.
+- MineTilbud bruges til at opdage manglende tilbud og manglende sider/kataloger.
+- For kæder hvor tilbud kan variere lokalt, skal butik/afdeling være eksplicit verificeret før publicering.
+- ABC Lavpris er altid ABC Lavpris Videbæk. Generiske ABC-kataloger eller kataloger fra Billund, Tarm, Vildbjerg eller andre afdelinger må aldrig publiceres som Videbæk.
+- ABC Lavpris oplyser selv, at valg af butik kan have betydning for ugens tilbud. Derfor er ABC altid branch-sensitive.
+- Hvis sekundær kilde og primær kilde er uenige, beholdes den verificerede primære post og uoverensstemmelsen sendes til datakvalitetskontrol.
+- Ingen sekundær kilde må reducere eksisterende dokumentationsniveau, kilde-URL eller butikssporbarhed.

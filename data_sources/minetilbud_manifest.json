@@ -1,0 +1,40 @@
+{
+  "source": "MineTilbud",
+  "url": "https://minetilbud.dk/",
+  "role": "secondary_completeness_and_fallback_source",
+  "verified_on": "2026-10-06",
+  "capabilities": {
+    "current_and_upcoming_catalogs": true,
+    "many_danish_grocery_chains": true,
+    "location_sensitive": true,
+    "public_structured_api_verified": false
+  },
+  "policy": {
+    "national_or_chainwide_flyers": [
+      "REMA 1000",
+      "Netto",
+      "Lidl",
+      "Bilka",
+      "føtex",
+      "365discount"
+    ],
+    "local_or_branch_sensitive": [
+      "ABC Lavpris",
+      "MENY",
+      "Min Købmand",
+      "SPAR",
+      "SuperBrugsen",
+      "Dagli'Brugsen",
+      "Brugsen",
+      "Let-Køb"
+    ],
+    "rules": [
+      "Use MineTilbud as a secondary completeness check against existing feeds.",
+      "Do not replace an existing richer/official feed only because MineTilbud has a catalog.",
+      "For branch-sensitive stores, publish only when the catalog or product source is explicitly tied to the intended branch/location.",
+      "ABC always means ABC Lavpris Videbæk; Billund, Tarm, Vildbjerg or generic ABC catalogs must never be mapped to Videbæk.",
+      "If MineTilbud and the primary feed disagree, keep the verified primary offer and flag the discrepancy for review."
+    ]
+  },
+  "evidence_note": "MineTilbud currently lists a broad set of grocery chains and states that catalog/product content can depend on location. Its public ABC link for the current period resolves to a Billund catalog, so branch verification is mandatory."
+}

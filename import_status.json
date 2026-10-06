@@ -91,6 +91,12 @@
       "source_url": "https://www.abc-lavpris.dk/butikker/videbaek",
       "store_location": "Videbæk",
       "verified": true
+    },
+    "abc-chain": {
+      "listed": 9,
+      "source_url": "https://www.abc-lavpris.dk/",
+      "scope": "chain-level",
+      "local_variation_possible": true
     }
   },
   "pending_stores": [
@@ -108,11 +114,9 @@
     }
   ],
   "offer_count": 5193,
-  "preferred_store_locations": {
-    "ABC Lavpris": "Videbæk"
-  },
+  "preferred_store_locations": {},
   "notes": [
-    "ABC Lavpris Videbæk: 9 active offers verified from the official store-specific weekly ad for 30.09-06.10.",
+    "ABC Lavpris is now handled at chain level; local branch differences may exist and special/local offers should open the retailer flyer.",
     "Piskefløde entries in store data are normalized to category 'mejeri' and food_relevance 'high'.",
     "Publication guard: PASS — current offers and import_status both contain 5,184 active offers; 0 hard data-quality errors."
   ],

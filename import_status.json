@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T22:29:00+02:00",
-  "current_total": 5184,
+  "generated_at": "2026-10-06T13:30:00+02:00",
+  "current_total": 5193,
   "counts": {
     "REMA 1000": 305,
     "føtex": 529,
@@ -10,7 +10,7 @@
     "Min Købmand": 126,
     "Løvbjerg": 485,
     "Let-Køb": 74,
-    "ABC Lavpris": 0,
+    "ABC Lavpris": 9,
     "365discount": 352,
     "Lidl": 576,
     "SuperBrugsen": 477,
@@ -85,14 +85,15 @@
     "dagli": {
       "listed": 229,
       "source_url": "https://www.tilbudsugen.dk/partner/daglibrugsen-117"
+    },
+    "abc-videbaek-official": {
+      "listed": 9,
+      "source_url": "https://www.abc-lavpris.dk/butikker/videbaek",
+      "store_location": "Videbæk",
+      "verified": true
     }
   },
   "pending_stores": [
-    {
-      "store": "ABC Lavpris",
-      "store_location": "Videbæk",
-      "reason": "107 candidate offers were found by broad ABC search, but 0 are verified for ABC Videbæk. Candidate count is not an active-offer count."
-    },
     {
       "store": "Nemlig.com",
       "reason": "Historical dump available; fresh dated offers pending."
@@ -106,18 +107,18 @@
       "reason": "Location and prices pending."
     }
   ],
-  "offer_count": 5184,
+  "offer_count": 5193,
   "preferred_store_locations": {
     "ABC Lavpris": "Videbæk"
   },
   "notes": [
-    "ABC broad-search candidates: 107; verified active ABC Videbæk offers: 0.",
+    "ABC Lavpris Videbæk: 9 active offers verified from the official store-specific weekly ad for 30.09-06.10.",
     "Piskefløde entries in store data are normalized to category 'mejeri' and food_relevance 'high'.",
     "Publication guard: PASS — current offers and import_status both contain 5,184 active offers; 0 hard data-quality errors."
   ],
   "publication_guard": {
     "status": "pass",
-    "current_offer_count": 5184,
+    "current_offer_count": 5193,
     "previous_offer_count": 5184,
     "hard_error_count": 0,
     "hard_error_rate": 0,

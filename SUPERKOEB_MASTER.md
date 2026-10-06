@@ -6,8 +6,8 @@ Dette er den eneste kanoniske implementeringsfil for Superkøb. Hvis andre ældr
 
 ## Faste regler
 
-- ABC betyder altid ABC Lavpris Videbæk.
-- ABC-priser fra Tarm, Vildbjerg eller andre afdelinger må ikke publiceres som Videbæk.
+- ABC betyder ABC Lavpris generelt; tilbud kan variere mellem afdelinger.
+- ABC-data må publiceres som generelle ABC Lavpris-tilbud, men må ikke mærkes som en bestemt afdeling uden dokumentation.
 - Aktuelle tilbud og historiske priser er separate datasæt.
 - Historiske poster må aldrig blive aktive tilbud alene fordi de er nye i en import.
 - Frontend må ikke genberegne centrale Supertilbud-regler.
@@ -78,7 +78,7 @@ En import må ikke erstatte de gode data hvis:
 - antal aktuelle tilbud falder mere end 25 % uden eksplicit override,
 - hård fejlrate overstiger 10 %,
 - import_status ikke kan afstemmes mod current_offers,
-- ABC-data ikke kan dokumenteres som Videbæk.
+- ABC-data fejlagtigt mærkes som en specifik afdeling uden dokumentation.
 
 Før publicering kopieres nuværende current_offers.json til current_offers.previous.json.
 
@@ -125,7 +125,7 @@ Regler:
 - Eksisterende officielle eller strukturerede feeds er fortsat primære, når de er bedre dokumenteret.
 - MineTilbud bruges til at opdage manglende tilbud og manglende sider/kataloger.
 - For kæder hvor tilbud kan variere lokalt, skal butik/afdeling være eksplicit verificeret før publicering.
-- ABC Lavpris er altid ABC Lavpris Videbæk. Generiske ABC-kataloger eller kataloger fra Billund, Tarm, Vildbjerg eller andre afdelinger må aldrig publiceres som Videbæk.
-- ABC Lavpris oplyser selv, at valg af butik kan have betydning for ugens tilbud. Derfor er ABC altid branch-sensitive.
+- ABC Lavpris behandles som kæde-niveau. Lokale afdelingsforskelle markeres som mulige, og appen skal tilbyde direkte link til den aktuelle ABC-tilbudsavis.
+- ABC Lavpris kan have lokale forskelle. Derfor vises kæde-tilbud som generelle ABC-tilbud, og brugeren kan åbne den aktuelle tilbudsavis for lokale/særlige tilbud.
 - Hvis sekundær kilde og primær kilde er uenige, beholdes den verificerede primære post og uoverensstemmelsen sendes til datakvalitetskontrol.
 - Ingen sekundær kilde må reducere eksisterende dokumentationsniveau, kilde-URL eller butikssporbarhed.

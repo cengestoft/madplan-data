@@ -1,0 +1,20 @@
+{
+  "source": "ABC Lavpris",
+  "store": "ABC Lavpris",
+  "store_location": "Videbæk",
+  "official_url": "https://www.abc-lavpris.dk/butikker/videbaek",
+  "verified_on": "2026-10-06",
+  "verification_status": "verified_official_store_page",
+  "publication_rule": "Only offers sourced from the official Videbæk page or another source explicitly tied to Videbæk may be published as ABC Lavpris Videbæk.",
+  "disallowed_sources": [
+    "generic ABC search",
+    "ABC Lavpris Tarm",
+    "ABC Lavpris Vildbjerg",
+    "other ABC branches"
+  ],
+  "extraction_status": "pending_structured_or_image_flyer_extraction",
+  "notes": [
+    "The official page explicitly labels ABC Lavpris Videbæk and provides weekly offers.",
+    "Current official flyer content is image-based rather than a structured product feed, so automatic offer extraction still requires a dedicated parser/OCR step."
+  ]
+}

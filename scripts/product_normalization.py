@@ -57,7 +57,9 @@ def _float(value: Any):
 def infer_brand(record: dict) -> str:
     explicit = _text(record.get("brand"))
     if explicit:
-        if explicit.lower() in {"coca cola", "coca-cola"}:
+        # Treat Coca-Cola naming variants (incl. "Coca Cola Zero") as one brand.
+        # Variant belongs in the variant part of the key, not in brand.
+        if re.match(r"^coca\s*-?\s*cola\b", explicit, flags=re.I):
             return "Coca-Cola"
         return explicit
     name = _text(record.get("name"))
@@ -99,6 +101,12 @@ def infer_pack(record: dict):
             amount = float(m.group(1))
             unit = normalize_unit(m.group(2))
 
+    # Explicit "24 pk.", "6 pack" etc. Some history sources encode the pack
+    # count only in the product name.
+    pm = re.search(r"(?<!\d)(\d{1,3})\s*(?:pk|pak|pack)\.?\b", name)
+    if pm:
+        count = float(pm.group(1))
+
     count_i = int(count) if float(count).is_integer() else count
     amount_v = int(amount) if isinstance(amount, float) and amount.is_integer() else amount
     return count_i, amount_v, unit
@@ -120,7 +128,32 @@ def normalized_product_key(record: dict) -> str:
     brand = infer_brand(record)
     variant = infer_variant(record)
     count, amount, unit = infer_pack(record)
-    product = canonical_name(record, brand, variant)
+
+    # Canonical Coca-Cola identity. Source feeds use labels such as
+    # "Original Taste", "unknown", "Cola 24 pk." and sometimes put Zero in
+    # the brand field. These are source labels, not different products.
+    if brand == "Coca-Cola":
+        text = f"{_text(record.get('name'))} {_text(record.get('brand'))}".lower()
+        if variant.lower() in {"original", "classic"}:
+            variant = "standard"
+        elif variant == "standard":
+            if "zero sugar" in text:
+                variant = "zero sugar"
+            elif re.search(r"\bzero\b", text):
+                variant = "zero"
+            elif "light" in text:
+                variant = "light"
+        product = "cola"
+
+        # Coca-Cola history may use ml/cl while current offers use litres.
+        # Canonicalize beverage size to litres so 1500 ml == 1.5 l.
+        if amount is not None and unit == "ml":
+            amount, unit = float(amount) / 1000.0, "l"
+        elif amount is not None and unit == "cl":
+            amount, unit = float(amount) / 100.0, "l"
+    else:
+        product = canonical_name(record, brand, variant)
+
     size = "unknown" if amount is None else f"{amount:g}{unit}"
     return (
         f"brand={_slug(brand)}|product={_slug(product)}|variant={_slug(variant)}"

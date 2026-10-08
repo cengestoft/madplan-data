@@ -129,3 +129,13 @@ Regler:
 - ABC Lavpris kan have lokale forskelle. Derfor vises kæde-tilbud som generelle ABC-tilbud, og brugeren kan åbne den aktuelle tilbudsavis for lokale/særlige tilbud.
 - Hvis sekundær kilde og primær kilde er uenige, beholdes den verificerede primære post og uoverensstemmelsen sendes til datakvalitetskontrol.
 - Ingen sekundær kilde må reducere eksisterende dokumentationsniveau, kilde-URL eller butikssporbarhed.
+
+
+## Supertilbud og historikdækning
+
+- `normalized_product_key` må kun genereres i backend via `scripts/product_normalization.py`; frontend må aldrig opfinde eller omskrive nøgler.
+- Coca-Cola normaliseres med `product=cola`; "Original"/"Classic" behandles som standard-variant, og ml/cl normaliseres semantisk til samme literstørrelse som aktuelle tilbud.
+- `scripts/check_super_deal_history.py` køres efter Supertilbud/import og skriver `super_deal_history_report.json`.
+- En prisgraf må kun vises for et aktuelt Supertilbud, når den eksakte kanoniske nøgle har mindst 3 forskellige måneder i historikken.
+- Manglende historik skrives til `data_quality_errors.json` med typen `super_deal_missing_history`.
+- `monthly_price_history.json` skal fortsat være månedligt aggregeret og være under 12 MB; overskridelse skal blokere publicering.

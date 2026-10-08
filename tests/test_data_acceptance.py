@@ -22,11 +22,16 @@ class AcceptanceTests(unittest.TestCase):
         out,errs=normalize_record({"id":"x","name":"Thise Piskefløde 38% 500 ml","brand":"Thise","category":"snacks","price_dkk":12})
         self.assertEqual(out["category"],"mejeri"); self.assertEqual(out["product_type"],"whipping_cream")
         self.assertFalse([e for e in errs if e["type"]=="category_uncertain"])
-    def test_04_abc_is_videbaek(self):
+    def test_04_abc_is_chain_level(self):
         prefs=json.loads((ROOT/"store_preferences.json").read_text(encoding="utf-8"))
-        abc=prefs["preferred_store_locations"]["ABC Lavpris"]
-        location=abc.get("city") if isinstance(abc,dict) else abc
-        self.assertEqual(location,"Videbæk")
+        status=json.loads((ROOT/"import_status.json").read_text(encoding="utf-8"))
+        self.assertNotIn("ABC Lavpris",prefs.get("preferred_store_locations",{}))
+        scope=prefs.get("store_scopes",{}).get("ABC Lavpris",{})
+        self.assertEqual(scope.get("scope"),"chain-level")
+        self.assertIsNone(scope.get("store_location"))
+        chain=status.get("sources",{}).get("abc-chain",{})
+        self.assertEqual(chain.get("scope"),"chain-level")
+        self.assertIsNone(chain.get("store_location"))
     def test_05_expired_offer_not_active(self):
         import datetime as dt
         self.assertFalse(is_active_offer({"valid_from":"2025-01-01","valid_to":"2025-01-07"},dt.date(2026,10,5)))

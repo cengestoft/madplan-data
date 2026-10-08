@@ -1,1 +1,13 @@
-{"updated_at":"2026-10-05","preferred_store_locations":{"ABC Lavpris":{"city":"Videbæk","address":"Høgevej 2","postal_code":"6920","source_url":"https://www.abc-lavpris.dk/butikker/videbaek","user_confirmed":true}},"exclude_other_abc_locations_from_active_offers":true}
+{
+  "updated_at": "2026-10-08",
+  "preferred_store_locations": {},
+  "exclude_other_abc_locations_from_active_offers": false,
+  "store_scopes": {
+    "ABC Lavpris": {
+      "scope": "chain-level",
+      "store_location": null,
+      "local_variation_possible": true,
+      "source_url": "https://www.abc-lavpris.dk/"
+    }
+  }
+}

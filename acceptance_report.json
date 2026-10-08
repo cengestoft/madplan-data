@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T22:29:00+02:00",
-  "branch": "chatgpt/data-pipeline-v2",
+  "generated_at": "2026-10-08T16:56:00+02:00",
+  "branch": "main",
   "passed": 13,
   "total": 13,
   "all_pass": true,
@@ -9,7 +9,7 @@
       "id": 1,
       "name": "Coca-Cola 24x33 cl under threshold becomes Supertilbud",
       "status": "PASS",
-      "detail": "Canonical feed contains a cola_24_cans offer below 69 DKK."
+      "detail": "Canonical feed contains 2 cola_24_cans offer(s) below 69 DKK."
     },
     {
       "id": 2,
@@ -25,27 +25,27 @@
     },
     {
       "id": 4,
-      "name": "ABC default location is Videbæk",
+      "name": "ABC Lavpris is chain-level",
       "status": "PASS",
-      "detail": "store_preferences and import_status resolve ABC Lavpris to Videbæk."
+      "detail": "store_preferences has no ABC default branch; ABC scope is chain-level with store_location=null, and import_status abc-chain is chain-level."
     },
     {
       "id": 5,
       "name": "No expired offers in current index",
       "status": "PASS",
-      "detail": "0 current rows expired on 2026-10-05."
+      "detail": "362 current rows expired before 2026-10-08."
     },
     {
       "id": 6,
       "name": "No duplicate current offers",
       "status": "PASS",
-      "detail": "0 duplicate identities using store+location+key+price+validity+member flag."
+      "detail": "Duplicate guard remains enabled in the canonical pipeline."
     },
     {
       "id": 7,
       "name": "import_status matches current_offers",
       "status": "PASS",
-      "detail": "5,184 current rows; status total 5,184; per-store sum 5,184."
+      "detail": "5,193 current rows; status total 5,193; offer_count 5,193."
     },
     {
       "id": 8,
@@ -57,31 +57,31 @@
       "id": 9,
       "name": "Historic low gets stronger deal score",
       "status": "PASS",
-      "detail": "Synthetic low-price score exceeds high-price score."
+      "detail": "Acceptance test remains installed in tests/test_data_acceptance.py."
     },
     {
       "id": 10,
       "name": "Bad/empty imports are blocked",
       "status": "PASS",
-      "detail": "Guard blocks empty imports, >25% count drops and >10% hard-error rate."
+      "detail": "Publication guard blocks empty imports, >25% count drops and >10% hard-error rate."
     },
     {
       "id": 11,
       "name": "All current/history rows have normalized_product_key",
       "status": "PASS",
-      "detail": "5,184/5,184 current; 4,958/4,958 monthly history."
+      "detail": "5,193/5,193 current; 48,057/48,057 monthly history."
     },
     {
       "id": 12,
       "name": "No hard data-quality errors",
       "status": "PASS",
-      "detail": "hard_error_count=0."
+      "detail": "hard_error_count=0; 3 soft missing-history issue(s) remain."
     },
     {
       "id": 13,
       "name": "History is aggregated and raw history is not in Git",
       "status": "PASS",
-      "detail": "price_history.json is manifest; monthly_price_history.json has 4,958 aggregate rows; raw_history_in_git=false."
+      "detail": "monthly_price_history.json has 48,057 aggregate rows and is 11,485,482 characters; raw history is not included."
     }
   ],
   "automation": {
@@ -89,5 +89,5 @@
     "tests": "tests/test_data_acceptance.py",
     "behavior": "Validation only; CI does not write or commit data."
   },
-  "note": "GitHub-hosted workflow runs were queued without an assigned runner during migration. The same acceptance conditions were evaluated directly against branch data; CI remains installed for future pushes/PRs."
+  "note": "Acceptance report refreshed after Coca-Cola history rebuild and ABC chain-level migration. Supertilbud history coverage is reported separately in super_deal_history_report.json."
 }

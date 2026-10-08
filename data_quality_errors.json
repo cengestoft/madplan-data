@@ -1,12 +1,11 @@
 {
-  "generated_at": "2026-10-08T07:12:00+02:00",
+  "generated_at": "2026-10-08T10:01:25+00:00",
   "offer_count": 5184,
   "error_count": 3,
   "hard_error_count": 0,
   "errors": [
     {
       "type": "super_deal_missing_history",
-      "severity": "warning",
       "offer_id": "tilbudsugen-11350985",
       "name": "Milbona Smør Saltet",
       "store": "Lidl",
@@ -17,7 +16,6 @@
     },
     {
       "type": "super_deal_missing_history",
-      "severity": "warning",
       "offer_id": "tilbudsugen-11343711",
       "name": "Coca Cola Cola 24 pk.",
       "store": "Løvbjerg",
@@ -28,7 +26,6 @@
     },
     {
       "type": "super_deal_missing_history",
-      "severity": "warning",
       "offer_id": "tilbudsugen-11349016",
       "name": "Coca Cola Cola 24 pk.",
       "store": "Netto",

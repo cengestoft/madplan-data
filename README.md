@@ -259,3 +259,10 @@ Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede o
 ## Kanonisk Superkøb-master
 
 `SUPERKOEB_MASTER.md` er den eneste masterfil for Superkøb-dataflow, ABC Videbæk, normalisering, Supertilbud, historik og accepttests. Ældre Claude-handoff-filer er fjernet for at undgå modstridende regler.
+
+
+## Supertilbud – historikvalidering
+- Frontend må ikke konstruere eller aliasere `normalized_product_key`; nøgler kommer fra backend-normalisering.
+- `super_deal_history_report.json` viser efter import, hvor mange aktuelle Supertilbud der har mindst 3 måneders prishistorik.
+- Tilbud med færre end 3 måneder får `graph_allowed: false` og registreres i `data_quality_errors.json`.
+- `monthly_price_history.json` skal være aggregeret og under 12 MB.

@@ -101,7 +101,7 @@ CI skal køre tests ved data-/pipelineændringer.
 1. Gyldig Coca-Cola 24x33 cl under grænsen bliver Supertilbud.
 2. Corny/irrelevante produkter må ikke matches som Coca-Cola.
 3. Piskefløde er mejeri.
-4. ABC-standardlokation er Videbæk.
+4. ABC Lavpris er kæde-niveau (`store_location: null`); lokale afdelingsforskelle kan forekomme.
 5. Udløbet historik er ikke aktivt tilbud.
 6. Dubletter opdages.
 7. import_status matcher current_offers.

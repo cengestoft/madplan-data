@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse, json, re
 from pathlib import Path
 from datetime import datetime
+from product_normalization import normalize_record
 
 COLA_BRANDS = ("coca cola", "coca-cola")
 COLA_EXCLUDE = ("zero", "light", "pepsi", "fanta")
@@ -114,12 +115,16 @@ def process_file(path: Path, checked_at: str):
     data=json.loads(path.read_text(encoding="utf-8"))
     count=0
     if isinstance(data.get("offers"),list):
-        for o in data["offers"]:
-            count += annotate(o,checked_at)
+        for i, o in enumerate(data["offers"]):
+            normalized, _ = normalize_record(o)
+            data["offers"][i] = normalized
+            count += annotate(data["offers"][i],checked_at)
     if isinstance(data.get("stores"),list):
-        for s in data["stores"]:
-            for o in s.get("offers",[]):
-                annotate(o,checked_at)
+        for store in data["stores"]:
+            for i, o in enumerate(store.get("offers",[])):
+                normalized, _ = normalize_record(o)
+                store["offers"][i] = normalized
+                annotate(store["offers"][i],checked_at)
     data["super_deal_count"]=count
     data["super_deal_generated_at"]=checked_at
     path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
@@ -137,6 +142,22 @@ def main():
         total += n
         print(f"{path}: {n} super deals")
     print(f"Total: {total}")
+
+    # Make history coverage visible after every Supertilbud recomputation.
+    # If the canonical files are present, produce the report automatically.
+    if Path("super_deals_current.json").exists() and Path("monthly_price_history.json").exists():
+        from check_super_deal_history import build_report, update_errors
+        report = build_report()
+        Path("super_deal_history_report.json").write_text(
+            json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
+        update_errors(report)
+        print(
+            f"History coverage: {report['with_minimum_history']}/"
+            f"{report['super_deal_count']} Supertilbud have >=3 months"
+        )
+        if not report["monthly_history_under_12mb"]:
+            raise SystemExit("monthly_price_history.json exceeds 12 MB")
 
 if __name__=="__main__":
     main()

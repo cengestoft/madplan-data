@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Validate Supertilbud history coverage.
 
-Creates super_deal_history_report.json and optionally appends missing-history
-issues to data_quality_errors.json. Frontend must not invent keys or graphs.
+Creates super_deal_history_report.json and appends missing-history issues to
+data_quality_errors.json. Matching is direct on normalized_product_key only;
+there is no legacy alias/mapping layer.
 """
 from __future__ import annotations
 import argparse, json
@@ -15,38 +16,6 @@ MAX_HISTORY_BYTES = 12 * 1024 * 1024
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
-def canonical_existing_history_key(key):
-    """Compatibility migration for legacy Coca-Cola aggregate keys.
-
-    This is backend/import logic, never frontend key invention. New imports use
-    product_normalization.py directly and therefore emit canonical keys.
-    """
-    if not key or not (key.startswith("brand=coca-cola|") or key.startswith("brand=coca-cola-zero|")):
-        return key
-    parts={}
-    for part in key.split("|"):
-        if "=" in part:
-            k,v=part.split("=",1); parts[k]=v
-    product=parts.get("product","")
-    variant=parts.get("variant","standard")
-    if variant in {"original","classic"}:
-        variant="standard"
-    if key.startswith("brand=coca-cola-zero|") and variant=="standard":
-        variant="zero"
-    count=int(parts.get("count","1") or 1)
-    m=__import__("re").search(r"(?:^|-)(\d+)-pk(?:-|$)",product)
-    if m and count==1:
-        count=int(m.group(1))
-    size=parts.get("size","unknown")
-    m=__import__("re").match(r"^(\d+(?:-\d+)?)ml$",size)
-    if m:
-        size=(f"{float(m.group(1).replace('-', '.'))/1000:g}l").replace(".","-")
-    else:
-        m=__import__("re").match(r"^(\d+(?:-\d+)?)cl$",size)
-        if m:
-            size=(f"{float(m.group(1).replace('-', '.'))/100:g}l").replace(".","-")
-    return f"brand=coca-cola|product=cola|variant={variant}|count={count}|size={size}"
-
 def build_report(super_deals_path="super_deals_current.json",
                  history_path="monthly_price_history.json"):
     deals=load(super_deals_path)
@@ -55,7 +24,7 @@ def build_report(super_deals_path="super_deals_current.json",
     records=history.get("records",[])
     months_by_key={}
     for r in records:
-        key=canonical_existing_history_key(r.get("normalized_product_key"))
+        key=r.get("normalized_product_key")
         month=r.get("month")
         if key and month:
             months_by_key.setdefault(key,set()).add(month)

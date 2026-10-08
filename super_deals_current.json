@@ -153,7 +153,7 @@
       "super_deal_rule": "cola_24_cans",
       "super_deal_reason": "63.63 kr. < 69 kr. for 24 dåser",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l"
+      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l"
     },
     {
       "id": "tilbudsugen-11344893",
@@ -243,7 +243,7 @@
       "super_deal_rule": "cola_24_cans",
       "super_deal_reason": "59 kr. < 69 kr. for 24 dåser",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l"
+      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l"
     },
     {
       "id": "tilbudsugen-11343064",

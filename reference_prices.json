@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-05T13:45:00+02:00",
+  "generated_at": "2026-10-12T06:01:26+02:00",
   "currency": "DKK",
   "country": "Denmark",
   "item_count": 200,
@@ -39,18 +39,18 @@
       "category": "mejeri",
       "package_amount": 1,
       "package_unit": "liter",
-      "estimated_reference_price_dkk": 13,
+      "estimated_reference_price_dkk": 12,
       "expected_normal_range_dkk": {
-        "low": 11,
-        "high": 15
+        "low": 10,
+        "high": 14
       },
-      "estimated_unit_price_dkk": 13,
+      "estimated_unit_price_dkk": 12,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 13,
+      "change_percent": -7.69,
       "source_count": 1
     },
     {
@@ -119,19 +119,19 @@
       "category": "mejeri",
       "package_amount": 0.5,
       "package_unit": "liter",
-      "estimated_reference_price_dkk": 30,
+      "estimated_reference_price_dkk": 27,
       "expected_normal_range_dkk": {
-        "low": 26,
-        "high": 34
+        "low": 24,
+        "high": 31
       },
-      "estimated_unit_price_dkk": 60,
+      "estimated_unit_price_dkk": 54,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 30,
+      "change_percent": -10,
+      "source_count": 2
     },
     {
       "id": "ref-007",
@@ -279,19 +279,19 @@
       "category": "mejeri",
       "package_amount": 0.2,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 22,
+      "estimated_reference_price_dkk": 27,
       "expected_normal_range_dkk": {
-        "low": 18,
-        "high": 27
+        "low": 19,
+        "high": 34
       },
-      "estimated_unit_price_dkk": 110,
+      "estimated_unit_price_dkk": 135,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 22,
+      "change_percent": 22.73,
+      "source_count": 2
     },
     {
       "id": "ref-015",
@@ -299,19 +299,19 @@
       "category": "mejeri",
       "package_amount": 0.2,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 26,
+      "estimated_reference_price_dkk": 23,
       "expected_normal_range_dkk": {
-        "low": 22,
-        "high": 31
+        "low": 18,
+        "high": 28
       },
-      "estimated_unit_price_dkk": 130,
+      "estimated_unit_price_dkk": 115,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 26,
+      "change_percent": -11.54,
+      "source_count": 2
     },
     {
       "id": "ref-016",
@@ -479,19 +479,19 @@
       "category": "æg",
       "package_amount": 10,
       "package_unit": "stk",
-      "estimated_reference_price_dkk": 30,
+      "estimated_reference_price_dkk": 32,
       "expected_normal_range_dkk": {
-        "low": 24,
-        "high": 36
+        "low": 29,
+        "high": 34
       },
-      "estimated_unit_price_dkk": 3,
-      "confidence": "medium",
+      "estimated_unit_price_dkk": 3.2,
+      "confidence": "high",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 30,
+      "change_percent": 6.67,
+      "source_count": 2
     },
     {
       "id": "ref-025",
@@ -499,18 +499,18 @@
       "category": "æg",
       "package_amount": 10,
       "package_unit": "stk",
-      "estimated_reference_price_dkk": 38,
+      "estimated_reference_price_dkk": 42,
       "expected_normal_range_dkk": {
-        "low": 32,
-        "high": 44
+        "low": 38,
+        "high": 46
       },
-      "estimated_unit_price_dkk": 3.8,
+      "estimated_unit_price_dkk": 4.2,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 38,
+      "change_percent": 10.53,
       "source_count": 1
     },
     {
@@ -1219,18 +1219,18 @@
       "category": "frugt_og_gront",
       "package_amount": 2,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 25,
+      "estimated_reference_price_dkk": 22,
       "expected_normal_range_dkk": {
         "low": 18,
-        "high": 32
+        "high": 30
       },
-      "estimated_unit_price_dkk": 12.5,
+      "estimated_unit_price_dkk": 11,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 25,
+      "change_percent": -12,
       "source_count": 1
     },
     {
@@ -2319,19 +2319,19 @@
       "category": "morgenmad",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 16,
+      "estimated_reference_price_dkk": 10,
       "expected_normal_range_dkk": {
-        "low": 12,
-        "high": 20
+        "low": 8,
+        "high": 17
       },
-      "estimated_unit_price_dkk": 16,
-      "confidence": "medium",
+      "estimated_unit_price_dkk": 10,
+      "confidence": "high",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 16,
+      "change_percent": -37.5,
+      "source_count": 2
     },
     {
       "id": "ref-117",
@@ -2379,19 +2379,19 @@
       "category": "bagning",
       "package_amount": 2,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 18,
+      "estimated_reference_price_dkk": 13,
       "expected_normal_range_dkk": {
-        "low": 14,
-        "high": 22
+        "low": 10,
+        "high": 18
       },
-      "estimated_unit_price_dkk": 9,
+      "estimated_unit_price_dkk": 6.5,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 18,
+      "change_percent": -27.78,
+      "source_count": 2
     },
     {
       "id": "ref-120",
@@ -2439,18 +2439,18 @@
       "category": "bagning",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 15,
+      "estimated_reference_price_dkk": 9,
       "expected_normal_range_dkk": {
-        "low": 12,
-        "high": 18
+        "low": 8,
+        "high": 13
       },
-      "estimated_unit_price_dkk": 15,
+      "estimated_unit_price_dkk": 9,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 15,
+      "change_percent": -40,
       "source_count": 1
     },
     {
@@ -2459,19 +2459,19 @@
       "category": "bagning",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 14,
+      "estimated_reference_price_dkk": 10,
       "expected_normal_range_dkk": {
-        "low": 11,
-        "high": 17
+        "low": 7.5,
+        "high": 17.5
       },
-      "estimated_unit_price_dkk": 14,
-      "confidence": "medium",
+      "estimated_unit_price_dkk": 10,
+      "confidence": "high",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 14,
+      "change_percent": -28.57,
+      "source_count": 2
     },
     {
       "id": "ref-124",
@@ -2599,18 +2599,18 @@
       "category": "konserves",
       "package_amount": 0.4,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 9,
+      "estimated_reference_price_dkk": 8,
       "expected_normal_range_dkk": {
-        "low": 7,
-        "high": 12
+        "low": 6,
+        "high": 11
       },
-      "estimated_unit_price_dkk": 22.5,
+      "estimated_unit_price_dkk": 20,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 9,
+      "change_percent": -11.11,
       "source_count": 1
     },
     {
@@ -2819,19 +2819,19 @@
       "category": "olie_eddike",
       "package_amount": 1,
       "package_unit": "liter",
-      "estimated_reference_price_dkk": 28,
+      "estimated_reference_price_dkk": 19.5,
       "expected_normal_range_dkk": {
-        "low": 23,
-        "high": 34
+        "low": 18,
+        "high": 22
       },
-      "estimated_unit_price_dkk": 28,
-      "confidence": "medium",
+      "estimated_unit_price_dkk": 19.5,
+      "confidence": "high",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 28,
+      "change_percent": -30.36,
+      "source_count": 2
     },
     {
       "id": "ref-142",
@@ -3699,18 +3699,18 @@
       "category": "drikkevarer",
       "package_amount": 0.5,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 55,
+      "estimated_reference_price_dkk": 85,
       "expected_normal_range_dkk": {
-        "low": 45,
-        "high": 65
+        "low": 65,
+        "high": 105
       },
-      "estimated_unit_price_dkk": 110,
+      "estimated_unit_price_dkk": 170,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
+      "updated_at": "2026-10-12",
+      "previous_reference_price_dkk": 55,
+      "change_percent": 54.55,
       "source_count": 1
     },
     {

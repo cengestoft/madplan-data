@@ -11,7 +11,7 @@ SECURITY RULES (this repository is PUBLIC, so Actions logs are public):
 Environment: DROPBOX_APP_KEY, DROPBOX_APP_SECRET, DROPBOX_REFRESH_TOKEN, DROPBOX_RAW_PATH (default /latest-canonical.json: path inside the Dropbox App Folder)
 """
 from __future__ import annotations
-import argparse, hashlib, json, os, subprocess, sys, urllib.error, urllib.parse, urllib.request
+import argparse, hashlib, json, os, re, subprocess, sys, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 BLOCK = 4 * 1024 * 1024  # Dropbox content_hash block size
@@ -58,11 +58,36 @@ def _fail(msg: str):
     raise DropboxError(f"ERROR: {msg}")
 
 
+SAFE_WORDS = {  # fixed Dropbox error vocabulary; anything else is reported as "other" (never echo free text)
+    "invalid_grant", "invalid_client", "invalid_request", "unauthorized_client", "unsupported_grant_type", "invalid_access_token",
+    "expired_access_token", "invalid_refresh_token", "path", "not_found", "malformed_path", "not_file", "not_folder", "restricted_content",
+    "no_permission", "missing_scope", "too_many_requests", "too_many_write_operations", "rate_limit", "internal_server_error",
+    "user", "team", "app", "other", "unsupported_file", "disallowed_name", "lookup_failed", "access_error", "email_not_verified"}
+
+
+def safe_error_code(body: bytes) -> str:
+    """Reduce a Dropbox error body to a fixed-vocabulary code such as 'path/not_found' or 'invalid_grant'. Nothing else is ever returned."""
+    try:
+        doc = json.loads(body.decode("utf-8", "replace"))
+        raw = doc.get("error_summary") or doc.get("error") or ""
+    except Exception:
+        return ""
+    if not isinstance(raw, str):
+        return ""
+    parts = [p for p in re.split(r"[/.]", raw)[:4] if p]
+    return "/".join(p if p in SAFE_WORDS else "other" for p in parts)
+
+
 def _request(urlopen, req, what):
     try:
         return urlopen(req, timeout=300)
     except urllib.error.HTTPError as e:
-        _fail(f"{what} failed with HTTP {e.code}")  # never include the response body
+        code = ""
+        try:
+            code = safe_error_code(e.read(4096))
+        except Exception:
+            pass
+        _fail(f"{what} failed with HTTP {e.code}" + (f" ({code})" if code else ""))  # never include the response body
     except Exception as e:  # network errors: only the exception class, never its text
         _fail(f"{what} failed ({type(e).__name__})")
 
@@ -119,6 +144,7 @@ def fetch(env, dest: Path, expected_size=None, min_bytes=MIN_BYTES, urlopen=urll
     if not outside_git_tree(dest):
         _fail("destination is inside the git working tree; use a temporary directory")
     path = env.get("DROPBOX_RAW_PATH") or DEFAULT_PATH
+    print(f"Dropbox-sti: {path}")  # a path, not a secret; shown so a wrong DROPBOX_RAW_PATH variable is visible in the log
     token = get_access_token(env, urlopen)
     meta = get_metadata(token, path, urlopen)
     size, remote_hash = int(meta.get("size", -1)), meta.get("content_hash")

@@ -20,6 +20,7 @@ import urllib.request
 from collections import defaultdict
 
 import math
+from history_approval_check import documented
 from history_identity import (REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash)
 from product_normalization import infer_pack, normalized_product_key
 
@@ -332,6 +333,7 @@ def main():
     conflicts_by_key = defaultdict(lambda: defaultdict(int))
     missing_by_key = defaultdict(lambda: defaultdict(int))
     manual_by_key = defaultdict(int)
+    blocked_by_key = defaultdict(int)  # approvals NOT applied because the evidence did not document the same product
     examples_by_key = defaultdict(dict)  # PRIVATE: raw names stay out of the repository
     buckets = defaultdict(list)
     months_by_key = defaultdict(set)
@@ -368,14 +370,24 @@ def main():
                 verdict = combine(compare(describe(rp), d) for d in offer_identity[key])
                 verdict = dict(verdict, method=method_of.get(ck) or "direct", manual=False)
                 decision = decisions.get((key, pid))
-                if decision == "rejected" or (decision == "verified" and verdict["status"] == REVIEW):
-                    verdict.update(status=decision, manual=True)  # a human decision never overrides a hard conflict
+                if decision == "verified" and verdict["status"] == REVIEW:
+                    # A human approval is only applied when it is documented against THIS run's evidence (offer vs raw product name).
+                    # Missing or contradicting evidence leaves the product review_required.
+                    offs = offers_by_key.get(key, [])
+                    ok_doc, _why = documented([x.get("name") for x in offs], (offs[0].get("brand") if offs else None), product.get("name"))
+                    if ok_doc:
+                        verdict.update(status=decision, manual=True)
+                    else:
+                        verdict["manual_blocked"] = True
+                elif decision == "rejected":
+                    verdict.update(status=decision, manual=True)  # a rejection always applies; a human approval never overrides a hard conflict
                 verdict_cache[vkey] = verdict
                 raw_by_key[key][verdict["status"]].add(pid)
                 methods_by_key[key][verdict["method"]] += 1
                 for f in verdict["conflicts"]: conflicts_by_key[key][f] += 1
                 for f in verdict["missing"]: missing_by_key[key][f] += 1
                 if verdict["manual"]: manual_by_key[key] += 1
+                if verdict.get("manual_blocked"): blocked_by_key[key] += 1
                 if len(examples_by_key[key]) < 12:
                     examples_by_key[key][pid] = {"raw_hash": pid, "raw_name": product.get("name"), "store": STORES[store_code],
                                                  "status": verdict["status"], "method": verdict["method"], "conflicts": verdict["conflicts"],
@@ -410,6 +422,7 @@ def main():
             "conflict_fields": dict(conflicts_by_key.get(key, {})),
             "missing_fields": dict(missing_by_key.get(key, {})),
             "manual_decisions": manual_by_key.get(key, 0),
+            "manual_decisions_blocked": blocked_by_key.get(key, 0),
             "months": len(months_by_key.get(key, ())),
         }
     status_count = defaultdict(int)

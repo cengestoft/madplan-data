@@ -1,6 +1,8 @@
 {
  "schema_version": 1,
  "raw_data_included": false,
+ "status": "provisional_until_checked_against_private_match_log",
+ "status_note": "Foreløbige godkendelser. De anvendes ved import kun hvis tilbudsnavn og råproduktets navn dokumenterer samme produkt (scripts/history_approval_check.documented); ved manglende eller modstridende evidens forbliver produktet review_required. Skal kontrolleres mod den private match-log på Caspers Mac før de regnes for endelige.",
  "decisions": [
   {
    "normalized_product_key": "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg",

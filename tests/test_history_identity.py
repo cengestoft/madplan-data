@@ -202,6 +202,16 @@ class ImporterEndToEnd(unittest.TestCase):
         self.assertIs(ver3["keys"][key]["active"], True)
         self.assertEqual(ver3["summary"]["verified"], 2)
 
+    def test_verified_history_survives_when_ALL_current_offers_expire(self):
+        monthly1, ver1 = self.run_import()
+        self.write_offers(set())  # every offer expired: current_offers is empty
+        monthly2, ver2 = self.run_import()
+        self.assertEqual(monthly2["records"], monthly1["records"], "verified history must not shrink")
+        self.assertEqual(ver2["summary"]["active_food_keys"], 0)
+        self.assertEqual(ver2["summary"]["retained_verified_keys_without_active_offer"], ver1["summary"]["verified"])
+        self.assertTrue(all(v["active"] is False for v in ver2["keys"].values()))
+        self.assertEqual(history_integrity(monthly2, ver2)["rows_unverified"], 0)
+
     def test_unverified_history_is_never_published_even_for_keys_without_active_offer(self):
         self.run_import()
         self.write_offers({"KiMs Sour Cream & Onion Chips", "KiMs Havsalt Chips"})  # hytteost offer gone, but still in the registry
@@ -211,6 +221,22 @@ class ImporterEndToEnd(unittest.TestCase):
         self.assertIs(ver["keys"][hyt]["active"], False)
         self.assertNotIn(hyt, {r["normalized_product_key"] for r in monthly["records"]})
         self.assertEqual(history_integrity(monthly, ver)["rows_unverified"], 0)
+
+    def test_human_approval_without_documenting_evidence_is_not_applied(self):
+        raw = json.loads((self.tmp / "raw.json").read_text(encoding="utf-8"))
+        hist = [{"date": f"2026-0{m}-15", "price": 17, "quantity": 450, "unit": "g"} for m in (6, 7, 8)]
+        raw.append({"store": "netto", "id": "7", "name": "Gestus, Hytteost Naturel 4% fedt 450g, Hytteost", "category": "0", "priceHistory": hist})
+        (self.tmp / "raw.json").write_text(json.dumps(raw), encoding="utf-8")
+        _, ver = self.run_import()
+        key = next(k for k in ver["keys"] if k.split("|")[1] == "product=hytteost")
+        (self.tmp / "decisions.json").write_text(json.dumps({"decisions": [
+            {"normalized_product_key": key, "raw_id_hash": raw_id_hash("netto", "7"), "decision": "verified", "reviewed_by": "Casper",
+             "reviewed_on": "2026-10-13"}]}), encoding="utf-8")
+        monthly, ver2 = self.run_import()
+        self.assertEqual(ver2["keys"][key]["status"], REVIEW, "extra distinctive word 'naturel' is not documented by the offer")
+        self.assertEqual(ver2["keys"][key]["manual_decisions_blocked"], 1)
+        self.assertEqual(ver2["keys"][key]["manual_decisions"], 0)
+        self.assertNotIn(key, {r["normalized_product_key"] for r in monthly["records"]})
 
     def test_identity_registry_holds_no_raw_text(self):
         self.run_import()

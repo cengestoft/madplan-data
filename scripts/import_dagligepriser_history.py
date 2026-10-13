@@ -118,6 +118,18 @@ def raw_probe(product, hist):
     }
 
 
+def reconcile_manifest_file(output: pathlib.Path) -> bool:
+    """Keep price_history.json (the manifest next to the output) in step with the rebuilt history: record count, keys, months."""
+    manifest_path = output.parent / "price_history.json"
+    if not manifest_path.exists():
+        return False
+    from build_data_pipeline import reconcile_history_manifest
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    monthly = json.loads(output.read_text(encoding="utf-8"))
+    manifest_path.write_text(json.dumps(reconcile_history_manifest(manifest, monthly), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source-file")
@@ -381,6 +393,7 @@ def main():
         raise SystemExit(f"Output over 12 MB: {size} bytes")
 
     output.write_text(payload, encoding="utf-8")
+    reconcile_manifest_file(output)
     print(
         json.dumps(
             {

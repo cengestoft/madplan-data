@@ -11,7 +11,7 @@ from pathlib import Path
 from datetime import datetime
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from offer_schema import copenhagen_today, offer_status
+from offer_schema import copenhagen_today, offer_status, snapshot_date
 import datetime as _dt
 
 MIN_MONTHS = 3
@@ -123,10 +123,13 @@ def main():
     ap.add_argument("--report",default="super_deal_history_report.json")
     ap.add_argument("--errors",default="data_quality_errors.json")
     ap.add_argument("--refresh-current",action="store_true",help="recompute super_deals_current.json from stores/*.json first")
+    ap.add_argument("--today",help="YYYY-MM-DD; default is the snapshot date of the super deals file (never the machine's date)")
     args=ap.parse_args()
+    # Same date basis as the tests: the snapshot date of the data, so a later run date cannot silently drop deals.
+    today=_dt.date.fromisoformat(args.today) if args.today else snapshot_date(load(args.super_deals))
     if args.refresh_current:
-        refresh_super_deals_current(args.super_deals)
-    report=build_report(args.super_deals,args.history)
+        refresh_super_deals_current(args.super_deals,today=today)
+    report=build_report(args.super_deals,args.history,today)
     Path(args.report).write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     update_errors(report,args.errors)
     print(json.dumps({

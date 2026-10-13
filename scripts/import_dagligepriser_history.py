@@ -125,13 +125,14 @@ def main():
     ap.add_argument("--current-offers", default="current_offers.json")
     ap.add_argument("--allow-public-output", action="store_true")
     ap.add_argument("--manifest", default="data_sources/dagligepriser_manifest.json")
+    ap.add_argument("--match-log", help="write per-key match documentation (method + raw product examples) to this PRIVATE path under data/private/; never committed")
     args = ap.parse_args()
 
     manifest_path = pathlib.Path(args.manifest)
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     redistribution = manifest.get("redistribution_status", "unresolved")
     output = pathlib.Path(args.output)
-    if "data/private" not in output.as_posix() and redistribution != "allowed" and not args.allow_public_output:
+    if "data/private" not in output.as_posix() and redistribution not in {"allowed", "permitted_aggregated_only"} and not args.allow_public_output:
         raise SystemExit("Refusing public output while redistribution status is unresolved")
 
     current = json.loads(pathlib.Path(args.current_offers).read_text(encoding="utf-8"))
@@ -165,6 +166,7 @@ def main():
         return None
 
     cache = {}
+    method_of = {}  # cache_key -> "direct" | "conservative" | "unmatched"
 
     def choose_key(product, hist):
         probe = raw_probe(product, hist)
@@ -180,11 +182,13 @@ def main():
         direct = normalized_product_key(probe)
         if direct in offer_keys:
             cache[cache_key] = direct
+            method_of[cache_key] = "direct"
             return direct
 
         candidates = index.get(sig(probe) or (), [])
         if not candidates:
             cache[cache_key] = direct
+            method_of[cache_key] = "unmatched"
             return direct
 
         raw_tokens = toks(probe.get("name"))
@@ -207,9 +211,11 @@ def main():
             len(scored) == 1 or scored[0][0] - scored[1][0] >= 0.01
         ):
             cache[cache_key] = scored[0][1]
+            method_of[cache_key] = "conservative"
             return cache[cache_key]
 
         cache[cache_key] = direct
+        method_of[cache_key] = "unmatched"
         return direct
 
     raw = (
@@ -221,6 +227,7 @@ def main():
     if not isinstance(products, list):
         raise ValueError("Expected product list")
 
+    provenance = {}
     buckets = defaultdict(list)
     months_by_key = defaultdict(set)
     skipped = 0
@@ -243,6 +250,18 @@ def main():
 
             key = choose_key(product, hist)
             month = hist["date"][:7]
+            if args.match_log and key in offer_keys:
+                ck = (probe.get("name"), probe.get("brand"), probe.get("variant"),
+                      probe.get("package_count"), probe.get("package_amount"), probe.get("package_unit"))
+                prov = provenance.setdefault(key, {"methods": defaultdict(int), "examples": {}})
+                m = method_of.get(ck) or "direct"
+                prov["methods"][m] += 1
+                prov["examples"].setdefault(
+                    (product.get("name"), product.get("brand"), product.get("variant"), STORES[store_code], m),
+                    {"raw_name": product.get("name"), "raw_brand": product.get("brand"),
+                     "raw_variant": product.get("variant"), "store": STORES[store_code], "method": m,
+                     "quantity": probe.get("package_amount"), "unit": probe.get("package_unit"),
+                     "package_count": probe.get("package_count")})
             buckets[(key, STORES[store_code], month)].append(price)
             months_by_key[key].add(month)
 
@@ -263,6 +282,31 @@ def main():
         rows.sort(key=lambda r: (r["month"], r["store"]))
 
     history_keys = set(by_key)
+    if args.match_log:
+        log_path = pathlib.Path(args.match_log)
+        if "data/private" not in log_path.as_posix():
+            raise SystemExit("--match-log must be under data/private/ (raw product text must never be committed)")
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        old_keys = set()
+        if output.exists():
+            try:
+                old_keys = {r.get("normalized_product_key") for r in json.loads(output.read_text(encoding="utf-8")).get("records", [])}
+            except Exception:
+                old_keys = set()
+        entries = []
+        for key in sorted(offer_keys & history_keys):
+            prov = provenance.get(key, {"methods": {}, "examples": {}})
+            entries.append({
+                "normalized_product_key": key,
+                "new_vs_previous_file": key not in old_keys,
+                "months": sorted(months_by_key[key]),
+                "month_count": len(months_by_key[key]),
+                "observations": sum(r["observation_count"] for r in by_key[key]),
+                "methods": dict(prov["methods"]),
+                "raw_examples": list(prov["examples"].values())[:5],
+            })
+        log_path.write_text(json.dumps({"offer_keys": len(offer_keys), "matched_in_raw": len(offer_keys & history_keys),
+                                         "entries": entries}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     direct = offer_keys & history_keys
     overlap = len(direct) / max(1, len(offer_keys))
     if overlap < MIN_OVERLAP:

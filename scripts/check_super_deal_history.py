@@ -9,6 +9,10 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 from datetime import datetime
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from offer_schema import copenhagen_today, offer_status
+import datetime as _dt
 
 MIN_MONTHS = 3
 MAX_HISTORY_BYTES = 12 * 1024 * 1024
@@ -16,9 +20,35 @@ MAX_HISTORY_BYTES = 12 * 1024 * 1024
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
+def collect_active_super_deals(stores_dir="stores", today=None):
+    """Recompute the current Supertilbud list from rich store records: flagged AND valid today."""
+    today=today or copenhagen_today()
+    rows=[]
+    for path in sorted(Path(stores_dir).glob("*.json")):
+        doc=load(path)
+        for o in doc.get("offers",[]) if isinstance(doc.get("offers"),list) else []:
+            if o.get("super_deal") is True and offer_status(o,today)=="active":
+                rows.append(o)
+    return rows
+
+def refresh_super_deals_current(path="super_deals_current.json", stores_dir="stores", today=None):
+    doc=load(path) if Path(path).exists() else {}
+    offers=collect_active_super_deals(stores_dir,today)
+    counts={}
+    for o in offers: counts[o.get("store")]=counts.get(o.get("store"),0)+1
+    doc["offers"]=offers; doc["super_deal_count"]=len(offers); doc["counts_by_store"]=dict(sorted(counts.items()))
+    doc["generated_at"]=datetime.now().astimezone().isoformat(timespec="seconds")
+    Path(path).write_text(json.dumps(doc,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    return doc
+
 def build_report(super_deals_path="super_deals_current.json",
-                 history_path="monthly_price_history.json"):
+                 history_path="monthly_price_history.json", today=None):
+    today=today or copenhagen_today()
     deals=load(super_deals_path)
+    all_offers=deals.get("offers",[])
+    active_offers=[o for o in all_offers if offer_status(o,today)=="active"]
+    expired_excluded=len(all_offers)-len(active_offers)
+    deals=dict(deals, offers=active_offers)
     history_file=Path(history_path)
     history=load(history_path)
     records=history.get("records",[])
@@ -51,6 +81,8 @@ def build_report(super_deals_path="super_deals_current.json",
         "schema_version":1,
         "generated_at":datetime.now().astimezone().isoformat(timespec="seconds"),
         "minimum_history_months":MIN_MONTHS,
+        "valid_on":str(today),
+        "expired_excluded":expired_excluded,
         "super_deal_count":total,
         "with_minimum_history":ok,
         "without_minimum_history":total-ok,
@@ -75,6 +107,7 @@ def update_errors(report, path="data_quality_errors.json"):
                 "normalized_product_key":r.get("normalized_product_key"),
                 "history_month_count":r.get("history_month_count"),
                 "required_months":MIN_MONTHS,
+                "severity":"warning",
                 "frontend_action":"Do not show a price-history graph for this offer."
             })
     data["generated_at"]=report["generated_at"]
@@ -89,7 +122,10 @@ def main():
     ap.add_argument("--history",default="monthly_price_history.json")
     ap.add_argument("--report",default="super_deal_history_report.json")
     ap.add_argument("--errors",default="data_quality_errors.json")
+    ap.add_argument("--refresh-current",action="store_true",help="recompute super_deals_current.json from stores/*.json first")
     args=ap.parse_args()
+    if args.refresh_current:
+        refresh_super_deals_current(args.super_deals)
     report=build_report(args.super_deals,args.history)
     Path(args.report).write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     update_errors(report,args.errors)

@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-06T13:30:00+02:00",
-  "current_total": 5193,
+  "generated_at": "2026-10-09T06:40:00+00:00",
+  "current_total": 1653,
   "counts": {
     "REMA 1000": 305,
-    "føtex": 529,
-    "Kvickly": 487,
-    "MENY": 401,
-    "SPAR": 328,
-    "Min Købmand": 126,
-    "Løvbjerg": 485,
+    "føtex": 18,
+    "Kvickly": 90,
+    "MENY": 16,
+    "SPAR": 16,
+    "Min Købmand": 16,
+    "Løvbjerg": 28,
     "Let-Køb": 74,
-    "ABC Lavpris": 9,
-    "365discount": 352,
+    "ABC Lavpris": 0,
+    "365discount": 5,
     "Lidl": 576,
-    "SuperBrugsen": 477,
+    "SuperBrugsen": 89,
     "Netto": 395,
-    "Bilka": 424,
-    "Dagli'Brugsen": 225
+    "Bilka": 6,
+    "Dagli'Brugsen": 19
   },
   "future_new": 0,
   "skipped": {
@@ -113,7 +113,7 @@
       "reason": "Location and prices pending."
     }
   ],
-  "offer_count": 5193,
+  "offer_count": 1653,
   "preferred_store_locations": {},
   "notes": [
     "ABC Lavpris is now handled at chain level; local branch differences may exist and special/local offers should open the retailer flyer.",
@@ -130,5 +130,18 @@
     "blocks_drop_over_pct": 25,
     "blocks_hard_error_rate_over_pct": 10,
     "previous_snapshot": "current_offers.previous.json"
+  },
+  "imported": {
+    "active": 1653,
+    "future_moved_to_next_week": 0,
+    "unknown_end_date": 0,
+    "undated": 0
+  },
+  "rejected": {
+    "expired_removed_from_index": 3540,
+    "undated": 0,
+    "duplicate_warnings": 0,
+    "hard_errors": 0,
+    "note": "Expired offers are removed from current_offers.json only; rich records stay in stores/*.json."
   }
 }

@@ -15,6 +15,10 @@ on:
       - "tests/**"
   pull_request:
     paths:
+      - ".github/workflows/**"
+      - "next_week_offers.json"
+      - "super_deals_current.json"
+      - "acceptance_report.json"
       - "current_offers.json"
       - "import_status.json"
       - "monthly_price_history.json"
@@ -34,8 +38,29 @@ jobs:
         with:
           python-version: "3.12"
       - name: Python syntax check
-        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py
+        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py scripts/offer_schema.py scripts/check_super_deal_history.py scripts/generate_acceptance_report.py scripts/build_offer_feed.py scripts/check_freshness.py scripts/history_overlap_report.py
       - name: Run acceptance tests
         run: python -m unittest discover -s tests -v
       - name: Validate pipeline without writing
-        run: python scripts/build_data_pipeline.py
+        run: python scripts/build_data_pipeline.py --snapshot-date
+      - name: Acceptance report must match a fresh run (no write)
+        run: python scripts/generate_acceptance_report.py --check
+      - name: Feed files must match a fresh build (no write)
+        run: python scripts/build_offer_feed.py --check
+      - name: History overlap diagnosis (read only)
+        if: always()
+        run: python scripts/history_overlap_report.py
+
+  # Live freshness is judged separately from snapshot integrity. It is advisory:
+  # stale published data is flagged with a visible warning, it does not make an
+  # otherwise valid pull request fail just because the calendar moved.
+  freshness:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Live data freshness (advisory, no write)
+        run: python scripts/check_freshness.py

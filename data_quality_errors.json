@@ -1,9 +1,105 @@
 {
-  "generated_at": "2026-10-08T10:01:25+00:00",
-  "offer_count": 5184,
-  "error_count": 3,
+  "generated_at": "2026-10-09T06:40:10+00:00",
+  "offer_count": 1653,
+  "error_count": 14,
   "hard_error_count": 0,
   "errors": [
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "Kalvecuvette",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "MADVÆRKET Medister",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "ROSE Hakket kyllingekød",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "ROSE Kyllingelårmix",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "ROSE Kyllingeinderfilet",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "Luksusrogn",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "BUTCHER'S Hamburger af oksekød",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "Røget bacon",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "Hamburgerryg",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "Skinke",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "BELLAROM Café crema hele bønner",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "BELLAROM Espresso hele bønner",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
     {
       "type": "super_deal_missing_history",
       "offer_id": "tilbudsugen-11350985",
@@ -12,16 +108,7 @@
       "normalized_product_key": "brand=milbona|product=smoer-saltet|variant=standard|count=1|size=0-25kg",
       "history_month_count": 0,
       "required_months": 3,
-      "frontend_action": "Do not show a price-history graph for this offer."
-    },
-    {
-      "type": "super_deal_missing_history",
-      "offer_id": "tilbudsugen-11343711",
-      "name": "Coca Cola Cola 24 pk.",
-      "store": "Løvbjerg",
-      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l",
-      "history_month_count": 0,
-      "required_months": 3,
+      "severity": "warning",
       "frontend_action": "Do not show a price-history graph for this offer."
     },
     {
@@ -29,9 +116,10 @@
       "offer_id": "tilbudsugen-11349016",
       "name": "Coca Cola Cola 24 pk.",
       "store": "Netto",
-      "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l",
+      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l",
       "history_month_count": 0,
       "required_months": 3,
+      "severity": "warning",
       "frontend_action": "Do not show a price-history graph for this offer."
     }
   ]

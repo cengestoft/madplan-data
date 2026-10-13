@@ -62,14 +62,13 @@ Hvis pakningsstørrelsen i en historisk observation er ukendt, må nutidens pakn
 
 ## dagligepriser.dk rettigheder
 
-Projektkoden Herover/heissepreise er MIT-licenseret, og projektets README beskriver download af live rådata. Der er ikke fundet en særskilt licens, der udtrykkeligt giver ret til offentlig videredistribution af selve prisdatabasen eller et stort afledt datasæt.
+Skriftlig tilladelse foreligger (5. og 6. oktober 2026, se `data_sources/DAGLIGEPRISER_DATA_RIGHTS.md`). Månedligt aggregeret historik pr. produkt, butik og måned må bruges i appen og ligge offentligt i dette repo.
 
-Konsekvens:
-- data må hentes til lokal analyse/importforberedelse,
-- rådata må ikke committes,
-- offentlig publicering af et stort afledt dagligepriser-datasæt er blokeret indtil eksplicit datalicens/tilladelse er dokumenteret.
-
-Kontakt angivet af sitet: hi+heissepreise@leonora.app.
+Vilkår, der fortsat er blokerende:
+- kun aggregerede månedsdata; rådata og daglige observationer må ikke offentliggøres,
+- det store dump (ca. 355 MB) må aldrig committes,
+- appen skal vise synlig kreditering med link til dagligepriser.dk,
+- tilladelsen kan trækkes tilbage; ingen automatisk publicering af historik uden brugerens udtrykkelige godkendelse.
 
 ## Publiceringsvagt
 

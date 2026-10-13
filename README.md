@@ -254,11 +254,11 @@ Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede o
 
 
 ## Opdatering 5. oktober 2026
-5.184 aktuelle tilbud fra 14 kæder. ABC-præference: Videbæk; Tarm er alene særskilt arkiv. Se `SUPERKOEB_MASTER.md` for den kanoniske implementeringsvejledning og `data_sources/dagligepriser_manifest.json` for det fundne historiske dump (226.142 vareposter, 2.336.261 historiske prisregistreringer). Kør `scripts/import_dagligepriser_history.py` for lokal månedlig aggregering. Rådumpet må ikke ligge i Git, og offentlig afledt dagligepriser-historik er blokeret, mens datalicensen er uafklaret.
+5.184 aktuelle tilbud fra 14 kæder. ABC Lavpris behandles på kædeniveau (ingen fast afdeling); Tarm er alene særskilt arkiv. Se `SUPERKOEB_MASTER.md` for den kanoniske implementeringsvejledning og `data_sources/dagligepriser_manifest.json` for det fundne historiske dump (226.142 vareposter, 2.336.261 historiske prisregistreringer). Kør `scripts/import_dagligepriser_history.py` for lokal månedlig aggregering. Rådumpet må ikke ligge i Git. Månedligt aggregeret historik må publiceres efter dagligepriser.dks skriftlige tilladelse (se `data_sources/DAGLIGEPRISER_DATA_RIGHTS.md`).
 
 ## Kanonisk Superkøb-master
 
-`SUPERKOEB_MASTER.md` er den eneste masterfil for Superkøb-dataflow, ABC Videbæk, normalisering, Supertilbud, historik og accepttests. Ældre Claude-handoff-filer er fjernet for at undgå modstridende regler.
+`SUPERKOEB_MASTER.md` er den eneste masterfil for Superkøb-dataflow, ABC Lavpris (kædeniveau), normalisering, Supertilbud, historik og accepttests. Ældre Claude-handoff-filer er fjernet for at undgå modstridende regler.
 
 
 ## Supertilbud – historikvalidering

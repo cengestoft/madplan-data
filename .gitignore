@@ -5,3 +5,4 @@ data/raw/
 data/private/
 data/history/raw/
 *.ndjson.raw
+__pycache__/

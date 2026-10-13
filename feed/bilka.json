@@ -1,0 +1,103 @@
+{
+ "store": "Bilka",
+ "offer_count": 6,
+ "page_count": 1,
+ "non_food_count": 2,
+ "valid_to": "2026-10-15",
+ "truncated_lines": [],
+ "offers": [
+  {
+   "id": "tilbudsugen-11346017",
+   "name": "Dyrup Maling",
+   "price_dkk": 799,
+   "package_amount": 9,
+   "package_unit": "l",
+   "valid_from": "2026-10-02",
+   "valid_to": "2026-10-15",
+   "organic": false,
+   "member_only": false,
+   "category": "kolonial",
+   "page": 0,
+   "line": 0,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11345789",
+   "name": "Infaillible Setting Spray",
+   "price_dkk": 103.5,
+   "package_amount": 0.075,
+   "package_unit": "l",
+   "valid_from": "2026-10-02",
+   "valid_to": "2026-10-15",
+   "organic": false,
+   "member_only": false,
+   "category": "kolonial",
+   "page": 0,
+   "line": 1,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11345787",
+   "name": "Loreal Paris Mascara",
+   "price_dkk": 96.75,
+   "package_amount": 2,
+   "package_unit": "stk",
+   "valid_from": "2026-10-02",
+   "valid_to": "2026-10-15",
+   "organic": false,
+   "member_only": false,
+   "category": "kolonial",
+   "page": 0,
+   "line": 2,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11345829",
+   "name": "Salling ØKO Vatrondeller",
+   "price_dkk": 10.2,
+   "package_amount": 35,
+   "package_unit": "stk",
+   "valid_from": "2026-10-02",
+   "valid_to": "2026-10-15",
+   "organic": true,
+   "member_only": false,
+   "category": "kolonial",
+   "page": 0,
+   "line": 3,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11345831",
+   "name": "Head&Shoulders Shampoo",
+   "price_dkk": 11.9,
+   "package_amount": 0.09,
+   "package_unit": "l",
+   "valid_from": "2026-10-02",
+   "valid_to": "2026-10-15",
+   "organic": false,
+   "member_only": false,
+   "category": "husholdning",
+   "page": 0,
+   "line": 4,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11345836",
+   "name": "Shampoo",
+   "price_dkk": 4.25,
+   "package_amount": 0.05,
+   "package_unit": "l",
+   "valid_from": "2026-10-02",
+   "valid_to": "2026-10-15",
+   "organic": false,
+   "member_only": false,
+   "category": "husholdning",
+   "page": 0,
+   "line": 5,
+   "name_shortened_in_page_text": false
+  }
+ ],
+ "pages": [
+  "Dyrup Maling - 799 kr. pr. 9 l\nInfaillible Setting Spray - 103,5 kr. pr. 0,075 l\nLoreal Paris Mascara - 96,75 kr. pr. 2 stk\nSalling ØKO Vatrondeller - 10,2 kr. pr. 35 stk - øko\nHead&Shoulders Shampoo - 11,9 kr. pr. 0,09 l\nShampoo - 4,25 kr. pr. 0,05 l"
+ ]
+}

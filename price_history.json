@@ -4,8 +4,12 @@
   "currency": "DKK",
   "mode": "monthly_aggregated",
   "data_file": "monthly_price_history.json",
-  "record_count": 4958,
+  "record_count": 48057,
   "aggregation": "normalized_product_key + store + month",
   "raw_history_in_git": false,
-  "note": "Canonical publishable history is monthly_price_history.json. Raw history and the ~355 MB dagligepriser.dk dump are not stored in Git."
+  "note": "Canonical publishable history is monthly_price_history.json. Raw history and the ~355 MB dagligepriser.dk dump are not stored in Git.",
+  "data_generated_at": "2026-10-08T10:01:25.187359+00:00",
+  "distinct_keys": 1138,
+  "first_month": "2023-10",
+  "last_month": "2026-10"
 }

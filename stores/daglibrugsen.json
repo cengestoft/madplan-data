@@ -3150,7 +3150,9 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-25l"
+      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-25l",
+      "quantity_status": "unverified",
+      "quantity_note": "Mængden er ikke bekræftet mod originalkilden (afviger fra samme vare i andre kæder). Tjek pakken."
     },
     {
       "id": "tilbudsugen-11335755",
@@ -3197,7 +3199,9 @@
       "super_deal_rule": null,
       "super_deal_reason": null,
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola-zero|product=cola-24-pk|variant=zero|count=24|size=0-25l"
+      "normalized_product_key": "brand=coca-cola-zero|product=cola-24-pk|variant=zero|count=24|size=0-25l",
+      "quantity_status": "unverified",
+      "quantity_note": "Mængden er ikke bekræftet mod originalkilden (afviger fra samme vare i andre kæder). Tjek pakken."
     },
     {
       "id": "tilbudsugen-11335756",

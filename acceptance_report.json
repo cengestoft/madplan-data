@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T20:58:47+02:00",
+  "generated_at": "2026-10-13T21:18:04+02:00",
   "branch": "claude-kodekontrol-2026-10-09",
-  "valid_on": "2026-10-09",
+  "valid_on": "2026-10-13",
   "passed": 12,
   "total": 12,
   "all_pass": true,
@@ -10,13 +10,13 @@
       "id": 1,
       "name": "No expired offers in current index (Danish date)",
       "status": "PASS",
-      "detail": "0 expired, 1653 active, 0 future, 0 without end date on 2026-10-09."
+      "detail": "0 expired, 748 active, 0 future, 0 without end date on 2026-10-13."
     },
     {
       "id": 2,
       "name": "import_status matches active offers",
       "status": "PASS",
-      "detail": "index 1653; status offer_count 1653, current_total 1653."
+      "detail": "index 748; status offer_count 748, current_total 748."
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "All current rows have a recomputed-identical normalized_product_key",
       "status": "PASS",
-      "detail": "0 mismatching of 1653."
+      "detail": "0 mismatching of 748."
     },
     {
       "id": 5,
@@ -74,7 +74,7 @@
     },
     {
       "id": 12,
-      "name": "Unit test suite (108 tests)",
+      "name": "Unit test suite (109 tests)",
       "status": "PASS",
       "detail": "all passed"
     }
@@ -84,13 +84,13 @@
       "name": "Verified history overlap on active food keys (target 30%, non-blocking)",
       "status": "BELOW_TARGET",
       "blocking": false,
-      "verified": 97,
-      "active_food_keys": 1271,
-      "overlap": 0.0763,
-      "review_required": 73,
-      "rejected": 23,
-      "no_candidate": 1078,
-      "additional_verified_needed": 285
+      "verified": 30,
+      "active_food_keys": 548,
+      "overlap": 0.0547,
+      "review_required": 24,
+      "rejected": 4,
+      "no_candidate": 490,
+      "additional_verified_needed": 135
     }
   ],
   "automation": {

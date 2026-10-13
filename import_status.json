@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T06:40:00+00:00",
-  "current_total": 1653,
+  "generated_at": "2026-10-13T21:16:04+02:00",
+  "current_total": 748,
   "counts": {
-    "REMA 1000": 305,
+    "REMA 1000": 0,
     "føtex": 18,
     "Kvickly": 90,
     "MENY": 16,
@@ -12,9 +12,9 @@
     "Let-Køb": 74,
     "ABC Lavpris": 0,
     "365discount": 5,
-    "Lidl": 576,
+    "Lidl": 370,
     "SuperBrugsen": 89,
-    "Netto": 395,
+    "Netto": 1,
     "Bilka": 6,
     "Dagli'Brugsen": 19
   },
@@ -113,7 +113,7 @@
       "reason": "Location and prices pending."
     }
   ],
-  "offer_count": 1653,
+  "offer_count": 748,
   "preferred_store_locations": {},
   "notes": [
     "ABC Lavpris is now handled at chain level; local branch differences may exist and special/local offers should open the retailer flyer.",
@@ -132,13 +132,13 @@
     "previous_snapshot": "current_offers.previous.json"
   },
   "imported": {
-    "active": 1653,
+    "active": 748,
     "future_moved_to_next_week": 0,
     "unknown_end_date": 0,
     "undated": 0
   },
   "rejected": {
-    "expired_removed_from_index": 3540,
+    "expired_removed_from_index": 905,
     "undated": 0,
     "duplicate_warnings": 0,
     "hard_errors": 0,

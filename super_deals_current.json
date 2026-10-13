@@ -1,14 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T06:40:10+00:00",
+  "generated_at": "2026-10-13T21:16:21+02:00",
   "currency": "DKK",
   "source": "Precomputed from stores/*.json using scripts/apply_super_deals.py and super_deal_rules.json",
   "app_behavior": "Display these offers directly. Do not re-evaluate Supertilbud thresholds in the frontend.",
   "criteria_note": "Coca-Cola rules match regular Coca-Cola only; Coca-Cola Zero/Light, Pepsi/Pepsi Max and Fanta are excluded. Bottle size is 1.25-2.0 L.",
-  "super_deal_count": 2,
+  "super_deal_count": 1,
   "counts_by_store": {
-    "Lidl": 1,
-    "Netto": 1
+    "Lidl": 1
   },
   "offers": [
     {
@@ -53,51 +52,6 @@
       "super_deal_reason": "39.8 kr./kg <= 40 kr./kg",
       "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
       "normalized_product_key": "brand=milbona|product=smoer-saltet|variant=standard|count=1|size=0-25kg"
-    },
-    {
-      "id": "tilbudsugen-11349016",
-      "name": "Coca Cola Cola 24 pk.",
-      "store": "Netto",
-      "category": "drikkevarer",
-      "source_category": "Sodavand",
-      "price_dkk": 59,
-      "package_amount": 7.92,
-      "package_unit": "l",
-      "unit_price_dkk": 7.45,
-      "organic": false,
-      "member_only": false,
-      "valid_from": "2026-10-03",
-      "valid_to": "2026-10-09",
-      "food_relevance": "low",
-      "price_verified": true,
-      "brand": "Coca Cola",
-      "variant": null,
-      "normal_price_dkk": null,
-      "discount_pct": null,
-      "multi_buy": null,
-      "deposit_dkk": null,
-      "source_type": "portal",
-      "source_url": "https://www.tilbudsugen.dk/partner/netto-114",
-      "retailer_source_url": null,
-      "source_offer_id": 11349016,
-      "source_image_url": "https://static.tilbudsugen.dk/1st-retail/2026/41/66464/Netto402026-1_1_102x3627_2361x6729_zoom.jpg",
-      "source_unit_price_dkk": 7.45,
-      "observed_at": "2026-10-05T16:44:00+02:00",
-      "source_notes": [
-        "Spot"
-      ],
-      "package_count": 24,
-      "single_package_amount": 0.33,
-      "single_package_unit": "l",
-      "single_package_price_dkk": 2.46,
-      "product_type": "cola",
-      "container": "can",
-      "volume_l": 0.33,
-      "super_deal": true,
-      "super_deal_rule": "cola_24_cans",
-      "super_deal_reason": "59 kr. < 69 kr. for 24 dåser",
-      "super_deal_checked_at": "2026-10-05T20:20:00+02:00",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l"
     }
   ]
 }

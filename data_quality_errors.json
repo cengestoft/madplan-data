@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-09T06:40:10+00:00",
-  "offer_count": 1653,
-  "error_count": 14,
+  "generated_at": "2026-10-13T21:16:21+02:00",
+  "offer_count": 748,
+  "error_count": 13,
   "hard_error_count": 0,
   "errors": [
     {
@@ -106,17 +106,6 @@
       "name": "Milbona Smør Saltet",
       "store": "Lidl",
       "normalized_product_key": "brand=milbona|product=smoer-saltet|variant=standard|count=1|size=0-25kg",
-      "history_month_count": 0,
-      "required_months": 3,
-      "severity": "warning",
-      "frontend_action": "Do not show a price-history graph for this offer."
-    },
-    {
-      "type": "super_deal_missing_history",
-      "offer_id": "tilbudsugen-11349016",
-      "name": "Coca Cola Cola 24 pk.",
-      "store": "Netto",
-      "normalized_product_key": "brand=coca-cola|product=cola-24-pk|variant=standard|count=24|size=0-33l",
       "history_month_count": 0,
       "required_months": 3,
       "severity": "warning",

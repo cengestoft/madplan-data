@@ -1,0 +1,147 @@
+{
+  "generated_at": "2026-10-09T06:40:00+00:00",
+  "current_total": 1653,
+  "counts": {
+    "REMA 1000": 305,
+    "føtex": 18,
+    "Kvickly": 90,
+    "MENY": 16,
+    "SPAR": 16,
+    "Min Købmand": 16,
+    "Løvbjerg": 28,
+    "Let-Køb": 74,
+    "ABC Lavpris": 0,
+    "365discount": 5,
+    "Lidl": 576,
+    "SuperBrugsen": 89,
+    "Netto": 395,
+    "Bilka": 6,
+    "Dagli'Brugsen": 19
+  },
+  "future_new": 0,
+  "skipped": {
+    "duplicate": 215,
+    "unsupported_or_missing_unit": 754,
+    "outside_grocery_scope": 341,
+    "expired": 1
+  },
+  "sources": {
+    "rema": {
+      "listed": 332,
+      "source_url": "https://www.tilbudsugen.dk/partner/rema1000-3"
+    },
+    "foetex": {
+      "listed": 852,
+      "source_url": "https://www.tilbudsugen.dk/partner/foetex-119"
+    },
+    "kvickly": {
+      "listed": 650,
+      "source_url": "https://www.tilbudsugen.dk/partner/kvickly-121"
+    },
+    "meny": {
+      "listed": 432,
+      "source_url": "https://www.tilbudsugen.dk/partner/meny-123"
+    },
+    "spar": {
+      "listed": 366,
+      "source_url": "https://www.tilbudsugen.dk/partner/spar-115"
+    },
+    "min-koebmand": {
+      "listed": 153,
+      "source_url": "https://www.tilbudsugen.dk/partner/min-koebmand-116"
+    },
+    "loevbjerg": {
+      "listed": 541,
+      "source_url": "https://www.tilbudsugen.dk/partner/loevbjerg-120"
+    },
+    "let-koeb": {
+      "listed": 74,
+      "source_url": "https://www.tilbudsugen.dk/partner/let-koeb-112"
+    },
+    "abc-search": {
+      "listed": 110,
+      "source_url": "https://www.tilbudsugen.dk/offer/ABC"
+    },
+    "365discount": {
+      "listed": 381,
+      "source_url": "https://www.tilbudsugen.dk/partner/coop-365discount-124"
+    },
+    "lidl": {
+      "listed": 643,
+      "source_url": "https://www.tilbudsugen.dk/partner/lidl-2"
+    },
+    "superbrugsen": {
+      "listed": 541,
+      "source_url": "https://www.tilbudsugen.dk/partner/superbrugsen-122"
+    },
+    "netto": {
+      "listed": 458,
+      "source_url": "https://www.tilbudsugen.dk/partner/netto-114"
+    },
+    "bilka": {
+      "listed": 841,
+      "source_url": "https://www.tilbudsugen.dk/partner/bilka-110"
+    },
+    "dagli": {
+      "listed": 229,
+      "source_url": "https://www.tilbudsugen.dk/partner/daglibrugsen-117"
+    },
+    "abc-videbaek-official": {
+      "listed": 9,
+      "source_url": "https://www.abc-lavpris.dk/butikker/videbaek",
+      "store_location": "Videbæk",
+      "verified": true
+    },
+    "abc-chain": {
+      "listed": 9,
+      "source_url": "https://www.abc-lavpris.dk/",
+      "scope": "chain-level",
+      "local_variation_possible": true
+    }
+  },
+  "pending_stores": [
+    {
+      "store": "Nemlig.com",
+      "reason": "Historical dump available; fresh dated offers pending."
+    },
+    {
+      "store": "Brugsen",
+      "reason": "Separate feed pending."
+    },
+    {
+      "store": "Wolt Market",
+      "reason": "Location and prices pending."
+    }
+  ],
+  "offer_count": 1653,
+  "preferred_store_locations": {},
+  "notes": [
+    "ABC Lavpris is now handled at chain level; local branch differences may exist and special/local offers should open the retailer flyer.",
+    "Piskefløde entries in store data are normalized to category 'mejeri' and food_relevance 'high'.",
+    "Publication guard: PASS — current offers and import_status both contain 5,184 active offers; 0 hard data-quality errors."
+  ],
+  "publication_guard": {
+    "status": "pass",
+    "current_offer_count": 5193,
+    "previous_offer_count": 5184,
+    "hard_error_count": 0,
+    "hard_error_rate": 0,
+    "blocks_empty_import": true,
+    "blocks_drop_over_pct": 25,
+    "blocks_hard_error_rate_over_pct": 10,
+    "previous_snapshot": "current_offers.previous.json"
+  },
+  "imported": {
+    "active": 1653,
+    "future_moved_to_next_week": 0,
+    "unknown_end_date": 0,
+    "undated": 0
+  },
+  "rejected": {
+    "expired_removed_from_index": 3540,
+    "undated": 0,
+    "duplicate_warnings": 0,
+    "hard_errors": 0,
+    "note": "Expired offers are removed from current_offers.json only; rich records stay in stores/*.json."
+  }
+}

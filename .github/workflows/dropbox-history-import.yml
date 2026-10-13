@@ -30,10 +30,12 @@ jobs:
     timeout-minutes: 60
     # Secrets ligger i GitHub Environment 'dropbox-import' (krævet godkender + kun main/branch-regler), ikke som repo-secrets.
     environment: dropbox-import
-    env:
-      RAW_DIR: ${{ runner.temp }}/raw
-      OUT_DIR: ${{ runner.temp }}/out
     steps:
+      # 'runner' findes ikke i job-level env. Stierne sættes derfor her via RUNNER_TEMP og gælder alle efterfølgende trin (GITHUB_ENV).
+      - name: Sæt midlertidige stier (uden for git)
+        run: |
+          echo "RAW_DIR=$RUNNER_TEMP/raw" >> "$GITHUB_ENV"
+          echo "OUT_DIR=$RUNNER_TEMP/out" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
@@ -89,7 +91,7 @@ jobs:
       - name: Slet rådata så snart importen er færdig
         if: always()
         run: |
-          rm -rf "$RAW_DIR"
+          rm -rf "${RAW_DIR:-$RUNNER_TEMP/raw}"
           rm -f "$RUNNER_TEMP/import.out" "$RUNNER_TEMP/import.err"
 
       - name: Sikkerhedstjek, før/efter-sammenligning og rapport
@@ -112,12 +114,12 @@ jobs:
         with:
           name: kandidat-historik
           path: |
-            ${{ runner.temp }}/out/monthly_price_history.json
-            ${{ runner.temp }}/out/history_verification.json
-            ${{ runner.temp }}/out/history_offer_identities.json
-            ${{ runner.temp }}/out/price_history.json
-            ${{ runner.temp }}/out/report.md
-            ${{ runner.temp }}/out/diff.json
+            ${{ env.OUT_DIR }}/monthly_price_history.json
+            ${{ env.OUT_DIR }}/history_verification.json
+            ${{ env.OUT_DIR }}/history_offer_identities.json
+            ${{ env.OUT_DIR }}/price_history.json
+            ${{ env.OUT_DIR }}/report.md
+            ${{ env.OUT_DIR }}/diff.json
           if-no-files-found: error
           retention-days: 7
 

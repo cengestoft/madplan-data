@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse, collections, datetime as dt, json, math, shutil
 from pathlib import Path
 from product_normalization import normalize_record, normalized_product_key, infer_brand, infer_variant
-from apply_quantity_flags import FlagError, REGISTRY as QUANTITY_FLAGS, apply_to_offers, load_flags
+from apply_quantity_flags import FlagError, consistency_problems, REGISTRY as QUANTITY_FLAGS, apply_to_offers, load_flags
 from offer_schema import (canonicalize_offer, copenhagen_today, food_relevance_for, offer_status,
                           partition_offers, snapshot_date, unexplained_losses, unverifiable_missing)
 
@@ -244,7 +244,17 @@ def main():
         quantity_flags=load_flags(root) if (root/QUANTITY_FLAGS).exists() else {}
     except FlagError as e:
         raise RuntimeError(f"Publication blocked: quantity flag registry invalid: {e}")
-    _n,_problems=apply_to_offers(current.get("offers",[]),quantity_flags,today)
+    apply_to_offers(current.get("offers",[]),quantity_flags,today)  # marks on the raw import records
+    _cur=[normalize_record(o)[0] for o in current.get("offers",[])]  # checks run on normalized copies (existing rules)
+    _problems=apply_to_offers(_cur,quantity_flags,today)[1]
+    _stores={}
+    for _p in sorted((root/"stores").glob("*.json")):
+        _d=load_json(_p)
+        if isinstance(_d.get("offers"),list):
+            _recs=[normalize_record(o)[0] for o in _d["offers"]]
+            _problems+=apply_to_offers(_recs,quantity_flags,today)[1]
+            _stores[f"stores/{_p.name}"]=_recs
+    _problems+=consistency_problems({"current_offers.json":_cur,**_stores},quantity_flags,today)
     if _problems: raise RuntimeError("Publication blocked: "+"; ".join(_problems))
     organic_conflicts=[]
     organic_flags=store_organic_flags(root,organic_conflicts)

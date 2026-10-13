@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import apply_quantity_flags as aqf
+from product_normalization import normalize_record
 
 
 def load(name):
@@ -81,10 +82,15 @@ FLAG_IDS = ("tilbudsugen-11335752", "tilbudsugen-11335755")
 
 
 def offer(oid, **kw):
-    o = {"id": oid, "name": "Coca Cola Cola 24 pk.", "store": "Dagli'Brugsen", "price_dkk": 79, "package_count": 24,
-         "single_package_amount": 0.25, "package_amount": 6, "package_unit": "l", "valid_from": "2026-10-01", "valid_to": "2026-10-31"}
+    """A complete record (like the real Dagli'Brugsen ones); normalized_* fields come from the existing normalization rules."""
+    o = {"id": oid, "name": "Coca Cola Cola 24 pk.", "store": "Dagli'Brugsen", "category": "drikkevarer", "brand": "Coca Cola", "price_dkk": 79,
+         "package_count": 24, "single_package_amount": 0.25, "single_package_unit": "l", "package_amount": 6, "package_unit": "l",
+         "unit_price_dkk": 13.17, "volume_l": 0.25, "product_type": "cola", "valid_from": "2026-10-01", "valid_to": "2026-10-31"}
     o.update(kw)
-    return o
+    full = normalize_record(o)[0]
+    for k, v in kw.items():  # explicit overrides win, even over the normalized values (used to plant deliberate errors)
+        full[k] = v
+    return full
 
 
 def flag(oid, **kw):
@@ -144,7 +150,8 @@ class ApplyRulesTest(unittest.TestCase):
         self.assertEqual(aqf.apply_to_offers([ok], flags, TODAY), (1, []))
         self.assertNotIn("quantity_status", ok)
         self.assertNotIn("quantity_note", ok)
-        wrong = offer("a", quantity_status="unverified", quantity_note=aqf.NOTE, single_package_amount=0.33, package_amount=7.92)
+        wrong = offer("a", quantity_status="unverified", quantity_note=aqf.NOTE, single_package_amount=0.33, package_amount=7.92,
+                      unit_price_dkk=9.97, volume_l=0.33)
         n, probs = aqf.apply_to_offers([wrong], flags, TODAY)
         self.assertEqual(n, 0)
         self.assertEqual(len(probs), 1)
@@ -155,6 +162,108 @@ class ApplyRulesTest(unittest.TestCase):
         o = offer("a")
         self.assertEqual(aqf.apply_to_offers([o], {"a": flag("a", status="confirmed", **CONFIRM)}, TODAY), (0, []))
         self.assertNotIn("quantity_status", o)
+
+
+def confirmed_flag(**quantity):
+    q = dict(CONFIRM["confirmed_quantity"], **quantity)
+    return {"a": flag("a", status="confirmed", **{**CONFIRM, "confirmed_quantity": q})}
+
+
+class ConfirmedConsistencyTest(unittest.TestCase):
+    """status=confirmed: every quantity-dependent field must agree; any deviation keeps the mark and blocks publication."""
+
+    def lift(self, **overrides):
+        o = offer("a", quantity_status="unverified", quantity_note=aqf.NOTE, **overrides)
+        before = copy.deepcopy(o)
+        res = aqf.apply_to_offers([o], confirmed_flag(), TODAY)
+        return o, before, res
+
+    def assert_blocked(self, field, **overrides):
+        o, before, (n, probs) = self.lift(**overrides)
+        self.assertEqual(len(probs), 1)
+        self.assertIn(field, probs[0])
+        self.assertEqual(n, 0)
+        self.assertEqual(o, before, "nothing is corrected by guessing; the offer stays exactly as delivered")
+        self.assertEqual(o["quantity_status"], "unverified")
+
+    def test_correct_confirmed_quantity_is_accepted_and_lifts_the_mark(self):
+        o, _, res = self.lift()
+        self.assertEqual(res, (1, []))
+        self.assertNotIn("quantity_status", o)
+
+    def test_correct_confirmed_quantity_for_a_different_pack_size(self):
+        o = offer("a", quantity_status="unverified", quantity_note=aqf.NOTE, single_package_amount=0.33, package_amount=7.92,
+                  unit_price_dkk=9.97, volume_l=0.33)
+        flags = confirmed_flag(single_package_amount=0.33, package_amount=7.92)
+        self.assertEqual(aqf.apply_to_offers([o], flags, TODAY), (1, []))
+
+    def test_wrong_litre_price(self):
+        self.assert_blocked("unit_price_dkk", unit_price_dkk=13.0)
+
+    def test_litre_price_is_rounded_half_up_to_two_decimals(self):
+        self.assertEqual(self.lift(unit_price_dkk=13.17)[2], (1, []))  # 79 / 6 = 13.1666...
+        self.assert_blocked("unit_price_dkk", unit_price_dkk=13.16)  # truncated, not rounded
+        self.assert_blocked("unit_price_dkk", unit_price_dkk=13.1667)  # more than two decimals
+
+    def test_wrong_volume_l(self):
+        self.assert_blocked("volume_l", volume_l=0.33)
+
+    def test_wrong_normalized_package_size(self):
+        self.assert_blocked("normalized_package_size", normalized_package_size={"amount": 0.33, "unit": "l"})
+
+    def test_wrong_normalized_product_key(self):
+        self.assert_blocked("normalized_product_key", normalized_product_key="brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l")
+        self.assert_blocked("normalized_product_key", normalized_product_key="brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l")
+        self.assert_blocked("normalized_product_key", normalized_product_key="brand=coca-cola|product=cola|variant=standard|count=12|size=0-25l")
+
+    def test_count_times_single_must_equal_total(self):
+        o = offer("a", quantity_status="unverified", quantity_note=aqf.NOTE)
+        flags = confirmed_flag(package_amount=7.92)  # 24 x 0.25 = 6, not 7.92
+        _, probs = aqf.apply_to_offers([o], flags, TODAY)
+        self.assertTrue(probs and "count x single" in probs[0])
+
+    def test_unmarked_offer_with_deviation_is_marked_not_left_open(self):
+        o = offer("a", unit_price_dkk=13.0)
+        n, probs = aqf.apply_to_offers([o], confirmed_flag(), TODAY)
+        self.assertEqual(o["quantity_status"], "unverified")
+        self.assertEqual(len(probs), 1)
+
+    def test_report_names_fields_but_no_product_names_or_keys(self):
+        _, _, (_, probs) = self.lift(unit_price_dkk=13.0, volume_l=0.33)
+        self.assertIn("unit_price_dkk", probs[0])
+        self.assertIn("volume_l", probs[0])
+        self.assertNotIn("coca", probs[0].lower())
+
+    def test_store_and_current_offers_must_agree(self):
+        a, b = offer("a"), offer("a", single_package_amount=0.33, package_amount=7.92, unit_price_dkk=9.97, volume_l=0.33)
+        probs = aqf.consistency_problems({"current_offers.json": [a], "stores/daglibrugsen.json": [b]}, {"a": flag("a")}, TODAY)
+        self.assertEqual(len(probs), 1)
+        self.assertIn("single_package_amount", probs[0])
+        self.assertIn("normalized_product_key", probs[0])
+        self.assertEqual(aqf.consistency_problems({"current_offers.json": [a], "stores/x.json": [offer("a")]}, {"a": flag("a")}, TODAY), [])
+
+    def test_index_records_without_normalized_fields_compare_by_the_existing_rules(self):
+        light = {k: v for k, v in offer("a").items() if not k.startswith("normalized_")}
+        self.assertEqual(aqf.consistency_problems({"current_offers.json": [light], "stores/x.json": [offer("a")]}, {"a": flag("a")}, TODAY), [])
+
+    def test_real_files_carry_identical_quantities_for_flagged_offers(self):
+        flags = aqf.load_flags(ROOT)
+        recs = {"current_offers.json": load("current_offers.json")["offers"]}
+        for p in sorted((ROOT / "stores").glob("*.json")):
+            recs[f"stores/{p.name}"] = json.loads(p.read_text(encoding="utf-8")).get("offers", [])
+        self.assertEqual(aqf.consistency_problems(recs, flags, TODAY), [])
+
+    def test_apply_writes_nothing_when_store_and_current_disagree(self):
+        d = Path(tempfile.mkdtemp()); self.addCleanup(shutil.rmtree, d, True)
+        (d / "stores").mkdir(); (d / "data_sources").mkdir()
+        shutil.copy(ROOT / aqf.REGISTRY, d / aqf.REGISTRY)
+        a, b = offer(FLAG_IDS[0]), offer(FLAG_IDS[0], single_package_amount=0.33)
+        for name, o in (("current_offers.json", a), ("stores/daglibrugsen.json", b)):
+            (d / name).write_text(json.dumps({"offers": [o]}), encoding="utf-8")
+        before = {n: (d / n).read_bytes() for n in ("current_offers.json", "stores/daglibrugsen.json")}
+        _, probs = aqf.apply(write=True, today=TODAY, root=d)
+        self.assertTrue(probs)
+        self.assertEqual({n: (d / n).read_bytes() for n in before}, before)
 
 
 class PipelineIntegrationTest(unittest.TestCase):
@@ -229,6 +338,56 @@ class PipelineIntegrationTest(unittest.TestCase):
         r = self.run_pipeline(root)
         self.assertNotEqual(r.returncode, 0)
         self.assertEqual((root / "current_offers.json").read_bytes(), before, "nothing is written when the lift is inconsistent")
+
+    def confirmed_registry(self, **quantity):
+        q = {"package_count": 24, "single_package_amount": 0.25, "package_amount": 6, "package_unit": "l", **quantity}
+        return {"flags": [flag(FLAG_IDS[0], status="confirmed", **{**CONFIRM, "confirmed_quantity": q})]}
+
+    def assert_blocked(self, root, text=None):
+        before = {n: (root / n).read_bytes() for n in ("current_offers.json", "stores/daglibrugsen.json")}
+        r = self.run_pipeline(root)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("Publication blocked", r.stderr)
+        if text:
+            self.assertIn(text, r.stderr)
+        self.assertEqual({n: (root / n).read_bytes() for n in before}, before, "an error blocks publication: nothing is written")
+
+    def test_correct_confirmed_quantity_passes_the_pipeline_and_lifts_the_mark(self):
+        root = self.make_root(registry=self.confirmed_registry())
+        r = self.run_pipeline(root)
+        self.assertEqual(r.returncode, 0, r.stderr[-500:])
+        for name in ("current_offers.json", "stores/daglibrugsen.json"):
+            self.assertNotIn("quantity_status", self.offers(root, name)[FLAG_IDS[0]])
+
+    def test_wrong_litre_price_blocks_publication(self):
+        def bad(name, o):
+            if o["id"] == FLAG_IDS[0]:
+                o["unit_price_dkk"] = 12.0
+        self.assert_blocked(self.make_root(mutate=bad, registry=self.confirmed_registry()), "unit_price_dkk")
+
+    def test_wrong_volume_blocks_publication(self):
+        def bad(name, o):
+            if o["id"] == FLAG_IDS[0]:
+                o["volume_l"] = 0.33
+        self.assert_blocked(self.make_root(mutate=bad, registry=self.confirmed_registry()), "volume_l")
+
+    def test_wrong_product_key_blocks_publication(self):
+        def bad(name, o):
+            if o["id"] == FLAG_IDS[0]:
+                o["normalized_product_key"] = "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l"
+        root = self.make_root(mutate=bad, registry=self.confirmed_registry())
+        # the pipeline re-derives the key with the existing rules, so a stale key cannot survive; what must hold is that nothing is wrong afterwards
+        r = self.run_pipeline(root)
+        self.assertEqual(r.returncode, 0, r.stderr[-400:])
+        self.assertEqual(self.offers(root, "current_offers.json")[FLAG_IDS[0]]["normalized_product_key"],
+                         "brand=coca-cola|product=cola|variant=standard|count=24|size=0-25l")
+
+    def test_store_and_current_offers_with_different_pack_sizes_block_publication(self):
+        def bad(name, o):
+            if o["id"] == FLAG_IDS[0] and name != "current_offers.json":
+                o["single_package_amount"] = 0.33
+                o["package_amount"] = 7.92
+        self.assert_blocked(self.make_root(mutate=bad), "differ in")
 
 
 if __name__ == "__main__":

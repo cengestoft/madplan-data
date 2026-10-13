@@ -13,3 +13,11 @@ Registeret `offer_quantity_flags.json` er eneste kilde. Markeringen ændrer KUN 
 2. Ret samtidig tilbuddets samlede mængde, enhedspris, volume_l, single_package_amount og produktnøgle, så de svarer til `confirmed_quantity`.
 3. Passer tilbuddets mængder ikke præcist til `confirmed_quantity`, nægter pipelinen at publicere. Markeringen fjernes først, når alt stemmer.
 4. Ingen gæt: uden original kilde forbliver status `unverified`.
+
+## Kontrol ved status "confirmed" (alle felter skal stemme)
+- package_count × single_package_amount = package_amount (og matcher bekræftet mængde)
+- unit_price_dkk = price_dkk / package_amount, når enheden er liter, afrundet til 2 decimaler (half-up)
+- volume_l = den enkelte pakkes volumen
+- normalized_package_size / normalized_package_count / normalized_product_key stemmer med bekræftet mængde (kontrolleret med de eksisterende normaliseringsregler i product_normalization.py)
+- samme tilbud har identiske mængdefelter i current_offers.json og alle stores/*.json
+Ved afvigelse: markeringen bliver stående, publicering blokeres, og rapporten nævner kun feltnavne (ingen produktnavne/rådata). Intet rettes automatisk.

@@ -71,6 +71,24 @@ def toks(s):
     return {x for x in slug(s).split() if len(x) > 1 and x not in STOP and not x.isdigit()}
 
 
+def conservative_score(raw_brand, raw_tokens, candidate_brand, candidate_tokens):
+    """Similarity of a raw product to a current offer, or None when they must not be matched.
+
+    Brand must exist on both sides and be identical (an empty brand never matches anything).
+    Brand words are removed before comparing, so 'Salling Princip ... ' can never match a
+    different Salling Princip product just because both start with the brand name. At least
+    one product word must be shared.
+    """
+    if not raw_brand or not candidate_brand or raw_brand != candidate_brand:
+        return None
+    brand_words = set(candidate_brand.split())
+    a, b = raw_tokens - brand_words, candidate_tokens - brand_words
+    shared = a & b
+    if not a or not b or not shared:
+        return None
+    return len(shared) / max(1, min(len(a), len(b))) + 0.15
+
+
 def food(p):
     name = str(p.get("name") or "")
     if NONFOOD.search(name):
@@ -207,18 +225,14 @@ def main():
         raw_brand = slug(probe.get("brand"))
         scored = []
         for candidate_key, candidate_tokens, candidate_brand in candidates:
-            if raw_brand and candidate_brand and raw_brand != candidate_brand:
-                continue
-            if not raw_tokens or not candidate_tokens:
-                continue
-            score = len(raw_tokens & candidate_tokens) / max(1, min(len(raw_tokens), len(candidate_tokens)))
-            if candidate_brand and raw_brand == candidate_brand:
-                score += 0.15
-            scored.append((score, candidate_key))
+            score = conservative_score(raw_brand, raw_tokens, candidate_brand, candidate_tokens)
+            if score is not None:
+                scored.append((score, candidate_key))
         scored.sort(reverse=True)
 
-        # Conservative raw-to-current identity match. Package signature must
-        # already be identical; this threshold only resolves naming differences.
+        # Conservative raw-to-current identity match. Package signature must already be identical,
+        # the brand must be present on BOTH sides and equal, and the product words (brand words
+        # removed) must overlap. This only resolves naming differences, never different products.
         if scored and scored[0][0] >= 0.50 and (
             len(scored) == 1 or scored[0][0] - scored[1][0] >= 0.01
         ):

@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from generate_acceptance_report import GROCERY_EXCLUDED, MIN_OVERLAP
+from offer_schema import offer_status, snapshot_date
 
 def parts(k): return dict(p.split("=", 1) for p in k.split("|"))
 
@@ -38,9 +39,10 @@ def main():
     cur = json.loads((ROOT / "current_offers.json").read_text(encoding="utf-8"))
     hist = json.loads((ROOT / "monthly_price_history.json").read_text(encoding="utf-8"))
     keys, store_of = set(), collections.defaultdict(set)
+    today = snapshot_date(cur)  # same scope as test_history_overlap: ACTIVE offers on the snapshot date only
     for o in cur["offers"]:
         k = o.get("normalized_product_key")
-        if k and str(o.get("category") or "").lower() not in GROCERY_EXCLUDED:
+        if k and offer_status(o, today) == "active" and str(o.get("category") or "").lower() not in GROCERY_EXCLUDED:
             keys.add(k); store_of[k].add(o["store"])
     hkeys = {r["normalized_product_key"] for r in hist["records"] if r.get("normalized_product_key")}
     matched, missing = keys & hkeys, keys - hkeys

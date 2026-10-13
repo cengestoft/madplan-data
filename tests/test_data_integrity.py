@@ -11,7 +11,7 @@ from offer_schema import (canonicalize_offer, copenhagen_today, food_relevance_f
                           partition_offers, snapshot_date, unexplained_losses, unverifiable_missing)
 from build_data_pipeline import (is_active_offer, reconcile_history_manifest, reconcile_import_status, store_organic_flags,
                                  validate_import)
-from build_offer_feed import PAGE_LIMIT, _num as _num_for_test, build_feed, offer_line, paginate, render
+from build_offer_feed import PAGE_LIMIT, _num as _num_for_test, build_feed, fit_line, offer_line, offer_suffix, paginate, render
 from generate_acceptance_report import compare_reports
 from check_freshness import freshness
 from product_normalization import normalized_product_key
@@ -194,6 +194,31 @@ class Feed(unittest.TestCase):
                 self.assertIn(f"{_num_for_test(e['price_dkk'])} kr. pr.", line)
                 if not e["name_shortened_in_page_text"]:
                     self.assertTrue(line.startswith(e["name"]), line)
+
+    def test_fit_line_never_cuts_price_package_or_end_date(self):
+        o = _o("N" * 200, to="2026-10-12")
+        o.update(organic=True, member_only=True)
+        line, full = fit_line(o, "2026-10-31", 120)
+        self.assertLessEqual(len(line), 120)
+        self.assertTrue(line.endswith(offer_suffix(o, "2026-10-31")))
+        self.assertIn("kr. pr.", line); self.assertIn("øko", line); self.assertIn("kun medlemmer", line); self.assertTrue(line.endswith("til 12.10."))
+        self.assertEqual(full, offer_line(o, "2026-10-31"))
+
+    def test_fit_line_raises_when_suffix_alone_exceeds_the_limit(self):
+        o = _o("Mælk", to="2026-10-12"); o.update(organic=True, member_only=True)
+        with self.assertRaises(ValueError):
+            fit_line(o, "2026-10-31", len(offer_suffix(o, "2026-10-31")))  # no room for even one name character
+
+    def test_all_pages_stay_below_6000_characters_in_real_data(self):
+        cur = load("current_offers.json"); feed, _ = build_feed(cur["offers"], snapshot_date(cur))
+        for d in feed.values():
+            for p in d["pages"]: self.assertLess(len(p), 6000)
+
+    def test_every_feed_record_keeps_its_own_valid_to(self):
+        cur = load("current_offers.json"); src = {o["id"]: o for o in cur["offers"]}
+        feed, _ = build_feed(cur["offers"], snapshot_date(cur))
+        for d in feed.values():
+            for e in d["offers"]: self.assertEqual(e["valid_to"], src[e["id"]]["valid_to"])
 
     def test_end_date_is_written_when_it_is_earlier_than_the_store_end(self):
         offers = [_o("Lang", to="2026-10-31"), _o("Kort", to="2026-10-12")]

@@ -46,8 +46,13 @@ def fit_line(o: dict, store_valid_to, limit: int):
     full = offer_line(o, store_valid_to)
     if len(full) <= limit: return full, None
     suffix = offer_suffix(o, store_valid_to); room = limit - len(suffix) - 1
-    name = str(o["name"]).strip()[: max(room, 0)] + ELLIPSIS
-    return (name + suffix)[:limit], full
+    if room < 1:
+        # Price, package, organic, membership and end date must never be cut: refuse instead of truncating silently.
+        raise ValueError(f"offer {o.get('id')!r}: suffix ({len(suffix)} chars) leaves no room for any name within the {limit}-char limit")
+    name = str(o["name"]).strip()[:room] + ELLIPSIS
+    line = name + suffix
+    assert len(line) <= limit and line.endswith(suffix)
+    return line, full
 
 def is_non_food(o: dict) -> bool:
     return str(o.get("category") or "").lower() in NON_FOOD_CATEGORIES or o.get("food_relevance") == "low"

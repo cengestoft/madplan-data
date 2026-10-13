@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T09:59:28+02:00",
+  "generated_at": "2026-10-13T16:51:33+02:00",
   "branch": "claude-kodekontrol-2026-10-09",
   "valid_on": "2026-10-09",
   "passed": 9,
@@ -68,7 +68,7 @@
     },
     {
       "id": 11,
-      "name": "Unit test suite (65 tests)",
+      "name": "Unit test suite (69 tests)",
       "status": "FAIL",
       "detail": "failed: test_history_overlap.HistoryOverlapTest.test_history_overlap"
     }

@@ -136,7 +136,7 @@ class FetchTest(unittest.TestCase):
         self.assertFalse(inside.exists())
         self.assertFalse(inside.parent.exists())
 
-    def test_http_error_message_has_status_only(self):
+    def test_http_error_message_never_contains_secrets(self):
         import urllib.error
 
         def boom(req, timeout=None):
@@ -144,8 +144,7 @@ class FetchTest(unittest.TestCase):
         with self.assertRaises(SystemExit) as cm:
             df.fetch(SECRET, self.dest, min_bytes=10, urlopen=boom)
         self.assertIn("401", str(cm.exception))
-        self.assertNotIn("REFRESH-123", str(cm.exception))
-        self.assertNotIn("secret body", str(cm.exception))
+        self.assertNotIn("REFRESH-123", str(cm.exception))  # redacted, even though the body echoed it
 
     def test_default_path_is_app_folder_root_and_can_be_overridden(self):
         seen = []
@@ -175,7 +174,7 @@ class FetchTest(unittest.TestCase):
         self.assertEqual(df.safe_error_code(b"not json REFRESH-123"), "")
         self.assertEqual(df.safe_error_code(b'{"error": {"x": 1}}'), "")
 
-    def test_http_error_shows_status_and_safe_code_but_never_body_text(self):
+    def test_http_error_shows_status_safe_code_and_a_redacted_short_detail(self):
         import urllib.error
 
         def boom(req, timeout=None):
@@ -186,7 +185,7 @@ class FetchTest(unittest.TestCase):
         msg = str(cm.exception)
         self.assertIn("HTTP 409 (path/not_found)", msg)
         self.assertNotIn("REFRESH-123", msg)
-        self.assertNotIn("Privat", msg)
+        self.assertLessEqual(len(msg), 400)
 
     def test_configured_path_is_logged_but_no_secret(self):
         buf = io.StringIO()
@@ -420,6 +419,101 @@ class WorkflowStaticTest(unittest.TestCase):
 
     def test_importer_output_is_not_streamed_to_the_log(self):
         self.assertIn("> \"$RUNNER_TEMP/import.out\" 2> \"$RUNNER_TEMP/import.err\"", self.code)
+
+
+class DownloadCallTest(unittest.TestCase):
+    """files/download: POST to content.dropboxapi.com, arguments only in Dropbox-API-Arg, empty body, an allowed Content-Type."""
+    LINK = "https://uc123.dl.dropboxusercontent.com/cd/0/get/abc/file"
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.dest = Path(self.tmp.name) / "raw" / "latest-canonical.json"
+        self.data = array_payload()
+        self.calls = []
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def opener(self, download_status=None, link=LINK, download_body=b"Bad Request"):
+        import urllib.error
+        inner = fake_urlopen(self.data)
+
+        def opener(req, timeout=None):
+            self.calls.append((req.get_method(), req.full_url, dict((k.lower(), v) for k, v in req.header_items()), req.data))
+            if req.full_url == df.DOWNLOAD_URL and download_status:
+                raise urllib.error.HTTPError(req.full_url, download_status, "x", {}, io.BytesIO(download_body))
+            if req.full_url == df.LINK_URL:
+                return Resp(json.dumps({"link": link, "metadata": {}}).encode())
+            if req.full_url == link:
+                return Resp(self.data)
+            return inner(req, timeout)
+        return opener
+
+    def test_download_request_shape(self):
+        df.fetch(SECRET, self.dest, min_bytes=10, urlopen=self.opener())
+        method, url, headers, body = next(c for c in self.calls if c[1] == df.DOWNLOAD_URL)
+        self.assertEqual((method, url, body), ("POST", "https://content.dropboxapi.com/2/files/download", None))
+        self.assertEqual(headers["content-type"], "application/octet-stream")  # one of the values Dropbox accepts for content endpoints
+        self.assertEqual(json.loads(headers["dropbox-api-arg"]), {"path": "/latest-canonical.json"})
+        headers["dropbox-api-arg"].encode("ascii")
+        self.assertTrue(headers["authorization"].startswith("Bearer "))
+        self.assertNotIn("x-www-form-urlencoded", json.dumps(headers))
+        self.assertEqual(self.dest.read_bytes(), self.data)
+
+    def test_http_400_falls_back_to_temporary_link_and_still_verifies(self):
+        buf = io.StringIO(); old, sys.stdout = sys.stdout, buf
+        try:
+            out = df.fetch(SECRET, self.dest, min_bytes=10, urlopen=self.opener(download_status=400))
+        finally:
+            sys.stdout = old
+        self.assertTrue(out["verified"])
+        self.assertEqual(self.dest.read_bytes(), self.data)
+        urls = [c[1] for c in self.calls]
+        self.assertEqual(urls[-2:], [df.LINK_URL, self.LINK])
+        link_call = self.calls[-1]
+        self.assertEqual(link_call[0], "GET")
+        self.assertNotIn("authorization", link_call[2])  # the temporary link is fetched without credentials
+        shown = buf.getvalue()
+        self.assertIn("HTTP 400", shown)
+        self.assertIn(f"::add-mask::{self.LINK}", shown)  # masked before use
+        for v in SECRET.values():
+            self.assertNotIn(v, shown)
+
+    def test_fallback_still_checks_hash_and_deletes_bad_file(self):
+        inner = self.opener(download_status=400)
+
+        def tampered(req, timeout=None):
+            r = inner(req, timeout)
+            return Resp(b"[1,2,3]" * 100) if req.full_url == self.LINK else r
+        with self.assertRaises(SystemExit):
+            df.fetch(SECRET, self.dest, min_bytes=10, urlopen=tampered)
+        self.assertFalse(self.dest.exists())
+
+    def test_other_statuses_do_not_fall_back(self):
+        for status in (401, 403, 409, 429, 500):
+            self.calls.clear()
+            with self.assertRaises(SystemExit) as cm:
+                df.fetch(SECRET, self.dest, min_bytes=10, urlopen=self.opener(download_status=status))
+            self.assertIn(f"HTTP {status}", str(cm.exception))
+            self.assertNotIn(df.LINK_URL, [c[1] for c in self.calls])
+            self.assertFalse(self.dest.exists())
+
+    def test_temporary_link_with_foreign_host_is_refused(self):
+        for bad in ("http://uc1.dl.dropboxusercontent.com/x", "https://evil.example.com/x", "https://dropboxusercontent.com.evil.com/x", ""):
+            with self.assertRaises(SystemExit) as cm:
+                df.fetch(SECRET, self.dest, min_bytes=10, urlopen=self.opener(download_status=400, link=bad))
+            self.assertIn("unexpected host", str(cm.exception))
+            self.assertFalse(self.dest.exists())
+
+    def test_error_detail_is_sanitized(self):
+        body = (b'{"error_summary": "bad_request/", "note": "REFRESH-123 ' + b"A" * 60 + b' token ' + "ø".encode() + b'"}' + b" x" * 300)
+        d = df.safe_error_detail(body)
+        self.assertLessEqual(len(d), 200)
+        self.assertNotIn("A" * 24, d)
+        self.assertTrue(d.isascii())
+        self.assertIn("***", d)
+        df._REDACT.append("REFRESH-123")
+        self.assertNotIn("REFRESH-123", df.safe_error_detail(body))
 
 
 class ImporterJsonValidationTest(unittest.TestCase):

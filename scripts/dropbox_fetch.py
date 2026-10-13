@@ -18,6 +18,7 @@ BLOCK = 4 * 1024 * 1024  # Dropbox content_hash block size
 TOKEN_URL = "https://api.dropboxapi.com/oauth2/token"
 META_URL = "https://api.dropboxapi.com/2/files/get_metadata"
 DOWNLOAD_URL = "https://content.dropboxapi.com/2/files/download"
+LINK_URL = "https://api.dropboxapi.com/2/files/get_temporary_link"
 DEFAULT_PATH = "/latest-canonical.json"  # Dropbox App Folder: API paths are relative to the app folder root
 MIN_BYTES = 50 * 1024 * 1024  # a real latest-canonical.json is hundreds of MB; anything tiny is an empty or wrong file
 
@@ -51,11 +52,28 @@ def content_hash_of_file(path) -> str:
 
 
 class DropboxError(SystemExit):
-    pass
+    status = None  # HTTP status of the failed Dropbox call, when there was one
 
 
-def _fail(msg: str):
-    raise DropboxError(f"ERROR: {msg}")
+_REDACT: list = []  # secret values (and the access token) that must never appear in any message
+
+
+def _fail(msg: str, status=None):
+    e = DropboxError(f"ERROR: {msg}")
+    e.status = status
+    raise e
+
+
+def safe_error_detail(body: bytes, limit=200) -> str:
+    """Short, sanitized excerpt of a Dropbox error body so a failure can be diagnosed from a public log.
+    Secrets are replaced, long token-like strings are replaced, non-printable characters are dropped, the excerpt is cut."""
+    text = body.decode("utf-8", "replace")
+    for secret in _REDACT:
+        if secret:
+            text = text.replace(secret, "***")
+    text = re.sub(r"[A-Za-z0-9_\-]{24,}", "***", text)
+    text = re.sub(r"[^\x20-\x7e]", "?", text)
+    return re.sub(r"\s+", " ", text).strip()[:limit]
 
 
 SAFE_WORDS = {  # fixed Dropbox error vocabulary; anything else is reported as "other" (never echo free text)
@@ -82,12 +100,13 @@ def _request(urlopen, req, what):
     try:
         return urlopen(req, timeout=300)
     except urllib.error.HTTPError as e:
-        code = ""
+        code = detail = ""
         try:
-            code = safe_error_code(e.read(4096))
+            raw = e.read(4096)
+            code, detail = safe_error_code(raw), safe_error_detail(raw)
         except Exception:
             pass
-        _fail(f"{what} failed with HTTP {e.code}" + (f" ({code})" if code else ""))  # never include the response body
+        _fail(f"{what} failed with HTTP {e.code}" + (f" ({code})" if code else "") + (f" - Dropbox: {detail}" if detail else ""), status=e.code)
     except Exception as e:  # network errors: only the exception class, never its text
         _fail(f"{what} failed ({type(e).__name__})")
 
@@ -96,12 +115,14 @@ def get_access_token(env, urlopen=urllib.request.urlopen) -> str:
     for name in ("DROPBOX_APP_KEY", "DROPBOX_APP_SECRET", "DROPBOX_REFRESH_TOKEN"):
         if not env.get(name):
             _fail(f"missing secret {name}")
+    _REDACT.extend([env["DROPBOX_REFRESH_TOKEN"], env["DROPBOX_APP_KEY"], env["DROPBOX_APP_SECRET"]])  # redacted from every message from now on
     body = urllib.parse.urlencode({"grant_type": "refresh_token", "refresh_token": env["DROPBOX_REFRESH_TOKEN"],
                                    "client_id": env["DROPBOX_APP_KEY"], "client_secret": env["DROPBOX_APP_SECRET"]}).encode()
     resp = _request(urlopen, urllib.request.Request(TOKEN_URL, data=body, method="POST"), "Dropbox token request")
     token = json.loads(resp.read().decode("utf-8")).get("access_token")
     if not token:
         _fail("Dropbox token response had no access_token")
+    _REDACT.append(token)
     print(f"::add-mask::{token}")  # belt and braces: GitHub masks it if it ever appears in a log
     return token
 
@@ -117,6 +138,34 @@ def get_metadata(token, path, urlopen=urllib.request.urlopen) -> dict:
     if meta.get(".tag") != "file":
         _fail("Dropbox path is not a file")
     return meta
+
+
+def get_temporary_link(token, path, urlopen=urllib.request.urlopen) -> str:
+    """Fallback transport: a short-lived link to the same file (files/get_temporary_link), fetched without credentials."""
+    req = urllib.request.Request(LINK_URL, data=json.dumps({"path": path}).encode("utf-8"), method="POST",
+                                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+    link = json.loads(_request(urlopen, req, "Dropbox temporary link request").read().decode("utf-8")).get("link") or ""
+    host = urllib.parse.urlparse(link).hostname or ""
+    if not link.startswith("https://") or not (host == "dropboxusercontent.com" or host.endswith(".dropboxusercontent.com")):
+        _fail("Dropbox temporary link has an unexpected host")
+    _REDACT.append(link)
+    print(f"::add-mask::{link}")  # the link is a bearer secret for a few hours
+    return link
+
+
+def open_download(token, path, urlopen=urllib.request.urlopen):
+    """files/download as documented (POST to content.dropboxapi.com, arguments in Dropbox-API-Arg, empty body, Content-Type
+    application/octet-stream). If Dropbox answers HTTP 400, the same file is fetched through a temporary link instead."""
+    req = urllib.request.Request(DOWNLOAD_URL, method="POST", headers={
+        "Authorization": f"Bearer {token}", "Dropbox-API-Arg": _api_arg(path), "Content-Type": "application/octet-stream"})
+    try:
+        return _request(urlopen, req, "Dropbox download")
+    except DropboxError as e:
+        if e.status != 400:
+            raise
+        print(f"{e}\nRetrying through a temporary link (same file, same verification).")
+    link = get_temporary_link(token, path, urlopen)
+    return _request(urlopen, urllib.request.Request(link, method="GET"), "Dropbox download via temporary link")
 
 
 def outside_git_tree(dest: Path) -> bool:
@@ -155,8 +204,7 @@ def fetch(env, dest: Path, expected_size=None, min_bytes=MIN_BYTES, urlopen=urll
     if not remote_hash:
         _fail("Dropbox returned no content_hash")
     dest.parent.mkdir(parents=True, exist_ok=True)
-    req = urllib.request.Request(DOWNLOAD_URL, method="POST", headers={"Authorization": f"Bearer {token}", "Dropbox-API-Arg": _api_arg(path)})
-    resp = _request(urlopen, req, "Dropbox download")
+    resp = open_download(token, path, urlopen)
     hasher = BlockHasher()
     fd = os.open(dest, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
     try:

@@ -40,7 +40,7 @@ jobs:
       - name: Workflow-syntaks (actionlint, fastlåst version)
         run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.7 -color
       - name: Python syntax check
-        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py scripts/offer_schema.py scripts/check_super_deal_history.py scripts/generate_acceptance_report.py scripts/build_offer_feed.py scripts/check_freshness.py scripts/history_overlap_report.py scripts/promote_future_offers.py scripts/history_approval_check.py scripts/history_identity.py scripts/history_decide.py scripts/history_match_audit.py scripts/dropbox_fetch.py scripts/history_import_guard.py
+        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py scripts/offer_schema.py scripts/check_super_deal_history.py scripts/generate_acceptance_report.py scripts/build_offer_feed.py scripts/check_freshness.py scripts/history_overlap_report.py scripts/promote_future_offers.py scripts/history_approval_check.py scripts/history_identity.py scripts/history_decide.py scripts/history_match_audit.py scripts/dropbox_fetch.py scripts/history_import_guard.py scripts/apply_quantity_flags.py
       - name: Run acceptance tests
         run: python -m unittest discover -s tests -v
       - name: Validate pipeline without writing

@@ -49,7 +49,7 @@ jobs:
           DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
           DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
-          DROPBOX_RAW_PATH: ${{ vars.DROPBOX_RAW_PATH }}
+          DROPBOX_RAW_PATH: ${{ vars.DROPBOX_RAW_PATH || '/Superkøb:RawData/latest-canonical.json' }}
           EXPECTED_SIZE: ${{ inputs.expected_size }}
           ALLOW_SIZE_CHANGE: ${{ inputs.allow_size_change }}
         run: |
@@ -63,17 +63,20 @@ jobs:
 
       - name: Byg kandidat med eksisterende importer (verified_only, ingen match-log)
         run: |
-          set -o pipefail
           mkdir -p "$OUT_DIR"
           cp price_history.json "$OUT_DIR/price_history.json"
           cp data_sources/history_offer_identities.json "$OUT_DIR/history_offer_identities.json"
-          # stdout/stderr gemmes i en temp-fil; kun slutresultatet (tal) vises. Fejl viser kun fejlklassen.
+          # Kandidatfilerne skal skabes af DENNE kørsel: de må ikke findes på forhånd.
+          rm -f "$OUT_DIR/monthly_price_history.json" "$OUT_DIR/history_verification.json"
+          date -u +%Y-%m-%dT%H:%M:%S+00:00 > "$RUNNER_TEMP/import.started"
+          # stdout/stderr gemmes i temp-filer og vises ALDRIG (offentlig log). Kun en fast fejlbesked og slutresultatets tal.
           if ! python scripts/import_dagligepriser_history.py \
                  --source-file "$RAW_DIR/latest-canonical.json" \
                  --output "$OUT_DIR/monthly_price_history.json" \
                  --current-offers current_offers.json \
-                 --identities "$OUT_DIR/history_offer_identities.json" > "$RUNNER_TEMP/import.out" 2> "$RUNNER_TEMP/import.err"; then
-            echo "::error::Importeren fejlede (fejlklasse: $(tail -n 1 "$RUNNER_TEMP/import.err" | cut -d: -f1 | cut -c1-60))"
+                 --identities "$OUT_DIR/history_offer_identities.json" \
+                 > "$RUNNER_TEMP/import.out" 2> "$RUNNER_TEMP/import.err"; then
+            echo "::error::Historikimport fejlede. Ingen kandidat publiceret."
             exit 1
           fi
           python - <<'PY'
@@ -93,7 +96,7 @@ jobs:
         run: |
           set +e
           python scripts/history_import_guard.py --before-dir . --after-dir "$OUT_DIR" \
-            --report "$OUT_DIR/report.md" --diff "$OUT_DIR/diff.json" > /dev/null
+            --started-at "$(cat "$RUNNER_TEMP/import.started")" --report "$OUT_DIR/report.md" --diff "$OUT_DIR/diff.json" > /dev/null
           code=$?
           [ -f "$OUT_DIR/report.md" ] && cat "$OUT_DIR/report.md" >> "$GITHUB_STEP_SUMMARY"
           exit $code
@@ -103,8 +106,8 @@ jobs:
           python -m unittest discover -s tests
           python scripts/generate_acceptance_report.py --check
 
+      # Kandidatfiler uploades KUN hvis alle trin ovenfor (inkl. history_import_guard) er bestået. Ingen 'if: always()'.
       - name: Upload kun aggregerede kandidatfiler og rapport (ingen rådata)
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kandidat-historik
@@ -115,6 +118,21 @@ jobs:
             ${{ runner.temp }}/out/price_history.json
             ${{ runner.temp }}/out/report.md
             ${{ runner.temp }}/out/diff.json
+          if-no-files-found: error
+          retention-days: 7
+
+      # Ved fejl uploades højst en fast, renset fejlrapport: ingen rådata, ingen produktnavne, ingen hemmeligheder, ingen kandidat.
+      - name: Fejlrapport (fast tekst)
+        if: failure()
+        run: |
+          mkdir -p "$RUNNER_TEMP/failure"
+          printf '%s\n' "Historikimport fejlede. Ingen kandidat publiceret." "Se trinnenes status i kørslen. Der er ikke uploadet kandidatfiler eller rådata." > "$RUNNER_TEMP/failure/fejlrapport.txt"
+      - name: Upload fejlrapport
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fejlrapport
+          path: ${{ runner.temp }}/failure/fejlrapport.txt
           if-no-files-found: ignore
           retention-days: 7
 

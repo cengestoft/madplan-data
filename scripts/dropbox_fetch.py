@@ -8,7 +8,7 @@ SECURITY RULES (this repository is PUBLIC, so Actions logs are public):
   * The destination must be OUTSIDE the git working tree (use $RUNNER_TEMP); the file is written with mode 0600.
   * Size, JSON array shape and Dropbox content_hash are verified; on any mismatch the file is deleted and the step fails.
 
-Environment: DROPBOX_APP_KEY, DROPBOX_APP_SECRET, DROPBOX_REFRESH_TOKEN, DROPBOX_RAW_PATH (default /Superkøb/RawData/latest-canonical.json)
+Environment: DROPBOX_APP_KEY, DROPBOX_APP_SECRET, DROPBOX_REFRESH_TOKEN, DROPBOX_RAW_PATH (verified path: /Superkøb:RawData/latest-canonical.json, set as configuration value)
 """
 from __future__ import annotations
 import argparse, hashlib, json, os, subprocess, sys, urllib.error, urllib.parse, urllib.request
@@ -18,7 +18,7 @@ BLOCK = 4 * 1024 * 1024  # Dropbox content_hash block size
 TOKEN_URL = "https://api.dropboxapi.com/oauth2/token"
 META_URL = "https://api.dropboxapi.com/2/files/get_metadata"
 DOWNLOAD_URL = "https://content.dropboxapi.com/2/files/download"
-DEFAULT_PATH = "/Superkøb/RawData/latest-canonical.json"
+DEFAULT_PATH = "/Superkøb:RawData/latest-canonical.json"  # verified by Casper (the colon is part of the folder name)
 MIN_BYTES = 50 * 1024 * 1024  # a real latest-canonical.json is hundreds of MB; anything tiny is an empty or wrong file
 
 

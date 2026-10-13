@@ -9,7 +9,13 @@ Workflow: `.github/workflows/dropbox-history-import.yml` (kun `workflow_dispatch
 4. Kører den eksisterende importer (`import_dagligepriser_history.py`, `verified_only`, uændret normalisering, `history_offer_identities.json`) mod en kopi i `$RUNNER_TEMP/out`. Ingen match-log skrives.
 5. Sletter rådata (`if: always()`).
 6. `scripts/history_import_guard.py` sammenligner før/efter og stopper ved: tom/ugyldig kandidat, ikke `verified_only`, rådata-flag, ≥12 MB, manglende kreditering af dagligepriser.dk, uventede felter i verificeringsfilen, ingen verificerede nøgler, tabt verificeret historik (nøgle eller måneder) uden dokumenteret årsag i `data_sources/history_expected_changes.json`, eller tabte registernøgler.
-7. Rapport (`report.md`, `diff.json`) i jobbets summary og som artifact sammen med de aggregerede kandidatfiler (7 dages opbevaring).
+7. Rapport (`report.md`, `diff.json`) i jobbets summary. Kandidatfiler + rapport uploades KUN hvis alle trin inkl. guarden er bestået (ingen `if: always()` på upload). Ved fejl uploades højst en fast fejlrapport uden rådata, produktnavne eller hemmeligheder, og loggen viser kun "Historikimport fejlede. Ingen kandidat publiceret." (import.err vises aldrig).
+
+Validering: streaming-tjekket ser kun start/slut (`[` … `]`); hele JSON-strukturen valideres af importeren (`json.loads`, kræver liste). Ugyldig JSON med korrekt start/slut giver stop uden kandidat (testet).
+
+Friskhed: `history_verification.json` og historikfilen skal være genereret af denne kørsel (`generated_at` ≥ starttidspunkt, filerne slettes før import). Mangler eller er de gamle, stopper guarden.
+
+Dropbox-sti (verificeret): `/Superkøb:RawData/latest-canonical.json` (konfigurationsværdi `DROPBOX_RAW_PATH`, samme værdi som standard).
 
 Workflowet committer, pusher, merger og publicerer aldrig. En godkendt kandidat lægges ind via en separat PR.
 

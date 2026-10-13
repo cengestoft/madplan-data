@@ -49,12 +49,35 @@ class HistoryOverlapTest(unittest.TestCase):
                       if (keys.get(r["normalized_product_key"]) or {}).get("status") != "verified"})
         self.assertEqual(bad, [], f"{len(bad)} history keys without verified status")
 
+    def test_review_decisions_are_well_formed_and_hash_only(self):
+        doc = load("data_sources/history_review_decisions.json")
+        if doc is None:
+            self.skipTest("no decisions yet")
+        self.assertIs(doc.get("raw_data_included"), False)
+        seen = set()
+        for d in doc["decisions"]:
+            self.assertIn(d["decision"], ("verified", "rejected"))
+            self.assertRegex(d["raw_id_hash"], r"^[0-9a-f]{16}$")
+            self.assertTrue(d.get("reviewed_by") and d.get("reviewed_on"), "decision without reviewer/date is ignored by the importer")
+            self.assertTrue(d["normalized_product_key"].startswith("brand="))
+            self.assertNotIn((d["normalized_product_key"], d["raw_id_hash"]), seen, "duplicate decision")
+            seen.add((d["normalized_product_key"], d["raw_id_hash"]))
+            self.assertLessEqual(set(d), {"normalized_product_key", "raw_id_hash", "decision", "reviewed_by", "reviewed_on", "note"})
+
+    def test_every_history_key_is_in_the_identity_registry(self):
+        """The next import keeps verified history for every key in the registry, so no existing history key may be missing there."""
+        hist, registry = load("monthly_price_history.json"), load("data_sources/history_offer_identities.json")
+        self.assertIsNotNone(registry, "identity registry is required so verified history survives expired offers")
+        self.assertIs(registry.get("raw_data_included"), False)
+        missing = sorted({r["normalized_product_key"] for r in hist["records"]} - set(registry["keys"]))
+        self.assertEqual(missing, [], f"{len(missing)} history keys would be dropped by the next import")
+
     def test_verification_file_holds_no_raw_text(self):
         verification = load("history_verification.json")
         if verification is None:
             self.skipTest("no verification file yet")
         self.assertIs(verification.get("raw_data_included"), False)
-        allowed = {"status", "offer_names", "raw_products", "methods", "conflict_fields", "missing_fields", "manual_decisions", "months"}
+        allowed = {"active", "status", "offer_names", "raw_products", "methods", "conflict_fields", "missing_fields", "manual_decisions", "manual_decisions_blocked", "months"}
         for k, v in verification["keys"].items():
             self.assertLessEqual(set(v), allowed, k)
 

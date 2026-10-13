@@ -20,6 +20,7 @@ import urllib.request
 from collections import defaultdict
 
 import math
+from history_approval_check import documented
 from history_identity import (REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash)
 from product_normalization import infer_pack, normalized_product_key
 
@@ -159,6 +160,47 @@ def load_decisions(path: pathlib.Path) -> dict:
             if d.get("decision") in {"verified", "rejected"} and d.get("reviewed_by") and d.get("reviewed_on")}
 
 
+IDENTITY_FIELDS = ("name", "brand", "variant", "package_amount", "package_unit", "package_count", "category", "normalized_product_key")
+REGISTRY_PATH = "data_sources/history_offer_identities.json"
+
+
+def identity_record(o):
+    """Minimal public offer identity (the project's own offer data, no raw dagligepriser text) used to keep verifying history
+    for products that temporarily have no active offer."""
+    rec = {f: o.get(f) for f in IDENTITY_FIELDS if o.get(f) is not None}
+    rec["normalized_product_key"] = o.get("normalized_product_key") or normalized_product_key(o)
+    return rec
+
+
+def load_registry(path):
+    path = pathlib.Path(path)
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8")).get("keys", {})
+
+
+def merge_registry(registry, offers):
+    """Union of known offer identities per history key. Nothing is ever removed because an offer expired."""
+    out = {k: list(v) for k, v in registry.items()}
+    for o in offers:
+        rec = identity_record(o)
+        k = rec["normalized_product_key"]
+        if not k:
+            continue
+        ident = lambda r: (r.get("name"), r.get("brand"), r.get("package_amount"), r.get("package_unit"), r.get("package_count"))
+        if all(ident(r) != ident(rec) for r in out.setdefault(k, [])):
+            out[k].append(rec)
+    return {k: sorted(v, key=lambda r: json.dumps(r, sort_keys=True, ensure_ascii=False)) for k, v in sorted(out.items())}
+
+
+def write_registry(path, registry):
+    pathlib.Path(path).write_text(json.dumps({
+        "schema_version": 1, "raw_data_included": False,
+        "purpose": "Offer identities of every product key that ever had an offer. Verified history is kept for these keys even "
+                   "when no offer is active; current offers only decide overlap and which graphs are possible.",
+        "keys": registry}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source-file")
@@ -168,6 +210,9 @@ def main():
     ap.add_argument("--manifest", default="data_sources/dagligepriser_manifest.json")
     ap.add_argument("--decisions", default="data_sources/history_review_decisions.json",
                     help="human review decisions (hashes only, no raw text): promote review_required to verified or reject a raw product")
+    ap.add_argument("--identities", default=REGISTRY_PATH,
+                    help="registry of offer identities for all historical product keys (kept across runs; history is never dropped because an offer expired)")
+    ap.add_argument("--update-identities-only", action="store_true", help="only add the current offers to the identity registry and exit")
     ap.add_argument("--verification", help="public per-key verification status (default: history_verification.json next to the output)")
     ap.add_argument("--match-log", help="write per-key match documentation (method + raw product examples) to this PRIVATE path under data/private/; never committed")
     args = ap.parse_args()
@@ -184,14 +229,21 @@ def main():
         o for o in current.get("offers", [])
         if str(o.get("category") or "").lower() not in {"husholdning", "dyrefoder"}
     ]
-    offer_keys = {o.get("normalized_product_key") or normalized_product_key(o) for o in offers}
+    offer_keys = {o.get("normalized_product_key") or normalized_product_key(o) for o in offers}  # A: ACTIVE offer keys (overlap, graph options)
     offer_keys.discard(None)
+    registry = merge_registry(load_registry(args.identities), offers)  # B: ALL historical keys with a known offer identity
+    if args.update_identities_only:
+        write_registry(args.identities, registry)
+        print(json.dumps({"identity_keys": len(registry), "active_keys": len(offer_keys)}))
+        return
+    history_keys = set(registry) | offer_keys
+    hist_offers = [dict(r) for k in sorted(registry) for r in registry[k]]  # active and historical offer identities
 
-    brands = sorted({str(o.get("brand")).strip() for o in offers if o.get("brand")}, key=len, reverse=True)
+    brands = sorted({str(o.get("brand")).strip() for o in hist_offers if o.get("brand")}, key=len, reverse=True)
     brand_lut = {slug(b): b for b in brands}
 
     index = defaultdict(list)
-    for o in offers:
+    for o in hist_offers:
         signature = sig(o)
         if signature:
             index[signature].append(
@@ -224,7 +276,7 @@ def main():
             return cache[cache_key]
 
         direct = normalized_product_key(probe)
-        if direct in offer_keys:
+        if direct in history_keys:
             cache[cache_key] = direct
             method_of[cache_key] = "direct"
             return direct
@@ -269,7 +321,7 @@ def main():
 
     decisions = load_decisions(pathlib.Path(args.decisions))
     offers_by_key = defaultdict(list)
-    for o in offers:
+    for o in hist_offers:
         k = o.get("normalized_product_key") or normalized_product_key(o)
         if k:
             offers_by_key[k].append(o)
@@ -281,6 +333,7 @@ def main():
     conflicts_by_key = defaultdict(lambda: defaultdict(int))
     missing_by_key = defaultdict(lambda: defaultdict(int))
     manual_by_key = defaultdict(int)
+    blocked_by_key = defaultdict(int)  # approvals NOT applied because the evidence did not document the same product
     examples_by_key = defaultdict(dict)  # PRIVATE: raw names stay out of the repository
     buckets = defaultdict(list)
     months_by_key = defaultdict(set)
@@ -304,8 +357,8 @@ def main():
                 continue
 
             key = choose_key(product, hist)
-            if key not in offer_keys:
-                non_offer_rows += 1  # history is only kept for keys of active offers, and only when verified
+            if key not in history_keys:
+                non_offer_rows += 1  # no offer (active or historical) ever had this key; only verified rows are kept anyway
                 continue
             ck = (probe.get("name"), probe.get("brand"), probe.get("variant"),
                   probe.get("package_count"), probe.get("package_amount"), probe.get("package_unit"))
@@ -317,14 +370,24 @@ def main():
                 verdict = combine(compare(describe(rp), d) for d in offer_identity[key])
                 verdict = dict(verdict, method=method_of.get(ck) or "direct", manual=False)
                 decision = decisions.get((key, pid))
-                if decision == "rejected" or (decision == "verified" and verdict["status"] == REVIEW):
-                    verdict.update(status=decision, manual=True)  # a human decision never overrides a hard conflict
+                if decision == "verified" and verdict["status"] == REVIEW:
+                    # A human approval is only applied when it is documented against THIS run's evidence (offer vs raw product name).
+                    # Missing or contradicting evidence leaves the product review_required.
+                    offs = offers_by_key.get(key, [])
+                    ok_doc, _why = documented([x.get("name") for x in offs], (offs[0].get("brand") if offs else None), product.get("name"))
+                    if ok_doc:
+                        verdict.update(status=decision, manual=True)
+                    else:
+                        verdict["manual_blocked"] = True
+                elif decision == "rejected":
+                    verdict.update(status=decision, manual=True)  # a rejection always applies; a human approval never overrides a hard conflict
                 verdict_cache[vkey] = verdict
                 raw_by_key[key][verdict["status"]].add(pid)
                 methods_by_key[key][verdict["method"]] += 1
                 for f in verdict["conflicts"]: conflicts_by_key[key][f] += 1
                 for f in verdict["missing"]: missing_by_key[key][f] += 1
                 if verdict["manual"]: manual_by_key[key] += 1
+                if verdict.get("manual_blocked"): blocked_by_key[key] += 1
                 if len(examples_by_key[key]) < 12:
                     examples_by_key[key][pid] = {"raw_hash": pid, "raw_name": product.get("name"), "store": STORES[store_code],
                                                  "status": verdict["status"], "method": verdict["method"], "conflicts": verdict["conflicts"],
@@ -348,9 +411,10 @@ def main():
 
     today_iso = dt.date.today().isoformat()
     key_info = {}
-    for key in sorted(offer_keys):
+    for key in sorted(history_keys):
         counts = {st: len(ids) for st, ids in raw_by_key[key].items()} if key in raw_by_key else {}
         key_info[key] = {
+            "active": key in offer_keys,
             "status": key_status(counts),
             "offer_names": sorted({str(x.get("name")) for x in offers_by_key.get(key, [])})[:3],
             "raw_products": {st: counts.get(st, 0) for st in (VERIFIED, REVIEW, REJECTED)},
@@ -358,17 +422,21 @@ def main():
             "conflict_fields": dict(conflicts_by_key.get(key, {})),
             "missing_fields": dict(missing_by_key.get(key, {})),
             "manual_decisions": manual_by_key.get(key, 0),
+            "manual_decisions_blocked": blocked_by_key.get(key, 0),
             "months": len(months_by_key.get(key, ())),
         }
     status_count = defaultdict(int)
-    for info in key_info.values(): status_count[info["status"]] += 1
+    retained_inactive = sum(1 for info in key_info.values() if not info["active"] and info["status"] == VERIFIED)
+    for info in key_info.values():
+        if info["active"]: status_count[info["status"]] += 1
     total_keys = len(offer_keys)
     verified_n = status_count[VERIFIED]
     needed = max(0, math.ceil(MIN_OVERLAP * total_keys) - verified_n)
     summary = {"active_food_keys": total_keys, "verified": verified_n, "review_required": status_count[REVIEW],
                "rejected": status_count[REJECTED], "no_candidate": status_count["no_candidate"],
                "verified_overlap": round(verified_n / max(1, total_keys), 4), "required_overlap": MIN_OVERLAP,
-               "additional_verified_needed": needed, "meets_required_overlap": needed == 0}
+               "additional_verified_needed": needed, "meets_required_overlap": needed == 0,
+               "retained_verified_keys_without_active_offer": retained_inactive}
 
     verification = {
         "schema_version": 1, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "control_date": today_iso,
@@ -396,10 +464,11 @@ def main():
             raise SystemExit("--match-log must be under data/private/ (raw product text must never be committed)")
         log_path.parent.mkdir(parents=True, exist_ok=True)
         entries = [{"normalized_product_key": k, **key_info[k], "months_list": sorted(months_by_key.get(k, ())),
-                    "raw_examples": list(examples_by_key.get(k, {}).values())} for k in sorted(offer_keys) if k in raw_by_key]
+                    "raw_examples": list(examples_by_key.get(k, {}).values())} for k in sorted(history_keys) if k in raw_by_key]
         log_path.write_text(json.dumps({"offer_keys": total_keys, "summary": summary, "entries": entries}, ensure_ascii=False, indent=1) + "\n",
                             encoding="utf-8")
 
+    write_registry(args.identities, registry)
     output.write_text(payload, encoding="utf-8")
     verification_path = pathlib.Path(args.verification) if args.verification else output.parent / "history_verification.json"
     verification_path.write_text(json.dumps(verification, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

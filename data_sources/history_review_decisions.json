@@ -1,0 +1,488 @@
+{
+ "schema_version": 1,
+ "raw_data_included": false,
+ "status": "provisional_until_checked_against_private_match_log",
+ "status_note": "Foreløbige godkendelser. De anvendes ved import kun hvis tilbudsnavn og råproduktets navn dokumenterer samme produkt (scripts/history_approval_check.documented); ved manglende eller modstridende evidens forbliver produktet review_required. Skal kontrolleres mod den private match-log på Caspers Mac før de regnes for endelige.",
+ "decisions": [
+  {
+   "normalized_product_key": "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "0e9e836832c7b607",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "a4d11dee267a5585",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=barebells|product=creamy-crisp-proteinbar|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "5d68e977d7d86f67",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=barebells|product=creamy-crisp-proteinbar|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "9f5c44cd7404a89e",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=barebells|product=white-salty-peanut-proteinbar|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "0049405b344aa19d",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=barebells|product=white-salty-peanut-proteinbar|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "3132be2a5118cd3e",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=ben-jerry-s|product=caramel-brownie-party-is|variant=standard|count=1|size=0-465l",
+   "raw_id_hash": "077027fce3a9430c",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=ben-jerry-s|product=caramel-brownie-party-is|variant=standard|count=1|size=0-465l",
+   "raw_id_hash": "9391388ddbb3171f",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=ben-jerry-s|product=churrifically-churros-y-is|variant=standard|count=1|size=0-465l",
+   "raw_id_hash": "d00b5f018628090a",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=ben-jerry-s|product=churrifically-churros-y-is|variant=standard|count=1|size=0-465l",
+   "raw_id_hash": "f3e368d519fd5b61",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=ben-jerry-s|product=cookie-dough-is|variant=standard|count=1|size=0-465l",
+   "raw_id_hash": "33ab5fd3df539f2c",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=ben-jerry-s|product=cookie-dough-is|variant=standard|count=1|size=0-465l",
+   "raw_id_hash": "c46092fb356dec50",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=buko|product=floedeost-naturel|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "8ddde41af744535d",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=buko|product=floedeost-naturel|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "ab475f9a2ea52604",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "35fe8bd3de9b885a",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "ebdf3f557d758c8b",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "fbd14b4d1ab3ccc0",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "331071cea756c037",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "adb436281968f1c2",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "fac23c314c046205",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skiveost-mellemlagret-13|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "060d812a5e87c737",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "337ca58f063ae466",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "4e1656b67ac334d9",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "9ee9aaff017cea5b",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "8f0f4b8595394325",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "930fb10a8c597122",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "95946e8b096d3254",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "d8cd596fcd1017f9",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "de7678570d1ab0fd",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "f8e883e8ef02a06b",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "18815c317b3862a6",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "8d4e6058abfcfa07",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "ed5dc06c3e19a144",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "24cdbdd9d4c97d5c",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "74c7fd9093d9d155",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg",
+   "raw_id_hash": "c2176467beff9cf1",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=vanilje-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "26fb5e06467d637d",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=cheasy|product=vanilje-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "96d96717c91ef675",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "raw_id_hash": "0107c485ef3a127c",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "raw_id_hash": "cb9cb75d88737a5e",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "raw_id_hash": "d8f0ef33723f1223",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=fun-light|product=ananas-laeskedrik|variant=light|count=1|size=0-5l",
+   "raw_id_hash": "89bc5a6b72305988",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=marabou|product=chokoladeplade-black-saltlakrids|variant=standard|count=1|size=0-09kg",
+   "raw_id_hash": "a033c287e06dc7ca",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=marabou|product=chokoladeplade-schweizernot|variant=standard|count=1|size=0-09kg",
+   "raw_id_hash": "d9b930532d634209",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=murph|product=proteinbar-creatine-milky-road|variant=standard|count=1|size=0-055kg",
+   "raw_id_hash": "690ceaaac867c077",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=nordthy|product=halloween-cookies-green|variant=standard|count=1|size=0-146kg",
+   "raw_id_hash": "00c7759b6e7123d2",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "535474fdd35b7015",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "9793b2210d111e39",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "9d93aede250ef5b6",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "bc89cc133552c7f0",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
+   "raw_id_hash": "f5952601cba8681d",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=riberhus|product=skiveost-danbo-mellemlagret|variant=standard|count=1|size=0-24kg",
+   "raw_id_hash": "04423c48b5311a3c",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=riberhus|product=skiveost-danbo-mellemlagret|variant=standard|count=1|size=0-24kg",
+   "raw_id_hash": "5f29f772f0145d39",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=valsoelille|product=dragtastisk-lemonade|variant=standard|count=1|size=0-85l",
+   "raw_id_hash": "39f68cce325fc07d",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=valsoelille|product=dragtastisk-lemonade|variant=standard|count=1|size=0-85l",
+   "raw_id_hash": "6def98c17a1ceb87",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg",
+   "raw_id_hash": "395b137ff2e3bf28",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg",
+   "raw_id_hash": "567f25fade57bf12",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg",
+   "raw_id_hash": "d247f85638a01c94",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=yoggi|product=havens-baer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "5aa9480206c4cd7a",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  },
+  {
+   "normalized_product_key": "brand=yoggi|product=havens-baer-yoghurt|variant=standard|count=1|size=1l",
+   "raw_id_hash": "5b8ecbeedcbba0bd",
+   "decision": "verified",
+   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reviewed_on": "2026-10-13",
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+  }
+ ]
+}

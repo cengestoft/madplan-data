@@ -32,3 +32,9 @@ Målet er 30 %, men siden Caspers beslutning 13. oktober 2026 er det et **kvalit
 - Privat (`data/private/`, ignoreret af git): historisk råprodukt, tilbudsprodukt, identitetsfelter og konflikter.
 - Menneskelige beslutninger ligger i `history_review_decisions.json` og indeholder kun hashes (`raw_id_hash`), reviewer og dato.
   En beslutning kan løfte `review_required` til `verified`, men aldrig overstyre en hård konflikt.
+Ved import anvendes en godkendelse kun, hvis `history_approval_check.documented` bekræfter samme produkt (samme særskilte ord efter fjernelse af mærke, størrelse, fedttal og generiske typeord).
+Ellers forbliver produktet `review_required` (`manual_decisions_blocked` tæller dem). Godkendelserne er foreløbige, til de er kontrolleret mod den private match-log.
+
+## Historikken bevares
+`data_sources/history_offer_identities.json` husker alle tilbudsidentiteter. Verificeret historik for en nøgle slettes aldrig, fordi dens tilbud udløber;
+aktuelle tilbud afgør kun overlap og hvilke grafer der er mulige (`active` pr. nøgle).

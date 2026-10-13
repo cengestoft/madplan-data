@@ -38,7 +38,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Python syntax check
-        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py scripts/offer_schema.py scripts/check_super_deal_history.py scripts/generate_acceptance_report.py scripts/build_offer_feed.py scripts/check_freshness.py scripts/history_overlap_report.py
+        run: python -m py_compile scripts/product_normalization.py scripts/build_data_pipeline.py scripts/apply_super_deals.py scripts/import_dagligepriser_history.py scripts/offer_schema.py scripts/check_super_deal_history.py scripts/generate_acceptance_report.py scripts/build_offer_feed.py scripts/check_freshness.py scripts/history_overlap_report.py scripts/promote_future_offers.py scripts/history_approval_check.py scripts/history_identity.py scripts/history_decide.py scripts/history_match_audit.py
       - name: Run acceptance tests
         run: python -m unittest discover -s tests -v
       - name: Validate pipeline without writing

@@ -1,0 +1,121 @@
+name: Superkøb privat Dropbox-import (kandidat, ingen publicering)
+
+# KUN manuel kørsel. Workflowet bygger en KANDIDAT og en rapport. Det committer, pusher og publicerer ALDRIG noget.
+# Repoet er offentligt: logs og artifacts kan læses af alle. Derfor printes kun antal og normaliserede produktnøgler.
+# Ugentlig kørsel må først aktiveres efter en godkendt manuel test (se blokken nedenfor, som er udkommenteret med vilje).
+on:
+  workflow_dispatch:
+    inputs:
+      expected_size:
+        description: "Forventet filstørrelse i bytes (356964273). Stop hvis Dropbox-filen har en anden størrelse."
+        required: true
+        default: "356964273"
+      allow_size_change:
+        description: "Sæt til 'ja' KUN hvis en ny størrelse er forventet (så ignoreres expected_size)."
+        required: false
+        default: "nej"
+  # schedule:
+  #   - cron: "17 4 * * 1"   # FØRST efter godkendt manuel test og beslutning fra Casper
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dropbox-history-import
+  cancel-in-progress: false
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    # Secrets ligger i GitHub Environment 'dropbox-import' (krævet godkender + kun main/branch-regler), ikke som repo-secrets.
+    environment: dropbox-import
+    env:
+      RAW_DIR: ${{ runner.temp }}/raw
+      OUT_DIR: ${{ runner.temp }}/out
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests før import (alle Python-tests)
+        run: python -m unittest discover -s tests
+
+      - name: Hent privat rådata fra Dropbox (midlertidigt, ikke i git)
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          DROPBOX_RAW_PATH: ${{ vars.DROPBOX_RAW_PATH }}
+          EXPECTED_SIZE: ${{ inputs.expected_size }}
+          ALLOW_SIZE_CHANGE: ${{ inputs.allow_size_change }}
+        run: |
+          umask 077
+          mkdir -p "$RAW_DIR"
+          if [ "$ALLOW_SIZE_CHANGE" = "ja" ]; then
+            python scripts/dropbox_fetch.py --dest "$RAW_DIR/latest-canonical.json"
+          else
+            python scripts/dropbox_fetch.py --dest "$RAW_DIR/latest-canonical.json" --expected-size "$EXPECTED_SIZE"
+          fi
+
+      - name: Byg kandidat med eksisterende importer (verified_only, ingen match-log)
+        run: |
+          set -o pipefail
+          mkdir -p "$OUT_DIR"
+          cp price_history.json "$OUT_DIR/price_history.json"
+          cp data_sources/history_offer_identities.json "$OUT_DIR/history_offer_identities.json"
+          # stdout/stderr gemmes i en temp-fil; kun slutresultatet (tal) vises. Fejl viser kun fejlklassen.
+          if ! python scripts/import_dagligepriser_history.py \
+                 --source-file "$RAW_DIR/latest-canonical.json" \
+                 --output "$OUT_DIR/monthly_price_history.json" \
+                 --current-offers current_offers.json \
+                 --identities "$OUT_DIR/history_offer_identities.json" > "$RUNNER_TEMP/import.out" 2> "$RUNNER_TEMP/import.err"; then
+            echo "::error::Importeren fejlede (fejlklasse: $(tail -n 1 "$RUNNER_TEMP/import.err" | cut -d: -f1 | cut -c1-60))"
+            exit 1
+          fi
+          python - <<'PY'
+          import json, os
+          line = open(os.environ["RUNNER_TEMP"] + "/import.out", encoding="utf-8").read().strip().splitlines()[0]
+          s = json.loads(line)
+          print(json.dumps({k: v for k, v in s.items() if isinstance(v, (int, float, bool))}, sort_keys=True))
+          PY
+
+      - name: Slet rådata så snart importen er færdig
+        if: always()
+        run: |
+          rm -rf "$RAW_DIR"
+          rm -f "$RUNNER_TEMP/import.out" "$RUNNER_TEMP/import.err"
+
+      - name: Sikkerhedstjek, før/efter-sammenligning og rapport
+        run: |
+          set +e
+          python scripts/history_import_guard.py --before-dir . --after-dir "$OUT_DIR" \
+            --report "$OUT_DIR/report.md" --diff "$OUT_DIR/diff.json" > /dev/null
+          code=$?
+          [ -f "$OUT_DIR/report.md" ] && cat "$OUT_DIR/report.md" >> "$GITHUB_STEP_SUMMARY"
+          exit $code
+
+      - name: Tests og accepttest efter kandidat (repo uændret)
+        run: |
+          python -m unittest discover -s tests
+          python scripts/generate_acceptance_report.py --check
+
+      - name: Upload kun aggregerede kandidatfiler og rapport (ingen rådata)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kandidat-historik
+          path: |
+            ${{ runner.temp }}/out/monthly_price_history.json
+            ${{ runner.temp }}/out/history_verification.json
+            ${{ runner.temp }}/out/history_offer_identities.json
+            ${{ runner.temp }}/out/price_history.json
+            ${{ runner.temp }}/out/report.md
+            ${{ runner.temp }}/out/diff.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+      # BEVIDST INGEN commit-, push-, merge- eller publiceringstrin. En godkendt kandidat lægges ind via en separat PR.

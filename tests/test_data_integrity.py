@@ -458,7 +458,10 @@ class WorkflowSafety(unittest.TestCase):
             self.assertNotRegex(text, r"(?m)^\s*branches:\s*\[main\]", wf.name)
             self.assertIn("contents: read", text, wf.name)
             self.assertNotRegex(text, r"(?i)(gh pr merge|gh api .*-X (POST|PUT|PATCH|DELETE)|git (merge|tag)|--write\b|actions/(create|upload)-release|peaceiris|stefanzweifel)", wf.name)
-            self.assertNotRegex(text, r"(?i)secrets\.", wf.name)
+            if wf.name == "dropbox-history-import.yml":  # the one reviewed exception: Dropbox credentials, read-only job, no publish step
+                self.assertEqual(sorted(set(re.findall(r"secrets\.([A-Z_]+)", text))), ["DROPBOX_APP_KEY", "DROPBOX_APP_SECRET", "DROPBOX_REFRESH_TOKEN"])
+            else:
+                self.assertNotRegex(text, r"(?i)secrets\.", wf.name)
             self.assertNotRegex(text, r"(?m)^\s*schedule:", wf.name)
 
     def test_workflows_do_not_run_the_pipeline_in_write_mode(self):

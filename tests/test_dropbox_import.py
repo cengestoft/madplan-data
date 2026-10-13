@@ -311,11 +311,12 @@ class WorkflowStaticTest(unittest.TestCase):
         self.assertIn("environment: dropbox-import", self.code)
 
     def test_raw_data_lives_in_runner_temp_and_is_always_deleted(self):
-        self.assertIn("RAW_DIR: ${{ runner.temp }}/raw", self.code)
+        self.assertIn('echo "RAW_DIR=$RUNNER_TEMP/raw" >> "$GITHUB_ENV"', self.code)
+        self.assertIn('echo "OUT_DIR=$RUNNER_TEMP/out" >> "$GITHUB_ENV"', self.code)
         self.assertEqual(self.code.count("if: always()"), 1, "only the raw-data cleanup may run always()")
         m = re.search(r"- name: Slet rådata[^\n]*\n\s+if: always\(\)\n\s+run: \|\n(.*?)\n\n", self.code + "\n\n", re.S)
         self.assertIsNotNone(m, "cleanup step with if: always() is required")
-        self.assertIn('rm -rf "$RAW_DIR"', m.group(1))
+        self.assertIn('rm -rf "${RAW_DIR:-$RUNNER_TEMP/raw}"', m.group(1))
 
     def test_artifacts_exclude_raw_data_and_match_log(self):
         m = re.search(r"upload-artifact@v4.*?path: \|\n(.*?)if-no-files-found", self.code, re.S)
@@ -332,6 +333,24 @@ class WorkflowStaticTest(unittest.TestCase):
         self.assertNotIn("--match-log", self.code)
         self.assertIn('--output "$OUT_DIR/monthly_price_history.json"', self.code)
         self.assertIn('--identities "$OUT_DIR/history_offer_identities.json"', self.code)
+
+    def test_expression_contexts_are_valid_where_they_are_used(self):
+        """Regression for the startup failure: 'runner' is not available in job-level env (run 38464620534). Offline stand-in for actionlint."""
+        lines = self.code.splitlines()
+        steps_at = next(i for i, l in enumerate(lines) if re.match(r"^    steps:\s*$", l))
+        jobs_at = next(i for i, l in enumerate(lines) if re.match(r"^jobs:\s*$", l))
+        allowed = {"workflow": {"github", "inputs", "vars"}, "job": {"github", "inputs", "vars", "secrets", "needs", "matrix", "strategy"},
+                   "step": {"github", "inputs", "vars", "secrets", "needs", "matrix", "strategy", "env", "runner", "job", "steps"}}
+        for i, line in enumerate(lines):
+            place = "workflow" if i < jobs_at else "job" if i < steps_at else "step"
+            for expr in re.findall(r"\$\{\{(.*?)\}\}", line):
+                for ctx in re.findall(r"(?<![\w.'\"])([a-z]+)\.[A-Za-z_]", re.sub(r"'[^']*'", "''", expr)):
+                    self.assertIn(ctx, allowed[place], f"line {i + 1}: context '{ctx}' is not available at {place} level")
+        self.assertNotIn("runner.", "\n".join(lines[:steps_at]))
+
+    def test_every_dir_variable_is_defined_before_use_via_github_env(self):
+        first_use = min(self.code.index(v) for v in ('"$RAW_DIR', '"$OUT_DIR') if v in self.code)
+        self.assertLess(self.code.index('>> "$GITHUB_ENV"'), first_use)
 
     def test_candidate_upload_only_after_guard_and_failure_report_is_fixed_text(self):
         up = self.code[self.code.index("name: Upload kun aggregerede"):]

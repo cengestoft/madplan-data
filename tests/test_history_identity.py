@@ -168,6 +168,21 @@ class ImporterEndToEnd(unittest.TestCase):
         for raw_text in ("Chips m. havsalt", "Chips med Sour Cream", "Hytteost 4% fedt"):  # raw product text must not reach the public file
             self.assertNotIn(raw_text, json.dumps(ver))
 
+    def test_mixed_candidates_never_leak_unverified_prices(self):
+        """One key with a verified raw product AND rejected/review raw products: only the verified prices reach the aggregate."""
+        raw = json.loads((self.tmp / "raw.json").read_text(encoding="utf-8"))
+        hist = lambda price: [{"date": f"2026-0{m}-15", "price": price, "quantity": 150, "unit": "g"} for m in (6, 7, 8)]
+        raw += [{"store": "netto", "id": "4", "name": "KiMs, Havsalt Chips Light., Chips m. havsalt light", "category": "0", "priceHistory": hist(99)},
+                {"store": "netto", "id": "5", "name": "Pringles, Havsalt Chips., Chips m. havsalt", "category": "0", "priceHistory": hist(77)},
+                {"store": "netto", "id": "6", "name": "KiMs, Havsalt Chips., Chips m. havsalt", "category": "0", "priceHistory": hist(21)}]
+        (self.tmp / "raw.json").write_text(json.dumps(raw), encoding="utf-8")
+        monthly, ver = self.run_import()
+        key = next(k for k in ver["keys"] if k.split("|")[1] == "product=havsalt-chips")
+        self.assertEqual(ver["keys"][key]["status"], VERIFIED)
+        prices = {r["median_price_dkk"] for r in monthly["records"] if r["normalized_product_key"] == key}
+        self.assertEqual(prices, {21}, "unverified candidates (Light 99, Pringles 77) must not enter the aggregate")
+        self.assertTrue(all(r["observation_count"] <= 2 for r in monthly["records"] if r["normalized_product_key"] == key))
+
     def test_human_decision_can_promote_review_but_not_override_conflict(self):
         _, ver = self.run_import()
         key = next(k for k in ver["keys"] if k.split("|")[1] == "product=hytteost")

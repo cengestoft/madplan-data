@@ -128,6 +128,7 @@ def reconcile_history_manifest(manifest, monthly):
     out["record_count"]=len(records)
     out["data_file"]="monthly_price_history.json"
     out["data_generated_at"]=monthly.get("generated_at")
+    if monthly.get("generated_at"): out["updated_at"]=monthly["generated_at"]  # manifest follows the data it describes
     out["distinct_keys"]=len({r.get("normalized_product_key") for r in records})
     months=sorted({r.get("month") for r in records if r.get("month")})
     out["first_month"]=months[0] if months else None; out["last_month"]=months[-1] if months else None

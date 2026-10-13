@@ -1,0 +1,88 @@
+{
+ "store": "365discount",
+ "offer_count": 5,
+ "page_count": 1,
+ "non_food_count": 0,
+ "valid_to": "2026-10-31",
+ "truncated_lines": [],
+ "offers": [
+  {
+   "id": "tilbudsugen-11347341",
+   "name": "Klovborg Skæreost Danbo Mellemlagret",
+   "price_dkk": 45,
+   "package_amount": 0.585,
+   "package_unit": "kg",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "organic": false,
+   "member_only": true,
+   "category": "mejeri",
+   "page": 0,
+   "line": 0,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11347343",
+   "name": "Klovborg Skæreost Danbo Mellemlagret Kommen",
+   "price_dkk": 45,
+   "package_amount": 0.585,
+   "package_unit": "kg",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "organic": false,
+   "member_only": true,
+   "category": "mejeri",
+   "page": 0,
+   "line": 1,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11347306",
+   "name": "Magnum Almond ispinde",
+   "price_dkk": 25,
+   "package_amount": 3,
+   "package_unit": "stk",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "organic": false,
+   "member_only": true,
+   "category": "snacks",
+   "page": 0,
+   "line": 2,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11347305",
+   "name": "Magnum Classic ispinde",
+   "price_dkk": 25,
+   "package_amount": 3,
+   "package_unit": "stk",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "organic": false,
+   "member_only": true,
+   "category": "snacks",
+   "page": 0,
+   "line": 3,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "tilbudsugen-11347307",
+   "name": "Magnum La-Pistachie ispinde",
+   "price_dkk": 25,
+   "package_amount": 3,
+   "package_unit": "stk",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "organic": false,
+   "member_only": true,
+   "category": "snacks",
+   "page": 0,
+   "line": 4,
+   "name_shortened_in_page_text": false
+  }
+ ],
+ "pages": [
+  "Klovborg Skæreost Danbo Mellemlagret - 45 kr. pr. 0,585 kg - kun medlemmer\nKlovborg Skæreost Danbo Mellemlagret Kommen - 45 kr. pr. 0,585 kg - kun medlemmer\nMagnum Almond ispinde - 25 kr. pr. 3 stk - kun medlemmer\nMagnum Classic ispinde - 25 kr. pr. 3 stk - kun medlemmer\nMagnum La-Pistachie ispinde - 25 kr. pr. 3 stk - kun medlemmer"
+ ]
+}

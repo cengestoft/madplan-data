@@ -1,8 +1,13 @@
-name: Rebuild monthly history from raw data
+name: Validate monthly history (validation only)
+
+# SAFETY: this workflow is validation-only. It has read-only permissions, never
+# commits or pushes, and never publishes. Rebuilding monthly_price_history.json
+# from dagligepriser.dk raw data is DISABLED until the user explicitly approves.
+# Written permission for monthly aggregates exists
+# (see data_sources/DAGLIGEPRISER_DATA_RIGHTS.md); raw data must still never be public.
 
 on:
-  push:
-    branches: [main]
+  pull_request:
     paths:
       - ".github/workflows/rebuild-monthly-history.yml"
       - "scripts/import_dagligepriser_history.py"
@@ -11,32 +16,20 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  rebuild:
+  validate:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Rebuild public monthly aggregate from dagligepriser raw data
-        run: |
-          python scripts/import_dagligepriser_history.py             --output monthly_price_history.json             --current-offers current_offers.json             --allow-public-output
-
-      - name: Build direct-key Supertilbud history report
-        run: |
-          python scripts/check_super_deal_history.py
-
-      - name: Acceptance tests
-        run: |
-          python -m unittest discover -s tests -v
-
-      - name: Enforce aggregate-only and size limit
+      - name: Acceptance tests (read-only)
+        run: python -m unittest discover -s tests -v
+      - name: Enforce aggregate-only and size limit (read-only)
         run: |
           python - <<'PY'
           import json
@@ -46,17 +39,5 @@ jobs:
           assert d.get("raw_data_included") is False
           assert p.stat().st_size < 12*1024*1024
           assert d.get("aggregation") == "normalized_product_key + store + month"
-          print({"bytes":p.stat().st_size,"records":d.get("record_count")})
+          print({"bytes":p.stat().st_size,"records":len(d.get("records",[]))})
           PY
-
-      - name: Commit regenerated aggregate and reports
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add monthly_price_history.json super_deal_history_report.json data_quality_errors.json
-          if git diff --cached --quiet; then
-            echo "No generated changes"
-          else
-            git commit -m "Rebuild monthly history from raw dagligepriser data"
-            git push
-          fi

@@ -1,93 +1,101 @@
 {
-  "generated_at": "2026-10-08T16:56:00+02:00",
-  "branch": "main",
-  "passed": 13,
-  "total": 13,
+  "generated_at": "2026-10-13T20:58:47+02:00",
+  "branch": "claude-kodekontrol-2026-10-09",
+  "valid_on": "2026-10-09",
+  "passed": 12,
+  "total": 12,
   "all_pass": true,
   "results": [
     {
       "id": 1,
-      "name": "Coca-Cola 24x33 cl under threshold becomes Supertilbud",
+      "name": "No expired offers in current index (Danish date)",
       "status": "PASS",
-      "detail": "Canonical feed contains 2 cola_24_cans offer(s) below 69 DKK."
+      "detail": "0 expired, 1653 active, 0 future, 0 without end date on 2026-10-09."
     },
     {
       "id": 2,
-      "name": "Corny is not matched as Coca-Cola",
+      "name": "import_status matches active offers",
       "status": "PASS",
-      "detail": "0 Corny records in canonical Supertilbud feed."
+      "detail": "index 1653; status offer_count 1653, current_total 1653."
     },
     {
       "id": 3,
-      "name": "Piskefløde categorized as mejeri",
+      "name": "price_history.json manifest matches monthly history",
       "status": "PASS",
-      "detail": "6/6 current piskefløde offers are mejeri."
+      "detail": "manifest 3485 vs actual 3485 records."
     },
     {
       "id": 4,
-      "name": "ABC Lavpris is chain-level",
+      "name": "All current rows have a recomputed-identical normalized_product_key",
       "status": "PASS",
-      "detail": "store_preferences has no ABC default branch; ABC scope is chain-level with store_location=null, and import_status abc-chain is chain-level."
+      "detail": "0 mismatching of 1653."
     },
     {
       "id": 5,
-      "name": "No expired offers in current index",
+      "name": "All history rows have normalized_product_key",
       "status": "PASS",
-      "detail": "362 current rows expired before 2026-10-08."
+      "detail": "0 missing of 3485."
     },
     {
       "id": 6,
-      "name": "No duplicate current offers",
+      "name": "History is aggregate-only and under 12 MiB",
       "status": "PASS",
-      "detail": "Duplicate guard remains enabled in the canonical pipeline."
+      "detail": "818378 bytes; raw_data_included=False."
     },
     {
       "id": 7,
-      "name": "import_status matches current_offers",
+      "name": "next_week_offers.json uses canonical schema",
       "status": "PASS",
-      "detail": "5,193 current rows; status total 5,193; offer_count 5,193."
+      "detail": "0 offers with alias field names."
     },
     {
       "id": 8,
-      "name": "Unit price calculation",
+      "name": "Future offers without end date are flagged, not treated as unlimited",
       "status": "PASS",
-      "detail": "59 DKK / 7.92 L = 7.4495 DKK/L."
+      "detail": "12 offers without valid_to; 12 flagged."
     },
     {
       "id": 9,
-      "name": "Historic low gets stronger deal score",
+      "name": "No hard data-quality errors",
       "status": "PASS",
-      "detail": "Acceptance test remains installed in tests/test_data_acceptance.py."
+      "detail": "hard_error_count=0."
     },
     {
       "id": 10,
-      "name": "Bad/empty imports are blocked",
+      "name": "History rows come only from verified products (verified_only, every row key has status verified)",
       "status": "PASS",
-      "detail": "Publication guard blocks empty imports, >25% count drops and >10% hard-error rate."
+      "detail": "3485 rows over 97 keys; 0 rows without verified status; verified_only=True; verification file present=True."
     },
     {
       "id": 11,
-      "name": "All current/history rows have normalized_product_key",
+      "name": "Verified status is only given to keys with actual verified history",
       "status": "PASS",
-      "detail": "5,193/5,193 current; 48,057/48,057 monthly history."
+      "detail": "97 verified keys; 0 without history rows; 0 without verified raw product."
     },
     {
       "id": 12,
-      "name": "No hard data-quality errors",
+      "name": "Unit test suite (108 tests)",
       "status": "PASS",
-      "detail": "hard_error_count=0; 3 soft missing-history issue(s) remain."
-    },
+      "detail": "all passed"
+    }
+  ],
+  "quality_targets": [
     {
-      "id": 13,
-      "name": "History is aggregated and raw history is not in Git",
-      "status": "PASS",
-      "detail": "monthly_price_history.json has 48,057 aggregate rows and is 11,485,482 characters; raw history is not included."
+      "name": "Verified history overlap on active food keys (target 30%, non-blocking)",
+      "status": "BELOW_TARGET",
+      "blocking": false,
+      "verified": 97,
+      "active_food_keys": 1271,
+      "overlap": 0.0763,
+      "review_required": 73,
+      "rejected": 23,
+      "no_candidate": 1078,
+      "additional_verified_needed": 285
     }
   ],
   "automation": {
     "workflow": ".github/workflows/data-quality.yml",
-    "tests": "tests/test_data_acceptance.py",
     "behavior": "Validation only; CI does not write or commit data."
   },
-  "note": "Acceptance report refreshed after Coca-Cola history rebuild and ABC chain-level migration. Supertilbud history coverage is reported separately in super_deal_history_report.json."
+  "note": "Generated by scripts/generate_acceptance_report.py from real data and test results."
 }

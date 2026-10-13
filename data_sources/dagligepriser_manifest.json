@@ -17,10 +17,25 @@
   },
   "contains_nonfood": true,
   "current_prices_not_necessarily_fresh": true,
-  "redistribution_status": "unresolved",
+  "redistribution_status": "permitted_aggregated_only",
   "code_license": "MIT",
   "data_license": null,
-  "public_derived_dataset_allowed": false,
-  "rights_reviewed_at": "2026-10-05",
-  "rights_note": "Raw feed is publicly downloadable and the source code is MIT, but no separate data redistribution license was found. Public derived dataset publication remains blocked pending explicit permission."
+  "public_derived_dataset_allowed": "aggregated_monthly_only",
+  "rights_reviewed_at": "2026-10-09",
+  "rights_note": "Written permission from dagligepriser.dk (mails received by the project owner on 2026-10-05 and 2026-10-06; wording in cengestoft/Opskrifter docs/dagligepriser_tilladelse.md): the monthly aggregated history per product, store and month may be used in the app and published in the public GitHub repository. Raw data, daily observations and the ~355 MB dump must never be published. The app must show a visible credit with link. Permission is revocable if the conditions are not met.",
+  "permission": {
+    "granted": true,
+    "received": [
+      "2026-10-05",
+      "2026-10-06"
+    ],
+    "scope": "monthly aggregates only (observation_count, median/average, min, max) per product, store and month",
+    "conditions": [
+      "no raw data or daily observations in Git",
+      "the ~355 MB dump is never committed",
+      "visible credit 'Historiske prisdata: dagligepriser.dk' with link",
+      "revocable"
+    ],
+    "contact": "hi+heissepreise@leonora.app"
+  }
 }

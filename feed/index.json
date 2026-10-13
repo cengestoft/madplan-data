@@ -1,0 +1,113 @@
+{
+ "schema_version": 1,
+ "valid_on": "2026-10-09",
+ "encoding": "utf-8",
+ "page_char_limit": 5800,
+ "food_only": false,
+ "stores": {
+  "365discount": {
+   "file": "365discount.json",
+   "offer_count": 5,
+   "page_count": 1,
+   "non_food_count": 0,
+   "valid_to": "2026-10-31"
+  },
+  "Bilka": {
+   "file": "bilka.json",
+   "offer_count": 6,
+   "page_count": 1,
+   "non_food_count": 2,
+   "valid_to": "2026-10-15"
+  },
+  "Dagli'Brugsen": {
+   "file": "daglibrugsen.json",
+   "offer_count": 19,
+   "page_count": 1,
+   "non_food_count": 2,
+   "valid_to": "2026-10-31"
+  },
+  "Kvickly": {
+   "file": "kvickly.json",
+   "offer_count": 90,
+   "page_count": 1,
+   "non_food_count": 2,
+   "valid_to": "2026-10-31"
+  },
+  "Let-Køb": {
+   "file": "let-koeb.json",
+   "offer_count": 74,
+   "page_count": 1,
+   "non_food_count": 3,
+   "valid_to": "2026-10-18"
+  },
+  "Lidl": {
+   "file": "lidl.json",
+   "offer_count": 576,
+   "page_count": 6,
+   "non_food_count": 38,
+   "valid_to": "2026-12-31"
+  },
+  "Løvbjerg": {
+   "file": "loevbjerg.json",
+   "offer_count": 28,
+   "page_count": 1,
+   "non_food_count": 0,
+   "valid_to": "2026-10-31"
+  },
+  "MENY": {
+   "file": "meny.json",
+   "offer_count": 16,
+   "page_count": 1,
+   "non_food_count": 0,
+   "valid_to": "2026-10-31"
+  },
+  "Min Købmand": {
+   "file": "min-koebmand.json",
+   "offer_count": 16,
+   "page_count": 1,
+   "non_food_count": 0,
+   "valid_to": "2026-10-31"
+  },
+  "Netto": {
+   "file": "netto.json",
+   "offer_count": 395,
+   "page_count": 4,
+   "non_food_count": 36,
+   "valid_to": "2026-10-31"
+  },
+  "REMA 1000": {
+   "file": "rema-1000.json",
+   "offer_count": 305,
+   "page_count": 3,
+   "non_food_count": 30,
+   "valid_to": "2026-10-10"
+  },
+  "SPAR": {
+   "file": "spar.json",
+   "offer_count": 16,
+   "page_count": 1,
+   "non_food_count": 0,
+   "valid_to": "2026-10-31"
+  },
+  "SuperBrugsen": {
+   "file": "superbrugsen.json",
+   "offer_count": 89,
+   "page_count": 1,
+   "non_food_count": 2,
+   "valid_to": "2026-10-31"
+  },
+  "føtex": {
+   "file": "foetex.json",
+   "offer_count": 18,
+   "page_count": 1,
+   "non_food_count": 2,
+   "valid_to": "2026-10-31"
+  }
+ },
+ "excluded": {
+  "not_active": 0,
+  "missing_price_or_package": 0,
+  "duplicate_id": 0,
+  "non_food_excluded_by_flag": 0
+ }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T21:18:04+02:00",
+  "generated_at": "2026-10-13T21:22:42+02:00",
   "branch": "claude-kodekontrol-2026-10-09",
   "valid_on": "2026-10-13",
   "passed": 12,
@@ -10,13 +10,13 @@
       "id": 1,
       "name": "No expired offers in current index (Danish date)",
       "status": "PASS",
-      "detail": "0 expired, 748 active, 0 future, 0 without end date on 2026-10-13."
+      "detail": "0 expired, 751 active, 0 future, 0 without end date on 2026-10-13."
     },
     {
       "id": 2,
       "name": "import_status matches active offers",
       "status": "PASS",
-      "detail": "index 748; status offer_count 748, current_total 748."
+      "detail": "index 751; status offer_count 751, current_total 751."
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "All current rows have a recomputed-identical normalized_product_key",
       "status": "PASS",
-      "detail": "0 mismatching of 748."
+      "detail": "0 mismatching of 751."
     },
     {
       "id": 5,
@@ -74,7 +74,7 @@
     },
     {
       "id": 12,
-      "name": "Unit test suite (109 tests)",
+      "name": "Unit test suite (123 tests)",
       "status": "PASS",
       "detail": "all passed"
     }
@@ -85,12 +85,12 @@
       "status": "BELOW_TARGET",
       "blocking": false,
       "verified": 30,
-      "active_food_keys": 548,
-      "overlap": 0.0547,
+      "active_food_keys": 551,
+      "overlap": 0.0544,
       "review_required": 24,
       "rejected": 4,
-      "no_candidate": 490,
-      "additional_verified_needed": 135
+      "no_candidate": 493,
+      "additional_verified_needed": 136
     }
   ],
   "automation": {

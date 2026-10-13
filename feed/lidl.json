@@ -1,6 +1,6 @@
 {
  "store": "Lidl",
- "offer_count": 370,
+ "offer_count": 373,
  "page_count": 4,
  "non_food_count": 18,
  "valid_to": "2026-12-31",
@@ -3232,6 +3232,21 @@
    "name_shortened_in_page_text": false
   },
   {
+   "id": "next-67530f7366",
+   "name": "Softkernerugbrød",
+   "price_dkk": 15,
+   "package_amount": 850,
+   "package_unit": "g",
+   "valid_from": "2026-10-11",
+   "valid_to": "2026-10-17",
+   "organic": null,
+   "member_only": true,
+   "category": "brød",
+   "page": 1,
+   "line": 100,
+   "name_shortened_in_page_text": false
+  },
+  {
    "id": "tilbudsugen-11350932",
    "name": "Bacon  Leverpostej",
    "price_dkk": 11.95,
@@ -3243,7 +3258,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 100,
+   "line": 101,
    "name_shortened_in_page_text": false
   },
   {
@@ -3258,7 +3273,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 101,
+   "line": 102,
    "name_shortened_in_page_text": false
   },
   {
@@ -3273,7 +3288,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 102,
+   "line": 103,
    "name_shortened_in_page_text": false
   },
   {
@@ -3288,7 +3303,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 103,
+   "line": 104,
    "name_shortened_in_page_text": false
   },
   {
@@ -3303,7 +3318,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 104,
+   "line": 105,
    "name_shortened_in_page_text": false
   },
   {
@@ -3318,7 +3333,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 105,
+   "line": 106,
    "name_shortened_in_page_text": false
   },
   {
@@ -3333,7 +3348,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 106,
+   "line": 107,
    "name_shortened_in_page_text": false
   },
   {
@@ -3348,7 +3363,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 107,
+   "line": 108,
    "name_shortened_in_page_text": false
   },
   {
@@ -3363,7 +3378,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 108,
+   "line": 109,
    "name_shortened_in_page_text": false
   },
   {
@@ -3378,7 +3393,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 109,
+   "line": 110,
    "name_shortened_in_page_text": false
   },
   {
@@ -3393,7 +3408,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 110,
+   "line": 111,
    "name_shortened_in_page_text": false
   },
   {
@@ -3408,7 +3423,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 111,
+   "line": 112,
    "name_shortened_in_page_text": false
   },
   {
@@ -3423,7 +3438,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 112,
+   "line": 113,
    "name_shortened_in_page_text": false
   },
   {
@@ -3438,7 +3453,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 113,
+   "line": 114,
    "name_shortened_in_page_text": false
   },
   {
@@ -3453,7 +3468,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 1,
-   "line": 114,
+   "line": 115,
    "name_shortened_in_page_text": false
   },
   {
@@ -3467,8 +3482,8 @@
    "organic": false,
    "member_only": false,
    "category": "pålæg",
-   "page": 1,
-   "line": 115,
+   "page": 2,
+   "line": 0,
    "name_shortened_in_page_text": false
   },
   {
@@ -3483,7 +3498,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 0,
+   "line": 1,
    "name_shortened_in_page_text": false
   },
   {
@@ -3498,7 +3513,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 1,
+   "line": 2,
    "name_shortened_in_page_text": false
   },
   {
@@ -3513,7 +3528,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 2,
+   "line": 3,
    "name_shortened_in_page_text": false
   },
   {
@@ -3528,7 +3543,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 3,
+   "line": 4,
    "name_shortened_in_page_text": false
   },
   {
@@ -3543,7 +3558,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 4,
+   "line": 5,
    "name_shortened_in_page_text": false
   },
   {
@@ -3558,7 +3573,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 5,
+   "line": 6,
    "name_shortened_in_page_text": false
   },
   {
@@ -3573,7 +3588,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 6,
+   "line": 7,
    "name_shortened_in_page_text": false
   },
   {
@@ -3588,7 +3603,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 7,
+   "line": 8,
    "name_shortened_in_page_text": false
   },
   {
@@ -3603,7 +3618,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 8,
+   "line": 9,
    "name_shortened_in_page_text": false
   },
   {
@@ -3618,7 +3633,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 9,
+   "line": 10,
    "name_shortened_in_page_text": false
   },
   {
@@ -3633,7 +3648,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 10,
+   "line": 11,
    "name_shortened_in_page_text": false
   },
   {
@@ -3648,7 +3663,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 11,
+   "line": 12,
    "name_shortened_in_page_text": false
   },
   {
@@ -3663,7 +3678,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 12,
+   "line": 13,
    "name_shortened_in_page_text": false
   },
   {
@@ -3678,7 +3693,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 13,
+   "line": 14,
    "name_shortened_in_page_text": false
   },
   {
@@ -3693,7 +3708,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 14,
+   "line": 15,
    "name_shortened_in_page_text": false
   },
   {
@@ -3708,7 +3723,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 15,
+   "line": 16,
    "name_shortened_in_page_text": false
   },
   {
@@ -3723,7 +3738,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 16,
+   "line": 17,
    "name_shortened_in_page_text": false
   },
   {
@@ -3738,7 +3753,7 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 17,
+   "line": 18,
    "name_shortened_in_page_text": false
   },
   {
@@ -3753,7 +3768,22 @@
    "member_only": false,
    "category": "pålæg",
    "page": 2,
-   "line": 18,
+   "line": 19,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "next-7779d6c281",
+   "name": "Akaciehonning",
+   "price_dkk": 29,
+   "package_amount": 250,
+   "package_unit": "g",
+   "valid_from": "2026-10-11",
+   "valid_to": "2026-10-17",
+   "organic": null,
+   "member_only": true,
+   "category": "kolonial",
+   "page": 2,
+   "line": 20,
    "name_shortened_in_page_text": false
   },
   {
@@ -3768,7 +3798,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 19,
+   "line": 21,
    "name_shortened_in_page_text": false
   },
   {
@@ -3783,7 +3813,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 20,
+   "line": 22,
    "name_shortened_in_page_text": false
   },
   {
@@ -3798,7 +3828,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 21,
+   "line": 23,
    "name_shortened_in_page_text": false
   },
   {
@@ -3813,7 +3843,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 22,
+   "line": 24,
    "name_shortened_in_page_text": false
   },
   {
@@ -3828,7 +3858,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 23,
+   "line": 25,
    "name_shortened_in_page_text": false
   },
   {
@@ -3843,7 +3873,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 24,
+   "line": 26,
    "name_shortened_in_page_text": false
   },
   {
@@ -3858,7 +3888,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 25,
+   "line": 27,
    "name_shortened_in_page_text": false
   },
   {
@@ -3873,7 +3903,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 26,
+   "line": 28,
    "name_shortened_in_page_text": false
   },
   {
@@ -3888,7 +3918,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 27,
+   "line": 29,
    "name_shortened_in_page_text": false
   },
   {
@@ -3903,7 +3933,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 28,
+   "line": 30,
    "name_shortened_in_page_text": false
   },
   {
@@ -3918,7 +3948,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 29,
+   "line": 31,
    "name_shortened_in_page_text": false
   },
   {
@@ -3933,7 +3963,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 30,
+   "line": 32,
    "name_shortened_in_page_text": false
   },
   {
@@ -3948,7 +3978,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 31,
+   "line": 33,
    "name_shortened_in_page_text": false
   },
   {
@@ -3963,7 +3993,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 32,
+   "line": 34,
    "name_shortened_in_page_text": false
   },
   {
@@ -3978,7 +4008,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 33,
+   "line": 35,
    "name_shortened_in_page_text": false
   },
   {
@@ -3993,7 +4023,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 34,
+   "line": 36,
    "name_shortened_in_page_text": false
   },
   {
@@ -4008,7 +4038,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 35,
+   "line": 37,
    "name_shortened_in_page_text": false
   },
   {
@@ -4023,7 +4053,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 36,
+   "line": 38,
    "name_shortened_in_page_text": false
   },
   {
@@ -4038,7 +4068,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 37,
+   "line": 39,
    "name_shortened_in_page_text": false
   },
   {
@@ -4053,7 +4083,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 38,
+   "line": 40,
    "name_shortened_in_page_text": false
   },
   {
@@ -4068,7 +4098,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 39,
+   "line": 41,
    "name_shortened_in_page_text": false
   },
   {
@@ -4083,7 +4113,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 40,
+   "line": 42,
    "name_shortened_in_page_text": false
   },
   {
@@ -4098,7 +4128,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 41,
+   "line": 43,
    "name_shortened_in_page_text": false
   },
   {
@@ -4113,7 +4143,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 42,
+   "line": 44,
    "name_shortened_in_page_text": false
   },
   {
@@ -4128,7 +4158,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 43,
+   "line": 45,
    "name_shortened_in_page_text": false
   },
   {
@@ -4143,7 +4173,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 44,
+   "line": 46,
    "name_shortened_in_page_text": false
   },
   {
@@ -4158,7 +4188,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 45,
+   "line": 47,
    "name_shortened_in_page_text": false
   },
   {
@@ -4173,7 +4203,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 46,
+   "line": 48,
    "name_shortened_in_page_text": false
   },
   {
@@ -4188,7 +4218,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 47,
+   "line": 49,
    "name_shortened_in_page_text": false
   },
   {
@@ -4203,7 +4233,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 48,
+   "line": 50,
    "name_shortened_in_page_text": false
   },
   {
@@ -4218,7 +4248,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 49,
+   "line": 51,
    "name_shortened_in_page_text": false
   },
   {
@@ -4233,7 +4263,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 50,
+   "line": 52,
    "name_shortened_in_page_text": false
   },
   {
@@ -4248,7 +4278,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 51,
+   "line": 53,
    "name_shortened_in_page_text": false
   },
   {
@@ -4263,7 +4293,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 52,
+   "line": 54,
    "name_shortened_in_page_text": false
   },
   {
@@ -4278,7 +4308,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 53,
+   "line": 55,
    "name_shortened_in_page_text": false
   },
   {
@@ -4293,7 +4323,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 54,
+   "line": 56,
    "name_shortened_in_page_text": false
   },
   {
@@ -4308,7 +4338,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 55,
+   "line": 57,
    "name_shortened_in_page_text": false
   },
   {
@@ -4323,7 +4353,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 56,
+   "line": 58,
    "name_shortened_in_page_text": false
   },
   {
@@ -4338,7 +4368,22 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 57,
+   "line": 59,
+   "name_shortened_in_page_text": false
+  },
+  {
+   "id": "next-e87b65f824",
+   "name": "MARLENE Honning",
+   "price_dkk": 29,
+   "package_amount": 500,
+   "package_unit": "g",
+   "valid_from": "2026-10-11",
+   "valid_to": "2026-10-17",
+   "organic": null,
+   "member_only": true,
+   "category": "kolonial",
+   "page": 2,
+   "line": 60,
    "name_shortened_in_page_text": false
   },
   {
@@ -4353,7 +4398,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 58,
+   "line": 61,
    "name_shortened_in_page_text": false
   },
   {
@@ -4368,7 +4413,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 59,
+   "line": 62,
    "name_shortened_in_page_text": false
   },
   {
@@ -4383,7 +4428,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 60,
+   "line": 63,
    "name_shortened_in_page_text": false
   },
   {
@@ -4398,7 +4443,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 61,
+   "line": 64,
    "name_shortened_in_page_text": false
   },
   {
@@ -4413,7 +4458,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 62,
+   "line": 65,
    "name_shortened_in_page_text": false
   },
   {
@@ -4428,7 +4473,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 63,
+   "line": 66,
    "name_shortened_in_page_text": false
   },
   {
@@ -4443,7 +4488,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 64,
+   "line": 67,
    "name_shortened_in_page_text": false
   },
   {
@@ -4458,7 +4503,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 65,
+   "line": 68,
    "name_shortened_in_page_text": false
   },
   {
@@ -4473,7 +4518,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 66,
+   "line": 69,
    "name_shortened_in_page_text": false
   },
   {
@@ -4488,7 +4533,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 67,
+   "line": 70,
    "name_shortened_in_page_text": false
   },
   {
@@ -4503,7 +4548,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 68,
+   "line": 71,
    "name_shortened_in_page_text": false
   },
   {
@@ -4518,7 +4563,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 69,
+   "line": 72,
    "name_shortened_in_page_text": false
   },
   {
@@ -4533,7 +4578,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 70,
+   "line": 73,
    "name_shortened_in_page_text": false
   },
   {
@@ -4548,7 +4593,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 71,
+   "line": 74,
    "name_shortened_in_page_text": false
   },
   {
@@ -4563,7 +4608,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 72,
+   "line": 75,
    "name_shortened_in_page_text": false
   },
   {
@@ -4578,7 +4623,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 73,
+   "line": 76,
    "name_shortened_in_page_text": false
   },
   {
@@ -4593,7 +4638,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 74,
+   "line": 77,
    "name_shortened_in_page_text": false
   },
   {
@@ -4608,7 +4653,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 75,
+   "line": 78,
    "name_shortened_in_page_text": false
   },
   {
@@ -4623,7 +4668,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 76,
+   "line": 79,
    "name_shortened_in_page_text": false
   },
   {
@@ -4638,7 +4683,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 77,
+   "line": 80,
    "name_shortened_in_page_text": false
   },
   {
@@ -4653,7 +4698,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 78,
+   "line": 81,
    "name_shortened_in_page_text": false
   },
   {
@@ -4668,7 +4713,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 79,
+   "line": 82,
    "name_shortened_in_page_text": false
   },
   {
@@ -4683,7 +4728,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 80,
+   "line": 83,
    "name_shortened_in_page_text": false
   },
   {
@@ -4698,7 +4743,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 81,
+   "line": 84,
    "name_shortened_in_page_text": false
   },
   {
@@ -4713,7 +4758,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 82,
+   "line": 85,
    "name_shortened_in_page_text": false
   },
   {
@@ -4728,7 +4773,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 83,
+   "line": 86,
    "name_shortened_in_page_text": false
   },
   {
@@ -4743,7 +4788,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 84,
+   "line": 87,
    "name_shortened_in_page_text": false
   },
   {
@@ -4758,7 +4803,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 85,
+   "line": 88,
    "name_shortened_in_page_text": false
   },
   {
@@ -4773,7 +4818,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 86,
+   "line": 89,
    "name_shortened_in_page_text": false
   },
   {
@@ -4788,7 +4833,7 @@
    "member_only": false,
    "category": "kolonial",
    "page": 2,
-   "line": 87,
+   "line": 90,
    "name_shortened_in_page_text": false
   },
   {
@@ -4803,7 +4848,7 @@
    "member_only": false,
    "category": "drikkevarer",
    "page": 2,
-   "line": 88,
+   "line": 91,
    "name_shortened_in_page_text": false
   },
   {
@@ -4818,7 +4863,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 89,
+   "line": 92,
    "name_shortened_in_page_text": false
   },
   {
@@ -4833,7 +4878,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 90,
+   "line": 93,
    "name_shortened_in_page_text": false
   },
   {
@@ -4848,7 +4893,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 91,
+   "line": 94,
    "name_shortened_in_page_text": false
   },
   {
@@ -4863,7 +4908,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 92,
+   "line": 95,
    "name_shortened_in_page_text": false
   },
   {
@@ -4878,7 +4923,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 93,
+   "line": 96,
    "name_shortened_in_page_text": false
   },
   {
@@ -4893,7 +4938,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 94,
+   "line": 97,
    "name_shortened_in_page_text": false
   },
   {
@@ -4908,7 +4953,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 95,
+   "line": 98,
    "name_shortened_in_page_text": false
   },
   {
@@ -4923,7 +4968,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 96,
+   "line": 99,
    "name_shortened_in_page_text": false
   },
   {
@@ -4938,7 +4983,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 97,
+   "line": 100,
    "name_shortened_in_page_text": false
   },
   {
@@ -4953,7 +4998,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 98,
+   "line": 101,
    "name_shortened_in_page_text": false
   },
   {
@@ -4968,7 +5013,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 99,
+   "line": 102,
    "name_shortened_in_page_text": false
   },
   {
@@ -4983,7 +5028,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 100,
+   "line": 103,
    "name_shortened_in_page_text": false
   },
   {
@@ -4998,7 +5043,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 101,
+   "line": 104,
    "name_shortened_in_page_text": false
   },
   {
@@ -5013,7 +5058,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 102,
+   "line": 105,
    "name_shortened_in_page_text": false
   },
   {
@@ -5028,7 +5073,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 103,
+   "line": 106,
    "name_shortened_in_page_text": false
   },
   {
@@ -5043,7 +5088,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 104,
+   "line": 107,
    "name_shortened_in_page_text": false
   },
   {
@@ -5058,7 +5103,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 105,
+   "line": 108,
    "name_shortened_in_page_text": false
   },
   {
@@ -5073,7 +5118,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 106,
+   "line": 109,
    "name_shortened_in_page_text": false
   },
   {
@@ -5088,7 +5133,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 107,
+   "line": 110,
    "name_shortened_in_page_text": false
   },
   {
@@ -5103,7 +5148,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 108,
+   "line": 111,
    "name_shortened_in_page_text": false
   },
   {
@@ -5118,7 +5163,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 109,
+   "line": 112,
    "name_shortened_in_page_text": false
   },
   {
@@ -5133,7 +5178,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 110,
+   "line": 113,
    "name_shortened_in_page_text": false
   },
   {
@@ -5148,7 +5193,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 111,
+   "line": 114,
    "name_shortened_in_page_text": false
   },
   {
@@ -5163,7 +5208,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 2,
-   "line": 112,
+   "line": 115,
    "name_shortened_in_page_text": false
   },
   {
@@ -5177,8 +5222,8 @@
    "organic": false,
    "member_only": false,
    "category": "snacks",
-   "page": 2,
-   "line": 113,
+   "page": 3,
+   "line": 0,
    "name_shortened_in_page_text": false
   },
   {
@@ -5192,8 +5237,8 @@
    "organic": false,
    "member_only": false,
    "category": "snacks",
-   "page": 2,
-   "line": 114,
+   "page": 3,
+   "line": 1,
    "name_shortened_in_page_text": false
   },
   {
@@ -5207,8 +5252,8 @@
    "organic": false,
    "member_only": false,
    "category": "snacks",
-   "page": 2,
-   "line": 115,
+   "page": 3,
+   "line": 2,
    "name_shortened_in_page_text": false
   },
   {
@@ -5223,7 +5268,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 3,
-   "line": 0,
+   "line": 3,
    "name_shortened_in_page_text": false
   },
   {
@@ -5238,7 +5283,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 3,
-   "line": 1,
+   "line": 4,
    "name_shortened_in_page_text": false
   },
   {
@@ -5253,7 +5298,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 3,
-   "line": 2,
+   "line": 5,
    "name_shortened_in_page_text": false
   },
   {
@@ -5268,7 +5313,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 3,
-   "line": 3,
+   "line": 6,
    "name_shortened_in_page_text": false
   },
   {
@@ -5283,7 +5328,7 @@
    "member_only": false,
    "category": "snacks",
    "page": 3,
-   "line": 4,
+   "line": 7,
    "name_shortened_in_page_text": false
   },
   {
@@ -5298,7 +5343,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 5,
+   "line": 8,
    "name_shortened_in_page_text": false
   },
   {
@@ -5313,7 +5358,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 6,
+   "line": 9,
    "name_shortened_in_page_text": false
   },
   {
@@ -5328,7 +5373,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 7,
+   "line": 10,
    "name_shortened_in_page_text": false
   },
   {
@@ -5343,7 +5388,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 8,
+   "line": 11,
    "name_shortened_in_page_text": false
   },
   {
@@ -5358,7 +5403,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 9,
+   "line": 12,
    "name_shortened_in_page_text": false
   },
   {
@@ -5373,7 +5418,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 10,
+   "line": 13,
    "name_shortened_in_page_text": false
   },
   {
@@ -5388,7 +5433,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 11,
+   "line": 14,
    "name_shortened_in_page_text": false
   },
   {
@@ -5403,7 +5448,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 12,
+   "line": 15,
    "name_shortened_in_page_text": false
   },
   {
@@ -5418,7 +5463,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 13,
+   "line": 16,
    "name_shortened_in_page_text": false
   },
   {
@@ -5433,7 +5478,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 14,
+   "line": 17,
    "name_shortened_in_page_text": false
   },
   {
@@ -5448,7 +5493,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 15,
+   "line": 18,
    "name_shortened_in_page_text": false
   },
   {
@@ -5463,7 +5508,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 16,
+   "line": 19,
    "name_shortened_in_page_text": false
   },
   {
@@ -5478,7 +5523,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 17,
+   "line": 20,
    "name_shortened_in_page_text": false
   },
   {
@@ -5493,7 +5538,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 18,
+   "line": 21,
    "name_shortened_in_page_text": false
   },
   {
@@ -5508,7 +5553,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 19,
+   "line": 22,
    "name_shortened_in_page_text": false
   },
   {
@@ -5523,7 +5568,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 20,
+   "line": 23,
    "name_shortened_in_page_text": false
   },
   {
@@ -5538,7 +5583,7 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 21,
+   "line": 24,
    "name_shortened_in_page_text": false
   },
   {
@@ -5553,14 +5598,14 @@
    "member_only": false,
    "category": "husholdning",
    "page": 3,
-   "line": 22,
+   "line": 25,
    "name_shortened_in_page_text": false
   }
  ],
  "pages": [
   "Freshona Blomkålsris - 9,95 kr. pr. 0,5 kg\nFreshona Broccoli Hakket - 14,95 kr. pr. 0,5 kg\nFreshona Broccoli Rice - 9,95 kr. pr. 0,5 kg\nFreshona Brussels Sprouts - 14,95 kr. pr. 0,75 kg\nFreshona Cauli Flower - 14,95 kr. pr. 0,75 kg\nFreshona Edamamebønner - 14,95 kr. pr. 0,4 kg\nFreshona Fine Ærter - 12,95 kr. pr. 0,75 kg\nFreshona Grøntsager - 17,95 kr. pr. 0,6 kg\nFreshona Hakket Spinat - 9,95 kr. pr. 0,75 kg\nFreshona Haricots Verts - 14,95 kr. pr. 1 kg\nFreshona Helbladet Spinat - 8,95 kr. pr. 0,45 kg\nFreshona Majs - 8,95 kr. pr. 0,45 kg\nFreshona Mixed Vegetables - 16,95 kr. pr. 1 kg\nFreshona Mixed Vegetables Asian Style - 14,95 kr. pr. 0,75 kg\nFreshona Mixed Vegetables Chili sin Carne - 11,95 kr. pr. 0,5 kg\nFreshona Mixed Vegetables Curry - 11,95 kr. pr. 0,4 kg\nFreshona Mixed Vegetables Gourmet - 14,95 kr. pr. 0,75 kg\nFreshona Mixed Vegetables Italian Style - 14,95 kr. pr. 0,75 kg\nFreshona Mixed Vegetables Mexican Style - 14,95 kr. pr. 0,75 kg\nFreshona Mixed Vegetables Red Curry - 11,95 kr. pr. 0,4 kg\nFreshona Mixed Vegetables Tikka Masala - 11,95 kr. pr. 0,4 kg\nFreshona Wokmix Classic - 11,95 kr. pr. 0,5 kg\nFreshona Wokmix Thai Style - 11,95 kr. pr. 0,5 kg\nHarvest Basket Crinkle Cut Fries - 9,95 kr. pr. 1 kg\nHarvest Basket Jumbo Fries Extra Crunch - 11,95 kr. pr. 1 kg\nHarvest Basket Pommes Frites Ekstra tynde - 19,95 kr. pr. 2 kg\nHarvest Basket Pommes Frites Ekstra tynde - 11,95 kr. pr. 1 kg\nHarvest Basket Potato Lattices - 11,95 kr. pr. 1 kg\nHarvest Basket Potato Rösti - 18,95 kr. pr. 0,8 kg\nHarvest Basket Potato Wedges - 13,95 kr. pr. 0,75 kg\nHarvest Basket Steakhouse Fries Thick Cut - 11,95 kr. pr. 1 kg\nBurger Boost Hakkebøffer - 39,95 kr. pr. 0,35 kg\nButchers Nakkefilet - 59,9 kr. pr. 1 kg\nButchers Oksesteaks - 39,95 kr. pr. 0,25 kg\nButchers Oksesteaks - 49,95 kr. pr. 0,25 kg\nChef Select Hamburger - 49,95 kr. pr. 0,5 kg\nChef Select Wienerschnitzel - 29,95 kr. pr. 0,3 kg\nCordon Bleu - 24,95 kr. pr. 0,3 kg\nDanish Crown Hakket Okse og Grønt 35% - 29,95 kr. pr. 0,4 kg\nDulano Bacontern - 19,95 kr. pr. 0,25 kg\nMadværket Flæsk i skiver - 29,95 kr. pr. 0,4 kg\nMadværket Flæskesteg - 24,95 kr. pr. 0,5 kg - øko\nMadværket Grisekoteletter - 29,95 kr. pr. 0,4 kg\nMadværket Grisemørbrad - 39,95 kr. pr. 0,5 kg\nMadværket Hakkebøffer - 24,95 kr. pr. 0,25 kg\nMadværket Hakket grisekød 8-12% - 37,95 kr. pr. 0,8 kg\nMadværket Hakket grisekød 8-12% - 24,95 kr. pr. 0,5 kg\nMadværket Hakket kalv og grisekød 4-7% - 29,95 kr. pr. 0,4 kg\nMadværket Hakket kalv og grisekød 8-12% - 29,95 kr. pr. 0,5 kg\nMadværket Hakket kalv og grisekød 8-12% - 44,95 kr. pr. 0,8 kg\nMadværket Hakket oksekød 14-18% - 72,95 kr. pr. 0,8 kg\nMadværket Hakket oksekød 14-18% - 37,95 kr. pr. 0,4 kg\nMadværket Hakket oksekød 8-12% - 44,95 kr. pr. 0,4 kg\nMadværket Hakket oksekød 8-12% - 39,95 kr. pr. 0,4 kg\nMadværket Hakket oksekød 8-12% - 76,95 kr. pr. 0,8 kg\nMadværket Medister - 24,95 kr. pr. 0,5 kg\nMadværket Nakkekoteletter - 29,95 kr. pr. 0,4 kg\nMadværket Okseentrecotes - 127,95 kr. pr. 0,7 kg\nMadværket Oksekødsstrimler - 44,95 kr. pr. 0,3 kg\nMadværket Oksekødstern - 44,95 kr. pr. 0,3 kg\nMadværket Ribeyefilet - 99,95 kr. pr. 0,5 kg\nMadværket Ribeyesteaks - 79,95 kr. pr. 0,36 kg\nMadværket Tykstegsbøffer - 59,95 kr. pr. 0,3 kg\nPålægsslagteren Baconskiver - 19,95 kr. pr. 0,3 kg\nPålægsslagteren Bacontern - 12,95 kr. pr. 0,2 kg\nTulip Baconskiver - 34,95 kr. pr. 0,375 kg\nMadværket Hakket kylling 3-7% - 29,95 kr. pr. 0,4 kg\nMadværket Kylling - 49,95 kr. pr. 1,35 kg\nMadværket Kyllingebryst - 32,95 kr. pr. 0,325 kg\nMadværket Kyllingebrystfilet - 53,95 kr. pr. 0,65 kg\nMadværket Kyllingebrystfilet - 34,95 kr. pr. 0,45 kg\nMadværket Kyllingebrystfilet - 27,95 kr. pr. 0,28 kg\nMadværket Kyllingebrystfilet - 64,95 kr. pr. 1 kg\nMadværket Kyllingeinderfileter - 49,95 kr. pr. 0,65 kg\nMadværket Kyllingeinderfileter - 29,95 kr. pr. 0,35 kg\nMadværket Kyllingelår - 64,95 kr. pr. 1,6 kg\nMadværket Kyllingelårfilet - 29,95 kr. pr. 0,4 kg\nMadværket Kyllingelårmix - 32,95 kr. pr. 0,8 kg\nMadværket Kyllingeoverlår - 29,95 kr. pr. 0,8 kg\nMadværket Kyllingeunderlår - 29,95 kr. pr. 0,7 kg\nMadværket Kyllingevinger - 29,95 kr. pr. 0,65 kg\nRose Kylling - 49,95 kr. pr. 1,6 kg\nHavblå Laksefilet - 43,95 kr. pr. 0,225 kg\nHavblå Laksefilet - 74,95 kr. pr. 0,5 kg\nHavblå Laksefilet - 54,95 kr. pr. 0,3 kg\nHavblå Laksefilet - 99,95 kr. pr. 0,6 kg\nHavblå Laksefilet - 89,95 kr. pr. 0,5 kg\nNautica Laks i skiver - 29,95 kr. pr. 0,1 kg\nNautica Laksefilet - 29,95 kr. pr. 0,125 kg\nOcean Sea Lakseportioner - 44,95 kr. pr. 0,25 kg\nOcean Sea Lakseportioner - 79,95 kr. pr. 0,5 kg\nRahbek Indbagt Laks med Spinat og Ostesauce - 17,95 kr. pr. 0,25 kg\nRahbek Indbagt Laks med cremet spinat-flødesauce - 39,95 kr. pr. 0,54 kg\nRahbek Indbagte Rejer med Asparges og Dildsauce - 17,95 kr. pr. 0,25 kg\nThorfisk Torskefilet - 49,95 kr. pr. 0,225 kg\nBakkedal Smørbar - 14,95 kr. pr. 0,2 kg - øko\nBlue Skimmelost - 17,95 kr. pr. 0,2 kg\nBuko Flødeost Naturel - 14,95 kr. pr. 0,2 kg\nBuko Flødeost Pikant - 14,95 kr. pr. 0,2 kg\nBuko Smelte Smøreost Rejeost - 14,95 kr. pr. 0,2 kg\nBuko Smelte Smøreost Skinkeost - 14,95 kr. pr. 0,2 kg\nCheasy Skæreost Mild 13% - 49,95 kr. pr. 0,495 kg\nChef Select Forårsruller - 14,95 kr. pr. 0,4 kg\nChef Select Kyllingekebab - 29,95 kr. pr. 0,3 kg\nChef Select Kødboller - 69,95 kr. pr. 1 kg\nCreamy Blue Skimmelost - 19,95 kr. pr. 0,15 kg\nCrefee Smøreost Herbs - 9,95 kr. pr. 0,15 kg\nCrefee Smøreost Hvidløg - 9,95 kr. pr. 0,15 kg\nCrefee Smøreost Rød Peberfrugt & Chili - 9,95 kr. pr. 0,15 kg\nDeluxe Potato Broccoli & Cheese - 29,95 kr. pr. 0,4 kg\nDeluxe Potato Gratins Emmeltal Cheese - 29,95 kr. pr. 0,4 kg\nDeluxe Smør - 14,95 kr. pr. 0,25 kg\nFærdigretter - 34,95 kr. pr. 0,4 kg\nGoldessa Smøreost Herbs - 9,95 kr. pr. 0,2 kg\nGoldessa Smøreost Light - 9,95 kr. pr. 0,2 kg",
-  "Goldessa Smøreost Original - 9,95 kr. pr. 0,2 kg\nHatting Kanelsnegle - 14,95 kr. pr. 0,34 kg\nHatting Møllehjul - 14,95 kr. pr. 0,42 kg\nHatting Skagenslapper - 14,95 kr. pr. 0,438 kg\nHatting Surdejs  Rundstykker - 14,95 kr. pr. 0,42 kg\nHatting Surdejsboller - 19,95 kr. pr. 0,4 kg\nHatting Tebirkes - 14,95 kr. pr. 0,34 kg\nItaliamo Piccante Pizza - 21,95 kr. pr. 0,36 kg\nItaliamo Pizza Prosciutto e Mozzarella - 21,95 kr. pr. 0,4 kg\nItaliamo Pizza Stracciatella di Burrata - 21,95 kr. pr. 0,35 kg\nKlovborg Skiveost Danbo Mellemlagret - 26,95 kr. pr. 0,24 kg\nKlovborg Skæreost Danbo Mellemlagret - 54,95 kr. pr. 0,65 kg\nKærgården Smørbar - 18,95 kr. pr. 0,2 kg\nLurpak Smør Saltet - 19,95 kr. pr. 0,2 kg\nLurpak Smørbar - 19,95 kr. pr. 0,2 kg\nMadværket Havarti - 29,95 kr. pr. 0,4 kg\nMadværket Jordbær Yoghurt - 11,95 kr. pr. 1 l\nMadværket Naturel Yoghurt 1,5 - 9,95 kr. pr. 1 l\nMadværket Naturel Yoghurt 3,5% - 9,95 kr. pr. 1 l\nMadværket Piskefløde 36% - 14,95 kr. pr. 0,5 l\nMadværket Pære & Banan Yoghurt 1,4% - 11,95 kr. pr. 1 l\nMadværket Pære & Banan Yoghurt 3,1% - 11,95 kr. pr. 1 l\nMadværket Skiveost Danbo Ekstralagret - 19,95 kr. pr. 0,2 kg\nMadværket Skiveost Danbo Lagret - 19,95 kr. pr. 0,2 kg\nMadværket Skiveost Danbo Mellemlagret - 22,95 kr. pr. 0,3 kg\nMadværket Skiveost Danbo Mellemlagret Kommen - 22,95 kr. pr. 0,3 kg\nMadværket Skiveost Samsø - 22,95 kr. pr. 0,3 kg\nMadværket Skyr Naturel 0,2% - 19,95 kr. pr. 1 kg\nMadværket Skæreost Danbo Ekstra Ekstralagret - 59,95 kr. pr. 0,54 kg\nMadværket Skæreost Danbo Ekstralagret - 54,95 kr. pr. 0,54 kg\nMadværket Skæreost Danbo Lagret - 49,95 kr. pr. 0,54 kg\nMadværket Skæreost Danbo Mellemlagret - 39,95 kr. pr. 0,59 kg\nMadværket Skæreost Dronning Dagmar Danbo - 44,95 kr. pr. 0,65 kg\nMadværket Skæreost Mellemlagret Kommen - 42,95 kr. pr. 0,65 kg\nMadværket Skæreost Samsø Mild - 39,95 kr. pr. 0,59 kg\nMadværket Smør - 14,95 kr. pr. 0,2 kg - øko\nMadværket Vanilje Skyr 0,2% - 19,95 kr. pr. 1 kg\nMadværket Vanilje Yoghurt - 11,95 kr. pr. 1 l\nMammen Hytteost 1,5% - 8,95 kr. pr. 0,2 kg\nMammen Hytteost 1,5% - 16,95 kr. pr. 0,45 l\nMammen Hytteost 4% - 16,95 kr. pr. 0,45 l\nMammen Hytteost 4% - 12,95 kr. pr. 0,2 l - øko\nMammen Hytteost 4% - 8,95 kr. pr. 0,2 l\nMammen Skæreost Danbo Mellemlagret - 49,95 kr. pr. 0,65 kg\nMilbona Cheddar - 29,95 kr. pr. 0,25 kg\nMilbona Emmentaler - 29,95 kr. pr. 0,4 kg\nMilbona Feta - 19,95 kr. pr. 0,2 kg\nMilbona Flødeost Classic - 14,95 kr. pr. 0,3 kg\nMilbona Greek Style 2% Yoghurt - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yoghurt Creamy - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yogurt Berries - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yogurt Pineapple, Orange & Mandarin - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yogurt Strawberry - 24,95 kr. pr. 1 kg\nMilbona Græsk Yoghurt Naturel - 14,95 kr. pr. 0,5 kg\nMilbona Hytteost - 12,95 kr. pr. 0,4 l\nMilbona Hytteost - 6,95 kr. pr. 0,2 l\nMilbona Kakaomælk - 9,95 kr. pr. 1 l\nMilbona Mini Mozzarella - 11,95 kr. pr. 0,125 kg\nMilbona Mozzarella Light - 7,95 kr. pr. 0,125 kg\nMilbona Mozzarella Light - 6,95 kr. pr. 0,125 kg\nMilbona Natural 0,1% Yoghurt - 5,95 kr. pr. 0,5 kg\nMilbona Natural 1,5% Yoghurt - 5,95 kr. pr. 0,5 kg\nMilbona Naturel 3,5% Yoghurt - 5,95 kr. pr. 0,5 kg\nMilbona Revet ost Gratin Cheese - 19,95 kr. pr. 0,25 kg\nMilbona Revet ost Gratin Cheese light - 19,95 kr. pr. 0,25 kg\nMilbona Revet ost Mozzarella Grated - 17,95 kr. pr. 0,25 kg\nMilbona Revet ost Mozzarella Grated - 29,95 kr. pr. 0,5 kg\nMilbona Revet ost Pizzatopping - 24,95 kr. pr. 0,5 kg\nMilbona Salatost - 13,95 kr. pr. 0,25 kg\nMilbona Skiveost Gouda - 29,95 kr. pr. 0,4 kg\nMilbona Skiveost Gouda - 69,95 kr. pr. 1 kg\nMilbona Skiveost Tilsiter - 29,95 kr. pr. 0,4 kg\nMilbona Smør Saltet - 9,95 kr. pr. 0,25 kg\nMilbona Smørbar - 9,95 kr. pr. 0,2 kg\nMilbona Turkish Style Yogurt 10% - 24,95 kr. pr. 1 kg\nNaturli' Smørbar - 14,95 kr. pr. 0,2 kg - øko\nNaturli' Smørbar - Blok - 14,95 kr. pr. 0,2 kg - øko\nPhiladelphia Flødeost Hvidløg & Urter - 14,95 kr. pr. 0,2 kg\nPhiladelphia Flødeost Original - 14,95 kr. pr. 0,2 kg\nPuck Salatost - 14,95 kr. pr. 0,2 kg\nRiberhus Skiveost Danbo Mellemlagret - 26,95 kr. pr. 0,24 kg\nRiberhus Skæreost Danbo Mellemlagret - 49,95 kr. pr. 0,52 kg\nRose Kyllingestrimler - 29,95 kr. pr. 0,35 kg\nSødergården Smørbar - 9,95 kr. pr. 0,2 kg\nTastino Baguette Rolls - 9,95 kr. pr. 0,54 kg\nTastino Butter Pains au Chocolat - 24,95 kr. pr. 0,45 kg\nTastino Fuldkornsstykker - 14,95 kr. pr. 0,57 kg\nTastino Håndværkere - 12,95 kr. pr. 0,6 kg\nTastino Rundstykker - 12,95 kr. pr. 0,6 kg\nTastino Smørcroissant - 19,95 kr. pr. 0,36 kg\nTastino Speltstykker - 14,95 kr. pr. 0,42 kg - øko\nTastino Wheat Rolls with Seeds - 14,95 kr. pr. 0,48 kg - øko\nVita Dor Margarine-fast - 9,95 kr. pr. 0,5 kg\nVita Dor Margarine-flydende - 9,95 kr. pr. 0,5 l\nWhite & Blue Skimmelost - 17,95 kr. pr. 0,2 kg\nLiba Fladbrød - 9,95 kr. pr. 0,34 kg\nMadværket Fuldkornskrydderboller - 12,95 kr. pr. 0,8 kg\nMadværket Krydderboller - 13,95 kr. pr. 0,7 kg\nMadværket Schwarzbrød - 4,95 kr. pr. 0,5 kg\nMadværket Solsikkerugbrød - 5,95 kr. pr. 0,5 kg\nBacon  Leverpostej - 11,95 kr. pr. 0,35 kg\nCosta Brava Chorizo - 9,95 kr. pr. 0,07 kg\nCosta Brava Jamon Serrano - 9,95 kr. pr. 0,07 kg\nCosta Brava Salchichón Extra - 9,95 kr. pr. 0,07 kg\nDulano Chorizo - 14,95 kr. pr. 0,12 kg\nDulano Grillpølser - 18,5 kr. pr. 0,375 kg\nDulano Hamburgerryg - 21,95 kr. pr. 0,15 kg\nDulano Hotdogpølser - 18,5 kr. pr. 0,375 kg\nDulano Serranoskinke - 19,95 kr. pr. 0,1 kg\nFransk Leverpostej - 7,95 kr. pr. 0,2 kg\nFransk Postej Leverpostej - 23,95 kr. pr. 0,4 kg\nFransk Postej Leverpostej - 12,95 kr. pr. 0,2 kg\nGrovhakket Leverpostej - 12,95 kr. pr. 0,2 kg\nGrovhakket Leverpostej - 23,95 kr. pr. 0,4 kg\nGul bordpak Kartoffelspegepølse - 12,95 kr. pr. 0,115 kg\nGul bordpak Kødpølse - 12,95 kr. pr. 0,125 kg",
-  "Gul bordpak Salami - 19,95 kr. pr. 0,2 kg\nGul bordpak Salami - 12,95 kr. pr. 0,1 kg\nGul bordpak Sønderjysk Spegepølse - 12,95 kr. pr. 0,125 kg\nHverdagspostej Leverpostej - 13,95 kr. pr. 0,5 kg\nKlassisk Bacon Leverpostej - 9,95 kr. pr. 0,2 kg\nMadværket Hamburgerryg - 14,95 kr. pr. 0,08 kg\nMadværket Porchetta - 16,95 kr. pr. 0,08 kg\nMadværket Rullepølse - 14,95 kr. pr. 0,08 kg\nMadværket Sennepsskinke - 14,95 kr. pr. 0,08 kg\nPålægsslagteren Grillpølser - 24,95 kr. pr. 0,55 kg\nPålægsslagteren Hamburgerryg - 13,95 kr. pr. 0,15 kg\nPålægsslagteren Kalkunbryst - 14,95 kr. pr. 0,12 kg\nPålægsslagteren Kyllingebryst - 12,95 kr. pr. 0,12 kg\nPålægsslagteren Rullepølse - 13,95 kr. pr. 0,15 kg\nPålægsslagteren Røget Rullepølse - 13,95 kr. pr. 0,14 kg\nPålækker Hamburgerryg - 12,95 kr. pr. 0,09 kg\nPålækker Rullepølse - 12,95 kr. pr. 0,09 kg\nSteff Houlberg Bayerske Pølser - 24,95 kr. pr. 0,375 kg\nSteff Houlberg Hotdogpølser - 24,95 kr. pr. 0,375 kg\nBelbake Fødselsdagsbolleblanding - 9,95 kr. pr. 0,35 kg\nBelbake Hvedemel - 9,95 kr. pr. 2 kg\nBelbake Hvedemel - 14,95 kr. pr. 2 kg - øko\nBelbake Pizzamel - 9,95 kr. pr. 1 kg\nBelbake Rugmel - 7,95 kr. pr. 1 kg - øko\nBelbake Speltmel - 12,95 kr. pr. 1 kg\nBelbake Sukker - 7,5 kr. pr. 1 kg\nBlanding 72 Kaffe Formalet - 59,95 kr. pr. 0,5 kg\nBran Flakes Morgenmadsprodukt - 14,95 kr. pr. 0,5 kg\nClassic Kaffe Formalet - 39,95 kr. pr. 0,5 kg\nCoco Pops Chocos Morgenmadsprodukt - 29,95 kr. pr. 0,33 kg\nCombino Farfalle - 7,95 kr. pr. 0,5 kg\nCombino Fuldkornslasagneplader - 9,95 kr. pr. 0,5 kg\nCombino Fusilli - 5,95 kr. pr. 0,5 kg\nCombino Fusilli Tricolore - 7,95 kr. pr. 0,5 kg\nCombino Gnocchi - 7,95 kr. pr. 0,5 kg\nCombino Lasagneplader - 9,95 kr. pr. 0,5 kg\nCombino Macaroni - 5,95 kr. pr. 0,5 kg\nCombino Pasta Animals - 9,95 kr. pr. 0,5 kg - øko\nCombino Pasta Vehicles - 9,95 kr. pr. 0,5 kg - øko\nCombino Penne Rigate - 5,95 kr. pr. 0,5 kg\nCombino Spaghetti - 8,95 kr. pr. 1 kg\nCrownfield Cornflakes - 12,5 kr. pr. 0,5 kg\nCrownfield Müsli Luxery Fruit - 29,95 kr. pr. 0,75 kg\nCrownfield Müsli Luxery Fruit & Nut - 29,95 kr. pr. 0,75 kg\nDeluxe Olivenolie - 59,95 kr. pr. 0,5 l\nDinner Kitt Family Lasagne - 24,95 kr. pr. 0,35 kg\nDinner Kitt Family Lasagnette - 24,95 kr. pr. 0,335 kg\nExtra Specialristet Kaffe Formalet - 44,95 kr. pr. 0,4 kg\nFlakes Morgenmadsprodukt - 14,95 kr. pr. 0,425 kg\nGold Kaffe Formalet - 59,95 kr. pr. 0,5 kg\nGrillmester Kalkunbøffer - 32,95 kr. pr. 0,48 kg\nHakket kalkun - 27,95 kr. pr. 0,5 kg\nKalkunbrystfilet - 85,95 kr. pr. 0,8 kg\nKalkunoverlår - 47,95 kr. pr. 1 kg\nKalkunschnitzler - 47,95 kr. pr. 0,5 kg\nKalkunstrimler - 29,95 kr. pr. 0,4 kg\nKalkununderlår - 44,95 kr. pr. 0,9 kg\nKelloggs Cornflakes - 29,95 kr. pr. 0,375 kg\nMadværket Finvalsede Havregryn - 9,95 kr. pr. 1 kg - øko\nMadværket Finvalsede Havregryn - 7,95 kr. pr. 1 kg\nMadværket Grovvalsede Havregryn - 7,95 kr. pr. 1 kg\nMadværket Grovvalsede Havregryn - 9,95 kr. pr. 1 kg - øko\nMellemristet Kaffe Formalet - 49,95 kr. pr. 0,4 kg - øko\nMellemristet Kaffe Formalet - 39,95 kr. pr. 0,4 kg\nMellemristet Kaffe Formalet - 59,95 kr. pr. 0,5 kg\nMilbona Cremosano 15% - 7,95 kr. pr. 0,25 kg\nMilbona Cremosano 7% - 7,95 kr. pr. 0,25 kg\nOta Sol Gryn Finvalsede Havregryn - 12,95 kr. pr. 0,7 kg\nPrimaDonna Olivenolie - 49,95 kr. pr. 0,5 l - øko\nPrimaDonna Olivenolie - 49,95 kr. pr. 0,75 l\nPrimaDonna Olivenolie - 49,95 kr. pr. 0,5 l\nPrimaDonna Olivenolie - 59,95 kr. pr. 1 l\nPurio Affaldsposer - 5,95 kr. pr. 20 stk\nQuaker Cruesli Dark Chocolate - 29,95 kr. pr. 0,45 kg\nQuaker Havrefras - 29,95 kr. pr. 0,375 kg\nRed Berries Flakes Morgenmadsprodukt - 14,95 kr. pr. 0,425 kg\nRosso Kaffebønner - 99,95 kr. pr. 1 kg\nSelezione Fusilli - 9,95 kr. pr. 0,5 kg\nSelezione Linguine - 9,95 kr. pr. 0,5 kg\nSelezione Penne Rigate - 9,95 kr. pr. 0,5 kg\nSelezione Spaghetti - 9,95 kr. pr. 0,5 kg\nSkrald-let Affaldsposer - 5,95 kr. pr. 20 stk\nSpecialristet Kaffe Formalet - 35,95 kr. pr. 0,4 kg\nValsemøllen Brunchboller Koldhævet Melblanding - 14,95 kr. pr. 0,9 kg\nValsemøllen Fuldkornshvedemel hvid - 9,95 kr. pr. 1 kg\nValsemøllen Gourmet Rugbrødsblanding - 14,95 kr. pr. 0,9 kg\nValsemøllen Tipo 00 Hvedemel - 12,95 kr. pr. 1 kg - øko\nVådservietter - 9,95 kr. pr. 100 stk\nRibena Solbær Frugtsaft - 24,95 kr. pr. 0,85 l\nBugles Original - 19,95 kr. pr. 0,125 kg\nDaim Chokoladeplade - 17,95 kr. pr. 0,09 kg\nFin Carré Chokoladeplade Crusti Choc - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Dark - 9,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Extra Dark 74% - 17,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Milk - 9,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Milk Fruit & Nut - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Milk Hazzelnut - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Mælkechokolade med karamelstykker - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Neo - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Salted Caramel Crisp - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade White - 9,95 kr. pr. 0,1 kg\nJD Gross Chokoladeplade Caramel & Seasalt 70% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Caramel 70% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Dark 70% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Dark 85% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Dark 90% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Pistachio 56% - 24,95 kr. pr. 0,125 kg\nKims Havsalt Chips - 11,95 kr. pr. 0,075 kg\nKims Jørgens Favorit Mix - 11,95 kr. pr. 0,075 kg\nKims Ostepops Original - 11,95 kr. pr. 0,075 kg\nKims Snack Chips Original - 11,95 kr. pr. 0,09 kg\nKims Snack Chips Souer cream & onion - 11,95 kr. pr. 0,075 kg\nKims Sour Cream & Onion Chips - 11,95 kr. pr. 0,095 kg\nMarabou Chokoladeplade Black Saltlakrids - 17,95 kr. pr. 0,09 kg\nMarabou Chokoladeplade Mjölk Choklad - 17,95 kr. pr. 0,09 kg\nMarabou Chokoladeplade Schweizernöt - 17,95 kr. pr. 0,09 kg",
-  "Mister Choc Caramel & Biscuit - 29,95 kr. pr. 0,29 kg\nOreo Sandwich Chokoladeplade - 17,95 kr. pr. 0,092 kg\nSnack Day Salted Chips - 9,95 kr. pr. 0,175 kg\nTaffel Original Chips - 14,95 kr. pr. 0,14 kg\nTaffel SuperCrunch  Snacks - 14,95 kr. pr. 0,125 kg\nFloralys Køkkenrulle - 17,95 kr. pr. 4 stk\nFormil Vaskemiddel-flydende - 37,95 kr. pr. 2,2 l\nFormil Vaskemiddel-flydende - 44,95 kr. pr. 3 l\nFormil Vaskemiddel-flydende - 24,95 kr. pr. 1 l\nLupilu Bleer str 1 2-5 kg - 16,95 kr. pr. 24 stk\nLupilu Bleer str 2 3-6 kg - 29,95 kr. pr. 42 stk\nLupilu Bleer str 5 11-16 kg - 79,95 kr. pr. 72 stk\nLupilu Bleer str 5 12-17 kg - 53,95 kr. pr. 40 stk\nLupilu Bleer str 6 13-18 kg - 79,95 kr. pr. 64 stk\nLupilu Bleer str 6 14-19 kg - 53,95 kr. pr. 36 stk\nLupilu Bleer str 7 17+ kg - 53,95 kr. pr. 36 stk\nSoft Toiletpapir - 34,95 kr. pr. 18 stk\nSoft Toiletpapir - 12,95 kr. pr. 6 stk\nSoft Toiletpapir - 17,95 kr. pr. 8 stk\nSoft&Dry Bleer str 3 6-10 kg - 79,95 kr. pr. 92 stk\nSoft&Dry Bleer str 4 9-14 kg Premium Diapers - 79,95 kr. pr. 84 stk\nSoft&Dry Bleer str 4 9-15 kg - 53,95 kr. pr. 44 stk\nSupersoft Toiletpapir - 39,5 kr. pr. 10 stk"
+  "Goldessa Smøreost Original - 9,95 kr. pr. 0,2 kg\nHatting Kanelsnegle - 14,95 kr. pr. 0,34 kg\nHatting Møllehjul - 14,95 kr. pr. 0,42 kg\nHatting Skagenslapper - 14,95 kr. pr. 0,438 kg\nHatting Surdejs  Rundstykker - 14,95 kr. pr. 0,42 kg\nHatting Surdejsboller - 19,95 kr. pr. 0,4 kg\nHatting Tebirkes - 14,95 kr. pr. 0,34 kg\nItaliamo Piccante Pizza - 21,95 kr. pr. 0,36 kg\nItaliamo Pizza Prosciutto e Mozzarella - 21,95 kr. pr. 0,4 kg\nItaliamo Pizza Stracciatella di Burrata - 21,95 kr. pr. 0,35 kg\nKlovborg Skiveost Danbo Mellemlagret - 26,95 kr. pr. 0,24 kg\nKlovborg Skæreost Danbo Mellemlagret - 54,95 kr. pr. 0,65 kg\nKærgården Smørbar - 18,95 kr. pr. 0,2 kg\nLurpak Smør Saltet - 19,95 kr. pr. 0,2 kg\nLurpak Smørbar - 19,95 kr. pr. 0,2 kg\nMadværket Havarti - 29,95 kr. pr. 0,4 kg\nMadværket Jordbær Yoghurt - 11,95 kr. pr. 1 l\nMadværket Naturel Yoghurt 1,5 - 9,95 kr. pr. 1 l\nMadværket Naturel Yoghurt 3,5% - 9,95 kr. pr. 1 l\nMadværket Piskefløde 36% - 14,95 kr. pr. 0,5 l\nMadværket Pære & Banan Yoghurt 1,4% - 11,95 kr. pr. 1 l\nMadværket Pære & Banan Yoghurt 3,1% - 11,95 kr. pr. 1 l\nMadværket Skiveost Danbo Ekstralagret - 19,95 kr. pr. 0,2 kg\nMadværket Skiveost Danbo Lagret - 19,95 kr. pr. 0,2 kg\nMadværket Skiveost Danbo Mellemlagret - 22,95 kr. pr. 0,3 kg\nMadværket Skiveost Danbo Mellemlagret Kommen - 22,95 kr. pr. 0,3 kg\nMadværket Skiveost Samsø - 22,95 kr. pr. 0,3 kg\nMadværket Skyr Naturel 0,2% - 19,95 kr. pr. 1 kg\nMadværket Skæreost Danbo Ekstra Ekstralagret - 59,95 kr. pr. 0,54 kg\nMadværket Skæreost Danbo Ekstralagret - 54,95 kr. pr. 0,54 kg\nMadværket Skæreost Danbo Lagret - 49,95 kr. pr. 0,54 kg\nMadværket Skæreost Danbo Mellemlagret - 39,95 kr. pr. 0,59 kg\nMadværket Skæreost Dronning Dagmar Danbo - 44,95 kr. pr. 0,65 kg\nMadværket Skæreost Mellemlagret Kommen - 42,95 kr. pr. 0,65 kg\nMadværket Skæreost Samsø Mild - 39,95 kr. pr. 0,59 kg\nMadværket Smør - 14,95 kr. pr. 0,2 kg - øko\nMadværket Vanilje Skyr 0,2% - 19,95 kr. pr. 1 kg\nMadværket Vanilje Yoghurt - 11,95 kr. pr. 1 l\nMammen Hytteost 1,5% - 8,95 kr. pr. 0,2 kg\nMammen Hytteost 1,5% - 16,95 kr. pr. 0,45 l\nMammen Hytteost 4% - 16,95 kr. pr. 0,45 l\nMammen Hytteost 4% - 12,95 kr. pr. 0,2 l - øko\nMammen Hytteost 4% - 8,95 kr. pr. 0,2 l\nMammen Skæreost Danbo Mellemlagret - 49,95 kr. pr. 0,65 kg\nMilbona Cheddar - 29,95 kr. pr. 0,25 kg\nMilbona Emmentaler - 29,95 kr. pr. 0,4 kg\nMilbona Feta - 19,95 kr. pr. 0,2 kg\nMilbona Flødeost Classic - 14,95 kr. pr. 0,3 kg\nMilbona Greek Style 2% Yoghurt - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yoghurt Creamy - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yogurt Berries - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yogurt Pineapple, Orange & Mandarin - 24,95 kr. pr. 1 kg\nMilbona Greek Style Yogurt Strawberry - 24,95 kr. pr. 1 kg\nMilbona Græsk Yoghurt Naturel - 14,95 kr. pr. 0,5 kg\nMilbona Hytteost - 12,95 kr. pr. 0,4 l\nMilbona Hytteost - 6,95 kr. pr. 0,2 l\nMilbona Kakaomælk - 9,95 kr. pr. 1 l\nMilbona Mini Mozzarella - 11,95 kr. pr. 0,125 kg\nMilbona Mozzarella Light - 7,95 kr. pr. 0,125 kg\nMilbona Mozzarella Light - 6,95 kr. pr. 0,125 kg\nMilbona Natural 0,1% Yoghurt - 5,95 kr. pr. 0,5 kg\nMilbona Natural 1,5% Yoghurt - 5,95 kr. pr. 0,5 kg\nMilbona Naturel 3,5% Yoghurt - 5,95 kr. pr. 0,5 kg\nMilbona Revet ost Gratin Cheese - 19,95 kr. pr. 0,25 kg\nMilbona Revet ost Gratin Cheese light - 19,95 kr. pr. 0,25 kg\nMilbona Revet ost Mozzarella Grated - 17,95 kr. pr. 0,25 kg\nMilbona Revet ost Mozzarella Grated - 29,95 kr. pr. 0,5 kg\nMilbona Revet ost Pizzatopping - 24,95 kr. pr. 0,5 kg\nMilbona Salatost - 13,95 kr. pr. 0,25 kg\nMilbona Skiveost Gouda - 29,95 kr. pr. 0,4 kg\nMilbona Skiveost Gouda - 69,95 kr. pr. 1 kg\nMilbona Skiveost Tilsiter - 29,95 kr. pr. 0,4 kg\nMilbona Smør Saltet - 9,95 kr. pr. 0,25 kg\nMilbona Smørbar - 9,95 kr. pr. 0,2 kg\nMilbona Turkish Style Yogurt 10% - 24,95 kr. pr. 1 kg\nNaturli' Smørbar - 14,95 kr. pr. 0,2 kg - øko\nNaturli' Smørbar - Blok - 14,95 kr. pr. 0,2 kg - øko\nPhiladelphia Flødeost Hvidløg & Urter - 14,95 kr. pr. 0,2 kg\nPhiladelphia Flødeost Original - 14,95 kr. pr. 0,2 kg\nPuck Salatost - 14,95 kr. pr. 0,2 kg\nRiberhus Skiveost Danbo Mellemlagret - 26,95 kr. pr. 0,24 kg\nRiberhus Skæreost Danbo Mellemlagret - 49,95 kr. pr. 0,52 kg\nRose Kyllingestrimler - 29,95 kr. pr. 0,35 kg\nSødergården Smørbar - 9,95 kr. pr. 0,2 kg\nTastino Baguette Rolls - 9,95 kr. pr. 0,54 kg\nTastino Butter Pains au Chocolat - 24,95 kr. pr. 0,45 kg\nTastino Fuldkornsstykker - 14,95 kr. pr. 0,57 kg\nTastino Håndværkere - 12,95 kr. pr. 0,6 kg\nTastino Rundstykker - 12,95 kr. pr. 0,6 kg\nTastino Smørcroissant - 19,95 kr. pr. 0,36 kg\nTastino Speltstykker - 14,95 kr. pr. 0,42 kg - øko\nTastino Wheat Rolls with Seeds - 14,95 kr. pr. 0,48 kg - øko\nVita Dor Margarine-fast - 9,95 kr. pr. 0,5 kg\nVita Dor Margarine-flydende - 9,95 kr. pr. 0,5 l\nWhite & Blue Skimmelost - 17,95 kr. pr. 0,2 kg\nLiba Fladbrød - 9,95 kr. pr. 0,34 kg\nMadværket Fuldkornskrydderboller - 12,95 kr. pr. 0,8 kg\nMadværket Krydderboller - 13,95 kr. pr. 0,7 kg\nMadværket Schwarzbrød - 4,95 kr. pr. 0,5 kg\nMadværket Solsikkerugbrød - 5,95 kr. pr. 0,5 kg\nSoftkernerugbrød - 15 kr. pr. 850 g - kun medlemmer - til 17.10.\nBacon  Leverpostej - 11,95 kr. pr. 0,35 kg\nCosta Brava Chorizo - 9,95 kr. pr. 0,07 kg\nCosta Brava Jamon Serrano - 9,95 kr. pr. 0,07 kg\nCosta Brava Salchichón Extra - 9,95 kr. pr. 0,07 kg\nDulano Chorizo - 14,95 kr. pr. 0,12 kg\nDulano Grillpølser - 18,5 kr. pr. 0,375 kg\nDulano Hamburgerryg - 21,95 kr. pr. 0,15 kg\nDulano Hotdogpølser - 18,5 kr. pr. 0,375 kg\nDulano Serranoskinke - 19,95 kr. pr. 0,1 kg\nFransk Leverpostej - 7,95 kr. pr. 0,2 kg\nFransk Postej Leverpostej - 23,95 kr. pr. 0,4 kg\nFransk Postej Leverpostej - 12,95 kr. pr. 0,2 kg\nGrovhakket Leverpostej - 12,95 kr. pr. 0,2 kg\nGrovhakket Leverpostej - 23,95 kr. pr. 0,4 kg\nGul bordpak Kartoffelspegepølse - 12,95 kr. pr. 0,115 kg",
+  "Gul bordpak Kødpølse - 12,95 kr. pr. 0,125 kg\nGul bordpak Salami - 19,95 kr. pr. 0,2 kg\nGul bordpak Salami - 12,95 kr. pr. 0,1 kg\nGul bordpak Sønderjysk Spegepølse - 12,95 kr. pr. 0,125 kg\nHverdagspostej Leverpostej - 13,95 kr. pr. 0,5 kg\nKlassisk Bacon Leverpostej - 9,95 kr. pr. 0,2 kg\nMadværket Hamburgerryg - 14,95 kr. pr. 0,08 kg\nMadværket Porchetta - 16,95 kr. pr. 0,08 kg\nMadværket Rullepølse - 14,95 kr. pr. 0,08 kg\nMadværket Sennepsskinke - 14,95 kr. pr. 0,08 kg\nPålægsslagteren Grillpølser - 24,95 kr. pr. 0,55 kg\nPålægsslagteren Hamburgerryg - 13,95 kr. pr. 0,15 kg\nPålægsslagteren Kalkunbryst - 14,95 kr. pr. 0,12 kg\nPålægsslagteren Kyllingebryst - 12,95 kr. pr. 0,12 kg\nPålægsslagteren Rullepølse - 13,95 kr. pr. 0,15 kg\nPålægsslagteren Røget Rullepølse - 13,95 kr. pr. 0,14 kg\nPålækker Hamburgerryg - 12,95 kr. pr. 0,09 kg\nPålækker Rullepølse - 12,95 kr. pr. 0,09 kg\nSteff Houlberg Bayerske Pølser - 24,95 kr. pr. 0,375 kg\nSteff Houlberg Hotdogpølser - 24,95 kr. pr. 0,375 kg\nAkaciehonning - 29 kr. pr. 250 g - kun medlemmer - til 17.10.\nBelbake Fødselsdagsbolleblanding - 9,95 kr. pr. 0,35 kg\nBelbake Hvedemel - 9,95 kr. pr. 2 kg\nBelbake Hvedemel - 14,95 kr. pr. 2 kg - øko\nBelbake Pizzamel - 9,95 kr. pr. 1 kg\nBelbake Rugmel - 7,95 kr. pr. 1 kg - øko\nBelbake Speltmel - 12,95 kr. pr. 1 kg\nBelbake Sukker - 7,5 kr. pr. 1 kg\nBlanding 72 Kaffe Formalet - 59,95 kr. pr. 0,5 kg\nBran Flakes Morgenmadsprodukt - 14,95 kr. pr. 0,5 kg\nClassic Kaffe Formalet - 39,95 kr. pr. 0,5 kg\nCoco Pops Chocos Morgenmadsprodukt - 29,95 kr. pr. 0,33 kg\nCombino Farfalle - 7,95 kr. pr. 0,5 kg\nCombino Fuldkornslasagneplader - 9,95 kr. pr. 0,5 kg\nCombino Fusilli - 5,95 kr. pr. 0,5 kg\nCombino Fusilli Tricolore - 7,95 kr. pr. 0,5 kg\nCombino Gnocchi - 7,95 kr. pr. 0,5 kg\nCombino Lasagneplader - 9,95 kr. pr. 0,5 kg\nCombino Macaroni - 5,95 kr. pr. 0,5 kg\nCombino Pasta Animals - 9,95 kr. pr. 0,5 kg - øko\nCombino Pasta Vehicles - 9,95 kr. pr. 0,5 kg - øko\nCombino Penne Rigate - 5,95 kr. pr. 0,5 kg\nCombino Spaghetti - 8,95 kr. pr. 1 kg\nCrownfield Cornflakes - 12,5 kr. pr. 0,5 kg\nCrownfield Müsli Luxery Fruit - 29,95 kr. pr. 0,75 kg\nCrownfield Müsli Luxery Fruit & Nut - 29,95 kr. pr. 0,75 kg\nDeluxe Olivenolie - 59,95 kr. pr. 0,5 l\nDinner Kitt Family Lasagne - 24,95 kr. pr. 0,35 kg\nDinner Kitt Family Lasagnette - 24,95 kr. pr. 0,335 kg\nExtra Specialristet Kaffe Formalet - 44,95 kr. pr. 0,4 kg\nFlakes Morgenmadsprodukt - 14,95 kr. pr. 0,425 kg\nGold Kaffe Formalet - 59,95 kr. pr. 0,5 kg\nGrillmester Kalkunbøffer - 32,95 kr. pr. 0,48 kg\nHakket kalkun - 27,95 kr. pr. 0,5 kg\nKalkunbrystfilet - 85,95 kr. pr. 0,8 kg\nKalkunoverlår - 47,95 kr. pr. 1 kg\nKalkunschnitzler - 47,95 kr. pr. 0,5 kg\nKalkunstrimler - 29,95 kr. pr. 0,4 kg\nKalkununderlår - 44,95 kr. pr. 0,9 kg\nKelloggs Cornflakes - 29,95 kr. pr. 0,375 kg\nMARLENE Honning - 29 kr. pr. 500 g - kun medlemmer - til 17.10.\nMadværket Finvalsede Havregryn - 9,95 kr. pr. 1 kg - øko\nMadværket Finvalsede Havregryn - 7,95 kr. pr. 1 kg\nMadværket Grovvalsede Havregryn - 7,95 kr. pr. 1 kg\nMadværket Grovvalsede Havregryn - 9,95 kr. pr. 1 kg - øko\nMellemristet Kaffe Formalet - 49,95 kr. pr. 0,4 kg - øko\nMellemristet Kaffe Formalet - 39,95 kr. pr. 0,4 kg\nMellemristet Kaffe Formalet - 59,95 kr. pr. 0,5 kg\nMilbona Cremosano 15% - 7,95 kr. pr. 0,25 kg\nMilbona Cremosano 7% - 7,95 kr. pr. 0,25 kg\nOta Sol Gryn Finvalsede Havregryn - 12,95 kr. pr. 0,7 kg\nPrimaDonna Olivenolie - 49,95 kr. pr. 0,5 l - øko\nPrimaDonna Olivenolie - 49,95 kr. pr. 0,75 l\nPrimaDonna Olivenolie - 49,95 kr. pr. 0,5 l\nPrimaDonna Olivenolie - 59,95 kr. pr. 1 l\nPurio Affaldsposer - 5,95 kr. pr. 20 stk\nQuaker Cruesli Dark Chocolate - 29,95 kr. pr. 0,45 kg\nQuaker Havrefras - 29,95 kr. pr. 0,375 kg\nRed Berries Flakes Morgenmadsprodukt - 14,95 kr. pr. 0,425 kg\nRosso Kaffebønner - 99,95 kr. pr. 1 kg\nSelezione Fusilli - 9,95 kr. pr. 0,5 kg\nSelezione Linguine - 9,95 kr. pr. 0,5 kg\nSelezione Penne Rigate - 9,95 kr. pr. 0,5 kg\nSelezione Spaghetti - 9,95 kr. pr. 0,5 kg\nSkrald-let Affaldsposer - 5,95 kr. pr. 20 stk\nSpecialristet Kaffe Formalet - 35,95 kr. pr. 0,4 kg\nValsemøllen Brunchboller Koldhævet Melblanding - 14,95 kr. pr. 0,9 kg\nValsemøllen Fuldkornshvedemel hvid - 9,95 kr. pr. 1 kg\nValsemøllen Gourmet Rugbrødsblanding - 14,95 kr. pr. 0,9 kg\nValsemøllen Tipo 00 Hvedemel - 12,95 kr. pr. 1 kg - øko\nVådservietter - 9,95 kr. pr. 100 stk\nRibena Solbær Frugtsaft - 24,95 kr. pr. 0,85 l\nBugles Original - 19,95 kr. pr. 0,125 kg\nDaim Chokoladeplade - 17,95 kr. pr. 0,09 kg\nFin Carré Chokoladeplade Crusti Choc - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Dark - 9,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Extra Dark 74% - 17,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Milk - 9,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Milk Fruit & Nut - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Milk Hazzelnut - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Mælkechokolade med karamelstykker - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Neo - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade Salted Caramel Crisp - 12,95 kr. pr. 0,1 kg\nFin Carré Chokoladeplade White - 9,95 kr. pr. 0,1 kg\nJD Gross Chokoladeplade Caramel & Seasalt 70% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Caramel 70% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Dark 70% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Dark 85% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Dark 90% - 24,95 kr. pr. 0,125 kg\nJD Gross Chokoladeplade Pistachio 56% - 24,95 kr. pr. 0,125 kg\nKims Havsalt Chips - 11,95 kr. pr. 0,075 kg\nKims Jørgens Favorit Mix - 11,95 kr. pr. 0,075 kg\nKims Ostepops Original - 11,95 kr. pr. 0,075 kg\nKims Snack Chips Original - 11,95 kr. pr. 0,09 kg\nKims Snack Chips Souer cream & onion - 11,95 kr. pr. 0,075 kg\nKims Sour Cream & Onion Chips - 11,95 kr. pr. 0,095 kg",
+  "Marabou Chokoladeplade Black Saltlakrids - 17,95 kr. pr. 0,09 kg\nMarabou Chokoladeplade Mjölk Choklad - 17,95 kr. pr. 0,09 kg\nMarabou Chokoladeplade Schweizernöt - 17,95 kr. pr. 0,09 kg\nMister Choc Caramel & Biscuit - 29,95 kr. pr. 0,29 kg\nOreo Sandwich Chokoladeplade - 17,95 kr. pr. 0,092 kg\nSnack Day Salted Chips - 9,95 kr. pr. 0,175 kg\nTaffel Original Chips - 14,95 kr. pr. 0,14 kg\nTaffel SuperCrunch  Snacks - 14,95 kr. pr. 0,125 kg\nFloralys Køkkenrulle - 17,95 kr. pr. 4 stk\nFormil Vaskemiddel-flydende - 37,95 kr. pr. 2,2 l\nFormil Vaskemiddel-flydende - 44,95 kr. pr. 3 l\nFormil Vaskemiddel-flydende - 24,95 kr. pr. 1 l\nLupilu Bleer str 1 2-5 kg - 16,95 kr. pr. 24 stk\nLupilu Bleer str 2 3-6 kg - 29,95 kr. pr. 42 stk\nLupilu Bleer str 5 11-16 kg - 79,95 kr. pr. 72 stk\nLupilu Bleer str 5 12-17 kg - 53,95 kr. pr. 40 stk\nLupilu Bleer str 6 13-18 kg - 79,95 kr. pr. 64 stk\nLupilu Bleer str 6 14-19 kg - 53,95 kr. pr. 36 stk\nLupilu Bleer str 7 17+ kg - 53,95 kr. pr. 36 stk\nSoft Toiletpapir - 34,95 kr. pr. 18 stk\nSoft Toiletpapir - 12,95 kr. pr. 6 stk\nSoft Toiletpapir - 17,95 kr. pr. 8 stk\nSoft&Dry Bleer str 3 6-10 kg - 79,95 kr. pr. 92 stk\nSoft&Dry Bleer str 4 9-14 kg Premium Diapers - 79,95 kr. pr. 84 stk\nSoft&Dry Bleer str 4 9-15 kg - 53,95 kr. pr. 44 stk\nSupersoft Toiletpapir - 39,5 kr. pr. 10 stk"
  ]
 }

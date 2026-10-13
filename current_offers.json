@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T21:16:04+02:00",
+  "generated_at": "2026-10-13T21:22:29+02:00",
   "currency": "DKK",
   "timezone": "Europe/Copenhagen",
   "scope": "food_and_grocery_offers",
@@ -8,7 +8,7 @@
   "note": "Lightweight current-offer index. Full source/image/detail fields remain in stores/*.json. ABC Lavpris is handled at chain level; local/special offers are opened via the retailer flyer.",
   "schema_version": 2,
   "stores_are_summaries": true,
-  "offer_count": 748,
+  "offer_count": 751,
   "missing_or_pending_stores": [
     "Brugsen",
     "Nemlig.com",
@@ -73,7 +73,7 @@
     },
     {
       "store": "Lidl",
-      "offer_count": 370,
+      "offer_count": 373,
       "valid_from": "2026-09-13",
       "valid_to": "2026-12-31"
     },
@@ -21665,6 +21665,81 @@
       },
       "organic": false,
       "food_relevance": "low"
+    },
+    {
+      "store": "Lidl",
+      "name": "Softkernerugbrød",
+      "category": "brød",
+      "price_dkk": 15,
+      "package_amount": 850,
+      "package_unit": "g",
+      "unit_price_dkk": 17.65,
+      "organic": null,
+      "member_only": true,
+      "valid_from": "2026-10-11",
+      "valid_to": "2026-10-17",
+      "offer_type": "lidl_plus",
+      "source": "https://www.lidl.dk/c/hverdagensfavoritter/a10104854",
+      "id": "next-67530f7366",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 850,
+        "unit": "g"
+      },
+      "normalized_product_key": "brand=generic|product=softkernerugbroed|variant=standard|count=1|size=850g",
+      "food_relevance": "high"
+    },
+    {
+      "store": "Lidl",
+      "name": "Akaciehonning",
+      "category": "kolonial",
+      "price_dkk": 29,
+      "package_amount": 250,
+      "package_unit": "g",
+      "unit_price_dkk": 116,
+      "organic": null,
+      "member_only": true,
+      "valid_from": "2026-10-11",
+      "valid_to": "2026-10-17",
+      "offer_type": "lidl_plus",
+      "source": "https://www.lidl.dk/c/hverdagensfavoritter/a10104854",
+      "id": "next-7779d6c281",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "normalized_product_key": "brand=generic|product=akaciehonning|variant=standard|count=1|size=250g",
+      "food_relevance": "high"
+    },
+    {
+      "store": "Lidl",
+      "name": "MARLENE Honning",
+      "category": "kolonial",
+      "price_dkk": 29,
+      "package_amount": 500,
+      "package_unit": "g",
+      "unit_price_dkk": 58,
+      "organic": null,
+      "member_only": true,
+      "valid_from": "2026-10-11",
+      "valid_to": "2026-10-17",
+      "offer_type": "lidl_plus",
+      "source": "https://www.lidl.dk/c/hverdagensfavoritter/a10104854",
+      "id": "next-e87b65f824",
+      "normalized_brand": "generic",
+      "normalized_variant": "standard",
+      "normalized_package_count": 1,
+      "normalized_package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "normalized_product_key": "brand=generic|product=marlene-honning|variant=standard|count=1|size=500g",
+      "food_relevance": "high"
     }
   ]
 }

@@ -151,7 +151,8 @@ class ImporterEndToEnd(unittest.TestCase):
     def run_import(self, *extra):
         out = subprocess.run([sys.executable, str(ROOT / "scripts" / "import_dagligepriser_history.py"), "--source-file", str(self.tmp / "raw.json"),
                               "--current-offers", str(self.tmp / "current.json"), "--output", str(self.tmp / "monthly.json"),
-                              "--decisions", str(self.tmp / "decisions.json"), *extra], cwd=ROOT, capture_output=True, text=True)
+                              "--decisions", str(self.tmp / "decisions.json"),
+                              "--identities", str(self.tmp / "identities.json"), *extra], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(out.returncode, 0, out.stderr)
         return json.loads((self.tmp / "monthly.json").read_text(encoding="utf-8")), json.loads((self.tmp / "history_verification.json").read_text(encoding="utf-8"))
 
@@ -167,6 +168,56 @@ class ImporterEndToEnd(unittest.TestCase):
         self.assertEqual(ver["summary"]["additional_verified_needed"], 0)  # 2 of 3 active keys verified in this tiny fixture
         for raw_text in ("Chips m. havsalt", "Chips med Sour Cream", "Hytteost 4% fedt"):  # raw product text must not reach the public file
             self.assertNotIn(raw_text, json.dumps(ver))
+
+    def write_offers(self, names):
+        """Replace current offers by the given subset of the fixture offers (keys stay the same)."""
+        cur = json.loads((self.tmp / "current.json").read_text(encoding="utf-8"))
+        full = cur.get("_all") or cur["offers"]
+        cur["_all"] = full
+        cur["offers"] = [o for o in full if o["name"] in names]
+        (self.tmp / "current.json").write_text(json.dumps(cur), encoding="utf-8")
+
+    def havsalt_rows(self, monthly):
+        return [r for r in monthly["records"] if r["normalized_product_key"].split("|")[1] == "product=havsalt-chips"]
+
+    def test_history_is_kept_when_a_product_loses_its_offer_and_reused_when_it_returns(self):
+        monthly1, ver1 = self.run_import()
+        before = self.havsalt_rows(monthly1)
+        self.assertTrue(before)
+        # the havsalt offer expires: only the other two offers are active now
+        self.write_offers({"KiMs Sour Cream & Onion Chips", "Gestus Hytteost"})
+        monthly2, ver2 = self.run_import()
+        key = next(k for k in ver2["keys"] if k.split("|")[1] == "product=havsalt-chips")
+        self.assertEqual(self.havsalt_rows(monthly2), before, "verified history must survive a missing offer")
+        self.assertEqual(ver2["keys"][key]["status"], VERIFIED)
+        self.assertIs(ver2["keys"][key]["active"], False)
+        # overlap and graph options are measured on ACTIVE keys only
+        self.assertEqual(ver2["summary"]["active_food_keys"], 2)
+        self.assertEqual(ver2["summary"]["verified"], 1)
+        self.assertEqual(ver2["summary"]["retained_verified_keys_without_active_offer"], 1)
+        # the offer returns: same history is reused, key active again
+        self.write_offers({"KiMs Sour Cream & Onion Chips", "KiMs Havsalt Chips", "Gestus Hytteost"})
+        monthly3, ver3 = self.run_import()
+        self.assertEqual(self.havsalt_rows(monthly3), before)
+        self.assertIs(ver3["keys"][key]["active"], True)
+        self.assertEqual(ver3["summary"]["verified"], 2)
+
+    def test_unverified_history_is_never_published_even_for_keys_without_active_offer(self):
+        self.run_import()
+        self.write_offers({"KiMs Sour Cream & Onion Chips", "KiMs Havsalt Chips"})  # hytteost offer gone, but still in the registry
+        monthly, ver = self.run_import()
+        hyt = next(k for k in ver["keys"] if k.split("|")[1] == "product=hytteost")
+        self.assertEqual(ver["keys"][hyt]["status"], REVIEW)
+        self.assertIs(ver["keys"][hyt]["active"], False)
+        self.assertNotIn(hyt, {r["normalized_product_key"] for r in monthly["records"]})
+        self.assertEqual(history_integrity(monthly, ver)["rows_unverified"], 0)
+
+    def test_identity_registry_holds_no_raw_text(self):
+        self.run_import()
+        text = (self.tmp / "identities.json").read_text(encoding="utf-8")
+        for raw_text in ("Chips m. havsalt", "Chips med Sour Cream", "Hytteost 4% fedt"):
+            self.assertNotIn(raw_text, text)
+        self.assertIs(json.loads(text)["raw_data_included"], False)
 
     def test_mixed_candidates_never_leak_unverified_prices(self):
         """One key with a verified raw product AND rejected/review raw products: only the verified prices reach the aggregate."""

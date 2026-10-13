@@ -101,51 +101,6 @@
     },
     {
       "store": "Lidl",
-      "name": "Softkernerugbrød",
-      "category": "brød",
-      "price_dkk": 15,
-      "package_amount": 850,
-      "package_unit": "g",
-      "unit_price_dkk": 17.65,
-      "organic": null,
-      "member_only": true,
-      "valid_from": "2026-10-11",
-      "valid_to": "2026-10-17",
-      "offer_type": "lidl_plus",
-      "source": "https://www.lidl.dk/c/hverdagensfavoritter/a10104854"
-    },
-    {
-      "store": "Lidl",
-      "name": "Akaciehonning",
-      "category": "kolonial",
-      "price_dkk": 29,
-      "package_amount": 250,
-      "package_unit": "g",
-      "unit_price_dkk": 116,
-      "organic": null,
-      "member_only": true,
-      "valid_from": "2026-10-11",
-      "valid_to": "2026-10-17",
-      "offer_type": "lidl_plus",
-      "source": "https://www.lidl.dk/c/hverdagensfavoritter/a10104854"
-    },
-    {
-      "store": "Lidl",
-      "name": "MARLENE Honning",
-      "category": "kolonial",
-      "price_dkk": 29,
-      "package_amount": 500,
-      "package_unit": "g",
-      "unit_price_dkk": 58,
-      "organic": null,
-      "member_only": true,
-      "valid_from": "2026-10-11",
-      "valid_to": "2026-10-17",
-      "offer_type": "lidl_plus",
-      "source": "https://www.lidl.dk/c/hverdagensfavoritter/a10104854"
-    },
-    {
-      "store": "Lidl",
       "name": "HAVBLÅ Laksefilet",
       "category": "fisk og skaldyr",
       "price_dkk": 89,
@@ -280,7 +235,7 @@
       "source": "https://www.lidl.dk/c/ekstra-gode-weekendpriser/a10104849"
     }
   ],
-  "offer_count": 18,
+  "offer_count": 15,
   "note": "Verified future offers currently available from Lidl official pages. Only offers with valid_from after 2026-10-07 are included. Missing end dates and organic status are left null rather than guessed. Other chains remain pending until future offers can be verified.",
   "pending_stores": [
     "Bilka",

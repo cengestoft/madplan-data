@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T21:16:21+02:00",
+  "generated_at": "2026-10-13T21:22:30+02:00",
   "currency": "DKK",
   "source": "Precomputed from stores/*.json using scripts/apply_super_deals.py and super_deal_rules.json",
   "app_behavior": "Display these offers directly. Do not re-evaluate Supertilbud thresholds in the frontend.",

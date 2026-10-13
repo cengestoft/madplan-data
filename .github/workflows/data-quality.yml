@@ -45,6 +45,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Validate pipeline without writing
         run: python scripts/build_data_pipeline.py --snapshot-date
+      - name: Quantity marks must be in step with the registry (no write)
+        run: python scripts/apply_quantity_flags.py --check
       - name: Acceptance report must match a fresh run (no write)
         run: python scripts/generate_acceptance_report.py --check
       - name: Feed files must match a fresh build (no write)

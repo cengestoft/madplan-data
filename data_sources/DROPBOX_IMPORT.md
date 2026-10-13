@@ -15,7 +15,7 @@ Validering: streaming-tjekket ser kun start/slut (`[` … `]`); hele JSON-strukt
 
 Friskhed: `history_verification.json` og historikfilen skal være genereret af denne kørsel (`generated_at` ≥ starttidspunkt, filerne slettes før import). Mangler eller er de gamle, stopper guarden.
 
-Dropbox-sti (verificeret): `/Superkøb:RawData/latest-canonical.json` (konfigurationsværdi `DROPBOX_RAW_PATH`, samme værdi som standard).
+Dropbox-sti: `/latest-canonical.json` i Dropbox App Folder (API-stier er relative til app-mappens rod). Standardværdi i koden og i workflowet; kan overstyres med variablen `DROPBOX_RAW_PATH`. Dropbox-appen skal være oprettet med adgangstypen "App folder", og filen skal ligge i app-mappen.
 
 Workflowet committer, pusher, merger og publicerer aldrig. En godkendt kandidat lægges ind via en separat PR.
 

@@ -49,7 +49,7 @@ jobs:
           DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
           DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
-          DROPBOX_RAW_PATH: ${{ vars.DROPBOX_RAW_PATH || '/Superkøb:RawData/latest-canonical.json' }}
+          DROPBOX_RAW_PATH: ${{ vars.DROPBOX_RAW_PATH || '/latest-canonical.json' }}
           EXPECTED_SIZE: ${{ inputs.expected_size }}
           ALLOW_SIZE_CHANGE: ${{ inputs.allow_size_change }}
         run: |

@@ -147,9 +147,29 @@ class FetchTest(unittest.TestCase):
         self.assertNotIn("REFRESH-123", str(cm.exception))
         self.assertNotIn("secret body", str(cm.exception))
 
+    def test_default_path_is_app_folder_root_and_can_be_overridden(self):
+        seen = []
+
+        def spy(payload):
+            inner = fake_urlopen(payload)
+
+            def opener(req, timeout=None):
+                if req.full_url == df.META_URL:
+                    seen.append(json.loads(req.data)["path"])
+                if req.full_url == df.DOWNLOAD_URL:
+                    seen.append(json.loads(req.get_header("Dropbox-api-arg"))["path"])
+                return inner(req, timeout)
+            return opener
+        data = array_payload()
+        df.fetch(SECRET, self.dest, min_bytes=10, urlopen=spy(data))
+        self.assertEqual(seen, ["/latest-canonical.json"] * 2)
+        seen.clear()
+        df.fetch({**SECRET, "DROPBOX_RAW_PATH": "/annan.json"}, self.dest, min_bytes=10, urlopen=spy(data))
+        self.assertEqual(seen, ["/annan.json"] * 2)
+
     def test_non_ascii_path_is_escaped_in_header(self):
-        self.assertTrue(df._api_arg("/Superkøb:RawData/x.json").isascii())
-        self.assertEqual(json.loads(df._api_arg("/Superkøb:RawData/x.json"))["path"], "/Superkøb:RawData/x.json")
+        self.assertTrue(df._api_arg("/Mappe ø/x.json").isascii())
+        self.assertEqual(json.loads(df._api_arg("/Mappe ø/x.json"))["path"], "/Mappe ø/x.json")
 
 
 def hist(rows, **kw):
@@ -334,9 +354,10 @@ class WorkflowStaticTest(unittest.TestCase):
         self.assertIn("--started-at", self.code)
         self.assertIn("import.started", self.code)
         self.assertIn('rm -f "$OUT_DIR/monthly_price_history.json" "$OUT_DIR/history_verification.json"', self.code)
-        self.assertIn("/Superkøb:RawData/latest-canonical.json", self.code)
-        self.assertEqual(df.DEFAULT_PATH, "/Superkøb:RawData/latest-canonical.json")
-        self.assertNotIn("/Superkøb/RawData", self.code)
+        self.assertIn("|| '/latest-canonical.json'", self.code)
+        self.assertEqual(df.DEFAULT_PATH, "/latest-canonical.json")
+        self.assertNotIn("RawData", self.code)
+        self.assertNotIn("Superkøb:", self.code)
 
     def test_importer_output_is_not_streamed_to_the_log(self):
         self.assertIn("> \"$RUNNER_TEMP/import.out\" 2> \"$RUNNER_TEMP/import.err\"", self.code)

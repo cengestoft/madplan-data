@@ -30,3 +30,6 @@ Der printes kun antal og normaliserede produktnøgler (egne tilbudsdata), aldrig
 
 ## Opsætning (Casper)
 Se PR-beskrivelsen: Dropbox-app (scopes `files.metadata.read`, `files.content.read`, offline), GitHub Environment `dropbox-import` med secrets `DROPBOX_APP_KEY`, `DROPBOX_APP_SECRET`, `DROPBOX_REFRESH_TOKEN`, variabel `DROPBOX_RAW_PATH` og påkrævet godkender.
+
+## Fejlfinding uden adgang til loggen
+Ved fejl skriver workflowet en fast `fejlrapport.txt` (artifact `fejlrapport` + jobbets summary) med kun trinstatus (`success`/`failure`/`skipped`) for: stier, checkout, tests_foer, dropbox_hentning, import, sikkerhedstjek, tests_efter. Dropbox-fejl vises som HTTP-status plus en fast kode (fx `HTTP 409 (path/not_found)`, `HTTP 400 (invalid_grant)`), aldrig svarindhold. Loggen viser også den anvendte `Dropbox-sti`. Typiske årsager: manglende secret (`missing secret …`), udløbet/forkert refresh-token (`invalid_grant`), forkert sti i variablen `DROPBOX_RAW_PATH` (`path/not_found`), afvigende filstørrelse (`remote size … differs from expected …`).

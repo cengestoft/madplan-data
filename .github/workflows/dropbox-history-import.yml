@@ -33,10 +33,12 @@ jobs:
     steps:
       # 'runner' findes ikke i job-level env. Stierne sættes derfor her via RUNNER_TEMP og gælder alle efterfølgende trin (GITHUB_ENV).
       - name: Sæt midlertidige stier (uden for git)
+        id: paths
         run: |
           echo "RAW_DIR=$RUNNER_TEMP/raw" >> "$GITHUB_ENV"
           echo "OUT_DIR=$RUNNER_TEMP/out" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
+        id: checkout
         with:
           persist-credentials: false
       - uses: actions/setup-python@v5
@@ -44,9 +46,11 @@ jobs:
           python-version: "3.12"
 
       - name: Tests før import (alle Python-tests)
+        id: tests_before
         run: python -m unittest discover -s tests
 
       - name: Hent privat rådata fra Dropbox (midlertidigt, ikke i git)
+        id: fetch
         env:
           DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
@@ -64,6 +68,7 @@ jobs:
           fi
 
       - name: Byg kandidat med eksisterende importer (verified_only, ingen match-log)
+        id: build
         run: |
           mkdir -p "$OUT_DIR"
           cp price_history.json "$OUT_DIR/price_history.json"
@@ -95,6 +100,7 @@ jobs:
           rm -f "$RUNNER_TEMP/import.out" "$RUNNER_TEMP/import.err"
 
       - name: Sikkerhedstjek, før/efter-sammenligning og rapport
+        id: guard
         run: |
           set +e
           python scripts/history_import_guard.py --before-dir . --after-dir "$OUT_DIR" \
@@ -104,6 +110,7 @@ jobs:
           exit $code
 
       - name: Tests og accepttest efter kandidat (repo uændret)
+        id: tests_after
         run: |
           python -m unittest discover -s tests
           python scripts/generate_acceptance_report.py --check
@@ -126,9 +133,22 @@ jobs:
       # Ved fejl uploades højst en fast, renset fejlrapport: ingen rådata, ingen produktnavne, ingen hemmeligheder, ingen kandidat.
       - name: Fejlrapport (fast tekst)
         if: failure()
+        env:
+          S_PATHS: ${{ steps.paths.outcome }}
+          S_CHECKOUT: ${{ steps.checkout.outcome }}
+          S_TESTS_BEFORE: ${{ steps.tests_before.outcome }}
+          S_FETCH: ${{ steps.fetch.outcome }}
+          S_BUILD: ${{ steps.build.outcome }}
+          S_GUARD: ${{ steps.guard.outcome }}
+          S_TESTS_AFTER: ${{ steps.tests_after.outcome }}
         run: |
           mkdir -p "$RUNNER_TEMP/failure"
-          printf '%s\n' "Historikimport fejlede. Ingen kandidat publiceret." "Se trinnenes status i kørslen. Der er ikke uploadet kandidatfiler eller rådata." > "$RUNNER_TEMP/failure/fejlrapport.txt"
+          # Kun faste ord (success/failure/skipped/cancelled) - aldrig loguddrag, rådata, produktnavne eller hemmeligheder.
+          {
+            echo "Historikimport fejlede. Ingen kandidat publiceret."
+            echo "Trinstatus: stier=$S_PATHS checkout=$S_CHECKOUT tests_foer=$S_TESTS_BEFORE dropbox_hentning=$S_FETCH import=$S_BUILD sikkerhedstjek=$S_GUARD tests_efter=$S_TESTS_AFTER"
+          } > "$RUNNER_TEMP/failure/fejlrapport.txt"
+          cat "$RUNNER_TEMP/failure/fejlrapport.txt" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload fejlrapport
         if: failure()
         uses: actions/upload-artifact@v4

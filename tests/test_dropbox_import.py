@@ -167,6 +167,38 @@ class FetchTest(unittest.TestCase):
         df.fetch({**SECRET, "DROPBOX_RAW_PATH": "/annan.json"}, self.dest, min_bytes=10, urlopen=spy(data))
         self.assertEqual(seen, ["/annan.json"] * 2)
 
+    def test_dropbox_error_codes_are_reduced_to_a_fixed_vocabulary(self):
+        self.assertEqual(df.safe_error_code(b'{"error_summary": "path/not_found/.."}'), "path/not_found")
+        self.assertEqual(df.safe_error_code(b'{"error": "invalid_grant", "error_description": "refresh token REFRESH-123 expired"}'), "invalid_grant")
+        self.assertEqual(df.safe_error_code(b'{"error_summary": "invalid_access_token/"}'), "invalid_access_token")
+        self.assertEqual(df.safe_error_code(b'{"error_summary": "Secret-Token-XYZ/whatever"}'), "other/other")
+        self.assertEqual(df.safe_error_code(b"not json REFRESH-123"), "")
+        self.assertEqual(df.safe_error_code(b'{"error": {"x": 1}}'), "")
+
+    def test_http_error_shows_status_and_safe_code_but_never_body_text(self):
+        import urllib.error
+
+        def boom(req, timeout=None):
+            raise urllib.error.HTTPError(req.full_url, 409, "Conflict", {}, io.BytesIO(
+                b'{"error_summary": "path/not_found/..", "user_message": {"text": "REFRESH-123 /Privat/mappe"}}'))
+        with self.assertRaises(SystemExit) as cm:
+            df.fetch({**SECRET}, self.dest, min_bytes=10, urlopen=lambda req, timeout=None: boom(req) if req.full_url != df.TOKEN_URL else Resp(json.dumps({"access_token": TOKEN}).encode()))
+        msg = str(cm.exception)
+        self.assertIn("HTTP 409 (path/not_found)", msg)
+        self.assertNotIn("REFRESH-123", msg)
+        self.assertNotIn("Privat", msg)
+
+    def test_configured_path_is_logged_but_no_secret(self):
+        buf = io.StringIO()
+        old, sys.stdout = sys.stdout, buf
+        try:
+            df.fetch({**SECRET, "DROPBOX_RAW_PATH": "/x/y.json"}, self.dest, min_bytes=10, urlopen=fake_urlopen(array_payload()))
+        finally:
+            sys.stdout = old
+        self.assertIn("Dropbox-sti: /x/y.json", buf.getvalue())
+        for v in SECRET.values():
+            self.assertNotIn(v, buf.getvalue())
+
     def test_non_ascii_path_is_escaped_in_header(self):
         self.assertTrue(df._api_arg("/Mappe ø/x.json").isascii())
         self.assertEqual(json.loads(df._api_arg("/Mappe ø/x.json"))["path"], "/Mappe ø/x.json")
@@ -351,6 +383,14 @@ class WorkflowStaticTest(unittest.TestCase):
     def test_every_dir_variable_is_defined_before_use_via_github_env(self):
         first_use = min(self.code.index(v) for v in ('"$RAW_DIR', '"$OUT_DIR') if v in self.code)
         self.assertLess(self.code.index('>> "$GITHUB_ENV"'), first_use)
+
+    def test_failure_report_lists_only_step_outcomes_and_every_step_has_an_id(self):
+        for sid in ("paths", "checkout", "tests_before", "fetch", "build", "guard", "tests_after"):
+            self.assertIn(f"id: {sid}\n", self.code)
+            self.assertIn(f"steps.{sid}.outcome", self.code)
+        rep = self.code[self.code.index("name: Fejlrapport"):self.code.index("name: Upload fejlrapport")]
+        self.assertNotRegex(rep, r"import\.(out|err)|cat .*raw|tail|head")
+        self.assertIn('>> "$GITHUB_STEP_SUMMARY"', rep)
 
     def test_candidate_upload_only_after_guard_and_failure_report_is_fixed_text(self):
         up = self.code[self.code.index("name: Upload kun aggregerede"):]

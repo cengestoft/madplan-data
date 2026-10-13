@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T06:40:10+00:00",
+  "generated_at": "2026-10-13T20:58:46+02:00",
   "minimum_history_months": 3,
   "valid_on": "2026-10-09",
   "expired_excluded": 0,
@@ -8,7 +8,7 @@
   "with_minimum_history": 0,
   "without_minimum_history": 2,
   "coverage_ratio": 0.0,
-  "monthly_history_bytes": 11500453,
+  "monthly_history_bytes": 818378,
   "monthly_history_under_12mb": true,
   "status": "pass",
   "offers": [

@@ -252,3 +252,24 @@ def verified_overlap(current: dict, verification: dict | None, today, min_overla
     return {"active_food_keys": total, "verified": n[VERIFIED], "review_required": n[REVIEW], "rejected": n[REJECTED],
             "no_candidate": n["no_candidate"], "overlap": n[VERIFIED] / max(1, total), "required": min_overlap,
             "additional_verified_needed": needed, "verification_file_present": verification is not None}
+
+
+def history_integrity(hist: dict, verification: dict | None) -> dict:
+    """Blocking integrity facts about the history file against the verification file.
+
+    - rows_unverified: history rows whose key is not 'verified' (must be 0)
+    - verified_without_history: keys marked 'verified' that have no history rows or months (must be 0)
+    - verified_without_raw: keys marked 'verified' without any verified raw product behind them (must be 0)
+    """
+    keys = (verification or {}).get("keys", {})
+    rows_by_key: dict = {}
+    for r in hist.get("records", []):
+        rows_by_key[r.get("normalized_product_key")] = rows_by_key.get(r.get("normalized_product_key"), 0) + 1
+    rows_unverified = sum(n for k, n in rows_by_key.items() if (keys.get(k) or {}).get("status") != VERIFIED)
+    verified = [k for k, v in keys.items() if v.get("status") == VERIFIED]
+    without_history = sorted(k for k in verified if rows_by_key.get(k, 0) == 0 or not (keys[k].get("months") or 0))
+    without_raw = sorted(k for k in verified
+                         if not ((keys[k].get("raw_products") or {}).get(VERIFIED) or keys[k].get("manual_decisions")))
+    return {"rows_total": sum(rows_by_key.values()), "history_keys": len(rows_by_key), "rows_unverified": rows_unverified,
+            "verified_keys": len(verified), "verified_without_history": without_history, "verified_without_raw": without_raw,
+            "verified_only_flag": hist.get("verified_only") is True, "verification_file_present": verification is not None}

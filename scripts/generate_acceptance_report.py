@@ -21,12 +21,11 @@ def run_unittests():
     return result.testsRun, sorted(failed)
 
 GROCERY_EXCLUDED = {"husholdning", "dyrefoder"}
-MIN_OVERLAP = 0.30
+MIN_OVERLAP = 0.30  # quality target (non-blocking, decided by Casper 13 Oct 2026); integrity checks stay blocking
 
 def history_overlap(cur, hist, verification=None, today=None):
     """Active food keys with VERIFIED history (unverified matches never count). Returns (verified, total)."""
     from history_identity import verified_overlap
-    from offer_schema import snapshot_date
     r = verified_overlap(cur, verification, today or snapshot_date(cur), MIN_OVERLAP)
     return r["verified"], r["active_food_keys"], r
 
@@ -35,6 +34,7 @@ def compare_reports(old, new):
     diffs = []
     for key in ("valid_on", "passed", "total", "all_pass"):
         if old.get(key) != new.get(key): diffs.append(f"{key}: {old.get(key)!r} -> {new.get(key)!r}")
+    if old.get("quality_targets") != new.get("quality_targets"): diffs.append("quality_targets differ")
     o_rows, n_rows = old.get("results", []), new.get("results", [])
     if len(o_rows) != len(n_rows): diffs.append(f"results: {len(o_rows)} rows -> {len(n_rows)} rows")
     for a, b in zip(o_rows, n_rows):
@@ -54,6 +54,8 @@ def compute(today=None):
     verification = load("history_verification.json") if (ROOT / "history_verification.json").exists() else None
     matched, total_keys, ov = history_overlap(cur, hist, verification, today)
     overlap = matched / max(1, total_keys)
+    from history_identity import history_integrity
+    integ = history_integrity(hist, verification)
     tests_run, failed = run_unittests()
     nxt_noncanon = sum(1 for o in nxt["offers"] if "package_size" in o or "member_required" in o)
     nxt_no_end = sum(1 for o in nxt["offers"] if not o.get("valid_to"))
@@ -72,14 +74,25 @@ def compute(today=None):
         ("Future offers without end date are flagged, not treated as unlimited", nxt_no_end == sum(1 for e in quality["errors"] if e.get("type") == "missing_valid_to"),
          f"{nxt_no_end} offers without valid_to; {sum(1 for e in quality['errors'] if e.get('type') == 'missing_valid_to')} flagged."),
         ("No hard data-quality errors", quality.get("hard_error_count") == 0, f"hard_error_count={quality.get('hard_error_count')}."),
-        (f"Verified history overlap on active food keys is at least {MIN_OVERLAP:.0%}", overlap >= MIN_OVERLAP,
-         f"{matched} of {total_keys} active food keys have verified history = {overlap:.1%}; review_required {ov['review_required']}, "
-         f"rejected {ov['rejected']}, no candidate {ov['no_candidate']}; {ov['additional_verified_needed']} more verified needed."),
+        ("History rows come only from verified products (verified_only, every row key has status verified)",
+         integ["verification_file_present"] and integ["verified_only_flag"] and integ["rows_unverified"] == 0,
+         f"{integ['rows_total']} rows over {integ['history_keys']} keys; {integ['rows_unverified']} rows without verified status; "
+         f"verified_only={integ['verified_only_flag']}; verification file present={integ['verification_file_present']}."),
+        ("Verified status is only given to keys with actual verified history",
+         integ["verification_file_present"] and not integ["verified_without_history"] and not integ["verified_without_raw"],
+         f"{integ['verified_keys']} verified keys; {len(integ['verified_without_history'])} without history rows; "
+         f"{len(integ['verified_without_raw'])} without verified raw product."),
         (f"Unit test suite ({tests_run} tests)", not failed, "all passed" if not failed else "failed: " + ", ".join(failed)),
     ]
+    quality = [{"name": f"Verified history overlap on active food keys (target {MIN_OVERLAP:.0%}, non-blocking)",
+                "status": "MET" if overlap >= MIN_OVERLAP else "BELOW_TARGET", "blocking": False,
+                "verified": matched, "active_food_keys": total_keys, "overlap": round(overlap, 4),
+                "review_required": ov["review_required"], "rejected": ov["rejected"], "no_candidate": ov["no_candidate"],
+                "additional_verified_needed": ov["additional_verified_needed"]}]
     results = [{"id": i + 1, "name": n, "status": "PASS" if ok else "FAIL", "detail": d} for i, (n, ok, d) in enumerate(rows)]
     passed = sum(r["status"] == "PASS" for r in results)
-    return {"valid_on": str(today), "passed": passed, "total": len(results), "all_pass": passed == len(results), "results": results}
+    return {"valid_on": str(today), "passed": passed, "total": len(results), "all_pass": passed == len(results), "results": results,
+            "quality_targets": quality}
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--check", action="store_true"); ap.add_argument("--today")

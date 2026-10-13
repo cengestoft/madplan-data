@@ -16,9 +16,16 @@ Lighed i `normalized_product_key` er ikke nok, fordi nøglen er grov (fx "hakket
 En prisgraf baseret på `monthly_price_history.json` må kun vises, når nøglens status i `history_verification.json` er `verified`.
 Ellers vises teksten **"Ingen verificeret prishistorik"**. (I dag læser appen ikke filen; det her er kontrakten, når den gør.)
 
-## Overlap-krav
+## Overlap (kvalitetsmål, ikke blokerende)
 Tæller: unikke aktive fødevarenøgler med status `verified`. Nævner: alle unikke aktive fødevarenøgler (uden husholdning og dyrefoder).
-Krav: mindst 30 %. Uverificerede matches tæller ikke. Kravet er ikke sænket.
+Målet er 30 %, men siden Caspers beslutning 13. oktober 2026 er det et **kvalitetsmål**: de faktiske tal rapporteres altid
+(i dag 97 af 1.271 = 7,6 %), og en mangel blokerer ikke publicering af korrekte tilbudsdata. Uverificerede matches tæller aldrig med.
+
+## Blokerende integritetskrav (uændrede)
+- Alle historikrækker har en nøgle med status `verified` (`verified_only`).
+- Status `verified` gives kun til nøgler med faktisk historik og mindst ét verificeret råprodukt (eller dokumenteret menneskelig beslutning).
+- Ingen rådata, ingen automatiske matches ved manglende eller modstridende identitet.
+- Tilbud uden verificeret historik vises stadig med pris, pakning og gyldighed, men uden prisgraf.
 
 ## Dokumentation og rådata
 - Offentligt: kun nøgler, tilbudsnavne (egne data), antal pr. status, metode, konfliktfelter og kontroldato.

@@ -1,12 +1,13 @@
 import json
 import sys
 import unittest
+import warnings
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from offer_schema import snapshot_date
-from history_identity import verified_overlap
+from history_identity import verified_overlap, history_integrity
 
 
 def load(name, default=None):
@@ -18,18 +19,25 @@ def load(name, default=None):
 
 
 class HistoryOverlapTest(unittest.TestCase):
-    def test_history_overlap(self):
-        """At least 30 % of the unique ACTIVE food keys must have VERIFIED history. Unverified matches never count.
-        Never lower this threshold."""
+    def test_overlap_is_reported_as_quality_target_not_blocking(self):
+        """30 % verified overlap is a QUALITY TARGET (Casper, 13 Oct 2026): the real numbers are reported, a shortfall never fails the suite."""
         current, verification = load("current_offers.json"), load("history_verification.json")
         r = verified_overlap(current, verification, snapshot_date(current))
-        self.assertGreaterEqual(
-            r["overlap"], 0.30,
-            f"verified history overlap below 30%: {r['overlap']:.1%} ({r['verified']} verified of {r['active_food_keys']} active food keys; "
-            f"review_required {r['review_required']}, rejected {r['rejected']}, no candidate {r['no_candidate']}; "
-            f"{r['additional_verified_needed']} more verified keys needed"
-            + ("" if r["verification_file_present"] else "; history_verification.json is missing") + ")"
-        )
+        self.assertEqual(r["verified"] + r["review_required"] + r["rejected"] + r["no_candidate"], r["active_food_keys"])
+        self.assertLessEqual(r["verified"], r["active_food_keys"])
+        if r["overlap"] < r["required"]:
+            warnings.warn(f"verified history overlap {r['overlap']:.1%} is below the 30% quality target "
+                          f"({r['verified']} of {r['active_food_keys']}; {r['additional_verified_needed']} more verified keys needed)")
+
+    def test_history_rows_come_only_from_verified_keys(self):
+        r = history_integrity(load("monthly_price_history.json"), load("history_verification.json"))
+        self.assertTrue(r["verification_file_present"], "history_verification.json is required next to the history")
+        self.assertEqual(r["rows_unverified"], 0, f"{r['rows_unverified']} history rows without verified status")
+
+    def test_verified_status_requires_actual_history(self):
+        r = history_integrity(load("monthly_price_history.json"), load("history_verification.json"))
+        self.assertEqual(r["verified_without_history"], [], "verified keys without history rows or months")
+        self.assertEqual(r["verified_without_raw"], [], "verified keys without a verified raw product")
 
     def test_history_file_contains_only_verified_history(self):
         hist = load("monthly_price_history.json")

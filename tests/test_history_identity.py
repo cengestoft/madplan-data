@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from history_identity import REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash
+from history_identity import REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash, history_integrity
 
 
 def verdict(raw, offer):
@@ -183,6 +183,38 @@ class ImporterEndToEnd(unittest.TestCase):
         (self.tmp / "decisions.json").write_text(json.dumps(decisions), encoding="utf-8")
         _, ver3 = self.run_import()
         self.assertEqual(ver3["keys"][sour]["raw_products"][VERIFIED], 1)
+
+
+class HistoryIntegrity(unittest.TestCase):
+    VER = {"keys": {
+        "a": {"status": "verified", "months": 3, "raw_products": {"verified": 1}},
+        "b": {"status": "review_required", "months": 0, "raw_products": {"review_required": 1}},
+        "c": {"status": "verified", "months": 0, "raw_products": {"verified": 1}},
+        "d": {"status": "verified", "months": 2, "raw_products": {"verified": 0}},
+    }}
+
+    def hist(self, *keys):
+        return {"verified_only": True, "records": [{"normalized_product_key": k} for k in keys]}
+
+    def test_clean_history_has_no_findings(self):
+        ver = {"keys": {"a": self.VER["keys"]["a"]}}
+        r = history_integrity(self.hist("a", "a"), ver)
+        self.assertEqual((r["rows_total"], r["rows_unverified"], r["verified_without_history"], r["verified_without_raw"]), (2, 0, [], []))
+
+    def test_row_with_review_required_key_is_flagged(self):
+        self.assertEqual(history_integrity(self.hist("a", "b"), self.VER)["rows_unverified"], 1)
+
+    def test_row_with_unknown_key_is_flagged(self):
+        self.assertEqual(history_integrity(self.hist("zzz"), self.VER)["rows_unverified"], 1)
+
+    def test_verified_without_history_or_raw_product_is_flagged(self):
+        r = history_integrity(self.hist("a", "d"), self.VER)
+        self.assertEqual(r["verified_without_history"], ["c"])  # no rows, months 0
+        self.assertEqual(r["verified_without_raw"], ["d"])
+
+    def test_missing_verification_file_is_reported(self):
+        r = history_integrity(self.hist("a"), None)
+        self.assertFalse(r["verification_file_present"]); self.assertEqual(r["rows_unverified"], 1)
 
 
 if __name__ == "__main__":

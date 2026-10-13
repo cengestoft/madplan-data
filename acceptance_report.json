@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T20:24:44+02:00",
+  "generated_at": "2026-10-13T20:38:56+02:00",
   "branch": "claude-kodekontrol-2026-10-09",
   "valid_on": "2026-10-09",
   "passed": 9,
@@ -62,15 +62,15 @@
     },
     {
       "id": 10,
-      "name": "History overlap on active grocery offers is at least 30%",
+      "name": "Verified history overlap on active food keys is at least 30%",
       "status": "FAIL",
-      "detail": "373 of 1271 active grocery keys have exact history = 29.3%."
+      "detail": "0 of 1271 active food keys have verified history = 0.0%; review_required 0, rejected 0, no candidate 1271; 382 more verified needed."
     },
     {
       "id": 11,
-      "name": "Unit test suite (73 tests)",
+      "name": "Unit test suite (100 tests)",
       "status": "FAIL",
-      "detail": "failed: test_history_overlap.HistoryOverlapTest.test_history_overlap"
+      "detail": "failed: test_history_overlap.HistoryOverlapTest.test_history_file_contains_only_verified_history, test_history_overlap.HistoryOverlapTest.test_history_overlap"
     }
   ],
   "automation": {

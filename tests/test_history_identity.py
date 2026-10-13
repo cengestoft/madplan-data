@@ -1,0 +1,189 @@
+"""Identity check for history matching: equal normalized_product_key is NOT enough.
+
+Names below are generic product descriptions that mirror the concrete false matches found in the 13 Oct 2026 revision.
+"""
+import json
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from history_identity import REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash
+
+
+def verdict(raw, offer):
+    return compare(describe(raw), describe(offer))
+
+
+def rec(name, brand, amount, unit, count=1):
+    return {"name": name, "brand": brand, "package_amount": amount, "package_unit": unit, "package_count": count}
+
+
+class ConcreteFalseMatches(unittest.TestCase):
+    def test_minced_beef_is_not_chicken(self):
+        v = verdict(rec("Hakket kylling 3-7%, 400 g", "Netto", 400, "g"), rec("Netto Hakket oksekød 8-12%", "Netto", 400, "g"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("meat", v["conflicts"])
+
+    def test_minced_beef_is_not_pork(self):
+        v = verdict(rec("Hakket grisekød 8-12% fedt øko 400 g", "ØGO", 400, "g"), rec("ØGO Hakket oksekød 8-12% øko", "ØGO", 400, "g"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("meat", v["conflicts"])
+
+    def test_veal_and_pork_is_not_pure_pork(self):
+        v = verdict(rec("Hakket grisekød 14-18% fedt 1 kg", "Velsmag", 1, "kg"), rec("Velsmag Hakket kalv- og grisekød 8-12%", "Velsmag", 1, "kg"))
+        self.assertEqual(v["status"], REJECTED)
+
+    def test_sour_cream_onion_is_not_sea_salt(self):
+        v = verdict(rec("Chips m. havsalt 95 g", "KiMs", 95, "g"), rec("KiMs Chips Sour Cream & Onion", "KiMs", 95, "g"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("flavour", v["conflicts"])
+
+    def test_vanilla_skyr_is_not_strawberry_yoghurt(self):
+        v = verdict(rec("Yoghurt m. jordbær, chia og vanilje 0,2% fedt 1 kg", "Cheasy", 1, "kg"), rec("Cheasy Skyr Vanilje 0,2%", "Cheasy", 1, "kg"))
+        self.assertNotEqual(v["status"], VERIFIED)
+
+    def test_other_capri_sun_flavour(self):
+        v = verdict(rec("Capri-Sun Fairy Drink multifrugt 10 x 200 ml", "Capri-Sun", 200, "ml", 10), rec("Capri-Sun Jungle Drink", "Capri-Sun", 200, "ml", 10))
+        self.assertNotEqual(v["status"], VERIFIED)
+
+    def test_cottage_cheese_fat_percentage(self):
+        v = verdict(rec("Hytteost 4% fedt 200 g", "Mammen", 200, "g"), rec("Mammen Hytteost 1,5%", "Mammen", 200, "g"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("fat_percent", v["conflicts"])
+
+    def test_cottage_cheese_missing_fat_percentage_needs_review(self):
+        v = verdict(rec("Hytteost 4% fedt 450 g", "Gestus", 450, "g"), rec("Gestus Hytteost", "Gestus", 450, "g"))
+        self.assertEqual(v["status"], REVIEW); self.assertIn("fat_percent", v["missing"])
+
+    def test_smoked_vs_cured_salmon(self):
+        v = verdict(rec("Gravad laks i skiver 100 g", "Premieur", 100, "g"), rec("Premieur Laks i skiver", "Premieur", 100, "g"))
+        self.assertNotEqual(v["status"], VERIFIED)
+
+
+class SpecialCases(unittest.TestCase):
+    def test_same_product_with_different_names_verifies(self):
+        v = verdict(rec("Stryhn's Grovhakket leverpostej 400 g", "Stryhn's", 400, "g"), rec("Stryhn's Leverpostej grovhakket", "Stryhn's", 400, "g"))
+        self.assertEqual(v["status"], VERIFIED)
+
+    def test_different_products_with_same_pack_size_never_verify(self):
+        v = verdict(rec("Salling Princip surdejsbrød 750 g", "Salling Princip", 750, "g"), rec("Salling Princip Clementiner", "Salling Princip", 750, "g"))
+        self.assertEqual(v["status"], REJECTED)
+
+    def test_unknown_brand_is_not_approved(self):
+        v = verdict(rec("Mælk 1 l", "", 1, "l"), rec("Arla Mælk", "Arla", 1, "l"))
+        self.assertEqual(v["status"], REVIEW); self.assertIn("brand", v["missing"])
+
+    def test_other_brand_is_rejected(self):
+        v = verdict(rec("Mørk chokoladeplade Ferrero Rocher 90 g", "Ferrero Rocher", 90, "g"), rec("Daim Chokoladeplade", "Daim", 90, "g"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("brand", v["conflicts"])
+
+    def test_missing_variant_information_is_not_approved(self):
+        v = verdict(rec("Chips 150 g", "KiMs", 150, "g"), rec("KiMs Chips Sour Cream & Onion", "KiMs", 150, "g"))
+        self.assertNotEqual(v["status"], VERIFIED)
+
+    def test_multipack_versus_single(self):
+        v = verdict(rec("Coca-Cola Original 33 cl", "Coca-Cola", 33, "cl", 1), rec("Coca-Cola Original 6 x 33 cl", "Coca-Cola", 33, "cl", 6))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("pack_count", v["conflicts"])
+
+    def test_coca_cola_original_zero_light_are_three_products(self):
+        cola = lambda name: rec(name, "Coca-Cola", 33, "cl", 24)
+        names = {"original": "Coca-Cola Original 24 x 33 cl", "zero": "Coca-Cola Zero 24 x 33 cl", "light": "Coca-Cola Light 24 x 33 cl"}
+        for a in names:
+            for b in names:
+                v = verdict(cola(names[a]), cola(names[b]))
+                self.assertEqual(v["status"] == VERIFIED, a == b, (a, b, v))
+
+    def test_same_package_in_g_and_kg_is_the_same_size(self):
+        v = verdict(rec("Rugbrød 500 g", "Schulstad", 500, "g"), rec("Schulstad Rugbrød 0,5 kg", "Schulstad", 0.5, "kg"))
+        self.assertEqual(v["status"], VERIFIED)
+
+    def test_different_unit_family_conflicts(self):
+        v = verdict(rec("Olie 1 kg", "Basso", 1, "kg"), rec("Basso Olie 1 l", "Basso", 1, "l"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("unit", v["conflicts"])
+
+    def test_organic_is_a_different_product(self):
+        v = verdict(rec("Mou Økologisk tomatsuppe 1 kg", "Mou", 1, "kg"), rec("Mou Tomatsuppe", "Mou", 1, "kg"))
+        self.assertEqual(v["status"], REJECTED); self.assertIn("variant", v["conflicts"])
+
+    def test_light_butter_is_not_regular_butter(self):
+        v = verdict(rec("Lurpak Let saltet smør 200 g", "Lurpak", 200, "g"), rec("Lurpak Smør saltet 200 g", "Lurpak", 200, "g"))
+        self.assertEqual(v["status"], REJECTED)
+
+    def test_raw_feed_without_brand_field_uses_brand_in_the_name(self):
+        v = verdict(rec("Steff Houlberg, Bayerske pølser, Bayerske pølser 67% kød", None, 375, "g"), rec("Steff Houlberg Bayerske Pølser", "Steff Houlberg", 375, "g"))
+        self.assertEqual(v["status"], VERIFIED)
+
+
+class Combining(unittest.TestCase):
+    def test_ambiguous_offers_under_one_key_need_review(self):
+        raw = rec("Barebells Soft Protein Bar Banana Dream", "Barebells", 55, "g")
+        a = verdict(raw, rec("Barebells Banana Dream Proteinbar", "Barebells", 55, "g"))
+        b = verdict(raw, rec("Barebells Salty Peanut Proteinbar", "Barebells", 55, "g"))
+        c = combine([a, b])
+        self.assertEqual(c["status"], REVIEW)
+        self.assertIn("ambiguous_offers", c["missing"])
+
+    def test_key_status_rules(self):
+        self.assertEqual(key_status({VERIFIED: 1, REVIEW: 3}), VERIFIED)
+        self.assertEqual(key_status({REVIEW: 1, REJECTED: 2}), REVIEW)
+        self.assertEqual(key_status({REJECTED: 2}), REJECTED)
+        self.assertEqual(key_status({}), "no_candidate")
+
+
+class ImporterEndToEnd(unittest.TestCase):
+    """Runs the real importer on a tiny synthetic raw file: only verified rows reach the public history."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        offers = [dict(id=f"o{i}", store="Netto", category="chips", price_dkk=20, package_amount=a, package_unit=u, name=n, brand=b,
+                       valid_from="2026-10-05", valid_to="2026-10-12") for i, (n, b, a, u) in enumerate([
+            ("KiMs Sour Cream & Onion Chips", "KiMs", 150, "g"), ("KiMs Havsalt Chips", "KiMs", 150, "g"),
+            ("Gestus Hytteost", "Gestus", 450, "g")])]
+        from product_normalization import normalized_product_key
+        for o in offers: o["normalized_product_key"] = normalized_product_key(o)
+        (self.tmp / "current.json").write_text(json.dumps({"generated_at": "2026-10-09T08:00:00+02:00", "offers": offers}), encoding="utf-8")
+        hist = lambda price, q, u: [{"date": f"2026-0{m}-15", "price": price, "quantity": q, "unit": u} for m in (6, 7, 8)]
+        raw = [{"store": "netto", "id": "1", "name": "KiMs, Chips med Sour Cream & Onion., Chips m. sour cream & onion", "category": "0", "priceHistory": hist(20, 150, "g")},
+               {"store": "netto", "id": "2", "name": "KiMs, Havsalt Chips., Chips m. havsalt", "category": "0", "priceHistory": hist(21, 150, "g")},
+               {"store": "netto", "id": "3", "name": "Gestus, Hytteost 4% fedt 450g, Hytteost", "category": "0", "priceHistory": hist(15, 450, "g")}]
+        (self.tmp / "raw.json").write_text(json.dumps(raw), encoding="utf-8")
+
+    def run_import(self, *extra):
+        out = subprocess.run([sys.executable, str(ROOT / "scripts" / "import_dagligepriser_history.py"), "--source-file", str(self.tmp / "raw.json"),
+                              "--current-offers", str(self.tmp / "current.json"), "--output", str(self.tmp / "monthly.json"),
+                              "--decisions", str(self.tmp / "decisions.json"), *extra], cwd=ROOT, capture_output=True, text=True)
+        self.assertEqual(out.returncode, 0, out.stderr)
+        return json.loads((self.tmp / "monthly.json").read_text(encoding="utf-8")), json.loads((self.tmp / "history_verification.json").read_text(encoding="utf-8"))
+
+    def test_only_verified_history_is_published(self):
+        monthly, ver = self.run_import()
+        statuses = {k.split("|")[1][8:]: v["status"] for k, v in ver["keys"].items()}
+        self.assertEqual(statuses["sour-cream-onion-chips"], VERIFIED)
+        self.assertEqual(statuses["havsalt-chips"], VERIFIED)
+        self.assertEqual(statuses["hytteost"], REVIEW)  # fat percentage missing on the offer side
+        self.assertIs(monthly["verified_only"], True)
+        self.assertEqual({r["normalized_product_key"].split("|")[1][8:] for r in monthly["records"]}, {"sour-cream-onion-chips", "havsalt-chips"})
+        self.assertEqual(ver["summary"]["verified"], 2); self.assertEqual(ver["summary"]["review_required"], 1)
+        self.assertEqual(ver["summary"]["additional_verified_needed"], 0)  # 2 of 3 active keys verified in this tiny fixture
+        for raw_text in ("Chips m. havsalt", "Chips med Sour Cream", "Hytteost 4% fedt"):  # raw product text must not reach the public file
+            self.assertNotIn(raw_text, json.dumps(ver))
+
+    def test_human_decision_can_promote_review_but_not_override_conflict(self):
+        _, ver = self.run_import()
+        key = next(k for k in ver["keys"] if k.split("|")[1] == "product=hytteost")
+        decisions = {"decisions": [
+            {"normalized_product_key": key, "raw_id_hash": raw_id_hash("netto", "3"), "decision": "verified", "reviewed_by": "Casper", "reviewed_on": "2026-10-13"}]}
+        (self.tmp / "decisions.json").write_text(json.dumps(decisions), encoding="utf-8")
+        monthly, ver2 = self.run_import()
+        self.assertEqual(ver2["keys"][key]["status"], VERIFIED)
+        self.assertEqual(ver2["keys"][key]["manual_decisions"], 1)
+        # a decision without reviewer/date is ignored; and a hard conflict can never be promoted
+        sour = next(k for k in ver["keys"] if k.split("|")[1] == "product=sour-cream-onion-chips")
+        decisions["decisions"] = [{"normalized_product_key": sour, "raw_id_hash": raw_id_hash("netto", "2"), "decision": "verified"}]
+        (self.tmp / "decisions.json").write_text(json.dumps(decisions), encoding="utf-8")
+        _, ver3 = self.run_import()
+        self.assertEqual(ver3["keys"][sour]["raw_products"][VERIFIED], 1)
+
+
+if __name__ == "__main__":
+    unittest.main()

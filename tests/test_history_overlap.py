@@ -5,34 +5,50 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from offer_schema import offer_status, snapshot_date
+from offer_schema import snapshot_date
+from history_identity import verified_overlap
 
 
-def load(name):
-    with open(ROOT / name, encoding="utf-8") as fh:
+def load(name, default=None):
+    path = ROOT / name
+    if not path.exists():
+        return default
+    with open(path, encoding="utf-8") as fh:
         return json.load(fh)
 
 
 class HistoryOverlapTest(unittest.TestCase):
     def test_history_overlap(self):
-        """At least 30 % of the ACTIVE grocery offer keys must have exact history. Never lower this threshold."""
-        current, history = load("current_offers.json"), load("monthly_price_history.json")
-        today = snapshot_date(current)
-        # Same grocery scope as the raw-history builder: household and pet food are outside the food history.
-        current_keys = {
-            x.get("normalized_product_key")
-            for x in current.get("offers", [])
-            if x.get("normalized_product_key")
-            and offer_status(x, today) == "active"
-            and str(x.get("category") or "").lower() not in {"husholdning", "dyrefoder"}
-        }
-        history_keys = {x.get("normalized_product_key") for x in history.get("records", []) if x.get("normalized_product_key")}
-        overlap = len(current_keys & history_keys) / max(1, len(current_keys))
+        """At least 30 % of the unique ACTIVE food keys must have VERIFIED history. Unverified matches never count.
+        Never lower this threshold."""
+        current, verification = load("current_offers.json"), load("history_verification.json")
+        r = verified_overlap(current, verification, snapshot_date(current))
         self.assertGreaterEqual(
-            overlap, 0.30,
-            f"history overlap below 30% on active grocery offers: {overlap:.1%} "
-            f"({len(current_keys & history_keys)} of {len(current_keys)} keys)"
+            r["overlap"], 0.30,
+            f"verified history overlap below 30%: {r['overlap']:.1%} ({r['verified']} verified of {r['active_food_keys']} active food keys; "
+            f"review_required {r['review_required']}, rejected {r['rejected']}, no candidate {r['no_candidate']}; "
+            f"{r['additional_verified_needed']} more verified keys needed"
+            + ("" if r["verification_file_present"] else "; history_verification.json is missing") + ")"
         )
+
+    def test_history_file_contains_only_verified_history(self):
+        hist = load("monthly_price_history.json")
+        self.assertIs(hist.get("verified_only"), True, "monthly_price_history.json must be rebuilt with the identity check (verified_only)")
+        verification = load("history_verification.json")
+        self.assertIsNotNone(verification, "history_verification.json is required next to the history")
+        keys = verification["keys"]
+        bad = sorted({r["normalized_product_key"] for r in hist["records"]
+                      if (keys.get(r["normalized_product_key"]) or {}).get("status") != "verified"})
+        self.assertEqual(bad, [], f"{len(bad)} history keys without verified status")
+
+    def test_verification_file_holds_no_raw_text(self):
+        verification = load("history_verification.json")
+        if verification is None:
+            self.skipTest("no verification file yet")
+        self.assertIs(verification.get("raw_data_included"), False)
+        allowed = {"status", "offer_names", "raw_products", "methods", "conflict_fields", "missing_fields", "manual_decisions", "months"}
+        for k, v in verification["keys"].items():
+            self.assertLessEqual(set(v), allowed, k)
 
 
 if __name__ == "__main__":

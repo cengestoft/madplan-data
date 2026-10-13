@@ -23,12 +23,12 @@ def run_unittests():
 GROCERY_EXCLUDED = {"husholdning", "dyrefoder"}
 MIN_OVERLAP = 0.30
 
-def history_overlap(cur, hist):
-    """Share of active grocery offer keys that exist EXACTLY in the monthly history."""
-    keys = {o.get("normalized_product_key") for o in cur["offers"]
-            if o.get("normalized_product_key") and str(o.get("category") or "").lower() not in GROCERY_EXCLUDED}
-    hkeys = {r.get("normalized_product_key") for r in hist["records"] if r.get("normalized_product_key")}
-    return len(keys & hkeys), len(keys)
+def history_overlap(cur, hist, verification=None, today=None):
+    """Active food keys with VERIFIED history (unverified matches never count). Returns (verified, total)."""
+    from history_identity import verified_overlap
+    from offer_schema import snapshot_date
+    r = verified_overlap(cur, verification, today or snapshot_date(cur), MIN_OVERLAP)
+    return r["verified"], r["active_food_keys"], r
 
 def compare_reports(old, new):
     """Differences between a committed and a fresh report. Everything except generated_at counts."""
@@ -51,7 +51,8 @@ def compute(today=None):
     bad_keys = sum(1 for o in cur["offers"] if o.get("normalized_product_key") != normalized_product_key(o))
     hist_missing = sum(1 for r in hist["records"] if not r.get("normalized_product_key"))
     size = (ROOT / "monthly_price_history.json").stat().st_size
-    matched, total_keys = history_overlap(cur, hist)
+    verification = load("history_verification.json") if (ROOT / "history_verification.json").exists() else None
+    matched, total_keys, ov = history_overlap(cur, hist, verification, today)
     overlap = matched / max(1, total_keys)
     tests_run, failed = run_unittests()
     nxt_noncanon = sum(1 for o in nxt["offers"] if "package_size" in o or "member_required" in o)
@@ -71,8 +72,9 @@ def compute(today=None):
         ("Future offers without end date are flagged, not treated as unlimited", nxt_no_end == sum(1 for e in quality["errors"] if e.get("type") == "missing_valid_to"),
          f"{nxt_no_end} offers without valid_to; {sum(1 for e in quality['errors'] if e.get('type') == 'missing_valid_to')} flagged."),
         ("No hard data-quality errors", quality.get("hard_error_count") == 0, f"hard_error_count={quality.get('hard_error_count')}."),
-        (f"History overlap on active grocery offers is at least {MIN_OVERLAP:.0%}", overlap >= MIN_OVERLAP,
-         f"{matched} of {total_keys} active grocery keys have exact history = {overlap:.1%}."),
+        (f"Verified history overlap on active food keys is at least {MIN_OVERLAP:.0%}", overlap >= MIN_OVERLAP,
+         f"{matched} of {total_keys} active food keys have verified history = {overlap:.1%}; review_required {ov['review_required']}, "
+         f"rejected {ov['rejected']}, no candidate {ov['no_candidate']}; {ov['additional_verified_needed']} more verified needed."),
         (f"Unit test suite ({tests_run} tests)", not failed, "all passed" if not failed else "failed: " + ", ".join(failed)),
     ]
     results = [{"id": i + 1, "name": n, "status": "PASS" if ok else "FAIL", "detail": d} for i, (n, ok, d) in enumerate(rows)]

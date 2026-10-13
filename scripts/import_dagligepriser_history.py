@@ -19,6 +19,8 @@ import unicodedata
 import urllib.request
 from collections import defaultdict
 
+import math
+from history_identity import (REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash)
 from product_normalization import infer_pack, normalized_product_key
 
 URL = "https://dagligepriser.dk/data/latest-canonical.json"
@@ -148,6 +150,15 @@ def reconcile_manifest_file(output: pathlib.Path) -> bool:
     return True
 
 
+def load_decisions(path: pathlib.Path) -> dict:
+    """{(normalized_product_key, raw_id_hash): 'verified' | 'rejected'} from the committed review file (hashes only)."""
+    if not path.exists():
+        return {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    return {(d["normalized_product_key"], d["raw_id_hash"]): d["decision"] for d in doc.get("decisions", [])
+            if d.get("decision") in {"verified", "rejected"} and d.get("reviewed_by") and d.get("reviewed_on")}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source-file")
@@ -155,6 +166,9 @@ def main():
     ap.add_argument("--current-offers", default="current_offers.json")
     ap.add_argument("--allow-public-output", action="store_true")
     ap.add_argument("--manifest", default="data_sources/dagligepriser_manifest.json")
+    ap.add_argument("--decisions", default="data_sources/history_review_decisions.json",
+                    help="human review decisions (hashes only, no raw text): promote review_required to verified or reject a raw product")
+    ap.add_argument("--verification", help="public per-key verification status (default: history_verification.json next to the output)")
     ap.add_argument("--match-log", help="write per-key match documentation (method + raw product examples) to this PRIVATE path under data/private/; never committed")
     args = ap.parse_args()
 
@@ -253,10 +267,25 @@ def main():
     if not isinstance(products, list):
         raise ValueError("Expected product list")
 
-    provenance = {}
+    decisions = load_decisions(pathlib.Path(args.decisions))
+    offers_by_key = defaultdict(list)
+    for o in offers:
+        k = o.get("normalized_product_key") or normalized_product_key(o)
+        if k:
+            offers_by_key[k].append(o)
+    offer_identity = {k: [describe(x) for x in v] for k, v in offers_by_key.items()}
+
+    verdict_cache = {}
+    raw_by_key = defaultdict(lambda: {VERIFIED: set(), REVIEW: set(), REJECTED: set()})
+    methods_by_key = defaultdict(lambda: defaultdict(int))
+    conflicts_by_key = defaultdict(lambda: defaultdict(int))
+    missing_by_key = defaultdict(lambda: defaultdict(int))
+    manual_by_key = defaultdict(int)
+    examples_by_key = defaultdict(dict)  # PRIVATE: raw names stay out of the repository
     buckets = defaultdict(list)
     months_by_key = defaultdict(set)
     skipped = 0
+    non_offer_rows = 0
 
     for product in products:
         store_code = product.get("store")
@@ -275,153 +304,111 @@ def main():
                 continue
 
             key = choose_key(product, hist)
+            if key not in offer_keys:
+                non_offer_rows += 1  # history is only kept for keys of active offers, and only when verified
+                continue
+            ck = (probe.get("name"), probe.get("brand"), probe.get("variant"),
+                  probe.get("package_count"), probe.get("package_amount"), probe.get("package_unit"))
+            pid = raw_id_hash(store_code, product.get("id"))
+            vkey = (ck, key, pid)
+            if vkey not in verdict_cache:
+                rp = dict(probe)
+                rp["description"] = product.get("description")
+                verdict = combine(compare(describe(rp), d) for d in offer_identity[key])
+                verdict = dict(verdict, method=method_of.get(ck) or "direct", manual=False)
+                decision = decisions.get((key, pid))
+                if decision == "rejected" or (decision == "verified" and verdict["status"] == REVIEW):
+                    verdict.update(status=decision, manual=True)  # a human decision never overrides a hard conflict
+                verdict_cache[vkey] = verdict
+                raw_by_key[key][verdict["status"]].add(pid)
+                methods_by_key[key][verdict["method"]] += 1
+                for f in verdict["conflicts"]: conflicts_by_key[key][f] += 1
+                for f in verdict["missing"]: missing_by_key[key][f] += 1
+                if verdict["manual"]: manual_by_key[key] += 1
+                if len(examples_by_key[key]) < 12:
+                    examples_by_key[key][pid] = {"raw_hash": pid, "raw_name": product.get("name"), "store": STORES[store_code],
+                                                 "status": verdict["status"], "method": verdict["method"], "conflicts": verdict["conflicts"],
+                                                 "missing": verdict["missing"], "manual": verdict["manual"]}
+            if verdict_cache[vkey]["status"] != VERIFIED:
+                continue
             month = hist["date"][:7]
-            if args.match_log and key in offer_keys:
-                ck = (probe.get("name"), probe.get("brand"), probe.get("variant"),
-                      probe.get("package_count"), probe.get("package_amount"), probe.get("package_unit"))
-                prov = provenance.setdefault(key, {"methods": defaultdict(int), "examples": {}})
-                m = method_of.get(ck) or "direct"
-                prov["methods"][m] += 1
-                prov["examples"].setdefault(
-                    (product.get("name"), product.get("brand"), product.get("variant"), STORES[store_code], m),
-                    {"raw_name": product.get("name"), "raw_brand": product.get("brand"),
-                     "raw_variant": product.get("variant"), "store": STORES[store_code], "method": m,
-                     "quantity": probe.get("package_amount"), "unit": probe.get("package_unit"),
-                     "package_count": probe.get("package_count")})
             buckets[(key, STORES[store_code], month)].append(price)
             months_by_key[key].add(month)
 
     by_key = defaultdict(list)
     for (key, store, month), prices in buckets.items():
-        by_key[key].append(
-            {
-                "normalized_product_key": key,
-                "store": store,
-                "month": month,
-                "observation_count": len(prices),
-                "median_price_dkk": round(float(statistics.median(prices)), 2),
-                "min_price_dkk": round(float(min(prices)), 2),
-                "source": "dagligepriser.dk",
-            }
-        )
-    for rows in by_key.values():
-        rows.sort(key=lambda r: (r["month"], r["store"]))
+        by_key[key].append({
+            "normalized_product_key": key, "store": store, "month": month, "observation_count": len(prices),
+            "median_price_dkk": round(float(statistics.median(prices)), 2), "min_price_dkk": round(float(min(prices)), 2),
+            "source": "dagligepriser.dk",
+        })
+    for rows_ in by_key.values():
+        rows_.sort(key=lambda r: (r["month"], r["store"]))
+    rows = [r for key in sorted(by_key) for r in by_key[key]]
 
-    history_keys = set(by_key)
+    today_iso = dt.date.today().isoformat()
+    key_info = {}
+    for key in sorted(offer_keys):
+        counts = {st: len(ids) for st, ids in raw_by_key[key].items()} if key in raw_by_key else {}
+        key_info[key] = {
+            "status": key_status(counts),
+            "offer_names": sorted({str(x.get("name")) for x in offers_by_key.get(key, [])})[:3],
+            "raw_products": {st: counts.get(st, 0) for st in (VERIFIED, REVIEW, REJECTED)},
+            "methods": dict(methods_by_key.get(key, {})),
+            "conflict_fields": dict(conflicts_by_key.get(key, {})),
+            "missing_fields": dict(missing_by_key.get(key, {})),
+            "manual_decisions": manual_by_key.get(key, 0),
+            "months": len(months_by_key.get(key, ())),
+        }
+    status_count = defaultdict(int)
+    for info in key_info.values(): status_count[info["status"]] += 1
+    total_keys = len(offer_keys)
+    verified_n = status_count[VERIFIED]
+    needed = max(0, math.ceil(MIN_OVERLAP * total_keys) - verified_n)
+    summary = {"active_food_keys": total_keys, "verified": verified_n, "review_required": status_count[REVIEW],
+               "rejected": status_count[REJECTED], "no_candidate": status_count["no_candidate"],
+               "verified_overlap": round(verified_n / max(1, total_keys), 4), "required_overlap": MIN_OVERLAP,
+               "additional_verified_needed": needed, "meets_required_overlap": needed == 0}
+
+    verification = {
+        "schema_version": 1, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "control_date": today_iso,
+        "source": "dagligepriser.dk", "raw_data_included": False,
+        "rules": "A history key is verified only when brand, product type, flavour/variant, meat type, fat percentage, pack count, "
+                 "size and unit all agree between the raw product and the offer. Equal normalized_product_key alone is not enough.",
+        "summary": summary, "keys": key_info,
+    }
+    doc = {
+        "schema_version": 3, "source": "dagligepriser.dk", "source_url": URL,
+        "credit": "Monthly aggregates derived from dagligepriser.dk raw data", "aggregation": "normalized_product_key + store + month",
+        "food_only": True, "raw_data_included": False, "verified_only": True, "verification_file": "history_verification.json",
+        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "record_count": len(rows),
+        "offer_key_count": total_keys, "matched_offer_keys": verified_n, "offer_key_overlap": summary["verified_overlap"],
+        "skipped": skipped, "records": rows,
+    }
+    payload = json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n"
+    size = len(payload.encode("utf-8"))
+    if size >= MAX_PUBLIC_BYTES:
+        raise SystemExit(f"Output over 12 MB: {size} bytes")
+
     if args.match_log:
         log_path = pathlib.Path(args.match_log)
         if "data/private" not in log_path.as_posix():
             raise SystemExit("--match-log must be under data/private/ (raw product text must never be committed)")
         log_path.parent.mkdir(parents=True, exist_ok=True)
-        old_keys = set()
-        if output.exists():
-            try:
-                old_keys = {r.get("normalized_product_key") for r in json.loads(output.read_text(encoding="utf-8")).get("records", [])}
-            except Exception:
-                old_keys = set()
-        entries = []
-        for key in sorted(offer_keys & history_keys):
-            prov = provenance.get(key, {"methods": {}, "examples": {}})
-            entries.append({
-                "normalized_product_key": key,
-                "new_vs_previous_file": key not in old_keys,
-                "months": sorted(months_by_key[key]),
-                "month_count": len(months_by_key[key]),
-                "observations": sum(r["observation_count"] for r in by_key[key]),
-                "methods": dict(prov["methods"]),
-                "raw_examples": list(prov["examples"].values())[:5],
-            })
-        log_path.write_text(json.dumps({"offer_keys": len(offer_keys), "matched_in_raw": len(offer_keys & history_keys),
-                                         "entries": entries}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    direct = offer_keys & history_keys
-    overlap = len(direct) / max(1, len(offer_keys))
-    if overlap < MIN_OVERLAP:
-        raise SystemExit(
-            f"History key overlap too low after raw rebuild: "
-            f"{len(direct)}/{len(offer_keys)} = {overlap:.1%}"
-        )
-
-    def rank(key):
-        return (
-            -len(months_by_key[key]),
-            -sum(r["observation_count"] for r in by_key[key]),
-            key,
-        )
-
-    required = max(1, int(len(offer_keys) * MIN_OVERLAP + 0.999999))
-    selected = list(sorted(direct, key=rank)[:required])
-    selected_set = set(selected)
-
-    # Keep useful non-current history (>=3 months) too, while staying compact.
-    eligible = {k for k in history_keys if k in offer_keys or len(months_by_key[k]) >= 3}
-
-    def key_bytes(key):
-        return sum(
-            len(json.dumps(r, ensure_ascii=False, separators=(",", ":")).encode("utf-8")) + 1
-            for r in by_key[key]
-        )
-
-    used = sum(key_bytes(k) for k in selected)
-    if used > TARGET_BYTES:
-        for k in selected:
-            by_key[k] = sorted(
-                by_key[k], key=lambda r: (r["month"], r["store"]), reverse=True
-            )[:12]
-        used = sum(key_bytes(k) for k in selected)
-        if used > TARGET_BYTES:
-            raise SystemExit("Required 30% overlap cannot fit under target size")
-
-    for key in sorted(eligible - selected_set, key=lambda k: (0 if k in offer_keys else 1,) + rank(k)):
-        size = key_bytes(key)
-        if used + size <= TARGET_BYTES:
-            selected.append(key)
-            selected_set.add(key)
-            used += size
-
-    rows = [r for key in selected for r in by_key[key]]
-    rows.sort(key=lambda r: (r["normalized_product_key"], r["store"], r["month"]))
-
-    matched = len(selected_set & offer_keys)
-    doc = {
-        "schema_version": 3,
-        "source": "dagligepriser.dk",
-        "source_url": URL,
-        "credit": "Monthly aggregates derived from dagligepriser.dk raw data",
-        "aggregation": "normalized_product_key + store + month",
-        "food_only": True,
-        "raw_data_included": False,
-        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-        "record_count": len(rows),
-        "offer_key_count": len(offer_keys),
-        "matched_offer_keys": matched,
-        "offer_key_overlap": round(matched / max(1, len(offer_keys)), 4),
-        "skipped": skipped,
-        "records": rows,
-    }
-    payload = json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n"
-    size = len(payload.encode("utf-8"))
-
-    if doc["offer_key_overlap"] < MIN_OVERLAP:
-        raise SystemExit("Final overlap below 30%")
-    if size >= MAX_PUBLIC_BYTES:
-        raise SystemExit(f"Output over 12 MB: {size} bytes")
+        entries = [{"normalized_product_key": k, **key_info[k], "months_list": sorted(months_by_key.get(k, ())),
+                    "raw_examples": list(examples_by_key.get(k, {}).values())} for k in sorted(offer_keys) if k in raw_by_key]
+        log_path.write_text(json.dumps({"offer_keys": total_keys, "summary": summary, "entries": entries}, ensure_ascii=False, indent=1) + "\n",
+                            encoding="utf-8")
 
     output.write_text(payload, encoding="utf-8")
+    verification_path = pathlib.Path(args.verification) if args.verification else output.parent / "history_verification.json"
+    verification_path.write_text(json.dumps(verification, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     reconcile_manifest_file(output)
-    print(
-        json.dumps(
-            {
-                "raw_product_count": len(products),
-                "records": len(rows),
-                "bytes": size,
-                "offer_keys": len(offer_keys),
-                "matched": matched,
-                "overlap": doc["offer_key_overlap"],
-                "skipped": skipped,
-            },
-            ensure_ascii=False,
-        )
-    )
+    print(json.dumps({"raw_product_count": len(products), "records": len(rows), "bytes": size, "skipped": skipped,
+                      "non_offer_rows_dropped": non_offer_rows, **summary}, ensure_ascii=False))
+    if not summary["meets_required_overlap"]:
+        print(f"WARNING: verified overlap {summary['verified_overlap']:.1%} is below the required {MIN_OVERLAP:.0%}; "
+              f"{needed} more verified keys needed. Nothing was lowered or invented.")
 
 
 if __name__ == "__main__":

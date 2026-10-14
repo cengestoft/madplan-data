@@ -1,6 +1,7 @@
 import hashlib
 import io
 import json
+import urllib.parse
 import os
 import re
 import subprocess
@@ -171,7 +172,7 @@ class FetchTest(unittest.TestCase):
         self.assertEqual(df.safe_error_code(b'{"error": "invalid_grant", "error_description": "refresh token REFRESH-123 expired"}'), "invalid_grant")
         self.assertEqual(df.safe_error_code(b'{"error_summary": "invalid_access_token/"}'), "invalid_access_token")
         self.assertEqual(df.safe_error_code(b'{"error_summary": "Secret-Token-XYZ/whatever"}'), "other/other")
-        self.assertEqual(df.safe_error_code(b"not json REFRESH-123"), "")
+        self.assertEqual(df.safe_error_code(b"not json REFRESH-123"), "text/unclassified")
         self.assertEqual(df.safe_error_code(b'{"error": {"x": 1}}'), "")
 
     def test_http_error_shows_only_status_and_a_safe_code(self):
@@ -548,6 +549,170 @@ class DownloadCallTest(unittest.TestCase):
             with self.assertRaises(SystemExit) as cm:
                 df.fetch({**SECRET}, self.dest, min_bytes=10, urlopen=opener)
         self.assertNotIn(LEAK, out.getvalue() + err.getvalue() + str(cm.exception))
+
+
+class WireRequestTest(unittest.TestCase):
+    """The EXACT HTTP requests urllib puts on the wire, recorded by a local server (Content-Length, Content-Type, body, headers)."""
+
+    @classmethod
+    def setUpClass(cls):
+        import http.server, threading
+        cls.seen, cls.replies = [], {}
+
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def do_POST(self):
+                body = self.rfile.read(int(self.headers.get("Content-Length") or 0))
+                cls.seen.append({"path": self.path, "headers": {k.lower(): v for k, v in self.headers.items()}, "body": body,
+                                 "version": self.request_version})
+                status, payload = cls.replies.get(self.path, (200, b"{}"))
+                self.send_response(status); self.send_header("Content-Length", str(len(payload))); self.end_headers(); self.wfile.write(payload)
+
+            def log_message(self, *a):
+                pass
+        cls.server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        threading.Thread(target=cls.server.serve_forever, daemon=True).start()
+        cls.base = f"http://127.0.0.1:{cls.server.server_port}"
+        cls.saved = {n: getattr(df, n) for n in ("TOKEN_URL", "META_URL", "DOWNLOAD_URL", "LINK_URL")}
+        df.TOKEN_URL, df.META_URL = cls.base + "/oauth2/token", cls.base + "/2/files/get_metadata"
+        df.DOWNLOAD_URL, df.LINK_URL = cls.base + "/2/files/download", cls.base + "/2/files/get_temporary_link"
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.server.shutdown(); cls.server.server_close()
+        for n, v in cls.saved.items():
+            setattr(df, n, v)
+
+    def setUp(self):
+        self.seen.clear(); self.replies.clear()
+
+    def last(self):
+        return self.seen[-1]
+
+    def test_token_request(self):
+        self.replies["/oauth2/token"] = (200, json.dumps({"access_token": TOKEN}).encode())
+        df.get_access_token(SECRET)
+        r = self.last()
+        self.assertEqual(r["headers"]["content-type"], "application/x-www-form-urlencoded")
+        self.assertEqual(int(r["headers"]["content-length"]), len(r["body"]))
+        self.assertEqual(dict(urllib.parse.parse_qsl(r["body"].decode())),
+                         {"grant_type": "refresh_token", "refresh_token": "REFRESH-123", "client_id": "KEY-abc", "client_secret": "SECRET-xyz"})
+        self.assertNotIn("authorization", r["headers"])
+
+    def test_metadata_request_is_json_post_with_matching_content_length(self):
+        self.replies["/2/files/get_metadata"] = (200, json.dumps({".tag": "file"}).encode())
+        df.get_metadata(TOKEN, "/latest-canonical.json")
+        r = self.last()
+        self.assertEqual(r["path"], "/2/files/get_metadata")
+        self.assertEqual(r["headers"]["authorization"], f"Bearer {TOKEN}")
+        self.assertEqual(r["headers"]["content-type"], "application/json")
+        self.assertEqual(int(r["headers"]["content-length"]), len(r["body"]))
+        self.assertEqual(json.loads(r["body"]), {"path": "/latest-canonical.json"})
+
+    def test_download_request_follows_the_content_endpoint_rules(self):
+        self.replies["/2/files/download"] = (200, b"[]")
+        df.open_download(TOKEN, "/latest-canonical.json").read()
+        r = self.last()
+        self.assertEqual(r["path"], "/2/files/download")
+        self.assertEqual(r["version"], "HTTP/1.1")
+        self.assertEqual(r["headers"]["authorization"], f"Bearer {TOKEN}")
+        self.assertEqual(r["body"], b"", "files/download takes its argument in the header; the body is empty")
+        self.assertEqual(r["headers"]["content-length"], "0")
+        self.assertEqual(r["headers"]["content-type"], "application/octet-stream")
+        self.assertEqual(json.loads(r["headers"]["dropbox-api-arg"]), {"path": "/latest-canonical.json"})
+        self.assertNotIn("range", r["headers"])
+
+    def test_download_argument_header_is_ascii_for_non_ascii_paths(self):
+        self.replies["/2/files/download"] = (200, b"[]")
+        df.open_download(TOKEN, "/Opskrifter/æøå.json").read()
+        arg = self.last()["headers"]["dropbox-api-arg"]
+        arg.encode("ascii")
+        self.assertEqual(json.loads(arg), {"path": "/Opskrifter/æøå.json"})
+
+    def test_temporary_link_request_is_json_post_with_matching_content_length(self):
+        self.replies["/2/files/get_temporary_link"] = (200, json.dumps({"link": self.base + "/x"}).encode())
+        with self.assertRaises(SystemExit):  # the local host is (rightly) refused as a link host; the request itself was still sent
+            df.get_temporary_link(TOKEN, "/latest-canonical.json")
+        r = self.last()
+        self.assertEqual(r["path"], "/2/files/get_temporary_link")
+        self.assertEqual(r["headers"]["authorization"], f"Bearer {TOKEN}")
+        self.assertEqual(r["headers"]["content-type"], "application/json")
+        self.assertEqual(int(r["headers"]["content-length"]), len(r["body"]))
+        self.assertEqual(json.loads(r["body"]), {"path": "/latest-canonical.json"})
+
+    def test_range_probe_asks_for_the_first_kib_only(self):
+        self.replies["/2/files/download"] = (200, b"x" * 1024)
+        df.range_probe(TOKEN, "/latest-canonical.json")
+        self.assertEqual(self.last()["headers"]["range"], "bytes=0-1023")
+        self.assertEqual(self.last()["body"], b"")
+
+
+class SafeDiagnosticsTest(unittest.TestCase):
+    def test_plain_text_bodies_are_classified_into_fixed_ids_never_echoed(self):
+        cases = {
+            b'Error in call to API function "files/download": Bad HTTP "Content-Type" header: "x" REFRESH-123': "text/bad_content_type",
+            b'Error in call to API function "files/download": HTTP header "Dropbox-API-Arg": could not decode input as JSON': "text/bad_api_arg",
+            b'Error in call to API function "files/get_temporary_link": request body: could not decode input as JSON': "text/bad_json",
+            b'Error: Your app is not permitted: it does not have the required scope files.content.read': "text/missing_scope",
+            b'Error in call to API function: Invalid authorization value in HTTP header': "text/bad_authorization",
+            b"something completely different ZZ-secret-0123456789abcdef": "text/unclassified",
+        }
+        for body, want in cases.items():
+            got = df.safe_error_code(body)
+            self.assertEqual(got, want)
+            self.assertNotIn("ZZ-secret", got); self.assertNotIn("REFRESH", got)
+        self.assertEqual(df.safe_error_code(b""), "empty")
+        self.assertEqual(df.safe_error_code(b"  \n"), "empty")
+
+    def test_json_missing_scope_names_the_permission_from_a_whitelist_only(self):
+        body = json.dumps({"error_summary": "missing_scope/..", "error": {".tag": "missing_scope", "required_scope": "files.content.read"}}).encode()
+        self.assertEqual(df.safe_error_code(body), "missing_scope/files.content.read")
+        evil = json.dumps({"error_summary": "missing_scope/..", "error": {".tag": "missing_scope", "required_scope": "ZZ-secret-123"}}).encode()
+        self.assertEqual(df.safe_error_code(evil), "missing_scope")
+
+    def test_granted_permissions_are_printed_as_whitelisted_names_only(self):
+        import contextlib
+        body = json.dumps({"access_token": TOKEN, "scope": "files.metadata.read files.content.read ZZ-secret-scope"}).encode()
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            df.get_access_token(SECRET, lambda req, timeout=None: Resp(body))
+        self.assertIn("files.content.read files.metadata.read", out.getvalue())
+        self.assertNotIn("ZZ-secret-scope", out.getvalue())
+        self.assertEqual(df.GRANTED_SCOPES, {"files.metadata.read", "files.content.read"})
+
+    def test_token_without_content_permission_stops_before_any_file_request(self):
+        calls = []
+        def opener(req, timeout=None):
+            calls.append(req.full_url)
+            return Resp(json.dumps({"access_token": TOKEN, "scope": "files.metadata.read account_info.read"}).encode())
+        with self.assertRaises(SystemExit) as cm:
+            df.fetch(SECRET, Path(tempfile.mkdtemp()) / "x.json", min_bytes=10, urlopen=opener)
+        self.assertIn("files.content.read", str(cm.exception))
+        self.assertEqual(calls, [df.TOKEN_URL], "no metadata, download or link request is made")
+
+    def test_token_response_without_scope_field_does_not_block(self):
+        df.get_access_token(SECRET, lambda req, timeout=None: Resp(json.dumps({"access_token": TOKEN}).encode()))
+        self.assertIsNone(df.GRANTED_SCOPES)
+
+    def test_when_both_downloads_fail_a_range_probe_reports_status_only(self):
+        import contextlib, urllib.error
+        LEAK = "ZZ-unknown-secret-77aa11bb22cc33dd"
+        seen = []
+        def opener(req, timeout=None):
+            seen.append((req.full_url, req.get_header("Range")))
+            if req.full_url == df.TOKEN_URL:
+                return Resp(json.dumps({"access_token": TOKEN}).encode())
+            if req.full_url == df.META_URL:
+                return Resp(json.dumps({".tag": "file", "size": 5000, "content_hash": "0" * 64}).encode())
+            raise urllib.error.HTTPError(req.full_url, 400, "x", {}, io.BytesIO(("Error " + LEAK).encode()))
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            with self.assertRaises(SystemExit) as cm:
+                df.fetch(SECRET, Path(tempfile.mkdtemp()) / "x.json", min_bytes=10, urlopen=opener)
+        text = out.getvalue() + err.getvalue() + str(cm.exception)
+        self.assertNotIn(LEAK, text)
+        self.assertIn("Dropbox range probe failed with HTTP 400 (text/unclassified)", text)
+        self.assertIn(("bytes=0-1023"), [r for _, r in seen])
+        self.assertEqual([u for u, _ in seen].count(df.DOWNLOAD_URL), 2, "full download + probe")
 
 
 class ImporterJsonValidationTest(unittest.TestCase):

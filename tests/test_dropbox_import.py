@@ -174,7 +174,7 @@ class FetchTest(unittest.TestCase):
         self.assertEqual(df.safe_error_code(b"not json REFRESH-123"), "")
         self.assertEqual(df.safe_error_code(b'{"error": {"x": 1}}'), "")
 
-    def test_http_error_shows_status_safe_code_and_a_redacted_short_detail(self):
+    def test_http_error_shows_only_status_and_a_safe_code(self):
         import urllib.error
 
         def boom(req, timeout=None):
@@ -185,7 +185,9 @@ class FetchTest(unittest.TestCase):
         msg = str(cm.exception)
         self.assertIn("HTTP 409 (path/not_found)", msg)
         self.assertNotIn("REFRESH-123", msg)
-        self.assertLessEqual(len(msg), 400)
+        self.assertNotIn("Privat", msg)
+        self.assertNotIn("Dropbox:", msg)
+        self.assertEqual(msg, "ERROR: Dropbox metadata request failed with HTTP 409 (path/not_found)")
 
     def test_configured_path_is_logged_but_no_secret(self):
         buf = io.StringIO()
@@ -505,15 +507,47 @@ class DownloadCallTest(unittest.TestCase):
             self.assertIn("unexpected host", str(cm.exception))
             self.assertFalse(self.dest.exists())
 
-    def test_error_detail_is_sanitized(self):
-        body = (b'{"error_summary": "bad_request/", "note": "REFRESH-123 ' + b"A" * 60 + b' token ' + "ø".encode() + b'"}' + b" x" * 300)
-        d = df.safe_error_detail(body)
-        self.assertLessEqual(len(d), 200)
-        self.assertNotIn("A" * 24, d)
-        self.assertTrue(d.isascii())
-        self.assertIn("***", d)
-        df._REDACT.append("REFRESH-123")
-        self.assertNotIn("REFRESH-123", df.safe_error_detail(body))
+    def test_no_free_text_helper_exists_any_more(self):
+        self.assertFalse(hasattr(df, "safe_error_detail"))
+
+    def test_unknown_secret_in_error_body_never_reaches_stdout_stderr_or_the_exception(self):
+        import contextlib, urllib.error
+        LEAK = "ZZ-unknown-secret-8f3a91c7d2e4b6a0"
+        bodies = [  # in free text, in a user message, in the error summary, and as non-JSON
+            json.dumps({"error_summary": "path/not_found/..", "user_message": {"text": LEAK}}).encode(),
+            json.dumps({"error_summary": LEAK + "/x", "error": LEAK, "error_description": LEAK}).encode(),
+            ("plain text " + LEAK).encode(),
+            json.dumps({"error": {"nested": LEAK}}).encode(),
+        ]
+        for status in (400, 401, 403, 409, 429, 500):
+            for body in bodies:
+                def opener(req, timeout=None, status=status, body=body):
+                    if req.full_url == df.TOKEN_URL:
+                        return Resp(json.dumps({"access_token": TOKEN}).encode())
+                    raise urllib.error.HTTPError(req.full_url, status, "x", {}, io.BytesIO(body))
+                out, err = io.StringIO(), io.StringIO()
+                with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+                    with self.assertRaises(SystemExit) as cm:
+                        df.fetch({**SECRET}, self.dest, min_bytes=10, urlopen=opener)
+                everything = out.getvalue() + err.getvalue() + str(cm.exception)
+                self.assertNotIn(LEAK, everything, (status, body))
+                self.assertRegex(str(cm.exception), r"^ERROR: [A-Za-z ]+ failed with HTTP %d( \([a-z_/]+\))?$" % status)
+                self.assertFalse(self.dest.exists())
+
+    def test_unknown_secret_in_a_400_fallback_chain_is_never_logged(self):
+        import contextlib, urllib.error
+        LEAK = "ZZ-unknown-secret-5d1e0b9c77a2f4e8"
+        def opener(req, timeout=None):
+            if req.full_url == df.TOKEN_URL:
+                return Resp(json.dumps({"access_token": TOKEN}).encode())
+            if req.full_url == df.META_URL:
+                return Resp(json.dumps({".tag": "file", "size": 5000, "content_hash": "0" * 64}).encode())
+            raise urllib.error.HTTPError(req.full_url, 400, "Bad Request", {}, io.BytesIO(json.dumps({"error_summary": LEAK, "x": LEAK}).encode()))
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            with self.assertRaises(SystemExit) as cm:
+                df.fetch({**SECRET}, self.dest, min_bytes=10, urlopen=opener)
+        self.assertNotIn(LEAK, out.getvalue() + err.getvalue() + str(cm.exception))
 
 
 class ImporterJsonValidationTest(unittest.TestCase):

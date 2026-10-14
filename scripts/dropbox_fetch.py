@@ -64,18 +64,6 @@ def _fail(msg: str, status=None):
     raise e
 
 
-def safe_error_detail(body: bytes, limit=200) -> str:
-    """Short, sanitized excerpt of a Dropbox error body so a failure can be diagnosed from a public log.
-    Secrets are replaced, long token-like strings are replaced, non-printable characters are dropped, the excerpt is cut."""
-    text = body.decode("utf-8", "replace")
-    for secret in _REDACT:
-        if secret:
-            text = text.replace(secret, "***")
-    text = re.sub(r"[A-Za-z0-9_\-]{24,}", "***", text)
-    text = re.sub(r"[^\x20-\x7e]", "?", text)
-    return re.sub(r"\s+", " ", text).strip()[:limit]
-
-
 SAFE_WORDS = {  # fixed Dropbox error vocabulary; anything else is reported as "other" (never echo free text)
     "invalid_grant", "invalid_client", "invalid_request", "unauthorized_client", "unsupported_grant_type", "invalid_access_token",
     "expired_access_token", "invalid_refresh_token", "path", "not_found", "malformed_path", "not_file", "not_folder", "restricted_content",
@@ -100,13 +88,13 @@ def _request(urlopen, req, what):
     try:
         return urlopen(req, timeout=300)
     except urllib.error.HTTPError as e:
-        code = detail = ""
+        code = ""
         try:
-            raw = e.read(4096)
-            code, detail = safe_error_code(raw), safe_error_detail(raw)
+            code = safe_error_code(e.read(4096))
         except Exception:
             pass
-        _fail(f"{what} failed with HTTP {e.code}" + (f" ({code})" if code else "") + (f" - Dropbox: {detail}" if detail else ""), status=e.code)
+        # Only the HTTP status and a code from the fixed vocabulary. Free text from the response body is NEVER shown (public log).
+        _fail(f"{what} failed with HTTP {e.code}" + (f" ({code})" if code else ""), status=e.code)
     except Exception as e:  # network errors: only the exception class, never its text
         _fail(f"{what} failed ({type(e).__name__})")
 

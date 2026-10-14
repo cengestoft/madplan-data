@@ -23,7 +23,7 @@ jobs:
           python-version: "3.12"
       - name: Promote only documented active offers
         run: python scripts/promote_future_offers.py --write
-      - name: Check no future offers became current early
+      - name: Keep next-week file future-only\n        run: |\n          python - <<'PY'\n          import json\n          from pathlib import Path\n          from datetime import datetime, date\n          from zoneinfo import ZoneInfo\n          p = Path('next_week_offers.json')\n          doc = json.loads(p.read_text())\n          today = datetime.now(ZoneInfo('Europe/Copenhagen')).date()\n          doc['offers'] = [o for o in doc['offers'] if o.get('valid_from') and date.fromisoformat(o['valid_from']) > today]\n          doc['offer_count'] = len(doc['offers'])\n          p.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\\n')\n          PY\n      - name: Check no future offers became current early
         run: |
           python - <<'PY'
           import json, sys

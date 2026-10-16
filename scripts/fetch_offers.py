@@ -23,6 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import offer_guard  # noqa: E402
 import offer_parser  # noqa: E402
 import source_probe  # noqa: E402
 
@@ -145,19 +146,34 @@ OFFER_FIELDS = (("id", "id"), ("name", "name"), ("brand", "brand"), ("price_dkk"
                 ("valid_from", "valid_from"), ("valid_to", "valid_to"), ("long_validity", "long_validity"))
 
 
-def build_output(per_store, now=None):
-    """Samlet fil til privat lager. Kun navn, pris, butik og gyldighed (ingen billeder eller links)."""
-    now = now or dt.datetime.now(dt.timezone.utc)
-    stores = {}
-    for st, offers in per_store:
-        stores[st["store"]] = {
-            "chain": next(iter(st.get("chains") or {}), None), "total_reported": st["total_reported"],
+def store_entry(st, offers):
+    return {"chain": next(iter(st.get("chains") or {}), None), "total_reported": st["total_reported"],
             "accepted": st["accepted"], "complete": st["complete"], "rejected": st["rejected"],
             "offers": [{out: o.get(src) for src, out in OFFER_FIELDS} for _, o in sorted(offers.items(), key=lambda kv: str(kv[0]))]}
+
+
+def build_output(per_store, now=None):
+    """Uden importvagt (bevaret til kompatibilitet). Brug build_guarded_output i produktion."""
+    now = now or dt.datetime.now(dt.timezone.utc)
     return {"generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "Tilbudsugen.dk",
             "source_url": "https://www.tilbudsugen.dk",
             "use": "Privat, ikke-kommerciel brug. Må kun deles med nærmeste familie. Angiv Tilbudsugen.dk som datakilde.",
-            "stores": stores}
+            "stores": {st["store"]: store_entry(st, offers) for st, offers in per_store}}
+
+
+def build_guarded_output(per_store, now=None, prev_doc=None, today=None):
+    """Samlet fil til privat lager. Kun navn, pris, butik og gyldighed (ingen billeder eller links).
+    Importvagten (offer_guard) beslutter pr. butik, om nye data må erstatte forrige. Returnerer (fil eller None, rapport)."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    today = today or now.date()
+    body, summary = offer_guard.assemble(per_store, prev_doc, today, now, store_entry)
+    if body is None:
+        return None, summary
+    doc = {"generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "Tilbudsugen.dk",
+           "source_url": "https://www.tilbudsugen.dk",
+           "use": "Privat, ikke-kommerciel brug. Må kun deles med nærmeste familie. Angiv Tilbudsugen.dk som datakilde.",
+           "stores": body["stores"], "import_report": body["import_report"]}
+    return doc, summary
 
 
 def main(get=http_get, sleep=time.sleep, argv=None):
@@ -182,13 +198,21 @@ def main(get=http_get, sleep=time.sleep, argv=None):
         with open(path, "a", encoding="utf-8") as f:
             f.write("## Hent alle tilbudssider (prøvekørsel, intet gemmes)\n\n" + text + "\n")
     if out_path:
-        if not any(st["accepted"] for st in results):
-            print("INGEN tilbud accepteret, filen skrives ikke.")
+        prev = offer_guard.load_previous(out_path)
+        doc, summary = build_guarded_output(per_store, prev_doc=prev, today=today)
+        for slug, r in summary["stores"].items():
+            if r["status"] != "ok":
+                print("TILBAGEHOLDT %s: %s (accepteret %s, tidligere gyldige %s, væk %s)" % (
+                    slug, r["reason"], r["accepted"], r["previous_running"], r["vanished"]))
+        if doc is None:
+            print("Kørslen blokeret (%s). Filen er uændret." % summary.get("blocked_reason"))
             return 1
+        tmp = Path(out_path + ".tmp")
         Path(out_path).parent.mkdir(parents=True, exist_ok=True)
-        Path(out_path).write_text(json.dumps(build_output(per_store), ensure_ascii=False, separators=(",", ":")) + "\n",
-                                  encoding="utf-8")
-        print("Skrev %s (%d tilbud)" % (out_path, sum(st["accepted"] for st in results)))
+        tmp.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+        tmp.replace(out_path)
+        print("Skrev %s (%d tilbud, %d butikker tilbageholdt)" % (
+            out_path, sum(len(s["offers"]) for s in doc["stores"].values()), len(summary["held"])))
     return 0
 
 

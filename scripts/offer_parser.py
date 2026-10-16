@@ -164,11 +164,85 @@ def candidates_from_html(html, today):
     return out
 
 
+ITEM_CONTAINERS = (("props", "pageProps", "searchResult", "pageOfOrganicProductOffers"),
+                   ("props", "pageProps", "data", "pageOfOrganicProductOffers"))
+
+
+def _dig(doc, path):
+    for k in path:
+        if not isinstance(doc, dict):
+            return None
+        doc = doc.get(k)
+    return doc
+
+
+def next_items(html):
+    """Tilbudsobjekter fra __NEXT_DATA__ (kendte stier, verificeret mod probe-rapport 16/10 2026).
+    Returnerer (liste af rå objekter, sidens tal-/bool-felter, sti-label)."""
+    m = RE_NEXT.search(html)
+    doc = _loads(m.group(1)) if m else {}
+    for path in ITEM_CONTAINERS:
+        c = _dig(doc, path)
+        if isinstance(c, dict) and isinstance(c.get("items"), list) and c["items"]:
+            info = {k: v for k, v in c.items() if isinstance(v, (int, float, bool)) and len(str(k)) < 40}
+            return [i for i in c["items"] if isinstance(i, dict)], info, ".".join(path[2:])
+    prods = _dig(doc, ("props", "pageProps", "products"))
+    if isinstance(prods, list) and prods and isinstance(prods[0], dict) and "startDate" in prods[0]:
+        return [i for i in prods if isinstance(i, dict)], {}, "pageProps.products"
+    return [], {}, None
+
+
+def _txt(v):
+    return v.strip() if isinstance(v, str) and v.strip() else None
+
+
+def candidate_from_item(it):
+    pn = it.get("productName")
+    name = _txt(pn.get("productName") if isinstance(pn, dict) else pn)
+    brand = it.get("brand") if isinstance(it.get("brand"), dict) else {}
+    chain = it.get("chain") if isinstance(it.get("chain"), dict) else {}
+    return {"name": name, "price": _num(it.get("price")), "valid_from": _date(it.get("startDate")),
+            "valid_to": _date(it.get("endDate")), "id": it.get("id"), "brand": _txt(brand.get("name")),
+            "chain": _txt(chain.get("name")), "quantity": _num(it.get("quantity")),
+            "quantity_type": _txt(it.get("quantityType")), "unit_type": _txt(it.get("unitType")),
+            "unit_price": _num(it.get("pricePerFullUnitOfQuantityType")), "currency": _txt(it.get("currency"))}
+
+
+def parse_next_items(html, today):
+    items, info, label = next_items(html)
+    reasons = collections.Counter()
+    ok = []
+    for it in items:
+        c = candidate_from_item(it)
+        r = accept(c, today, reasons)
+        if r:
+            if c["currency"] and c["currency"] != "DKK":
+                reasons["not_dkk"] += 1
+                continue
+            r.update({k: c[k] for k in ("id", "brand", "chain", "quantity", "quantity_type", "unit_type", "unit_price")})
+            ok.append(r)
+    diag = {"source_used": "next_items" if ok else None, "container": label, "candidates": len(items),
+            "accepted": len(ok), "rejected": dict(reasons), "year_inferred": 0, "page_info": info}
+    if ok:
+        diag["chains"] = dict(collections.Counter(r["chain"] or "?" for r in ok).most_common(5))
+        diag["distinct_ids"] = len({r["id"] for r in ok})
+        diag["valid_from_min"] = min(r["valid_from"] for r in ok)
+        diag["valid_to_max"] = max(r["valid_to"] for r in ok)
+        diag["with_quantity"] = sum(1 for r in ok if r["quantity"])
+        diag["with_unit_price"] = sum(1 for r in ok if r["unit_price"])
+    return ok, diag
+
+
 def parse_page(html, today=None):
     """Returnerer (accepterede poster, sikker diagnostik). Diagnostikken indeholder kun tal og kategorier."""
     today = today or dt.date.today()
     reasons = collections.Counter()
     diag = {"source_used": None, "candidates": 0, "accepted": 0, "rejected": {}, "year_inferred": 0}
+    ok, d2 = parse_next_items(html, today)
+    if ok:
+        return ok, d2
+    if d2["candidates"]:
+        diag.update(candidates=d2["candidates"], rejected=d2["rejected"], container=d2["container"])
     for label, getter in (
         ("json_ld", lambda: [c for m in RE_LD.finditer(html) for c in candidates_from_json(_loads(m.group(1)))]),
         ("next_data", lambda: [c for m in RE_NEXT.finditer(html) for c in candidates_from_json(_loads(m.group(1)))]),

@@ -123,6 +123,29 @@ def probe_next_data_endpoint(url, html, opener):
     return out
 
 
+def _ids(html):
+    items, _, _ = offer_parser.next_items(html)
+    return {i.get("id") for i in items if isinstance(i, dict) and i.get("id") is not None}
+
+
+def probe_pagination(url, html, opener):
+    """Gætter pagineringsparametre på samme URL og tæller kun hvor mange tilbuds-id'er der er nye."""
+    base = _ids(html)
+    m = RE_NEXT_ID.search(html)
+    q = offer_parser._loads(m.group(1)).get("query") if m else None
+    out = {"page1_ids": len(base), "query_keys": sorted(q)[:10] if isinstance(q, dict) and all(isinstance(k, str) and len(k) < 30 for k in q) else None, "tries": {}}
+    p = urllib.parse.urlparse(url)
+    for param in ("page=2", "side=2"):
+        u = url + ("&" if p.query else "?") + param
+        status, body = fetch(u, opener)
+        row = {"http": status}
+        if status == 200:
+            ids = _ids(body.decode("utf-8", "replace"))
+            row.update(ids=len(ids), new=len(ids - base), overlap=len(ids & base))
+        out["tries"][param] = row
+    return out
+
+
 def probe_chain(slug, url, opener=urllib.request.urlopen):
     row = {"store": slug, "http": None, "bytes": 0, "too_large": False, "structured_records": 0, "robots": "unknown", "result": "error"}
     try:
@@ -140,10 +163,10 @@ def probe_chain(slug, url, opener=urllib.request.urlopen):
         html = body.decode("utf-8", "replace")
         row["structured_records"] = ld_offer_count(html)
         row["signals"] = html_signals(html)
-        row["shape"] = offer_parser.page_shape(html, cards=1, max_lines=25)
         row["next_shape"] = offer_parser.next_data_shape(html)
         recs, row["parser"] = offer_parser.parse_page(html)  # kun tal; selve posterne droppes
         row["next_data_endpoint"] = probe_next_data_endpoint(url, html, opener)
+        row["pagination"] = probe_pagination(url, html, opener)
         row["result"] = "ok_structured" if row["structured_records"] else "ok_no_structured_data"
     except Exception:
         row["result"] = "error"

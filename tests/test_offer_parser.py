@@ -102,5 +102,35 @@ class NextShapeTests(unittest.TestCase):
         self.assertNotIn("Kyllingebryst", json.dumps(lp))
 
 
+def next_page(items, key="searchResult"):
+    doc = {"props": {"pageProps": {key: {"pageOfOrganicProductOffers": {"items": items, "currentPage": 1, "totalItems": 734}}}}}
+    return '<script id="__NEXT_DATA__" type="application/json">' + json.dumps(doc) + '</script>'
+
+
+def item(i, price="25.00", start="2026-10-16", end="2026-10-22", name="Testvare", chain="TestButik", currency="DKK"):
+    return {"id": i, "startDate": start, "endDate": end, "price": price, "currency": currency, "quantity": "500",
+            "quantityType": "g", "unitType": "stk", "pricePerFullUnitOfQuantityType": "50.00",
+            "productName": {"id": 1, "productName": name}, "brand": {"id": 2, "name": "M"}, "chain": {"id": 3, "name": chain}}
+
+
+class NextItemsTests(unittest.TestCase):
+    def test_accepts_only_complete_items_and_reports_counts(self):
+        html = next_page([item(1), item(2, price=None), item(3, start="2026-10-05", end="2026-10-10"), item(4, name=None),
+                          item(5, start="2026-10-23", end="2026-10-20"), item(6, currency="SEK")])
+        ok, diag = op.parse_page(html, TODAY)
+        self.assertEqual([r["id"] for r in ok], [1])
+        self.assertEqual(ok[0]["price_dkk"], 25.0)
+        self.assertEqual(ok[0]["valid_from"], "2026-10-16")
+        self.assertEqual(diag["source_used"], "next_items")
+        self.assertEqual(diag["candidates"], 6)
+        self.assertEqual(diag["rejected"], {"no_or_bad_price": 1, "expired": 1, "no_name": 1, "bad_date_range": 1, "not_dkk": 1})
+        self.assertEqual(diag["page_info"], {"currentPage": 1, "totalItems": 734})
+        self.assertEqual(diag["chains"], {"TestButik": 1})
+
+    def test_data_container_path(self):
+        ok, diag = op.parse_page(next_page([item(1), item(2)], key="data"), TODAY)
+        self.assertEqual(len(ok), 2)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -28,7 +28,7 @@ class ProbeTest(unittest.TestCase):
         r = sp.probe_chain("x", URL, opener_for({URL: LD, "https://example.test/robots.txt": b"User-agent: *\nDisallow: /admin"}))
         self.assertEqual((r["result"], r["structured_records"], r["robots"]), ("ok_structured", 2, "allowed"))
         self.assertNotIn("9", json.dumps(r.get("price", "")))
-        self.assertEqual(set(r), {"store", "http", "bytes", "too_large", "structured_records", "robots", "result", "signals", "shape", "next_shape", "parser", "next_data_endpoint"})
+        self.assertEqual(set(r), {"store", "http", "bytes", "too_large", "structured_records", "robots", "result", "signals", "next_shape", "parser", "next_data_endpoint", "pagination"})
 
     def test_robots_disallow_stops_before_fetching_page(self):
         calls = []

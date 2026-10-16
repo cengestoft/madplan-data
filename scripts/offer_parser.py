@@ -208,9 +208,9 @@ def candidate_from_item(it):
             "unit_price": _num(it.get("pricePerFullUnitOfQuantityType")), "currency": _txt(it.get("currency"))}
 
 
-def parse_next_items(html, today):
-    items, info, label = next_items(html)
-    reasons = collections.Counter()
+def accept_items(items, today, reasons=None):
+    """Streng accept af rå tilbudsobjekter. Returnerer (godkendte poster, afvisningstællere)."""
+    reasons = collections.Counter() if reasons is None else reasons
     ok = []
     for it in items:
         c = candidate_from_item(it)
@@ -220,7 +220,14 @@ def parse_next_items(html, today):
                 reasons["not_dkk"] += 1
                 continue
             r.update({k: c[k] for k in ("id", "brand", "chain", "quantity", "quantity_type", "unit_type", "unit_price")})
+            r["quantity_raw"] = _txt(it.get("quantity"))
             ok.append(r)
+    return ok, reasons
+
+
+def parse_next_items(html, today):
+    items, info, label = next_items(html)
+    ok, reasons = accept_items(items, today)
     diag = {"source_used": "next_items" if ok else None, "container": label, "candidates": len(items),
             "accepted": len(ok), "rejected": dict(reasons), "year_inferred": 0, "page_info": info}
     if ok:

@@ -140,7 +140,8 @@ def probe_chain(slug, url, opener=urllib.request.urlopen):
         html = body.decode("utf-8", "replace")
         row["structured_records"] = ld_offer_count(html)
         row["signals"] = html_signals(html)
-        row["shape"] = offer_parser.page_shape(html)
+        row["shape"] = offer_parser.page_shape(html, cards=1, max_lines=25)
+        row["next_shape"] = offer_parser.next_data_shape(html)
         recs, row["parser"] = offer_parser.parse_page(html)  # kun tal; selve posterne droppes
         row["next_data_endpoint"] = probe_next_data_endpoint(url, html, opener)
         row["result"] = "ok_structured" if row["structured_records"] else "ok_no_structured_data"

@@ -313,3 +313,69 @@ def page_shape(html, cards=2, max_lines=70):
         if len(out) >= cards:
             break
     return out
+
+
+def _vkind(v):
+    if v is None:
+        return "null"
+    if isinstance(v, bool):
+        return "bool"
+    if isinstance(v, (int, float)):
+        return "num"
+    if isinstance(v, list):
+        return "list[%d]" % len(v)
+    if isinstance(v, dict):
+        return "dict"
+    if isinstance(v, str):
+        s = v.strip()
+        if re.match(r"\d{4}-\d{2}-\d{2}", s):
+            return "ISO_DATE"
+        if RE_RANGE.search(s):
+            return "DATE_RANGE"
+        if re.fullmatch(r"\d{1,5}(?:[.,]\d{1,2})?", s) or RE_PRICE.search(s):
+            return "PRICE_OR_NUM_STR"
+        if s.startswith(("http", "/")):
+            return "url"
+        return "text<=10" if len(s) <= 10 else "text<=30" if len(s) <= 30 else "text>30"
+    return type(v).__name__
+
+
+def _safe_keys(d):
+    ks = list(d)
+    if len(ks) > 40 or any((not isinstance(k, str)) or len(k) > 40 or " " in k for k in ks):
+        return None
+    return ks
+
+
+def next_data_shape(html, max_paths=25):
+    """Sti til lister af objekter i __NEXT_DATA__ med feltnavne og værditype. Aldrig værdier."""
+    m = RE_NEXT.search(html)
+    if not m:
+        return {"found": False}
+    doc = _loads(m.group(1))
+    top = _safe_keys(doc) if isinstance(doc, dict) else None
+    out, stack = [], [("$", doc, 0)]
+    while stack and len(out) < max_paths:
+        path, x, depth = stack.pop(0)
+        if depth > 9:
+            continue
+        if isinstance(x, dict):
+            ks = _safe_keys(x)
+            if ks is None:
+                out.append({"path": path, "note": "dict med mange/frie nøgler", "keys": len(x)})
+                continue
+            for k in ks:
+                stack.append((path + "." + k, x[k], depth + 1))
+        elif isinstance(x, list) and x:
+            if all(isinstance(i, dict) for i in x[:5]) and len(x) >= 3:
+                first = x[0]
+                ks = _safe_keys(first)
+                out.append({"path": path + "[]", "len": len(x),
+                            "fields": {k: _vkind(first[k]) for k in ks} if ks else "frie nøgler"})
+                if ks:
+                    for k in ks:
+                        if isinstance(first[k], (dict, list)):
+                            stack.append((path + "[]." + k, first[k], depth + 1))
+            elif isinstance(x[0], (dict, list)):
+                stack.append((path + "[0]", x[0], depth + 1))
+    return {"found": True, "top_keys": top, "list_paths": out}

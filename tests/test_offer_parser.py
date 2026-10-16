@@ -75,5 +75,21 @@ class ShapeTests(unittest.TestCase):
             self.assertNotIn(forbidden, text)
 
 
+class NextShapeTests(unittest.TestCase):
+    def test_shape_lists_field_types_not_values(self):
+        doc = {"props": {"pageProps": {"offers": [
+            {"title": "Hakket oksekød 500 g", "price": 25, "dateRange": "16.10 - 22.10", "start": "2026-10-16", "img": "/x.png"}
+            for _ in range(4)]}}}
+        html = '<script id="__NEXT_DATA__" type="application/json">' + json.dumps(doc) + '</script>'
+        sh = op.next_data_shape(html)
+        self.assertTrue(sh["found"])
+        lp = sh["list_paths"][0]
+        self.assertEqual(lp["path"], "$.props.pageProps.offers[]")
+        self.assertEqual(lp["fields"]["dateRange"], "DATE_RANGE")
+        self.assertEqual(lp["fields"]["start"], "ISO_DATE")
+        self.assertNotIn("oksekød", json.dumps(sh))
+        self.assertNotIn("2026-10-16", json.dumps(sh))
+
+
 if __name__ == "__main__":
     unittest.main()

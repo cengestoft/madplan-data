@@ -5,6 +5,7 @@ Kun faste, sikre felter pr. kæde (HTTP-status, størrelse, antal strukturerede 
 Ingen sideindhold, produktnavne, priser eller datoer gemmes eller printes (logs er offentlige).
 Én kæde, der fejler, stopper aldrig de øvrige.
 """
+import collections
 import json
 import re
 import sys
@@ -14,6 +15,8 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import offer_parser  # noqa: E402
 UA = "SuperkoebSourceProbe/1.0 (+https://github.com/cengestoft/madplan-data)"
 MAX_BYTES = 5 * 1024 * 1024
 CHAINS = {  # import_status.json "sources": fast liste over de 15 kæder
@@ -73,6 +76,53 @@ def ld_offer_count(html):
     return n
 
 
+RE_NEXT_ID = re.compile(r'<script[^>]+id=["\']__NEXT_DATA__["\'][^>]*>(.*?)</script>', re.I | re.S)
+RE_TITLE = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
+RE_SCRIPT_SRC = re.compile(r'<script[^>]+src=["\']([^"\']+)["\']', re.I)
+RE_ENDPOINT = re.compile(r'["\'](/(?:api|_next/data)/[A-Za-z0-9_\-./]{1,80})')
+
+
+def html_signals(html):
+    """Kun tal, booleans og korte strukturnavne. Aldrig produktnavne, priser eller rå tekst."""
+    sig = {"title": " ".join((RE_TITLE.search(html).group(1) if RE_TITLE.search(html) else "").split())[:60],
+           "json_ld_blocks": len(RE_LD.findall(html)), "ld_offer_count": ld_offer_count(html),
+           "next_data": False, "next_data_keys": [], "next_build_id": False,
+           "date_range_matches": len(offer_parser.RE_RANGE.findall(html)),
+           "price_matches": len(offer_parser.RE_PRICE.findall(html)),
+           "single_links": len(set(offer_parser.RE_SINGLE.findall(html))),
+           "script_tags": len(re.findall(r"<script\b", html, re.I)),
+           "external_script_hosts": sorted({urllib.parse.urlparse(u).netloc for u in RE_SCRIPT_SRC.findall(html) if u.startswith(("http", "//"))})[:8],
+           "endpoint_path_prefixes": sorted({"/".join(m.split("/")[:3]) for m in RE_ENDPOINT.findall(html)})[:8],
+           "content_fingerprint": offer_parser.content_fingerprint(html)}
+    shown, total = offer_parser.load_more_counts(html)
+    sig["load_more_shown"], sig["load_more_total"] = shown, total
+    m = RE_NEXT_ID.search(html)
+    if m:
+        doc = offer_parser._loads(m.group(1))
+        sig["next_data"] = True
+        sig["next_data_keys"] = sorted(doc)[:10] if isinstance(doc, dict) else []
+        sig["next_build_id"] = bool(isinstance(doc, dict) and doc.get("buildId"))
+    return sig
+
+
+def probe_next_data_endpoint(url, html, opener):
+    """Dokumenteret Next.js-mønster: /_next/data/<buildId>/<sti>.json. Kun hvis robots tillader det."""
+    m = RE_NEXT_ID.search(html)
+    doc = offer_parser._loads(m.group(1)) if m else {}
+    bid = doc.get("buildId") if isinstance(doc, dict) else None
+    if not bid or not re.fullmatch(r"[A-Za-z0-9_\-]{5,64}", str(bid)):
+        return {"tried": False}
+    p = urllib.parse.urlparse(url)
+    ep = f"{p.scheme}://{p.netloc}/_next/data/{bid}{p.path}.json"
+    if robots_allows(f"{p.scheme}://{p.netloc}", urllib.parse.urlparse(ep).path, opener) == "disallowed":
+        return {"tried": False, "robots": "disallowed"}
+    status, body = fetch(ep, opener)
+    out = {"tried": True, "http": status, "bytes": min(len(body), MAX_BYTES)}
+    if status == 200:
+        recs, out["parser"] = offer_parser.parse_json_doc(offer_parser._loads(body.decode("utf-8", "replace")))
+    return out
+
+
 def probe_chain(slug, url, opener=urllib.request.urlopen):
     row = {"store": slug, "http": None, "bytes": 0, "too_large": False, "structured_records": 0, "robots": "unknown", "result": "error"}
     try:
@@ -87,7 +137,11 @@ def probe_chain(slug, url, opener=urllib.request.urlopen):
         row["too_large"] = len(body) > MAX_BYTES
         if status != 200:
             row["result"] = "http_error" if status else "unreachable"; return row
-        row["structured_records"] = ld_offer_count(body.decode("utf-8", "replace"))
+        html = body.decode("utf-8", "replace")
+        row["structured_records"] = ld_offer_count(html)
+        row["signals"] = html_signals(html)
+        recs, row["parser"] = offer_parser.parse_page(html)  # kun tal; selve posterne droppes
+        row["next_data_endpoint"] = probe_next_data_endpoint(url, html, opener)
         row["result"] = "ok_structured" if row["structured_records"] else "ok_no_structured_data"
     except Exception:
         row["result"] = "error"
@@ -100,7 +154,14 @@ def main(opener=urllib.request.urlopen):
     for slug, key in CHAINS.items():
         url = (status.get(key) or {}).get("source_url")
         rows.append(probe_chain(slug, url, opener) if url else {"store": slug, "result": "no_source_url"})
-    out = {"mode": "dry_run_no_data_written", "stores": rows}
+    groups = collections.defaultdict(list)
+    for r in rows:
+        fp = (r.get("signals") or {}).get("content_fingerprint")
+        if fp:
+            groups[fp].append(r["store"])
+    shared = [sorted(v) for v in groups.values() if len(v) > 1]
+    out = {"mode": "dry_run_no_data_written", "identical_content_groups": shared,
+           "distinct_pages": len(groups), "stores": rows}
     print(json.dumps(out, ensure_ascii=False, indent=2))
     Path("source_probe_report.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return 0

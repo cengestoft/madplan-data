@@ -1,0 +1,29 @@
+name: Daily all-store offer audit
+
+on:
+  schedule:
+    - cron: "45 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit every store, including Bilka and REMA 1000
+        run: python scripts/audit_daily_store_offers.py
+      - name: Check current-offer freshness
+        continue-on-error: true
+        run: python scripts/check_freshness.py
+      - name: Preserve daily diagnostic report
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-store-freshness
+          path: daily_store_freshness_report.json
+          retention-days: 30

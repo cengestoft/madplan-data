@@ -77,5 +77,37 @@ class BucketTests(unittest.TestCase):
         self.assertEqual(dict(b), {"start_efter_slut": 1, "varighed_121_365": 1, "varighed_over_365": 1})
 
 
+class OutputTests(unittest.TestCase):
+    def test_build_output_has_only_offer_fields(self):
+        site = FakeSite(3, False)
+        st, offers = fo.fetch_chain("x", "https://example.invalid/x", TODAY, site.get, lambda s: None)
+        out = fo.build_output([(st, offers)], dt.datetime(2026, 10, 16, 3, 0, tzinfo=dt.timezone.utc))
+        self.assertEqual(out["source"], "Tilbudsugen.dk")
+        self.assertEqual(out["generated_at"], "2026-10-16T03:00:00Z")
+        o = out["stores"]["x"]["offers"]
+        self.assertEqual(len(o), 3)
+        self.assertEqual(set(o[0]), {"id", "name", "brand", "price_dkk", "unit_price_dkk", "quantity_raw", "quantity_type",
+                                     "unit_type", "valid_from", "valid_to", "long_validity"})
+        self.assertEqual(o[0]["price_dkk"], 10.0)
+        self.assertEqual(o[0]["quantity_raw"], "500")
+
+    def test_main_writes_file_only_with_out(self):
+        import tempfile, os
+        site = FakeSite(40, False)
+        orig = fo.source_probe.CHAINS
+        fo.source_probe.CHAINS = {"x": "bilka"}
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                self.assertEqual(fo.main(site.get, lambda s: None, argv=[]), 0)
+                self.assertEqual(os.listdir(d), [])
+                path = os.path.join(d, "data", "offers.json")
+                self.assertEqual(fo.main(site.get, lambda s: None, argv=["--out", path]), 0)
+                with open(path, encoding="utf-8") as f:
+                    data = json.load(f)
+                self.assertEqual(len(data["stores"]["x"]["offers"]), 40)
+        finally:
+            fo.source_probe.CHAINS = orig
+
+
 if __name__ == "__main__":
     unittest.main()

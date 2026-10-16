@@ -140,17 +140,40 @@ def summary_lines(results):
     return lines
 
 
-def main(get=http_get, sleep=time.sleep):
+OFFER_FIELDS = (("id", "id"), ("name", "name"), ("brand", "brand"), ("price_dkk", "price_dkk"), ("unit_price", "unit_price_dkk"),
+                ("quantity_raw", "quantity_raw"), ("quantity_type", "quantity_type"), ("unit_type", "unit_type"),
+                ("valid_from", "valid_from"), ("valid_to", "valid_to"), ("long_validity", "long_validity"))
+
+
+def build_output(per_store, now=None):
+    """Samlet fil til privat lager. Kun navn, pris, butik og gyldighed (ingen billeder eller links)."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    stores = {}
+    for st, offers in per_store:
+        stores[st["store"]] = {
+            "chain": next(iter(st.get("chains") or {}), None), "total_reported": st["total_reported"],
+            "accepted": st["accepted"], "complete": st["complete"], "rejected": st["rejected"],
+            "offers": [{out: o.get(src) for src, out in OFFER_FIELDS} for _, o in sorted(offers.items(), key=lambda kv: str(kv[0]))]}
+    return {"generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "Tilbudsugen.dk",
+            "source_url": "https://www.tilbudsugen.dk",
+            "use": "Privat, ikke-kommerciel brug. Må kun deles med nærmeste familie. Angiv Tilbudsugen.dk som datakilde.",
+            "stores": stores}
+
+
+def main(get=http_get, sleep=time.sleep, argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    out_path = argv[argv.index("--out") + 1] if "--out" in argv else None
     status = json.loads((ROOT / "import_status.json").read_text(encoding="utf-8"))["sources"]
-    today, budget, results = dt.date.today(), Budget(), []
+    today, budget, results, per_store = dt.date.today(), Budget(), [], []
     for slug, key in source_probe.CHAINS.items():
         url = (status.get(key) or {}).get("source_url")
         if not url:
             results.append({"store": slug, "pages_fetched": 0, "total_reported": None, "fetched_ids": 0, "accepted": 0,
                             "rejected": {}, "complete": False, "stopped": "no_source_url", "chains": {}})
             continue
-        st, _offers = fetch_chain(slug, url, today, get, sleep, budget)  # prøvekørsel: tilbuddene droppes
+        st, offers = fetch_chain(slug, url, today, get, sleep, budget)
         results.append(st)
+        per_store.append((st, offers))
         sleep(DELAY)
     text = "\n".join(summary_lines(results))
     print(text)
@@ -158,6 +181,14 @@ def main(get=http_get, sleep=time.sleep):
     if path:
         with open(path, "a", encoding="utf-8") as f:
             f.write("## Hent alle tilbudssider (prøvekørsel, intet gemmes)\n\n" + text + "\n")
+    if out_path:
+        if not any(st["accepted"] for st in results):
+            print("INGEN tilbud accepteret, filen skrives ikke.")
+            return 1
+        Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(out_path).write_text(json.dumps(build_output(per_store), ensure_ascii=False, separators=(",", ":")) + "\n",
+                                  encoding="utf-8")
+        print("Skrev %s (%d tilbud)" % (out_path, sum(st["accepted"] for st in results)))
     return 0
 
 

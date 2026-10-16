@@ -91,5 +91,16 @@ class NextShapeTests(unittest.TestCase):
         self.assertNotIn("2026-10-16", json.dumps(sh))
 
 
+    def test_wide_items_and_nested_fields_show_types_only(self):
+        item = {"f%d" % i: i for i in range(60)}
+        item.update({"name": "Kyllingebryst 400 g", "prices": {"current": 29.5, "validTo": "2026-10-22"}, "range": "16.10 - 22.10"})
+        doc = {"props": {"pageProps": {"searchResult": {"items": [dict(item) for _ in range(4)]}}}}
+        html = '<script id="__NEXT_DATA__" type="application/json">' + json.dumps(doc) + '</script>'
+        lp = op.next_data_shape(html)["list_paths"][0]
+        self.assertEqual(lp["fields"]["prices"]["validTo"], "ISO_DATE")
+        self.assertEqual(lp["fields"]["range"], "DATE_RANGE")
+        self.assertNotIn("Kyllingebryst", json.dumps(lp))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -340,11 +340,33 @@ def _vkind(v):
     return type(v).__name__
 
 
-def _safe_keys(d):
+RE_KEY = re.compile(r"[A-Za-z_@$][\w@$-]{0,59}")
+
+
+def _safe_keys(d, limit=40):
     ks = list(d)
-    if len(ks) > 40 or any((not isinstance(k, str)) or len(k) > 40 or " " in k for k in ks):
+    if len(ks) > limit or any((not isinstance(k, str)) or not RE_KEY.fullmatch(k) for k in ks):
         return None
     return ks
+
+
+def _fieldtypes(d):
+    """Feltnavn -> værditype for et objekt; ét niveau ned for under-objekter. Aldrig værdier."""
+    ks = _safe_keys(d, 150)
+    if ks is None:
+        return "frie nøgler"
+    out = {}
+    for k in ks:
+        v = d[k]
+        if isinstance(v, dict):
+            sub = _safe_keys(v, 25)
+            out[k] = {kk: _vkind(v[kk]) for kk in sub} if sub else "dict(frie/mange nøgler)"
+        elif isinstance(v, list) and v and isinstance(v[0], dict):
+            sub = _safe_keys(v[0], 25)
+            out[k] = {"list[%d] af" % len(v): ({kk: _vkind(v[0][kk]) for kk in sub} if sub else "frie nøgler")}
+        else:
+            out[k] = _vkind(v)
+    return out
 
 
 def next_data_shape(html, max_paths=25):
@@ -369,11 +391,9 @@ def next_data_shape(html, max_paths=25):
         elif isinstance(x, list) and x:
             if all(isinstance(i, dict) for i in x[:5]) and len(x) >= 3:
                 first = x[0]
-                ks = _safe_keys(first)
-                out.append({"path": path + "[]", "len": len(x),
-                            "fields": {k: _vkind(first[k]) for k in ks} if ks else "frie nøgler"})
-                if ks:
-                    for k in ks:
+                out.append({"path": path + "[]", "len": len(x), "fields": _fieldtypes(first)})
+                if _safe_keys(first, 150):
+                    for k in first:
                         if isinstance(first[k], (dict, list)):
                             stack.append((path + "[]." + k, first[k], depth + 1))
             elif isinstance(x[0], (dict, list)):

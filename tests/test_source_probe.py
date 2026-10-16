@@ -47,3 +47,14 @@ class ProbeTest(unittest.TestCase):
         self.assertEqual(len(sp.CHAINS), 15)
         status = json.loads((Path(sp.ROOT) / "import_status.json").read_text())["sources"]
         for key in sp.CHAINS.values(): self.assertIn("source_url", status[key])
+
+
+class SummaryTest(unittest.TestCase):
+    def test_summary_has_numbers_and_chain_names_only(self):
+        out = {"identical_content_groups": [], "distinct_pages": 1, "stores": [{
+            "store": "bilka", "http": 200,
+            "parser": {"accepted": 30, "candidates": 30, "chains": {"Bilka": 30}, "valid_from_min": "2026-10-16",
+                       "valid_to_max": "2026-10-22", "rejected": {}, "page_info": {"totalNumberOfItems": 717}},
+            "pagination": {"tries": {"page=2": {"http": 200, "new": 30}}}}]}
+        text = "\n".join(sp.summary_lines(out))
+        self.assertIn("| bilka | 200 | 30/30 | Bilka | 2026-10-16 | 2026-10-22 | 717 | 30 |", text)

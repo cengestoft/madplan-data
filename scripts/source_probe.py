@@ -7,6 +7,7 @@ Ingen sideindhold, produktnavne, priser eller datoer gemmes eller printes (logs 
 """
 import collections
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -173,6 +174,24 @@ def probe_chain(slug, url, opener=urllib.request.urlopen):
     return row
 
 
+def summary_lines(out):
+    """Kort, sikker tekstoversigt (kun tal og kædenavne). Bruges i loggen og i kørslens Summary."""
+    lines = ["| kilde | http | accepteret/kandidater | kæde i tilbud | gyldig fra | gyldig til | i alt | nye ved ?page=2 | afvist |",
+             "|---|---|---|---|---|---|---|---|---|"]
+    for r in out["stores"]:
+        p, g = r.get("parser") or {}, r.get("pagination") or {}
+        info = p.get("page_info") or {}
+        pg = ((g.get("tries") or {}).get("page=2") or {}).get("new")
+        lines.append("| %s | %s | %s/%s | %s | %s | %s | %s | %s | %s |" % (
+            r.get("store"), r.get("http"), p.get("accepted"), p.get("candidates"),
+            ",".join((p.get("chains") or {}).keys()) or "-", p.get("valid_from_min") or "-",
+            p.get("valid_to_max") or "-", info.get("totalNumberOfItems", "-"), pg if pg is not None else "-",
+            json.dumps(p.get("rejected") or {}, ensure_ascii=False)))
+    lines.append("")
+    lines.append("distinct_pages=%s, identical_content_groups=%s" % (out["distinct_pages"], out["identical_content_groups"]))
+    return lines
+
+
 def main(opener=urllib.request.urlopen):
     status = json.loads((ROOT / "import_status.json").read_text(encoding="utf-8"))["sources"]
     rows = []
@@ -187,8 +206,13 @@ def main(opener=urllib.request.urlopen):
     shared = [sorted(v) for v in groups.values() if len(v) > 1]
     out = {"mode": "dry_run_no_data_written", "identical_content_groups": shared,
            "distinct_pages": len(groups), "stores": rows}
-    print(json.dumps(out, ensure_ascii=False, indent=2))
     Path("source_probe_report.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    text = "\n".join(summary_lines(out))
+    print(text)
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as f:
+            f.write("## Source probe\n\n" + text + "\n")
     return 0
 
 

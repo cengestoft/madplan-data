@@ -1,0 +1,27 @@
+name: Fetch all offers (dry run)
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/fetch-offers-dryrun.yml"
+      - "scripts/fetch_offers.py"
+      - "scripts/offer_parser.py"
+      - "tests/test_fetch_offers.py"
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest tests.test_source_probe tests.test_offer_parser tests.test_fetch_offers
+      - name: Fetch every offer page (nothing is stored)
+        run: python scripts/fetch_offers.py

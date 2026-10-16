@@ -132,5 +132,15 @@ class NextItemsTests(unittest.TestCase):
         self.assertEqual(len(ok), 2)
 
 
+class LongValidityTests(unittest.TestCase):
+    def test_63_to_120_days_accepted_and_flagged_longer_rejected(self):
+        html = next_page([item(1, start="2026-10-01", end="2026-12-15"),   # 75 dage
+                          item(2, start="2026-10-01", end="2026-10-20"),   # 19 dage
+                          item(3, start="2026-10-01", end="2027-03-01")])  # >120 dage
+        ok, diag = op.parse_page(html, TODAY)
+        self.assertEqual({r["id"]: r["long_validity"] for r in ok}, {1: True, 2: False})
+        self.assertEqual(diag["rejected"], {"bad_date_range": 1})
+
+
 if __name__ == "__main__":
     unittest.main()

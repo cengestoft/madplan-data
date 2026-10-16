@@ -100,6 +100,7 @@ def fetch_chain(slug, url, today, get=http_get, sleep=time.sleep, budget=None):
     st["complete"] = done()
     st["chains"] = dict(collections.Counter(r["chain"] or "?" for r in offers.values()).most_common(3))
     st["date_issues"] = dict(buckets)
+    st["long_validity"] = sum(1 for r in offers.values() if r.get("long_validity"))
     return st, offers
 
 
@@ -130,6 +131,10 @@ def summary_lines(results):
     issues = [(st["store"], st["date_issues"]) for st in results if st.get("date_issues")]
     if issues:
         lines += ["", "datoafvisninger (kun tal): " + "; ".join("%s %s" % (n, json.dumps(d, ensure_ascii=False)) for n, d in issues)]
+    longs = [(st["store"], st["long_validity"]) for st in results if st.get("long_validity")]
+    if longs:
+        lines += ["", "accepterede tilbud med varighed over %d dage (markeret long_validity): " % offer_parser.LONG_DAYS
+                  + "; ".join("%s %d" % x for x in longs)]
     tot = sum(st["accepted"] for st in results)
     lines += ["", "accepteret i alt: %d, forespørgsler i alt: %d" % (tot, sum(st["pages_fetched"] for st in results))]
     return lines

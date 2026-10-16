@@ -21,7 +21,8 @@ RE_RANGE = re.compile(r"(?<!\d)(\d{1,2})\.(\d{1,2})(?:\.(\d{2,4}))?\s*[-–]\s*(
 RE_PRICE = re.compile(r"(?<![\d,.])(\d{1,4}(?:[.,]\d{1,2})?)\s*(?:kr\.?|,-|DKK)", re.I)
 RE_LOADMORE = re.compile(r"Indlæs flere tilbud\s*\((\d+)\s*af\s*(\d+)\)", re.I)
 RE_SINGLE = re.compile(r"/single/(\d+)")
-MAX_DAYS = 62
+MAX_DAYS = 120   # længere end dette afvises som sandsynlig fejl
+LONG_DAYS = 62   # tilbud længere end dette markeres long_validity (men accepteres, hvis datoerne er hele og i orden)
 NAME_KEYS = ("name", "title", "productName", "product_name", "heading")
 PRICE_KEYS = ("price", "price_dkk", "priceDkk", "offerPrice", "salePrice")
 FROM_KEYS = ("valid_from", "validFrom", "startDate", "from", "start", "priceValidFrom")
@@ -90,7 +91,7 @@ def accept(rec, today, reasons):
     if b < today:
         reasons["expired"] += 1; return None
     return {"name": name, "price_dkk": price, "valid_from": a.isoformat(), "valid_to": b.isoformat(),
-            "year_inferred": bool(rec.get("year_inferred"))}
+            "year_inferred": bool(rec.get("year_inferred")), "long_validity": (b - a).days > LONG_DAYS}
 
 
 def _first(d, keys):

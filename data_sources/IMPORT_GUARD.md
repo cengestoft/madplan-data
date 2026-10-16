@@ -22,3 +22,10 @@ Hele kørslen blokeres (filen røres ikke, trinnet fejler), hvis halvdelen eller
 
 Filen får pr. butik `status` (`ok`/`held`), `last_good_at`, og ved tilbageholdelse `held_reason` og `held_since`, samt et
 `import_report` med fast vokabular (ingen indhold). Eksisterende felter er uændrede.
+
+## Tidsstyring (fase 2)
+`scripts/schedule_gate.py` afgør i workflowet "Daily offers" (repoet `madplan-tilbud`), om en planlagt kørsel skal gennemføres.
+GitHub-cron er UTC, så workflowet udløses kl. 06:03, 07:03 og 08:03 UTC. En planlagt kørsel gennemføres kun, hvis klokken er 8 eller 9
+i København, og dagens hentning ikke allerede er sket (`generated_at` i `data/offers.json`, målt i dansk dato). Det giver præcis én hentning om
+dagen ca. 08.03 dansk tid både sommer og vinter, og en reserve en time senere, hvis GitHub er forsinket. Manuel kørsel gennemføres altid.
+Testet for hver dag i 2026 og 2027 samt skiftedagene 29. marts og 25. oktober 2026.

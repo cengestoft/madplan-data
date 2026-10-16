@@ -67,5 +67,15 @@ class FetchTests(unittest.TestCase):
         self.assertEqual(st["stopped"], "request_budget")
 
 
+class BucketTests(unittest.TestCase):
+    def test_range_buckets_count_reasons_only(self):
+        def it(a, b):
+            d = make_item(1); d["startDate"], d["endDate"] = a, b; return d
+        items = [it("2026-10-20", "2026-10-10"), it("2026-01-01", "2026-06-01"), it("2026-10-16", "2026-10-22"),
+                 it("2026-01-01", "2028-01-01")]
+        b = fo.range_buckets(items, TODAY)
+        self.assertEqual(dict(b), {"start_efter_slut": 1, "varighed_121_365": 1, "varighed_over_365": 1})
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -58,7 +58,7 @@ def fetch_chain(slug, url, today, get=http_get, sleep=time.sleep, budget=None):
     budget = budget or Budget()
     st = {"store": slug, "pages_fetched": 0, "total_reported": None, "last_page": None, "fetched_ids": 0,
           "accepted": 0, "rejected": {}, "complete": False, "stopped": None, "chains": {}}
-    seen, offers, reasons = set(), {}, collections.Counter()
+    seen, offers, reasons, buckets = set(), {}, collections.Counter(), collections.Counter()
 
     def load(n):
         if budget.left <= 0:
@@ -74,6 +74,7 @@ def fetch_chain(slug, url, today, get=http_get, sleep=time.sleep, budget=None):
         new = [i for i in items if i.get("id") not in seen]
         seen.update(i.get("id") for i in new)
         ok, _ = offer_parser.accept_items(new, today, reasons)
+        buckets.update(range_buckets(new, today))
         for r in ok:
             offers[r["id"]] = r
         return info
@@ -98,7 +99,25 @@ def fetch_chain(slug, url, today, get=http_get, sleep=time.sleep, budget=None):
     st["fetched_ids"], st["accepted"], st["rejected"] = len(seen), len(offers), dict(reasons)
     st["complete"] = done()
     st["chains"] = dict(collections.Counter(r["chain"] or "?" for r in offers.values()).most_common(3))
+    st["date_issues"] = dict(buckets)
     return st, offers
+
+
+def range_buckets(items, today):
+    """Tæller kun, hvorfor datoer afvises (ingen værdier): start efter slut, eller varighed i intervaller."""
+    out = collections.Counter()
+    for it in items:
+        c = offer_parser.candidate_from_item(it)
+        a, b = c["valid_from"], c["valid_to"]
+        if a is None or b is None:
+            out["mangler_dato"] += 1
+        elif a > b:
+            out["start_efter_slut"] += 1
+        else:
+            d = (b - a).days
+            if d > offer_parser.MAX_DAYS:
+                out["varighed_63_120" if d <= 120 else "varighed_121_365" if d <= 365 else "varighed_over_365"] += 1
+    return out
 
 
 def summary_lines(results):
@@ -108,6 +127,9 @@ def summary_lines(results):
             st["store"], st["pages_fetched"], st["fetched_ids"], st["total_reported"], st["accepted"],
             json.dumps(st["rejected"], ensure_ascii=False), ",".join(st["chains"]) or "-",
             "ja" if st["complete"] else "nej", st["stopped"] or "-"))
+    issues = [(st["store"], st["date_issues"]) for st in results if st.get("date_issues")]
+    if issues:
+        lines += ["", "datoafvisninger (kun tal): " + "; ".join("%s %s" % (n, json.dumps(d, ensure_ascii=False)) for n, d in issues)]
     tot = sum(st["accepted"] for st in results)
     lines += ["", "accepteret i alt: %d, forespørgsler i alt: %d" % (tot, sum(st["pages_fetched"] for st in results))]
     return lines

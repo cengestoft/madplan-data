@@ -56,5 +56,24 @@ class ParserTest(unittest.TestCase):
         self.assertEqual(op.content_fingerprint(a), op.content_fingerprint(b))
 
 
+
+
+class ShapeTests(unittest.TestCase):
+    HTML = ('<div class="grid"><div class="card c1"><a href="/single/11"><img src="x"></a>'
+            '<h3>Hakket oksekød</h3><span class="p">25,00 kr.</span><span class="d">16.10 - 22.10</span></div>'
+            '<div class="card c1"><a href="/single/12"></a><h3>Mælk</h3><span>9,95 kr</span><span>16.10 - 22.10</span></div></div>')
+
+    def test_shape_has_structure_but_no_content(self):
+        shape = op.page_shape(self.HTML)
+        self.assertEqual(len(shape), 2)
+        self.assertTrue(shape[0]["date_found"])
+        text = "\n".join(shape[0]["skeleton"])
+        self.assertIn("DATE", text)
+        self.assertIn("PRICE_OR_NUM", text)
+        self.assertIn("card.c1", text)
+        for forbidden in ("Hakket", "oksekød", "25,00", "16.10", "/single/11"):
+            self.assertNotIn(forbidden, text)
+
+
 if __name__ == "__main__":
     unittest.main()

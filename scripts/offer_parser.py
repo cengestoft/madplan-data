@@ -214,3 +214,102 @@ def parse_json_doc(doc, today=None):
     ok = [r for r in (accept(c, today, reasons) for c in cands) if r]
     return ok, {"source_used": "json_doc" if ok else None, "candidates": len(cands), "accepted": len(ok),
                 "rejected": dict(reasons), "year_inferred": 0}
+
+
+# ---------------------------------------------------------------------------------------------
+# Strukturdiagnostik: viser kun sidens opbygning (tags, klassenavne, teksttype), aldrig tekstindhold.
+# ---------------------------------------------------------------------------------------------
+VOID = {"br", "img", "input", "meta", "link", "hr", "source", "wbr", "area", "base", "col", "embed", "track", "param"}
+
+
+class _Node:
+    __slots__ = ("tag", "cls", "single", "kids", "parent", "text")
+
+    def __init__(self, tag, cls, single, parent):
+        self.tag, self.cls, self.single, self.parent = tag, cls, single, parent
+        self.kids, self.text = [], []
+
+
+class _Tree(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.root = _Node("root", "", None, None)
+        self.cur, self.skip, self.singles = self.root, 0, []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style", "noscript"):
+            self.skip += 1
+            return
+        if self.skip:
+            return
+        a = dict(attrs)
+        m = RE_SINGLE.search(a.get("href") or "") if tag == "a" else None
+        n = _Node(tag, ".".join((a.get("class") or "").split()[:3]), m.group(1) if m else None, self.cur)
+        self.cur.kids.append(n)
+        if n.single:
+            self.singles.append(n)
+        if tag not in VOID:
+            self.cur = n
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style", "noscript"):
+            self.skip = max(0, self.skip - 1)
+            return
+        if self.skip or tag in VOID:
+            return
+        n = self.cur
+        while n is not None and n.tag != tag:
+            n = n.parent
+        if n is not None and n.parent is not None:
+            self.cur = n.parent
+
+    def handle_data(self, data):
+        t = data.strip()
+        if t and not self.skip:
+            self.cur.text.append(_kind(t))
+
+
+def _kind(t):
+    if RE_RANGE.search(t):
+        return "DATE"
+    if RE_PRICE.search(t) or re.fullmatch(r"\d{1,4}(?:[.,]\d{1,2})?", t):
+        return "PRICE_OR_NUM"
+    return "text<=10" if len(t) <= 10 else "text<=30" if len(t) <= 30 else "text>30"
+
+
+def _has(n, kind):
+    return kind in n.text or any(_has(k, kind) for k in n.kids)
+
+
+def _skeleton(n, depth, lines, budget):
+    if budget[0] <= 0 or depth > 7:
+        return
+    budget[0] -= 1
+    label = n.tag + ("." + n.cls if n.cls else "") + (" [link /single/*]" if n.single else "")
+    if n.text:
+        label += " <" + ",".join(n.text[:4]) + ">"
+    lines.append("  " * depth + label)
+    for k in n.kids:
+        _skeleton(k, depth + 1, lines, budget)
+
+
+def page_shape(html, cards=2, max_lines=70):
+    """Skelet over de første tilbudskort: for hvert /single/-link klatres op til en forælder med en dato.
+    Indeholder kun tags, klassenavne og teksttyper (DATE, PRICE_OR_NUM, text<=N). Intet indhold."""
+    t = _Tree()
+    t.feed(html)
+    out, seen = [], set()
+    for a in t.singles:
+        if a.single in seen:
+            continue
+        seen.add(a.single)
+        n, up = a, 0
+        while n.parent is not None and up < 8 and not _has(n, "DATE"):
+            n, up = n.parent, up + 1
+        found = _has(n, "DATE")
+        lines = []
+        _skeleton(n, 0, lines, [max_lines])
+        out.append({"levels_up_to_date": up if found else None, "date_found": found, "skeleton": lines})
+        if len(out) >= cards:
+            break
+    return out

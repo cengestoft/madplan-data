@@ -13,7 +13,9 @@ import datetime as dt
 import json
 import re
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
+CPH_TZ = ZoneInfo("Europe/Copenhagen")
 BAD_REASONS = ("no_name", "no_or_bad_price", "no_dates", "bad_date_range", "not_dkk")
 MAX_BAD_SHARE = 0.25      # andel af hentede poster med ødelagt navn/pris/dato (udløbne tæller ikke som fejl)
 MIN_PREV_VALID = 20       # under dette antal gyldige forrige tilbud sammenlignes der ikke
@@ -125,3 +127,58 @@ def assemble(per_store, prev_doc, today, now, entry_fn):
         summary["blocked_reason"] = "no_offers_at_all"
         return None, summary
     return {"stores": stores, "import_report": {"run_at": now_iso, "held": sorted(held), "stores": report}}, summary
+
+
+# ---- Backup og gendannelse (fase 3) ----
+BACKUP_NAME = "offers.previous.json"
+
+
+def valid_backup(doc):
+    """En fil må kun blive til backup, hvis den ligner en brugbar fil: butikker og mindst ét tilbud i alt."""
+    if not isinstance(doc, dict) or not isinstance(doc.get("stores"), dict):
+        return False
+    return any(isinstance(s, dict) and isinstance(s.get("offers"), list) and s["offers"] for s in doc["stores"].values())
+
+
+def write_atomic(path, doc):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    tmp.replace(path)
+
+
+def backup_previous(out_path, prev_doc):
+    """Gemmer forrige gyldige fil ved siden af den nye, FØR den nye skrives. En ugyldig forrige fil overskriver aldrig en god backup.
+    Returnerer True, hvis der blev gemt en backup."""
+    if not valid_backup(prev_doc):
+        return False
+    write_atomic(Path(out_path).with_name(BACKUP_NAME), prev_doc)
+    return True
+
+
+def restore_doc(backup, today, now):
+    """Gendanner fra en backup uden at genaktivere udløbne tilbud: kun tilbud, der stadig er gyldige i dag, tages med
+    (kommende tilbud beholdes). generated_at bevares, så alderen på data forbliver synlig i appen.
+    Returnerer (doc, rapport). doc er None, hvis backup'en er ugyldig, eller der ikke er noget gyldigt tilbage."""
+    if not valid_backup(backup):
+        return None, {"result": "refused", "reason": "backup_invalid"}
+    stores, dropped = {}, 0
+    for slug, s in backup["stores"].items():
+        if not isinstance(s, dict) or not isinstance(s.get("offers"), list):
+            continue
+        keep = [o for o in s["offers"] if still_valid(o, today)]
+        dropped += len(s["offers"]) - len(keep)
+        if keep:
+            e = {k: v for k, v in s.items() if k not in ("offers", "held_reason", "held_since")}
+            e.update(offers=keep, accepted=len(keep), status="restored")
+            stores[slug] = e
+    if not stores:
+        return None, {"result": "refused", "reason": "nothing_still_valid", "dropped_expired": dropped}
+    now_iso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    doc = {k: v for k, v in backup.items() if k not in ("stores", "import_report")}
+    doc["stores"] = stores
+    doc["restored"] = {"at": now_iso, "from_generated_at": backup.get("generated_at"), "dropped_expired": dropped}
+    doc["import_report"] = {"run_at": now_iso, "held": [], "restored": True, "stores": {}}
+    return doc, {"result": "restored", "stores": len(stores), "offers": sum(len(e["offers"]) for e in stores.values()),
+                 "dropped_expired": dropped}

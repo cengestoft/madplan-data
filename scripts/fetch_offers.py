@@ -207,10 +207,11 @@ def main(get=http_get, sleep=time.sleep, argv=None):
         if doc is None:
             print("Kørslen blokeret (%s). Filen er uændret." % summary.get("blocked_reason"))
             return 1
-        tmp = Path(out_path + ".tmp")
-        Path(out_path).parent.mkdir(parents=True, exist_ok=True)
-        tmp.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
-        tmp.replace(out_path)
+        if offer_guard.backup_previous(out_path, prev):
+            print("Forrige gyldige fil gemt som %s" % offer_guard.BACKUP_NAME)
+        else:
+            print("Ingen forrige gyldig fil at tage backup af (eksisterende backup bevares).")
+        offer_guard.write_atomic(out_path, doc)
         print("Skrev %s (%d tilbud, %d butikker tilbageholdt)" % (
             out_path, sum(len(s["offers"]) for s in doc["stores"].values()), len(summary["held"])))
     return 0

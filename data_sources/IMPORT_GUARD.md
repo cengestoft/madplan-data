@@ -29,3 +29,14 @@ GitHub-cron er UTC, så workflowet udløses kl. 06:03, 07:03 og 08:03 UTC. En pl
 i København, og dagens hentning ikke allerede er sket (`generated_at` i `data/offers.json`, målt i dansk dato). Det giver præcis én hentning om
 dagen ca. 08.03 dansk tid både sommer og vinter, og en reserve en time senere, hvis GitHub er forsinket. Manuel kørsel gennemføres altid.
 Testet for hver dag i 2026 og 2027 samt skiftedagene 29. marts og 25. oktober 2026.
+
+## Backup og sikker gendannelse (fase 3)
+
+**Backup.** Når en kørsel skal skrive en ny `offers.json`, gemmes den forrige *gyldige* fil først som `offers.previous.json` (samme mappe, atomisk skrivning). En fil tæller kun som gyldig, hvis den har butikker og mindst ét tilbud. En ugyldig eller tom forrige fil overskriver aldrig en god backup. En blokeret kørsel (systemfejl) rører hverken filen eller backup'en.
+
+**Gendannelse (kun manuelt).** `python scripts/restore_offers.py --from data/offers.previous.json --to data/offers.json`
+
+- Kun tilbud, der stadig er gyldige i dag, tages med (kommende tilbud beholdes). Udløbne tilbud genaktiveres aldrig.
+- Ugyldig backup, eller intet gyldigt tilbud tilbage: intet skrives, scriptet stopper med fejl, og målfilen er uændret.
+- `generated_at` bevares (alderen på data skjules ikke); filen får `restored` med tidspunkt, og butikker får `status: restored`.
+- Output er kun faste ord og tal, aldrig indhold.

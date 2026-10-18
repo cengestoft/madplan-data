@@ -197,6 +197,9 @@ Når økologi ønskes:
 - hvis prisforskellen er lille, vælg økologisk
 - hvis forskellen er stor, vis begge muligheder
 
+## Interne snapshots
+`current_offers.json` og `next_week_offers.json` er interne snapshots. Appens tilbud kommer fra det private `madplan-tilbud`. Se `data_sources/SNAPSHOTS.md`.
+
 ## Datakvalitet
 
 Nogle tilbudsaviser er JavaScript-baserede, og datasættet kan derfor være ufuldstændigt.

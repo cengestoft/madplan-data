@@ -53,6 +53,8 @@ jobs:
         if: always()
         run: python scripts/history_overlap_report.py
 
+  # current_offers.json er et internt snapshot (se data_sources/SNAPSHOTS.md), ikke appens tilbudskilde.
+  # Alderen meldes derfor kun som information og gør aldrig kørslen rød.
   # Live freshness is judged separately from snapshot integrity. It is advisory:
   # stale published data is flagged with a visible warning, it does not make an
   # otherwise valid pull request fail just because the calendar moved.
@@ -64,5 +66,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Live data freshness (advisory, no write)
-        run: python scripts/check_freshness.py
+      - name: Snapshot freshness (informational, no write)
+        run: python scripts/check_freshness.py --informational

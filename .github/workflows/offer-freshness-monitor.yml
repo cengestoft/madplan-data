@@ -3,11 +3,11 @@ name: Offer freshness monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "13 13 * * 3"
+    - cron: "0 13 * * 3"
       timezone: "Europe/Copenhagen"
-    - cron: "13 8 * * 5"
+    - cron: "0 8 * * 5"
       timezone: "Europe/Copenhagen"
-    - cron: "13 8 * * 0"
+    - cron: "0 8 * * 0"
       timezone: "Europe/Copenhagen"
 
 permissions:

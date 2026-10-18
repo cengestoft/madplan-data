@@ -1,0 +1,54 @@
+name: Offer freshness monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "13 13 * * 3"
+      timezone: "Europe/Copenhagen"
+    - cron: "13 8 * * 5"
+      timezone: "Europe/Copenhagen"
+    - cron: "13 8 * * 0"
+      timezone: "Europe/Copenhagen"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: offer-freshness-monitor
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check current and upcoming publication age
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          now = dt.datetime.now(ZoneInfo("Europe/Copenhagen"))
+          stale = []
+          for name in ("current_offers.json", "next_week_offers.json"):
+              doc = json.loads(Path(name).read_text(encoding="utf-8"))
+              raw = doc.get("generated_at")
+              try:
+                  timestamp = dt.datetime.fromisoformat(raw)
+                  if timestamp.tzinfo is None:
+                      raise ValueError("timezone missing")
+                  age = (now - timestamp.astimezone(now.tzinfo)).total_seconds() / 86400
+              except (TypeError, ValueError):
+                  age = float("inf")
+              count = len(doc.get("offers", []))
+              print(f"{name}: offers={count}, generated_at={raw}, age_days={age:.2f}")
+              if age > 4 or age < -0.1:
+                  stale.append(name)
+          if stale:
+              print("::error::Stale or invalid offer files: " + ", ".join(stale))
+              raise SystemExit(1)
+          PY

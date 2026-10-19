@@ -500,7 +500,8 @@ def main():
     verification_path.write_text(json.dumps(verification, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     reconcile_manifest_file(output)
     print(json.dumps({"raw_product_count": len(products), "records": len(rows), "bytes": size, "skipped": skipped,
-                      "non_offer_rows_dropped": non_offer_rows, **summary}, ensure_ascii=False))
+                      "non_offer_rows_dropped": non_offer_rows,
+                      "previous_verification_keys": len(prev_keys), "carried_over_rejections": len(carried), **summary}, ensure_ascii=False))
     if not summary["meets_required_overlap"]:
         print(f"WARNING: verified overlap {summary['verified_overlap']:.1%} is below the required {MIN_OVERLAP:.0%}; "
               f"{needed} more verified keys needed. Nothing was lowered or invented.")

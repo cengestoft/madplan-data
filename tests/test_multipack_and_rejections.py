@@ -117,6 +117,8 @@ class ImporterKeepsRejection(unittest.TestCase):
                               "--current-offers", str(tmp / "current.json"), "--output", str(tmp / "monthly.json"), "--decisions", str(tmp / "d.json"),
                               "--identities", str(tmp / "id.json"), "--previous-verification", str(tmp / "prev.json")], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(out.returncode, 0, out.stderr)
+        line = json.loads(out.stdout.strip().splitlines()[0])  # the Actions log prints the numeric fields of this line
+        self.assertEqual((line["previous_verification_keys"], line["carried_over_rejections"]), (1, 1))
         ver = json.loads((tmp / "history_verification.json").read_text(encoding="utf-8"))
         v = ver["keys"][offer["normalized_product_key"]]
         self.assertEqual(v["status"], "rejected"); self.assertTrue(v["carried_over"])

@@ -216,7 +216,13 @@ def combine(verdicts) -> dict:
     verdicts = list(verdicts)
     if not verdicts: return {"status": REVIEW, "fields": {}, "conflicts": [], "missing": ["no_offer"]}
     sts = {v["status"] for v in verdicts}
-    if len(sts) == 1: return verdicts[0]  # all verified, all rejected or all review_required
+    if len(sts) == 1 and sts != {REVIEW}:
+        return verdicts[0]  # Preserve existing verified/rejected behaviour.
+    if sts == {REVIEW}:
+        first = verdicts[0]
+        return {"status": REVIEW, "fields": first["fields"],
+                "conflicts": sorted({c for v in verdicts for c in v["conflicts"]}),
+                "missing": sorted({m for v in verdicts for m in v["missing"]})}
     worst = next((v for v in verdicts if v["status"] != VERIFIED), verdicts[0])
     return {"status": REVIEW, "fields": worst["fields"], "conflicts": sorted({c for v in verdicts for c in v["conflicts"]}),
             "missing": sorted({m for v in verdicts for m in v["missing"]} | {"ambiguous_offers"})}

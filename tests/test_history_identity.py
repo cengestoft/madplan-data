@@ -123,6 +123,15 @@ class Combining(unittest.TestCase):
         self.assertEqual(c["status"], REVIEW)
         self.assertIn("ambiguous_offers", c["missing"])
 
+    def test_all_review_verdicts_collect_missing_reasons(self):
+        first = {"status": REVIEW, "fields": {"product_type": "missing"}, "conflicts": [], "missing": ["product_type"]}
+        second = {"status": REVIEW, "fields": {"flavour": "missing"}, "conflicts": [], "missing": ["flavour"]}
+        for verdicts in ([first, second], [second, first]):
+            combined = combine(verdicts)
+            self.assertEqual(combined["status"], REVIEW)
+            self.assertEqual(combined["missing"], ["flavour", "product_type"])
+            self.assertEqual(combined["conflicts"], [])
+
     def test_key_status_rules(self):
         self.assertEqual(key_status({VERIFIED: 1, REVIEW: 3}), VERIFIED)
         self.assertEqual(key_status({REVIEW: 1, REJECTED: 2}), REVIEW)

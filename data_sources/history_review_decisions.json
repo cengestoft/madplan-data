@@ -1,8 +1,8 @@
 {
  "schema_version": 1,
  "raw_data_included": false,
- "status": "provisional_until_checked_against_private_match_log",
- "status_note": "Foreløbige godkendelser. De anvendes ved import kun hvis tilbudsnavn og råproduktets navn dokumenterer samme produkt (scripts/history_approval_check.documented); ved manglende eller modstridende evidens forbliver produktet review_required. Skal kontrolleres mod den private match-log på Caspers Mac før de regnes for endelige.",
+ "status": "confirmed_by_casper_57_zero_unresolved",
+ "status_note": "57 godkendelser på 25 nøgler er bekræftet af Casper 19. okt 2026 efter gennemgang mod den private match-log (60 af 60 fundet; filen med svar indeholder kun nøgler og hashes). De 3 Coca-Cola Zero 24 x 25 cl-poster er UAFKLARET af Casper og står i 'unresolved': de læses aldrig af importen. Godkendelser anvendes stadig kun, hvis tilbudsnavn og råproduktets navn dokumenterer samme produkt (scripts/history_approval_check.documented).",
  "decisions": [
   {
    "normalized_product_key": "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg",
@@ -10,7 +10,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg",
@@ -18,7 +20,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=barebells|product=creamy-crisp-proteinbar|variant=standard|count=1|size=0-055kg",
@@ -26,7 +30,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=barebells|product=creamy-crisp-proteinbar|variant=standard|count=1|size=0-055kg",
@@ -34,7 +40,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=barebells|product=white-salty-peanut-proteinbar|variant=standard|count=1|size=0-055kg",
@@ -42,7 +50,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=barebells|product=white-salty-peanut-proteinbar|variant=standard|count=1|size=0-055kg",
@@ -50,7 +60,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=ben-jerry-s|product=caramel-brownie-party-is|variant=standard|count=1|size=0-465l",
@@ -58,7 +70,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=ben-jerry-s|product=caramel-brownie-party-is|variant=standard|count=1|size=0-465l",
@@ -66,7 +80,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=ben-jerry-s|product=churrifically-churros-y-is|variant=standard|count=1|size=0-465l",
@@ -74,7 +90,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=ben-jerry-s|product=churrifically-churros-y-is|variant=standard|count=1|size=0-465l",
@@ -82,7 +100,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=ben-jerry-s|product=cookie-dough-is|variant=standard|count=1|size=0-465l",
@@ -90,7 +110,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=ben-jerry-s|product=cookie-dough-is|variant=standard|count=1|size=0-465l",
@@ -98,7 +120,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=buko|product=floedeost-naturel|variant=standard|count=1|size=0-2kg",
@@ -106,7 +130,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=buko|product=floedeost-naturel|variant=standard|count=1|size=0-2kg",
@@ -114,7 +140,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l",
@@ -122,7 +150,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l",
@@ -130,7 +160,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l",
@@ -138,7 +170,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg",
@@ -146,7 +180,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg",
@@ -154,7 +190,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg",
@@ -162,7 +200,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skiveost-mellemlagret-13|variant=standard|count=1|size=0-2kg",
@@ -170,7 +210,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg",
@@ -178,7 +220,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg",
@@ -186,7 +230,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg",
@@ -194,7 +240,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
@@ -202,7 +250,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
@@ -210,7 +260,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
@@ -218,7 +270,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
@@ -226,7 +280,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
@@ -234,7 +290,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg",
@@ -242,7 +300,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l",
@@ -250,7 +310,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l",
@@ -258,7 +320,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l",
@@ -266,7 +330,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg",
@@ -274,7 +340,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg",
@@ -282,7 +350,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg",
@@ -290,7 +360,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=vanilje-yoghurt|variant=standard|count=1|size=1l",
@@ -298,7 +370,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=cheasy|product=vanilje-yoghurt|variant=standard|count=1|size=1l",
@@ -306,31 +380,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
-  },
-  {
-   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
-   "raw_id_hash": "0107c485ef3a127c",
-   "decision": "verified",
-   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
-   "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
-  },
-  {
-   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
-   "raw_id_hash": "cb9cb75d88737a5e",
-   "decision": "verified",
-   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
-   "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
-  },
-  {
-   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
-   "raw_id_hash": "d8f0ef33723f1223",
-   "decision": "verified",
-   "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
-   "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=fun-light|product=ananas-laeskedrik|variant=light|count=1|size=0-5l",
@@ -338,7 +390,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=marabou|product=chokoladeplade-black-saltlakrids|variant=standard|count=1|size=0-09kg",
@@ -346,7 +400,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=marabou|product=chokoladeplade-schweizernot|variant=standard|count=1|size=0-09kg",
@@ -354,7 +410,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=murph|product=proteinbar-creatine-milky-road|variant=standard|count=1|size=0-055kg",
@@ -362,7 +420,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=nordthy|product=halloween-cookies-green|variant=standard|count=1|size=0-146kg",
@@ -370,7 +430,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
@@ -378,7 +440,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
@@ -386,7 +450,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
@@ -394,7 +460,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
@@ -402,7 +470,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg",
@@ -410,7 +480,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=riberhus|product=skiveost-danbo-mellemlagret|variant=standard|count=1|size=0-24kg",
@@ -418,7 +490,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=riberhus|product=skiveost-danbo-mellemlagret|variant=standard|count=1|size=0-24kg",
@@ -426,7 +500,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=valsoelille|product=dragtastisk-lemonade|variant=standard|count=1|size=0-85l",
@@ -434,7 +510,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=valsoelille|product=dragtastisk-lemonade|variant=standard|count=1|size=0-85l",
@@ -442,7 +520,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg",
@@ -450,7 +530,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg",
@@ -458,7 +540,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg",
@@ -466,7 +550,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=yoggi|product=havens-baer-yoghurt|variant=standard|count=1|size=1l",
@@ -474,7 +560,9 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
   },
   {
    "normalized_product_key": "brand=yoggi|product=havens-baer-yoghurt|variant=standard|count=1|size=1l",
@@ -482,7 +570,38 @@
    "decision": "verified",
    "reviewed_by": "Claude (efter ChatGPT-opgave 13. okt 2026)",
    "reviewed_on": "2026-10-13",
-   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side"
+   "note": "Mærke, størrelse og antal ens; produktnavn/variant entydigt ens, kun beskrivende ord mangler på den ene side",
+   "confirmed_by": "Casper",
+   "confirmed_on": "2026-10-19"
+  }
+ ],
+ "unresolved": [
+  {
+   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "raw_id_hash": "0107c485ef3a127c",
+   "status": "uafklaret",
+   "uafklaret_af": "Casper",
+   "uafklaret_den": "2026-10-19",
+   "oprindeligt_foreslaaet_af": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reason": "Ikke dokumenteret mod privat match-log; pakkestørrelse 24x25 cl vs 24x33 cl uafklaret. Må ikke anvendes."
+  },
+  {
+   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "raw_id_hash": "cb9cb75d88737a5e",
+   "status": "uafklaret",
+   "uafklaret_af": "Casper",
+   "uafklaret_den": "2026-10-19",
+   "oprindeligt_foreslaaet_af": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reason": "Ikke dokumenteret mod privat match-log; pakkestørrelse 24x25 cl vs 24x33 cl uafklaret. Må ikke anvendes."
+  },
+  {
+   "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "raw_id_hash": "d8f0ef33723f1223",
+   "status": "uafklaret",
+   "uafklaret_af": "Casper",
+   "uafklaret_den": "2026-10-19",
+   "oprindeligt_foreslaaet_af": "Claude (efter ChatGPT-opgave 13. okt 2026)",
+   "reason": "Ikke dokumenteret mod privat match-log; pakkestørrelse 24x25 cl vs 24x33 cl uafklaret. Må ikke anvendes."
   }
  ]
 }

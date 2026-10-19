@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from candidate_checks import COLA_KEYS, ZERO25_KEY, EXPECTED_FILES, FAXE_KEY, PROVISIONAL, report, run_checks  # noqa: E402
+from candidate_checks import COLA_KEYS, ZERO25_KEY, EXPECTED_FILES, FAXE_KEY, FINAL, report, run_checks  # noqa: E402
 
 V = "brand=a|product=verified|variant=standard|count=1|size=1kg"
 
@@ -36,7 +36,7 @@ class Fixture(unittest.TestCase):
         write(self.b, "history_verification.json", ver(bkeys))
         write(self.b, "current_offers.json", {"offers": [{"name": "Eget Tilbud"}]})
         write(self.b, "data_sources/history_offer_identities.json", {"keys": {}})
-        self.dec = {"status": PROVISIONAL, "decisions": [{"decision": "verified", "normalized_product_key": V, "raw_id_hash": "h"}]}
+        self.dec = {"status": FINAL, "decisions": [{"decision": "verified", "normalized_product_key": V, "raw_id_hash": "h", "confirmed_by": "Casper", "confirmed_on": "2026-10-19"}], "unresolved": []}
         write(self.b, "data_sources/history_review_decisions.json", self.dec)
         self.hist = hist
         akeys = copy.deepcopy(bkeys)
@@ -61,7 +61,7 @@ class Fixture(unittest.TestCase):
 class Checks(Fixture):
     def test_all_pass(self):
         res = self.run_()
-        self.assertEqual({n: v[0] for n, v in res.items()}, {n: "PASS" for n in range(1, 10)}, res)
+        self.assertEqual({n: v[0] for n, v in res.items()}, {n: "PASS" for n in range(1, 11)}, res)
         self.assertTrue(report(res, [])[1])
 
     def test_changed_row_fails_1(self):
@@ -88,6 +88,34 @@ class Checks(Fixture):
         self.assertEqual(self.run_()[5][0], "FAIL")
         self.dec["status"] = "final"; write(self.b, "data_sources/history_review_decisions.json", self.dec)
         self.assertEqual(self.run_()[6][0], "FAIL")
+
+    def test_unconfirmed_approval_fails_6(self):
+        del self.dec["decisions"][0]["confirmed_by"]; write(self.b, "data_sources/history_review_decisions.json", self.dec)
+        self.assertEqual(self.run_()[6][0], "FAIL")
+
+    def _unresolved_zero(self):
+        self.dec["unresolved"] = [{"normalized_product_key": ZERO25_KEY, "raw_id_hash": "z1", "status": "uafklaret"}]
+        write(self.b, "data_sources/history_review_decisions.json", self.dec)
+        write(self.b, "data_sources/history_holds.json", {"holds": [{"key": ZERO25_KEY}], "releases": []})
+
+    def test_unresolved_held_and_not_applied_passes_10(self):
+        self._unresolved_zero(); self.akeys[ZERO25_KEY] = k("review_required", held=["approval_pending"]); self.save()
+        res = self.run_(); self.assertEqual(res[10][0], "PASS", res[10])
+
+    def test_unresolved_applied_or_verified_fails_10(self):
+        self._unresolved_zero(); self.akeys[ZERO25_KEY] = k("review_required", manual_decisions=1); self.save()
+        self.assertEqual(self.run_()[10][0], "FAIL")
+        self.akeys[ZERO25_KEY] = k("verified"); self.save()
+        self.assertEqual(self.run_()[10][0], "FAIL")
+
+    def test_unresolved_also_in_decisions_or_without_hold_fails_10(self):
+        self._unresolved_zero(); self.akeys[ZERO25_KEY] = k("review_required"); self.save()
+        self.dec["decisions"].append({"decision": "verified", "normalized_product_key": ZERO25_KEY, "raw_id_hash": "z1", "confirmed_by": "Casper", "confirmed_on": "2026-10-19"})
+        write(self.b, "data_sources/history_review_decisions.json", self.dec)
+        self.assertEqual(self.run_()[10][0], "FAIL")
+        self.dec["decisions"].pop(); write(self.b, "data_sources/history_review_decisions.json", self.dec)
+        write(self.b, "data_sources/history_holds.json", {"holds": [], "releases": []})
+        self.assertEqual(self.run_()[10][0], "FAIL")
 
     def test_leaks_fail_7(self):
         write(self.a, "extra.txt", {}); self.assertEqual(self.run_()[7][0], "FAIL"); (self.a / "extra.txt").unlink()

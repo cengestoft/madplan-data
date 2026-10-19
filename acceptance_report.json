@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T14:29:23+02:00",
+  "generated_at": "2026-10-19T16:29:34+02:00",
   "branch": "claude-kodekontrol-2026-10-09",
   "valid_on": "2026-10-13",
   "passed": 12,
@@ -74,7 +74,7 @@
     },
     {
       "id": 12,
-      "name": "Unit test suite (343 tests)",
+      "name": "Unit test suite (348 tests)",
       "status": "PASS",
       "detail": "all passed"
     }

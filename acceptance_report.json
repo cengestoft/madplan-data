@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T12:13:41+02:00",
+  "generated_at": "2026-10-19T10:51:52+02:00",
   "branch": "claude-kodekontrol-2026-10-09",
   "valid_on": "2026-10-13",
   "passed": 12,
@@ -52,7 +52,7 @@
       "id": 8,
       "name": "Future offers without end date are flagged, not treated as unlimited",
       "status": "PASS",
-      "detail": "12 offers without valid_to; 12 flagged."
+      "detail": "29 offers without valid_to; 29 flagged."
     },
     {
       "id": 9,
@@ -74,7 +74,7 @@
     },
     {
       "id": 12,
-      "name": "Unit test suite (196 tests)",
+      "name": "Unit test suite (277 tests)",
       "status": "PASS",
       "detail": "all passed"
     }

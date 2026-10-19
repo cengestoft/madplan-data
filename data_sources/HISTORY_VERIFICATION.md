@@ -38,3 +38,19 @@ Ellers forbliver produktet `review_required` (`manual_decisions_blocked` tæller
 ## Historikken bevares
 `data_sources/history_offer_identities.json` husker alle tilbudsidentiteter. Verificeret historik for en nøgle slettes aldrig, fordi dens tilbud udløber;
 aktuelle tilbud afgør kun overlap og hvilke grafer der er mulige (`active` pr. nøgle).
+
+## Multipack-identiteter og videreførte afvisninger (19. okt 2026)
+- Tilbuddenes `package_amount` er TOTALEN for en multipack (24 x 0,33 l = 7,92 l). Identitetsregistret gemmer derfor også `single_package_amount`/`single_package_unit` for multipacks (count > 1), så `describe()` giver samme pakkestørrelse for et fuldt tilbud og dets registeridentitet. Uden dem blev antal ganget to gange (fx 144 l i stedet for 6 l) og gav falske `pack_size`-afvisninger. Nøglerne er uændrede.
+- En tidligere `rejected` nøgle, der ikke har nogen rå produkter i en ny kørsel, forbliver `rejected` med `carried_over: true` (kilde: `--previous-verification`, standard `history_verification.json`). Nye matches bedømmes som normalt. `history_import_guard.py` stopper kørslen, hvis en afvisning forsvinder uden rå produkter.
+
+## Spærring mod verificeret historik på ubekræftet mængde (19. okt 2026)
+
+Problem: nøglen `brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l` blev `verified` i Dropbox-kandidat #11 via tre foreløbige godkendelser, selv om tilbuddet `tilbudsugen-11335755` står som `quantity_status: "unverified"` (SuperBrugsen/Kvickly sælger samme produkt som 24 x 0,33 l).
+
+Løsning (snæver, ingen data slettet eller ændret):
+- `compute_holds()` i `scripts/history_identity.py`: en nøgle holdes tilbage, hvis (a) et aktivt tilbud på nøglen har `quantity_status == "unverified"` (`quantity_unverified`), eller (b) nøglen står i `data_sources/history_holds.json` uden frigivelse (`approval_pending`).
+- Importen springer rækker for holdte nøgler over, men tæller rå matches og godkendelser uændret. Nøglen får `status: review_required` og feltet `held` (faste årsagskoder). Ingen automatisk omklassificering til 33 cl; ingen historiske matches slettes.
+- Frigivelse kræver BÅDE at tilbuddets mængdeflag fjernes med dokumentation OG en post i `releases` med `approved_by: "Casper"` og `approved_on`.
+- `history_import_guard.py` blokerer, hvis en verificeret nøgle har et aktivt tilbud med ubekræftet mængde.
+- `scripts/candidate_checks.py` tjek 8 (ingen verificeret nøgle på ubekræftet mængde; Zero 24 x 25 cl eksplicit) og tjek 9 (rapporterer nøgler, hvis anvendte godkendelser afviger fra `data_sources/history_approval_baseline.json`, kun nøgler og antal; FAIL hvis nye godkendelser gør en nøgle verificeret).
+- Påvirker i dag kun Zero 24 x 25 cl (det eneste tilbud med `unverified`). De 60 godkendelser er stadig foreløbige og ikke kontrolleret mod den private match-log (ikke tilgængelig).

@@ -1,0 +1,14 @@
+{
+ "schema_version": 1,
+ "purpose": "Keys that must not become verified history yet. The importer keeps their raw matches, provisional approvals and offers untouched, but the key stays review_required and no rows are published.",
+ "holds": [
+  {
+   "key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+   "offer_id": "tilbudsugen-11335755",
+   "reason": "Package size of the offer is unverified (offer_quantity_flags.json) and the three provisional approvals have not been approved by Casper.",
+   "added": "2026-10-19"
+  }
+ ],
+ "releases": [],
+ "release_rules": "A hold is lifted only when (1) the quantity flag of the offer is lifted with documented evidence (automatic quantity_unverified hold disappears) AND (2) a release entry {key, approved_by: 'Casper', approved_on, note} is added here after Casper has explicitly approved the matches."
+}

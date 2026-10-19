@@ -1,0 +1,33 @@
+{
+ "schema_version": 1,
+ "purpose": "Keys and counts of the provisional approvals that were applied in the first Dropbox candidate (25 keys, 57 approvals). candidate_checks.py reports and blocks any key whose applied approvals differ from this baseline.",
+ "approved_by_casper": false,
+ "status": "provisional",
+ "keys": {
+  "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg": 2,
+  "brand=barebells|product=creamy-crisp-proteinbar|variant=standard|count=1|size=0-055kg": 2,
+  "brand=barebells|product=white-salty-peanut-proteinbar|variant=standard|count=1|size=0-055kg": 2,
+  "brand=ben-jerry-s|product=caramel-brownie-party-is|variant=standard|count=1|size=0-465l": 2,
+  "brand=ben-jerry-s|product=churrifically-churros-y-is|variant=standard|count=1|size=0-465l": 2,
+  "brand=ben-jerry-s|product=cookie-dough-is|variant=standard|count=1|size=0-465l": 2,
+  "brand=buko|product=floedeost-naturel|variant=standard|count=1|size=0-2kg": 2,
+  "brand=cheasy|product=jordbaer-rababer-yoghurt|variant=standard|count=1|size=1l": 3,
+  "brand=cheasy|product=passion-banan-skyr|variant=standard|count=1|size=1kg": 3,
+  "brand=cheasy|product=skiveost-mellemlagret-13|variant=standard|count=1|size=0-2kg": 1,
+  "brand=cheasy|product=skiveost-mild|variant=standard|count=1|size=0-2kg": 3,
+  "brand=cheasy|product=skovbaer-skyr|variant=standard|count=1|size=1kg": 6,
+  "brand=cheasy|product=skovbaer-yoghurt|variant=standard|count=1|size=1l": 3,
+  "brand=cheasy|product=vanilje-skyr|variant=standard|count=1|size=1kg": 3,
+  "brand=cheasy|product=vanilje-yoghurt|variant=standard|count=1|size=1l": 2,
+  "brand=fun-light|product=ananas-laeskedrik|variant=light|count=1|size=0-5l": 1,
+  "brand=marabou|product=chokoladeplade-black-saltlakrids|variant=standard|count=1|size=0-09kg": 1,
+  "brand=marabou|product=chokoladeplade-schweizernot|variant=standard|count=1|size=0-09kg": 1,
+  "brand=murph|product=proteinbar-creatine-milky-road|variant=standard|count=1|size=0-055kg": 1,
+  "brand=nordthy|product=halloween-cookies-green|variant=standard|count=1|size=0-146kg": 1,
+  "brand=philadelphia|product=floedeost-hvidloeg-urter|variant=standard|count=1|size=0-2kg": 5,
+  "brand=riberhus|product=skiveost-danbo-mellemlagret|variant=standard|count=1|size=0-24kg": 2,
+  "brand=valsoelille|product=dragtastisk-lemonade|variant=standard|count=1|size=0-85l": 2,
+  "brand=wasa|product=frukost-knaekbroed|variant=standard|count=1|size=0-48kg": 3,
+  "brand=yoggi|product=havens-baer-yoghurt|variant=standard|count=1|size=1l": 2
+ }
+}

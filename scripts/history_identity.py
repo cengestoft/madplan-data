@@ -230,6 +230,54 @@ def key_status(counts: dict) -> str:
     return "no_candidate"
 
 
+def single_from_key(identity: dict):
+    """(amount, unit) of ONE unit of a multipack, read from the product key's size token (e.g. size=0-33l -> 0.33 l), and only if
+    count x that size equals the identity's total package_amount. Returns None otherwise (never a guess)."""
+    import re
+    m = re.search(r"\|size=(\d+(?:-\d+)?)(kg|g|ml|cl|l)$", str(identity.get("normalized_product_key") or ""))
+    count, total, unit = identity.get("package_count"), identity.get("package_amount"), identity.get("package_unit")
+    if not m or not count or float(count) <= 1 or total is None or str(unit) != m.group(2):
+        return None
+    size = float(m.group(1).replace("-", "."))
+    return (size if not size.is_integer() else int(size), unit) if abs(float(count) * size - float(total)) < 1e-6 else None
+
+
+def compute_holds(offers, holds_doc, keyfn) -> dict:
+    """{normalized_product_key: [reasons]} for keys that must NOT be promoted to `verified` history yet.
+    quantity_unverified: an ACTIVE offer of the key has quantity_status == "unverified" (the key was built from an unconfirmed package size).
+    approval_pending:    the key is listed in data_sources/history_holds.json and has no release signed off by Casper.
+    A hold never deletes anything: raw matches, provisional approvals and the offer data stay as they are; only the key status and the
+    published rows are held back (status review_required, no rows)."""
+    held = {}
+    for o in offers:
+        if o.get("quantity_status") == "unverified":
+            k = keyfn(o)
+            if k:
+                held.setdefault(k, set()).add("quantity_unverified")
+    doc = holds_doc or {}
+    released = {r.get("key") for r in doc.get("releases", []) if r.get("key") and r.get("approved_by") == "Casper" and r.get("approved_on")}
+    for h in doc.get("holds", []):
+        k = h.get("key")
+        if k and k not in released:
+            held.setdefault(k, set()).add("approval_pending")
+    return {k: sorted(v) for k, v in held.items()}
+
+
+def carry_over_rejections(key_info: dict, previous_keys: dict) -> list:
+    """A documented rejection must never disappear silently. If a key was `rejected` in the previous verification file and the
+    new run has NO raw products at all for it (no new evidence either way), the rejection is kept and marked carried_over.
+    New evidence (any raw product matched in this run) is judged normally. Returns the carried-over keys."""
+    kept = []
+    for key, info in key_info.items():
+        prev = (previous_keys or {}).get(key) or {}
+        rp = info.get("raw_products") or {}
+        if prev.get("status") == REJECTED and info.get("status") == "no_candidate" and sum(rp.values()) == 0:
+            info["status"] = REJECTED
+            info["carried_over"] = True
+            kept.append(key)
+    return kept
+
+
 GROCERY_EXCLUDED = {"husholdning", "dyrefoder"}
 
 

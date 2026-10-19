@@ -1,0 +1,220 @@
+#!/usr/bin/env python3
+"""Tør kørsel: kan kildesiderne hentes, og ligner de noget vi kan læse? Skriver INGEN tilbudsdata.
+
+Kun faste, sikre felter pr. kæde (HTTP-status, størrelse, antal strukturerede poster, robots-svar).
+Ingen sideindhold, produktnavne, priser eller datoer gemmes eller printes (logs er offentlige).
+Én kæde, der fejler, stopper aldrig de øvrige.
+"""
+import collections
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import offer_parser  # noqa: E402
+UA = "SuperkoebSourceProbe/1.0 (+https://github.com/cengestoft/madplan-data)"
+MAX_BYTES = 5 * 1024 * 1024
+CHAINS = {  # import_status.json "sources": fast liste over de 15 kæder
+    "rema1000": "rema", "foetex": "foetex", "kvickly": "kvickly", "meny": "meny", "spar": "spar",
+    "min-koebmand": "min-koebmand", "loevbjerg": "loevbjerg", "let-koeb": "let-koeb",
+    "365discount": "365discount", "lidl": "lidl", "superbrugsen": "superbrugsen", "netto": "netto",
+    "bilka": "bilka", "daglibrugsen": "dagli", "abc-lavpris": "abc-search",
+}
+RE_LD = re.compile(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.I | re.S)
+
+
+def fetch(url, opener=urllib.request.urlopen):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/json"})
+    try:
+        with opener(req, timeout=30) as r:
+            return r.status, r.read(MAX_BYTES + 1)
+    except urllib.error.HTTPError as e:
+        return e.code, b""
+    except Exception:
+        return None, b""
+
+
+def robots_allows(origin, path, opener=urllib.request.urlopen):
+    """Enkel, forsigtig læsning af robots.txt for alle brugeragenter (*). Uklart svar = 'unknown'."""
+    status, body = fetch(origin + "/robots.txt", opener)
+    if status != 200:
+        return "unknown"
+    applies, disallow = False, []
+    for line in body.decode("utf-8", "replace").splitlines():
+        line = line.split("#")[0].strip()
+        if not line or ":" not in line:
+            continue
+        k, v = [x.strip() for x in line.split(":", 1)]
+        if k.lower() == "user-agent":
+            applies = v == "*"
+        elif applies and k.lower() == "disallow" and v:
+            disallow.append(v)
+    return "disallowed" if any(path.startswith(d) for d in disallow) else "allowed"
+
+
+def ld_offer_count(html):
+    n = 0
+    for m in RE_LD.finditer(html):
+        try:
+            doc = json.loads(m.group(1))
+        except ValueError:
+            continue
+        stack = [doc]
+        while stack:
+            x = stack.pop()
+            if isinstance(x, dict):
+                if str(x.get("@type")) in ("Offer", "Product"):
+                    n += 1
+                stack.extend(x.values())
+            elif isinstance(x, list):
+                stack.extend(x)
+    return n
+
+
+RE_NEXT_ID = re.compile(r'<script[^>]+id=["\']__NEXT_DATA__["\'][^>]*>(.*?)</script>', re.I | re.S)
+RE_TITLE = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
+RE_SCRIPT_SRC = re.compile(r'<script[^>]+src=["\']([^"\']+)["\']', re.I)
+RE_ENDPOINT = re.compile(r'["\'](/(?:api|_next/data)/[A-Za-z0-9_\-./]{1,80})')
+
+
+def html_signals(html):
+    """Kun tal, booleans og korte strukturnavne. Aldrig produktnavne, priser eller rå tekst."""
+    sig = {"title": " ".join((RE_TITLE.search(html).group(1) if RE_TITLE.search(html) else "").split())[:60],
+           "json_ld_blocks": len(RE_LD.findall(html)), "ld_offer_count": ld_offer_count(html),
+           "next_data": False, "next_data_keys": [], "next_build_id": False,
+           "date_range_matches": len(offer_parser.RE_RANGE.findall(html)),
+           "price_matches": len(offer_parser.RE_PRICE.findall(html)),
+           "single_links": len(set(offer_parser.RE_SINGLE.findall(html))),
+           "script_tags": len(re.findall(r"<script\b", html, re.I)),
+           "external_script_hosts": sorted({urllib.parse.urlparse(u).netloc for u in RE_SCRIPT_SRC.findall(html) if u.startswith(("http", "//"))})[:8],
+           "endpoint_path_prefixes": sorted({"/".join(m.split("/")[:3]) for m in RE_ENDPOINT.findall(html)})[:8],
+           "content_fingerprint": offer_parser.content_fingerprint(html)}
+    shown, total = offer_parser.load_more_counts(html)
+    sig["load_more_shown"], sig["load_more_total"] = shown, total
+    m = RE_NEXT_ID.search(html)
+    if m:
+        doc = offer_parser._loads(m.group(1))
+        sig["next_data"] = True
+        sig["next_data_keys"] = sorted(doc)[:10] if isinstance(doc, dict) else []
+        sig["next_build_id"] = bool(isinstance(doc, dict) and doc.get("buildId"))
+    return sig
+
+
+def probe_next_data_endpoint(url, html, opener):
+    """Dokumenteret Next.js-mønster: /_next/data/<buildId>/<sti>.json. Kun hvis robots tillader det."""
+    m = RE_NEXT_ID.search(html)
+    doc = offer_parser._loads(m.group(1)) if m else {}
+    bid = doc.get("buildId") if isinstance(doc, dict) else None
+    if not bid or not re.fullmatch(r"[A-Za-z0-9_\-]{5,64}", str(bid)):
+        return {"tried": False}
+    p = urllib.parse.urlparse(url)
+    ep = f"{p.scheme}://{p.netloc}/_next/data/{bid}{p.path}.json"
+    if robots_allows(f"{p.scheme}://{p.netloc}", urllib.parse.urlparse(ep).path, opener) == "disallowed":
+        return {"tried": False, "robots": "disallowed"}
+    status, body = fetch(ep, opener)
+    out = {"tried": True, "http": status, "bytes": min(len(body), MAX_BYTES)}
+    if status == 200:
+        recs, out["parser"] = offer_parser.parse_json_doc(offer_parser._loads(body.decode("utf-8", "replace")))
+    return out
+
+
+def _ids(html):
+    items, _, _ = offer_parser.next_items(html)
+    return {i.get("id") for i in items if isinstance(i, dict) and i.get("id") is not None}
+
+
+def probe_pagination(url, html, opener):
+    """Gætter pagineringsparametre på samme URL og tæller kun hvor mange tilbuds-id'er der er nye."""
+    base = _ids(html)
+    m = RE_NEXT_ID.search(html)
+    q = offer_parser._loads(m.group(1)).get("query") if m else None
+    out = {"page1_ids": len(base), "query_keys": sorted(q)[:10] if isinstance(q, dict) and all(isinstance(k, str) and len(k) < 30 for k in q) else None, "tries": {}}
+    p = urllib.parse.urlparse(url)
+    for param in ("page=2", "side=2"):
+        u = url + ("&" if p.query else "?") + param
+        status, body = fetch(u, opener)
+        row = {"http": status}
+        if status == 200:
+            ids = _ids(body.decode("utf-8", "replace"))
+            row.update(ids=len(ids), new=len(ids - base), overlap=len(ids & base))
+        out["tries"][param] = row
+    return out
+
+
+def probe_chain(slug, url, opener=urllib.request.urlopen):
+    row = {"store": slug, "http": None, "bytes": 0, "too_large": False, "structured_records": 0, "robots": "unknown", "result": "error"}
+    try:
+        p = urllib.parse.urlparse(url)
+        if p.scheme != "https":
+            row["result"] = "bad_url"; return row
+        row["robots"] = robots_allows(f"{p.scheme}://{p.netloc}", p.path or "/", opener)
+        if row["robots"] == "disallowed":
+            row["result"] = "robots_disallow"; return row
+        status, body = fetch(url, opener)
+        row["http"], row["bytes"] = status, min(len(body), MAX_BYTES)
+        row["too_large"] = len(body) > MAX_BYTES
+        if status != 200:
+            row["result"] = "http_error" if status else "unreachable"; return row
+        html = body.decode("utf-8", "replace")
+        row["structured_records"] = ld_offer_count(html)
+        row["signals"] = html_signals(html)
+        row["next_shape"] = offer_parser.next_data_shape(html)
+        recs, row["parser"] = offer_parser.parse_page(html)  # kun tal; selve posterne droppes
+        row["next_data_endpoint"] = probe_next_data_endpoint(url, html, opener)
+        row["pagination"] = probe_pagination(url, html, opener)
+        row["result"] = "ok_structured" if row["structured_records"] else "ok_no_structured_data"
+    except Exception:
+        row["result"] = "error"
+    return row
+
+
+def summary_lines(out):
+    """Kort, sikker tekstoversigt (kun tal og kædenavne). Bruges i loggen og i kørslens Summary."""
+    lines = ["| kilde | http | accepteret/kandidater | kæde i tilbud | gyldig fra | gyldig til | i alt | nye ved ?page=2 | afvist |",
+             "|---|---|---|---|---|---|---|---|---|"]
+    for r in out["stores"]:
+        p, g = r.get("parser") or {}, r.get("pagination") or {}
+        info = p.get("page_info") or {}
+        pg = ((g.get("tries") or {}).get("page=2") or {}).get("new")
+        lines.append("| %s | %s | %s/%s | %s | %s | %s | %s | %s | %s |" % (
+            r.get("store"), r.get("http"), p.get("accepted"), p.get("candidates"),
+            ",".join((p.get("chains") or {}).keys()) or "-", p.get("valid_from_min") or "-",
+            p.get("valid_to_max") or "-", info.get("totalNumberOfItems", "-"), pg if pg is not None else "-",
+            json.dumps(p.get("rejected") or {}, ensure_ascii=False)))
+    lines.append("")
+    lines.append("distinct_pages=%s, identical_content_groups=%s" % (out["distinct_pages"], out["identical_content_groups"]))
+    return lines
+
+
+def main(opener=urllib.request.urlopen):
+    status = json.loads((ROOT / "import_status.json").read_text(encoding="utf-8"))["sources"]
+    rows = []
+    for slug, key in CHAINS.items():
+        url = (status.get(key) or {}).get("source_url")
+        rows.append(probe_chain(slug, url, opener) if url else {"store": slug, "result": "no_source_url"})
+    groups = collections.defaultdict(list)
+    for r in rows:
+        fp = (r.get("signals") or {}).get("content_fingerprint")
+        if fp:
+            groups[fp].append(r["store"])
+    shared = [sorted(v) for v in groups.values() if len(v) > 1]
+    out = {"mode": "dry_run_no_data_written", "identical_content_groups": shared,
+           "distinct_pages": len(groups), "stores": rows}
+    Path("source_probe_report.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    text = "\n".join(summary_lines(out))
+    print(text)
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as f:
+            f.write("## Source probe\n\n" + text + "\n")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

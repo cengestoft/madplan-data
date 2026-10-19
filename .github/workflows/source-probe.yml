@@ -1,0 +1,32 @@
+name: Source probe (dry run)
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/source-probe.yml"
+      - "scripts/source_probe.py"
+      - "scripts/offer_parser.py"
+      - "tests/test_offer_parser.py"
+      - "tests/test_source_probe.py"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (probe + parser)
+        run: python -m unittest tests.test_source_probe tests.test_offer_parser
+      - name: Probe every store source (no data written)
+        run: python scripts/source_probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-probe-report
+          path: source_probe_report.json
+          retention-days: 14

@@ -1,13 +1,13 @@
 {
   "generated_at": "2026-10-13T21:22:30+02:00",
   "offer_count": 751,
-  "error_count": 13,
+  "error_count": 30,
   "hard_error_count": 0,
   "errors": [
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "Kalvecuvette",
+      "name": "ROSE Kyllingebrystfilet",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -15,7 +15,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "MADVÆRKET Medister",
+      "name": "MADVÆRKET Nakkekoteletter",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -23,7 +23,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "ROSE Hakket kyllingekød",
+      "name": "MADVÆRKET Koteletter",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -31,7 +31,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "ROSE Kyllingelårmix",
+      "name": "ROSE Hakket kylling",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -39,7 +39,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "ROSE Kyllingeinderfilet",
+      "name": "MADVÆRKET Hakket grisekød",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -47,7 +47,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "Luksusrogn",
+      "name": "Spegepølse",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -55,7 +55,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "BUTCHER'S Hamburger af oksekød",
+      "name": "Køkkenrulle",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -63,7 +63,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "Røget bacon",
+      "name": "Toiletpapir",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -71,7 +71,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "Hamburgerryg",
+      "name": "DANONINO Drikkeyoghurt med banan 8 x 100 g",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -79,7 +79,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "Skinke",
+      "name": "DANONINO Drikkeyoghurt 8 x 100 g",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -87,7 +87,7 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "BELLAROM Café crema hele bønner",
+      "name": "Mayonnaise",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."
@@ -95,7 +95,143 @@
     {
       "type": "missing_valid_to",
       "offer_id": null,
-      "name": "BELLAROM Espresso hele bønner",
+      "name": "Remoulade",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "chef select Schnitzel",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "MILBONA High Protein budding 4 x 125 g",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "MILBONA Skyr natural",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "MILBONA Græsk-inspireret yoghurt",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "MILBONA Creamy Cheese",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "DULANO Knækpølser",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "DULANO Bacon i strimler 2 x 150 g",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "DULANO Frikadeller",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "SOL&MAR Serranoskinke",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "chef select Kyllingenuggets",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "chef select XXL kalkunnuggets",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "chef select Chicken wings",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "chef select Kalkun-cordon bleu",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "CHEF SELECT Kalkunbryst med ost",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "OCEAN SEA Fiskepinde",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "ALESTO Cashewnødder 250 g",
+      "store": "Lidl",
+      "severity": "warning",
+      "detail": "End date unknown: not treated as valid without limit."
+    },
+    {
+      "type": "missing_valid_to",
+      "offer_id": null,
+      "name": "LUPILU Babyvådservietter 4 x 100 stk",
       "store": "Lidl",
       "severity": "warning",
       "detail": "End date unknown: not treated as valid without limit."

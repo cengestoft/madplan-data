@@ -33,7 +33,10 @@ Målet er 30 %, men siden Caspers beslutning 13. oktober 2026 er det et **kvalit
 - Menneskelige beslutninger ligger i `history_review_decisions.json` og indeholder kun hashes (`raw_id_hash`), reviewer og dato.
   En beslutning kan løfte `review_required` til `verified`, men aldrig overstyre en hård konflikt.
 Ved import anvendes en godkendelse kun, hvis `history_approval_check.documented` bekræfter samme produkt (samme særskilte ord efter fjernelse af mærke, størrelse, fedttal og generiske typeord).
-Ellers forbliver produktet `review_required` (`manual_decisions_blocked` tæller dem). Godkendelserne er foreløbige, til de er kontrolleret mod den private match-log.
+Ellers forbliver produktet `review_required` (`manual_decisions_blocked` tæller dem). Status pr. 19. okt 2026: Casper har gennemgået de 60 foreløbige godkendelser mod den private match-log (60 af 60 fundet).
+57 godkendelser på 25 nøgler er bekræftet (`confirmed_by: Casper`) og står i `decisions`. De 3 Coca-Cola Zero 24 x 25 cl-poster er UAFKLARET og står i `unresolved`; importen læser aldrig `unresolved`,
+og nøglen er fortsat spærret i `history_holds.json` (ingen frigivelse). `candidate_checks.py` tjek 6 og 10 bevogter det. En uafklaret post kan først flyttes til `decisions`, når den er dokumenteret og Casper har bekræftet den særskilt.
+Bekræftelsen ændrer ikke, hvilke nøgler en import verificerer (godkendelserne blev allerede anvendt i kandidat 12); den gør dem endelige.
 
 ## Historikken bevares
 `data_sources/history_offer_identities.json` husker alle tilbudsidentiteter. Verificeret historik for en nøgle slettes aldrig, fordi dens tilbud udløber;

@@ -4,8 +4,10 @@
 Needs NO raw data. Reads only aggregated files and writes a report with COUNTS and normalized product keys, never raw text.
 Checks (PASS/FAIL each):
   1 existing price rows unchanged      2 previously verified keys kept      3 Coca-Cola keys without pack_size conflict
-  4 Faxe Kondi rejection kept          5 no new approvals applied           6 the 60 approvals still provisional
+  4 Faxe Kondi rejection kept          5 no new approvals applied           6 the 57 approvals final (Casper), file unchanged
   7 no raw data / tokens / unexpected files in the artifact
+  8 no verified key on unverified quantity   9 approval changes vs baseline
+  10 unresolved approvals (Coca-Cola Zero 24 x 25 cl) never applied, hold kept
 Usage: python3 scripts/candidate_checks.py --before-dir . --after-dir DIR_WITH_UNZIPPED_ARTIFACT [--report OUT.md] [--main-ref origin/main]
 Exit code 1 if any check fails.
 """
@@ -22,7 +24,7 @@ COLA_KEYS = ["brand=coca-cola|product=cola|variant=standard|count=24|size=0-25l"
 ZERO25_KEY = "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l"
 FAXE_KEY = "brand=faxe-kondi|product=sportssodavand-24-pk|variant=standard|count=24|size=0-33l"
 EXPECTED_FILES = {"monthly_price_history.json", "history_verification.json", "history_offer_identities.json", "price_history.json", "report.md", "diff.json"}
-PROVISIONAL = "provisional_until_checked_against_private_match_log"
+FINAL = "confirmed_by_casper_57_zero_unresolved"
 TOKEN_PATTERNS = [r"sl\.[A-Za-z0-9_-]{20,}", r"ghp_[A-Za-z0-9]{20,}", r"github_pat_[A-Za-z0-9_]{20,}", r"(?i)bearer\s+[A-Za-z0-9._-]{20,}",
                   r"(?i)(refresh_token|app_secret|api[_-]?key)\"?\s*[:=]\s*\"?[A-Za-z0-9._-]{12,}", r"sk-ant-[A-Za-z0-9_-]{10,}"]
 RAW_FIELD_NAMES = {"raw_name", "raw_examples", "raw_hash", "examples", "match_log", "description", "priceHistory"}
@@ -120,8 +122,9 @@ def run_checks(before, after, main_ref=None):
     if main_ref:
         ref = main_ref_sha(main_ref, "data_sources/history_review_decisions.json", before)
         same = ref is not None and ref == sha(dec_path)
-    ok6 = dec.get("status") == PROVISIONAL and same is not False
-    res[6] = ("PASS" if ok6 else "FAIL", f"decisions-filens status = {dec.get('status')}; filen " + ("identisk med main" if same else "ikke sammenlignet med main" if same is None else "ER ÆNDRET i forhold til main"))
+    unconfirmed = [d for d in dec.get("decisions", []) if d.get("confirmed_by") != "Casper" or not d.get("confirmed_on")]
+    ok6 = dec.get("status") == FINAL and not unconfirmed and same is not False
+    res[6] = ("PASS" if ok6 else "FAIL", f"decisions-filens status = {dec.get('status')}; {len(unconfirmed)} godkendelser uden bekræftelse fra Casper; filen " + ("identisk med main" if same else "ikke sammenlignet med main" if same is None else "ER ÆNDRET i forhold til main"))
 
     # 7 leaks
     problems = []
@@ -195,13 +198,26 @@ def run_checks(before, after, main_ref=None):
                   + (f". Nyligt anvendte godkendelser har gjort {len(promoted)} nøgle(r) verificeret – kræver Caspers vurdering" if promoted else ""))
     else:
         res[9] = ("FAIL", "baseline-filen data_sources/history_approval_baseline.json mangler")
+
+    # 10 unresolved approvals are never applied and the hold stays
+    unres = dec.get("unresolved", [])
+    unres_hashes = {(u.get("normalized_product_key"), u.get("raw_id_hash")) for u in unres}
+    unres_keys = {k for k, _ in unres_hashes}
+    in_decisions = sorted(k for k in unres_hashes if k in {(d["normalized_product_key"], d["raw_id_hash"]) for d in dec.get("decisions", [])})
+    applied10 = sorted(k for k in unres_keys if ak.get(k, {}).get("manual_decisions", 0) or ak.get(k, {}).get("status") == "verified")
+    hold_keys = {h.get("key") for h in holds.get("holds", [])}
+    unheld = sorted(k for k in unres_keys if k not in hold_keys or k in released)
+    ok10 = not in_decisions and not applied10 and not unheld
+    res[10] = ("PASS" if ok10 else "FAIL",
+               f"{len(unres)} uafklarede poster på {len(unres_keys)} nøgle(r); anvendt/verificeret: {len(applied10)}; også i decisions: {len(in_decisions)}; uden spærring eller med frigivelse: {len(unheld)}")
     return res, notes
 
 
 TITLES = {1: "3.485 eksisterende prisrækker uændrede", 2: "97 tidligere verificerede nøgler bevaret", 3: "Coca-Cola uden falske pakkestørrelseskonflikter",
-          4: "Faxe Kondis afvisning bevaret", 5: "Ingen nye, udokumenterede godkendelser anvendt", 6: "De foreløbige godkendelser stadig foreløbige",
+          4: "Faxe Kondis afvisning bevaret", 5: "Ingen nye, udokumenterede godkendelser anvendt", 6: "De 57 godkendelser er endelige (Casper), og filen er uændret",
           7: "Ingen rådata, private logs eller tokens i artifact",
-          8: "Ingen verificeret nøgle bygger på ubekræftet tilbudsmængde (inkl. Coca-Cola Zero 24 x 25 cl)", 9: "Ændringer i anvendte godkendelser rapporteret og ikke promoveret"}
+          8: "Ingen verificeret nøgle bygger på ubekræftet tilbudsmængde (inkl. Coca-Cola Zero 24 x 25 cl)", 9: "Ændringer i anvendte godkendelser rapporteret og ikke promoveret",
+          10: "Uafklarede godkendelser (Coca-Cola Zero 24 x 25 cl) aldrig anvendt, spærring bevaret"}
 
 
 def report(res, notes):
@@ -210,7 +226,7 @@ def report(res, notes):
     for n in sorted(res):
         lines.append(f"{n}. {TITLES[n]}: **{res[n][0]}**")
         lines.append(f"   - {res[n][1]}")
-    lines += [""] + [f"- {x}" for x in notes] + ["", "Kandidaten er ikke publiceret og er ikke godkendt. De foreløbige godkendelser skal stadig kontrolleres mod den private match-log."]
+    lines += [""] + [f"- {x}" for x in notes] + ["", "Kandidaten er ikke publiceret og er ikke godkendt."]
     return "\n".join(lines) + "\n", allp
 
 

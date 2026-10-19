@@ -1,8 +1,9 @@
 {
  "schema_version": 1,
- "purpose": "Keys and counts of the provisional approvals that were applied in the first Dropbox candidate (25 keys, 57 approvals). candidate_checks.py reports and blocks any key whose applied approvals differ from this baseline.",
- "approved_by_casper": false,
- "status": "provisional",
+ "purpose": "Keys and counts of the 57 approvals (25 keys) that were applied in the first Dropbox candidate and confirmed by Casper on 2026-10-19. candidate_checks.py reports and blocks any key whose applied approvals differ from this baseline.",
+ "approved_by_casper": true,
+ "approved_on": "2026-10-19",
+ "status": "final",
  "keys": {
   "brand=barebells|product=banana-dream-proteinbar|variant=standard|count=1|size=0-055kg": 2,
   "brand=barebells|product=creamy-crisp-proteinbar|variant=standard|count=1|size=0-055kg": 2,

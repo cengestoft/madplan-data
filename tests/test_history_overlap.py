@@ -62,7 +62,25 @@ class HistoryOverlapTest(unittest.TestCase):
             self.assertTrue(d["normalized_product_key"].startswith("brand="))
             self.assertNotIn((d["normalized_product_key"], d["raw_id_hash"]), seen, "duplicate decision")
             seen.add((d["normalized_product_key"], d["raw_id_hash"]))
-            self.assertLessEqual(set(d), {"normalized_product_key", "raw_id_hash", "decision", "reviewed_by", "reviewed_on", "note"})
+            self.assertLessEqual(set(d), {"normalized_product_key", "raw_id_hash", "decision", "reviewed_by", "reviewed_on", "note", "confirmed_by", "confirmed_on"})
+
+    def test_casper_confirmed_57_and_zero_unresolved_and_held(self):
+        doc, base, holds = load("data_sources/history_review_decisions.json"), load("data_sources/history_approval_baseline.json"), load("data_sources/history_holds.json")
+        zero = "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l"
+        decs = doc["decisions"]
+        self.assertEqual(doc["status"], "confirmed_by_casper_57_zero_unresolved")
+        self.assertEqual((len(decs), len({d["normalized_product_key"] for d in decs})), (57, 25))
+        self.assertTrue(all(d["confirmed_by"] == "Casper" and d["confirmed_on"] == "2026-10-19" and d["decision"] == "verified" for d in decs))
+        self.assertNotIn(zero, {d["normalized_product_key"] for d in decs}, "Coca-Cola Zero must not be among the applied approvals")
+        unres = doc["unresolved"]
+        self.assertEqual((len(unres), {u["normalized_product_key"] for u in unres}), (3, {zero}))
+        self.assertTrue(all(u["status"] == "uafklaret" and u["uafklaret_af"] == "Casper" for u in unres))
+        self.assertEqual(sum(base["keys"].values()), 57)
+        from collections import Counter
+        self.assertEqual(Counter(d["normalized_product_key"] for d in decs), Counter(base["keys"]), "baseline must equal the confirmed approvals")
+        self.assertTrue(base["approved_by_casper"] and base["status"] == "final")
+        self.assertIn(zero, {h["key"] for h in holds["holds"]}, "the Zero hold must stay")
+        self.assertEqual(holds["releases"], [], "no release without Casper's explicit approval")
 
     def test_every_history_key_is_in_the_identity_registry(self):
         """The next import keeps verified history for every key in the registry, so no existing history key may be missing there."""

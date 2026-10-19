@@ -55,6 +55,9 @@ class DropboxError(SystemExit):
     status = None  # HTTP status of the failed Dropbox call, when there was one
 
 
+GRANTED_SCOPES = None  # set of whitelisted scope names granted to the token, or None when the token response does not say
+
+
 _REDACT: list = []  # secret values (and the access token) that must never appear in any message
 
 
@@ -71,17 +74,49 @@ SAFE_WORDS = {  # fixed Dropbox error vocabulary; anything else is reported as "
     "user", "team", "app", "other", "unsupported_file", "disallowed_name", "lookup_failed", "access_error", "email_not_verified"}
 
 
+SAFE_SCOPES = {  # Dropbox permission names: not secrets, and the only free-looking words that may be shown
+    "account_info.read", "account_info.write", "files.metadata.read", "files.metadata.write", "files.content.read", "files.content.write",
+    "files.permanent_delete", "sharing.read", "sharing.write", "file_requests.read", "file_requests.write", "contacts.read", "contacts.write"}
+REQUIRED_SCOPES = ("files.metadata.read", "files.content.read")
+
+# Plain-text 400 bodies from Dropbox are free text. They are NEVER shown; they are only matched against these patterns, and the
+# output is the fixed id of the first pattern that matches (or "text/unclassified"). The patterns are fixed in the code, not data.
+_TEXT_CLASSES = (
+    ("bad_content_type", re.compile(r"content-type", re.I)),
+    ("bad_api_arg", re.compile(r"dropbox-api-arg", re.I)),
+    ("bad_json", re.compile(r"could not decode|decode input|invalid json", re.I)),
+    ("missing_scope", re.compile(r"required scope|missing_scope", re.I)),
+    ("bad_authorization", re.compile(r"authorization|access token|bearer", re.I)),
+    ("bad_path_argument", re.compile(r"\bpath\b", re.I)),
+    ("bad_content_length", re.compile(r"content-length", re.I)),
+)
+
+
 def safe_error_code(body: bytes) -> str:
-    """Reduce a Dropbox error body to a fixed-vocabulary code such as 'path/not_found' or 'invalid_grant'. Nothing else is ever returned."""
+    """Reduce a Dropbox error body to a code from a FIXED vocabulary, e.g. 'path/not_found', 'invalid_grant', 'missing_scope/files.content.read'
+    or 'text/bad_content_type'. Free text from the body is never returned, only ids chosen by this code."""
+    text = body.decode("utf-8", "replace")
+    if not text.strip():
+        return "empty"
     try:
-        doc = json.loads(body.decode("utf-8", "replace"))
-        raw = doc.get("error_summary") or doc.get("error") or ""
+        doc = json.loads(text)
     except Exception:
+        return "text/" + next((name for name, rx in _TEXT_CLASSES if rx.search(text)), "unclassified")
+    if not isinstance(doc, dict):
         return ""
+    raw = doc.get("error_summary") or doc.get("error") or ""
+    err = doc.get("error")
+    tag = err.get(".tag") if isinstance(err, dict) else None
+    if isinstance(tag, str) and tag in SAFE_WORDS and not isinstance(raw, str):
+        raw = tag
     if not isinstance(raw, str):
         return ""
     parts = [p for p in re.split(r"[/.]", raw)[:4] if p]
-    return "/".join(p if p in SAFE_WORDS else "other" for p in parts)
+    code = "/".join(p if p in SAFE_WORDS else "other" for p in parts)
+    scope = err.get("required_scope") if isinstance(err, dict) else None
+    if isinstance(scope, str) and scope in SAFE_SCOPES:
+        code += f"/{scope}"
+    return code
 
 
 def _request(urlopen, req, what):
@@ -107,11 +142,17 @@ def get_access_token(env, urlopen=urllib.request.urlopen) -> str:
     body = urllib.parse.urlencode({"grant_type": "refresh_token", "refresh_token": env["DROPBOX_REFRESH_TOKEN"],
                                    "client_id": env["DROPBOX_APP_KEY"], "client_secret": env["DROPBOX_APP_SECRET"]}).encode()
     resp = _request(urlopen, urllib.request.Request(TOKEN_URL, data=body, method="POST"), "Dropbox token request")
-    token = json.loads(resp.read().decode("utf-8")).get("access_token")
+    doc = json.loads(resp.read().decode("utf-8"))
+    token = doc.get("access_token")
     if not token:
         _fail("Dropbox token response had no access_token")
     _REDACT.append(token)
     print(f"::add-mask::{token}")  # belt and braces: GitHub masks it if it ever appears in a log
+    global GRANTED_SCOPES
+    raw_scope = doc.get("scope")
+    GRANTED_SCOPES = None if not isinstance(raw_scope, str) else {x for x in raw_scope.split() if x in SAFE_SCOPES}
+    if GRANTED_SCOPES is not None:  # scope names are permission labels, not secrets
+        print("Dropbox-rettigheder: " + (" ".join(sorted(GRANTED_SCOPES)) or "(ingen kendte)"))
     return token
 
 
@@ -152,8 +193,25 @@ def open_download(token, path, urlopen=urllib.request.urlopen):
         if e.status != 400:
             raise
         print(f"{e}\nRetrying through a temporary link (same file, same verification).")
-    link = get_temporary_link(token, path, urlopen)
+    try:
+        link = get_temporary_link(token, path, urlopen)
+    except DropboxError:
+        range_probe(token, path, urlopen)
+        raise
     return _request(urlopen, urllib.request.Request(link, method="GET"), "Dropbox download via temporary link")
+
+
+def range_probe(token, path, urlopen=urllib.request.urlopen):
+    """Diagnosis only, after BOTH downloads failed: does files/download accept a tiny ranged request (first 1 KiB)? Prints a status line,
+    never any content. Tells a size/transfer problem (probe works) from a permission/path problem (probe fails the same way)."""
+    req = urllib.request.Request(DOWNLOAD_URL, method="POST", headers={
+        "Authorization": f"Bearer {token}", "Dropbox-API-Arg": _api_arg(path), "Content-Type": "application/octet-stream", "Range": "bytes=0-1023"})
+    try:
+        resp = _request(urlopen, req, "Dropbox range probe")
+        resp.read(1024)  # discarded, never printed or stored
+        print("Range-probe: OK (de foerste 1024 bytes kan hentes)")
+    except DropboxError as e:
+        print(f"{e}")
 
 
 def outside_git_tree(dest: Path) -> bool:
@@ -183,6 +241,9 @@ def fetch(env, dest: Path, expected_size=None, min_bytes=MIN_BYTES, urlopen=urll
     path = env.get("DROPBOX_RAW_PATH") or DEFAULT_PATH
     print(f"Dropbox-sti: {path}")  # a path, not a secret; shown so a wrong DROPBOX_RAW_PATH variable is visible in the log
     token = get_access_token(env, urlopen)
+    missing = [x for x in REQUIRED_SCOPES if GRANTED_SCOPES is not None and x not in GRANTED_SCOPES]
+    if missing:  # the token itself says it cannot do this; a new refresh token is needed after changing app permissions
+        _fail("the Dropbox token lacks required permission(s): " + ", ".join(missing) + " (enable them in the app console, then create a new refresh token)")
     meta = get_metadata(token, path, urlopen)
     size, remote_hash = int(meta.get("size", -1)), meta.get("content_hash")
     if size < min_bytes:

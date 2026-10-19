@@ -230,6 +230,18 @@ def key_status(counts: dict) -> str:
     return "no_candidate"
 
 
+def single_from_key(identity: dict):
+    """(amount, unit) of ONE unit of a multipack, read from the product key's size token (e.g. size=0-33l -> 0.33 l), and only if
+    count x that size equals the identity's total package_amount. Returns None otherwise (never a guess)."""
+    import re
+    m = re.search(r"\|size=(\d+(?:-\d+)?)(kg|g|ml|cl|l)$", str(identity.get("normalized_product_key") or ""))
+    count, total, unit = identity.get("package_count"), identity.get("package_amount"), identity.get("package_unit")
+    if not m or not count or float(count) <= 1 or total is None or str(unit) != m.group(2):
+        return None
+    size = float(m.group(1).replace("-", "."))
+    return (size if not size.is_integer() else int(size), unit) if abs(float(count) * size - float(total)) < 1e-6 else None
+
+
 def carry_over_rejections(key_info: dict, previous_keys: dict) -> list:
     """A documented rejection must never disappear silently. If a key was `rejected` in the previous verification file and the
     new run has NO raw products at all for it (no new evidence either way), the rejection is kept and marked carried_over.

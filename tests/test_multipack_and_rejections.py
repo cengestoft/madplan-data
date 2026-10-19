@@ -126,3 +126,26 @@ class ImporterKeepsRejection(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class HistoricalMultipack(unittest.TestCase):
+    def test_every_multipack_identity_has_a_single_size_that_matches_its_key(self):
+        from history_identity import single_from_key
+        reg = load("data_sources/history_offer_identities.json")["keys"]
+        n = 0
+        for k, recs in reg.items():
+            for r in recs:
+                if float(r.get("package_count") or 1) > 1:
+                    n += 1
+                    self.assertIsNotNone(r.get("single_package_amount"), k)
+                    self.assertAlmostEqual(float(r["package_count"]) * float(r["single_package_amount"]), float(r["package_amount"]), places=6, msg=k)
+                    self.assertEqual(describe(r)["pack_value"], round(float(r["package_amount"]), 6), k)
+        self.assertGreaterEqual(n, 28)
+
+    def test_single_from_key_never_guesses(self):
+        from history_identity import single_from_key
+        base = {"normalized_product_key": "brand=x|product=oel-18-pk|variant=standard|count=18|size=0-33l", "package_count": 18, "package_amount": 5.94, "package_unit": "l"}
+        self.assertEqual(single_from_key(base), (0.33, "l"))
+        self.assertIsNone(single_from_key(dict(base, package_amount=6)))          # total does not match count x size
+        self.assertIsNone(single_from_key(dict(base, package_unit="kg")))         # unit differs
+        self.assertIsNone(single_from_key(dict(base, normalized_product_key="brand=x|product=y")))  # no size in key

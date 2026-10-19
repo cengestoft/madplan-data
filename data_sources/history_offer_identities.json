@@ -673,7 +673,9 @@
     "package_unit": "l",
     "package_count": 18,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=blanche|product=oel-18-pk|variant=standard|count=18|size=0-33l"
+    "normalized_product_key": "brand=blanche|product=oel-18-pk|variant=standard|count=18|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=blanco|product=tequila|variant=standard|count=1|size=0-5l": [
@@ -2869,7 +2871,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=exotic|product=appelsinsodavand-24-pk|variant=standard|count=24|size=0-33l"
+    "normalized_product_key": "brand=exotic|product=appelsinsodavand-24-pk|variant=standard|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=export|product=oel-18-pk|variant=standard|count=18|size=0-33l": [
@@ -2880,7 +2884,9 @@
     "package_unit": "l",
     "package_count": 18,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=export|product=oel-18-pk|variant=standard|count=18|size=0-33l"
+    "normalized_product_key": "brand=export|product=oel-18-pk|variant=standard|count=18|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=extra-specialristet|product=kaffe-formalet|variant=standard|count=1|size=0-4kg": [
@@ -5531,7 +5537,9 @@
     "package_unit": "l",
     "package_count": 18,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=heineken|product=oel-18-pk|variant=standard|count=18|size=0-33l"
+    "normalized_product_key": "brand=heineken|product=oel-18-pk|variant=standard|count=18|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=hellige-karameller|product=slikposer|variant=standard|count=1|size=0-06kg": [
@@ -5806,7 +5814,9 @@
     "package_unit": "l",
     "package_count": 18,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=ipa|product=oel-18-pk|variant=standard|count=18|size=0-33l"
+    "normalized_product_key": "brand=ipa|product=oel-18-pk|variant=standard|count=18|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=irmas-hverdag|product=hasselnoedder|variant=standard|count=1|size=0-1kg": [
@@ -7148,7 +7158,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=lemon-zero|product=lemonsodavand-24-pk|variant=zero|count=24|size=0-33l"
+    "normalized_product_key": "brand=lemon-zero|product=lemonsodavand-24-pk|variant=zero|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=liba|product=fladbroed|variant=standard|count=1|size=0-34kg": [
@@ -10505,7 +10517,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=orange|product=appelsinsodavand-24-pk|variant=standard|count=24|size=0-33l"
+    "normalized_product_key": "brand=orange|product=appelsinsodavand-24-pk|variant=standard|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=oreo-sandwich|product=chokoladeplade|variant=standard|count=1|size=0-092kg": [

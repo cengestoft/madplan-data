@@ -21,7 +21,7 @@ from collections import defaultdict
 
 import math
 from history_approval_check import documented
-from history_identity import (REJECTED, REVIEW, VERIFIED, carry_over_rejections, combine, compare, describe, key_status, raw_id_hash)
+from history_identity import (REJECTED, REVIEW, VERIFIED, carry_over_rejections, combine, compare, describe, key_status, raw_id_hash, single_from_key)
 from product_normalization import infer_pack, normalized_product_key
 
 URL = "https://dagligepriser.dk/data/latest-canonical.json"
@@ -202,6 +202,12 @@ def merge_registry(registry, offers):
                 for f in ("single_package_amount", "single_package_unit"):
                     if r.get(f) is None and rec.get(f) is not None:
                         r[f] = rec[f]
+    for recs in out.values():  # identities that no longer have an offer: derive the single size from the key, only when it matches the total exactly
+        for r in recs:
+            if r.get("single_package_amount") is None and float(r.get("package_count") or 1) > 1:
+                s = single_from_key(r)
+                if s:
+                    r["single_package_amount"], r["single_package_unit"] = s
     return {k: sorted(v, key=lambda r: json.dumps(r, sort_keys=True, ensure_ascii=False)) for k, v in sorted(out.items())}
 
 

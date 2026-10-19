@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse, collections, datetime as dt, json, math, shutil
 from pathlib import Path
 from product_normalization import normalize_record, normalized_product_key, infer_brand, infer_variant
+from apply_quantity_flags import FlagError, consistency_problems, REGISTRY as QUANTITY_FLAGS, apply_to_offers, load_flags
 from offer_schema import (canonicalize_offer, copenhagen_today, food_relevance_for, offer_status,
                           partition_offers, snapshot_date, unexplained_losses, unverifiable_missing)
 
@@ -237,6 +238,24 @@ def main():
     today=dt.date.fromisoformat(a.today) if a.today else (snapshot_date(current) if a.snapshot_date else copenhagen_today())
     if a.snapshot_date and a.write: raise SystemExit("--snapshot-date is validation-only and cannot be combined with --write")
     previous=load_json(previous_path) if previous_path.exists() else None
+    # Unverified-quantity marks are (re)applied to every freshly imported offer BEFORE validation and publication.
+    # Expired or missing offers never get a mark; a source-confirmed lift with mismatching amounts blocks publication.
+    try:
+        quantity_flags=load_flags(root) if (root/QUANTITY_FLAGS).exists() else {}
+    except FlagError as e:
+        raise RuntimeError(f"Publication blocked: quantity flag registry invalid: {e}")
+    apply_to_offers(current.get("offers",[]),quantity_flags,today)  # marks on the raw import records
+    _cur=[normalize_record(o)[0] for o in current.get("offers",[])]  # checks run on normalized copies (existing rules)
+    _problems=apply_to_offers(_cur,quantity_flags,today)[1]
+    _stores={}
+    for _p in sorted((root/"stores").glob("*.json")):
+        _d=load_json(_p)
+        if isinstance(_d.get("offers"),list):
+            _recs=[normalize_record(o)[0] for o in _d["offers"]]
+            _problems+=apply_to_offers(_recs,quantity_flags,today)[1]
+            _stores[f"stores/{_p.name}"]=_recs
+    _problems+=consistency_problems({"current_offers.json":_cur,**_stores},quantity_flags,today)
+    if _problems: raise RuntimeError("Publication blocked: "+"; ".join(_problems))
     organic_conflicts=[]
     organic_flags=store_organic_flags(root,organic_conflicts)
     offers,errors=normalize_offers(current.get("offers",[])); hard=sum(1 for e in errors if e.get("severity")=="hard")
@@ -313,6 +332,7 @@ def main():
         doc=load_json(path)
         if isinstance(doc.get("offers"),list):
             doc["offers"]=[normalize_record(o)[0] for o in doc["offers"]]
+            apply_to_offers(doc["offers"],quantity_flags,today)
             doc["offer_count"]=len(doc["offers"]); dump_json(path,doc)
     for name in ("super_deals.json","super_deals_current.json"):
         path=root/name

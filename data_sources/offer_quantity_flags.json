@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "raw_data_included": false,
+  "purpose": "Offers whose package quantity could not be confirmed against the original source. Nothing is corrected by guessing; the quantity stays as delivered and is marked quantity_status=unverified until the source confirms it.",
+  "flags": [
+    {
+      "offer_id": "tilbudsugen-11335752",
+      "store": "Dagli'Brugsen",
+      "name": "Coca Cola Cola 24 pk.",
+      "status": "confirmed",
+      "checked_on": "2026-10-13",
+      "as_delivered": {
+        "package_count": 24,
+        "single_package_amount": 0.25,
+        "package_amount": 6,
+        "package_unit": "l",
+        "unit_price_dkk": 13.17
+      },
+      "conflicts_with": "SuperBrugsen and Kvickly deliver the same product and price (79 kr) as 24 x 0.33 l = 7.92 l (9.97 kr/l)",
+      "original_source": "tilbudsugen.dk portal, partner page daglibrugsen-117, source_offer_id 11335752; Dagli'Brugsen flyer 40/2026, page 25",
+      "evidence_for_as_delivered": "Source record carries its own unit price 13.17 kr/l, which matches 6 l; container is empty (not 'can'); a 24 x 25 cl PET pack of Coca-Cola exists in the Danish market (seen in the dagligepriser.dk raw data for other chains).",
+      "evidence_against": "Same product text and price as the 24 x 0.33 l can pack at SuperBrugsen/Kvickly.",
+      "not_confirmed_because": "The portal page and the flyer image could not be opened from the working environment (network policy). No source text for the pack size is stored in the repository.",
+      "needed_to_confirm": "Open the flyer page (Dagli'Brugsen 40/2026, page 25) or the portal listing and read the pack text (24 x 25 cl or 24 x 33 cl).",
+      "secondary_check_2026-10-19": {
+        "by": "ChatGPT (read by Claude)",
+        "result": "C: cannot be settled. 24 x 25 cl PET is made plausible but NOT verified.",
+        "indications": "Goma lists Coca-Cola 24 x 25 cl PET at 79 kr at Brugsen (https://goma.gg/varer/coca-cola-24x25-cl-pet-24996); the public Tilbudsugen listing and the Brugsen flyer page were cited as showing 24 x 25 cl at 79 kr (https://brugsen.coop.dk/avis/). These are indications, not the printed pack text on flyer 40/2026 page 25.",
+        "still_unverified": "Unit size, container type (can or PET), deposit, and whether the offer covers Coca-Cola Original only or also Zero/other variants (this record is the Original). The report only names Coca-Cola.",
+        "decision": "Keep status unverified. Do not use as basis for approving the pack size. No quantity, price, key or history changed."
+      },
+      "confirmed_by": "Casper (accepted the Goma product image as sufficient, 19 Oct 2026)",
+      "confirmed_on": "2026-10-19",
+      "confirmed_source": "Goma product page https://goma.gg/varer/coca-cola-24x25-cl-pet-24996: pack image reads 24 x 250 ml, Coca-Cola Original Taste, sold only as 24 pcs. Not the printed Dagli'Brugsen flyer 40/2026 p. 25; Casper chose to accept this.",
+      "confirmed_quantity": {
+        "package_count": 24,
+        "single_package_amount": 0.25,
+        "package_amount": 6,
+        "package_unit": "l"
+      }
+    },
+    {
+      "offer_id": "tilbudsugen-11335755",
+      "store": "Dagli'Brugsen",
+      "name": "Coca Cola Zero Cola 24 pk.",
+      "status": "unverified",
+      "checked_on": "2026-10-13",
+      "as_delivered": {
+        "package_count": 24,
+        "single_package_amount": 0.25,
+        "package_amount": 6,
+        "package_unit": "l",
+        "unit_price_dkk": 13.17
+      },
+      "conflicts_with": "SuperBrugsen and Kvickly deliver the same product and price (79 kr) as 24 x 0.33 l = 7.92 l (9.97 kr/l)",
+      "original_source": "tilbudsugen.dk portal, partner page daglibrugsen-117, source_offer_id 11335755; Dagli'Brugsen flyer 40/2026, page 25",
+      "evidence_for_as_delivered": "Source record carries its own unit price 13.17 kr/l, which matches 6 l; container is empty (not 'can'); a 24 x 25 cl PET pack of Coca-Cola Zero exists in the Danish market (seen in the dagligepriser.dk raw data for other chains).",
+      "evidence_against": "Same product text and price as the 24 x 0.33 l can pack at SuperBrugsen/Kvickly.",
+      "not_confirmed_because": "The portal page and the flyer image could not be opened from the working environment (network policy). No source text for the pack size is stored in the repository.",
+      "needed_to_confirm": "Open the flyer page (Dagli'Brugsen 40/2026, page 25) or the portal listing and read the pack text (24 x 25 cl or 24 x 33 cl).",
+      "secondary_check_2026-10-19": {
+        "by": "ChatGPT (read by Claude)",
+        "result": "C: cannot be settled. 24 x 25 cl PET is made plausible but NOT verified.",
+        "indications": "Goma lists Coca-Cola 24 x 25 cl PET at 79 kr at Brugsen (https://goma.gg/varer/coca-cola-24x25-cl-pet-24996); the public Tilbudsugen listing and the Brugsen flyer page were cited as showing 24 x 25 cl at 79 kr (https://brugsen.coop.dk/avis/). These are indications, not the printed pack text on flyer 40/2026 page 25.",
+        "still_unverified": "Unit size, container type (can or PET), deposit, and whether the offer covers Coca-Cola Original only or also Zero/other variants (this record is Zero). The report only names Coca-Cola.",
+        "decision": "Keep status unverified. Do not use as basis for approving the pack size. No quantity, price, key or history changed."
+      }
+    }
+  ]
+}

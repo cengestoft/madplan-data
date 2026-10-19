@@ -21297,7 +21297,9 @@
         "amount": 0.25,
         "unit": "l"
       },
-      "organic": false
+      "organic": false,
+      "quantity_status": "unverified",
+      "quantity_note": "Mængden er ikke bekræftet mod originalkilden (afviger fra samme vare i andre kæder). Tjek pakken."
     },
     {
       "id": "tilbudsugen-11335756",

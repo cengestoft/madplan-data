@@ -52,6 +52,11 @@ def main():
     print(json.dumps({"today": str(today), "promoted": len(promoted), "left_in_next_week": len(n2["offers"]), "without_valid_to_not_promoted": no_end,
                       "already_current": present, "names": [o["name"] for o in promoted]}, ensure_ascii=False))
     if a.write:
+        from apply_quantity_flags import apply_to_offers, load_flags
+        flags = load_flags()
+        _n, problems = apply_to_offers(c2["offers"], flags, today)
+        if problems:
+            raise SystemExit("; ".join(problems))
         cp.write_text(json.dumps(c2, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         np_.write_text(json.dumps(n2, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

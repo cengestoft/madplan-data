@@ -11,7 +11,9 @@
     "package_unit": "l",
     "package_count": 20,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=0-kalorier|product=sportssodavand-20-pk|variant=standard|count=20|size=0-33l"
+    "normalized_product_key": "brand=0-kalorier|product=sportssodavand-20-pk|variant=standard|count=20|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=0-kalorier|product=sportssodavand|variant=standard|count=1|size=1-5l": [
@@ -693,7 +695,9 @@
     "package_unit": "l",
     "package_count": 6,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=blanc|product=specialoel-6-pk|variant=standard|count=6|size=0-33l"
+    "normalized_product_key": "brand=blanc|product=specialoel-6-pk|variant=standard|count=6|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=blanding-72|product=kaffe-formalet|variant=standard|count=1|size=0-5kg": [
@@ -814,7 +818,9 @@
     "package_unit": "l",
     "package_count": 8,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=booster-original|product=energidrik-8-pk|variant=original|count=8|size=0-5l"
+    "normalized_product_key": "brand=booster-original|product=energidrik-8-pk|variant=original|count=8|size=0-5l",
+    "single_package_amount": 0.5,
+    "single_package_unit": "l"
    }
   ],
   "brand=booster-original|product=energidrik|variant=original|count=1|size=0-5l": [
@@ -1595,7 +1601,9 @@
     "package_unit": "l",
     "package_count": 12,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=classic|product=oel-12-pk|variant=classic|count=12|size=0-33l"
+    "normalized_product_key": "brand=classic|product=oel-12-pk|variant=classic|count=12|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=classic|product=oel-20-pk|variant=classic|count=20|size=0-33l": [
@@ -1606,7 +1614,9 @@
     "package_unit": "l",
     "package_count": 20,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=classic|product=oel-20-pk|variant=classic|count=20|size=0-33l"
+    "normalized_product_key": "brand=classic|product=oel-20-pk|variant=classic|count=20|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=classic|product=oel|variant=classic|count=1|size=0-33l": [
@@ -1628,7 +1638,9 @@
     "package_unit": "l",
     "package_count": 30,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=classic|product=oel|variant=classic|count=30|size=0-33l"
+    "normalized_product_key": "brand=classic|product=oel|variant=classic|count=30|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=coca-cola|product=cola|variant=standard|count=24|size=0-25l": [
@@ -1639,7 +1651,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-25l"
+    "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-25l",
+    "single_package_amount": 0.25,
+    "single_package_unit": "l"
    }
   ],
   "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l": [
@@ -1650,7 +1664,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l"
+    "normalized_product_key": "brand=coca-cola|product=cola|variant=standard|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l": [
@@ -1661,7 +1677,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l"
+    "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
+    "single_package_amount": 0.25,
+    "single_package_unit": "l"
    }
   ],
   "brand=coca-cola|product=cola|variant=zero|count=24|size=0-33l": [
@@ -1672,7 +1690,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-33l"
+    "normalized_product_key": "brand=coca-cola|product=cola|variant=zero|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=cocio|product=chokolademaelk|variant=classic|count=1|size=0-6l": [
@@ -2937,7 +2957,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=faxe-kondi|product=sportssodavand-24-pk|variant=standard|count=24|size=0-33l"
+    "normalized_product_key": "brand=faxe-kondi|product=sportssodavand-24-pk|variant=standard|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=faxe-kondi|product=sportssodavand|variant=standard|count=1|size=2l": [
@@ -5032,7 +5054,9 @@
     "package_unit": "l",
     "package_count": 12,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=groen|product=oel-12-pk|variant=standard|count=12|size=0-33l"
+    "normalized_product_key": "brand=groen|product=oel-12-pk|variant=standard|count=12|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=groen|product=oel|variant=standard|count=30|size=0-33l": [
@@ -5043,7 +5067,9 @@
     "package_unit": "l",
     "package_count": 30,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=groen|product=oel|variant=standard|count=30|size=0-33l"
+    "normalized_product_key": "brand=groen|product=oel|variant=standard|count=30|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=grovhakket-let|product=leverpostej|variant=standard|count=1|size=0-275kg": [
@@ -10114,7 +10140,9 @@
     "package_unit": "l",
     "package_count": 6,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=new-england-ipa|product=specialoel-6-pk|variant=standard|count=6|size=0-44l"
+    "normalized_product_key": "brand=new-england-ipa|product=specialoel-6-pk|variant=standard|count=6|size=0-44l",
+    "single_package_amount": 0.44,
+    "single_package_unit": "l"
    }
   ],
   "brand=nivea|product=renseprodukter|variant=standard|count=1|size=0-04l": [
@@ -10818,7 +10846,9 @@
     "package_unit": "l",
     "package_count": 20,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=pepsi-max|product=cola-20-pk|variant=max|count=20|size=0-33l"
+    "normalized_product_key": "brand=pepsi-max|product=cola-20-pk|variant=max|count=20|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=pepsi-max|product=cola-24-pk|variant=max|count=24|size=0-33l": [
@@ -10829,7 +10859,9 @@
     "package_unit": "l",
     "package_count": 24,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=pepsi-max|product=cola-24-pk|variant=max|count=24|size=0-33l"
+    "normalized_product_key": "brand=pepsi-max|product=cola-24-pk|variant=max|count=24|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=pepsi-max|product=cola|variant=max|count=1|size=1-5l": [
@@ -10906,7 +10938,9 @@
     "package_unit": "l",
     "package_count": 12,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=pilsner|product=oel-12-pk|variant=standard|count=12|size=0-33l"
+    "normalized_product_key": "brand=pilsner|product=oel-12-pk|variant=standard|count=12|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=pilsner|product=oel-20-pk|variant=standard|count=20|size=0-33l": [
@@ -10917,7 +10951,9 @@
     "package_unit": "l",
     "package_count": 20,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=pilsner|product=oel-20-pk|variant=standard|count=20|size=0-33l"
+    "normalized_product_key": "brand=pilsner|product=oel-20-pk|variant=standard|count=20|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=pilsner|product=oel|variant=standard|count=1|size=0-33l": [
@@ -10939,7 +10975,9 @@
     "package_unit": "l",
     "package_count": 30,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=pilsner|product=oel|variant=standard|count=30|size=0-33l"
+    "normalized_product_key": "brand=pilsner|product=oel|variant=standard|count=30|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=pingui|product=cool-snacks|variant=standard|count=1|size=0-24kg": [
@@ -12633,7 +12671,9 @@
     "package_unit": "l",
     "package_count": 12,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=somersby|product=apple-cider-12-pk|variant=standard|count=12|size=0-33l"
+    "normalized_product_key": "brand=somersby|product=apple-cider-12-pk|variant=standard|count=12|size=0-33l",
+    "single_package_amount": 0.33,
+    "single_package_unit": "l"
    }
   ],
   "brand=somersby|product=apple-cider|variant=standard|count=1|size=0-275l": [
@@ -13436,7 +13476,9 @@
     "package_unit": "l",
     "package_count": 8,
     "category": "drikkevarer",
-    "normalized_product_key": "brand=ultra-energy|product=energidrik-8-pk|variant=standard|count=8|size=0-5l"
+    "normalized_product_key": "brand=ultra-energy|product=energidrik-8-pk|variant=standard|count=8|size=0-5l",
+    "single_package_amount": 0.5,
+    "single_package_unit": "l"
    }
   ],
   "brand=urtekram|product=roede-kidneyboenner|variant=standard|count=1|size=0-25kg": [

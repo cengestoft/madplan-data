@@ -18,7 +18,7 @@ from pathlib import Path
 
 MAX_BYTES = 12 * 1024 * 1024
 ALLOWED_KEY_FIELDS = {"active", "status", "offer_names", "raw_products", "methods", "conflict_fields", "missing_fields",
-                      "manual_decisions", "manual_decisions_blocked", "months"}
+                      "manual_decisions", "manual_decisions_blocked", "months", "carried_over"}
 MIN_GRAPH_MONTHS = 3  # same rule as the app worker
 
 
@@ -104,6 +104,11 @@ def check(before_hist, before_ver, after_hist, after_ver, after_size, before_reg
     shrunk = sorted(k for k, m in bm.items() if k in b_keys and b_keys[k].get("status") == "verified" and not m <= am.get(k, set()) and k not in allowed)
     if shrunk:
         bad.append(f"{len(shrunk)} verified keys lost history months")
+    # a documented rejection must not vanish silently: rejected before, now neither rejected nor backed by any raw product
+    lost_rej = sorted(k for k, v in b_keys.items() if v.get("status") == "rejected" and a_keys.get(k, {}).get("status") != "rejected"
+                      and sum((a_keys.get(k, {}).get("raw_products") or {}).values()) == 0 and k not in allowed)
+    if lost_rej:
+        bad.append(f"{len(lost_rej)} previously rejected keys lost their rejection without new evidence")
     if set(before_registry or {}) - set(after_registry or {}):
         bad.append("identity registry lost keys")
     return bad

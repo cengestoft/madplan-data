@@ -230,6 +230,21 @@ def key_status(counts: dict) -> str:
     return "no_candidate"
 
 
+def carry_over_rejections(key_info: dict, previous_keys: dict) -> list:
+    """A documented rejection must never disappear silently. If a key was `rejected` in the previous verification file and the
+    new run has NO raw products at all for it (no new evidence either way), the rejection is kept and marked carried_over.
+    New evidence (any raw product matched in this run) is judged normally. Returns the carried-over keys."""
+    kept = []
+    for key, info in key_info.items():
+        prev = (previous_keys or {}).get(key) or {}
+        rp = info.get("raw_products") or {}
+        if prev.get("status") == REJECTED and info.get("status") == "no_candidate" and sum(rp.values()) == 0:
+            info["status"] = REJECTED
+            info["carried_over"] = True
+            kept.append(key)
+    return kept
+
+
 GROCERY_EXCLUDED = {"husholdning", "dyrefoder"}
 
 

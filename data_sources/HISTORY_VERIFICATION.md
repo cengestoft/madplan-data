@@ -38,3 +38,7 @@ Ellers forbliver produktet `review_required` (`manual_decisions_blocked` tæller
 ## Historikken bevares
 `data_sources/history_offer_identities.json` husker alle tilbudsidentiteter. Verificeret historik for en nøgle slettes aldrig, fordi dens tilbud udløber;
 aktuelle tilbud afgør kun overlap og hvilke grafer der er mulige (`active` pr. nøgle).
+
+## Multipack-identiteter og videreførte afvisninger (19. okt 2026)
+- Tilbuddenes `package_amount` er TOTALEN for en multipack (24 x 0,33 l = 7,92 l). Identitetsregistret gemmer derfor også `single_package_amount`/`single_package_unit` for multipacks (count > 1), så `describe()` giver samme pakkestørrelse for et fuldt tilbud og dets registeridentitet. Uden dem blev antal ganget to gange (fx 144 l i stedet for 6 l) og gav falske `pack_size`-afvisninger. Nøglerne er uændrede.
+- En tidligere `rejected` nøgle, der ikke har nogen rå produkter i en ny kørsel, forbliver `rejected` med `carried_over: true` (kilde: `--previous-verification`, standard `history_verification.json`). Nye matches bedømmes som normalt. `history_import_guard.py` stopper kørslen, hvis en afvisning forsvinder uden rå produkter.

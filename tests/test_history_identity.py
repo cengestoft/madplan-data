@@ -152,7 +152,8 @@ class ImporterEndToEnd(unittest.TestCase):
         out = subprocess.run([sys.executable, str(ROOT / "scripts" / "import_dagligepriser_history.py"), "--source-file", str(self.tmp / "raw.json"),
                               "--current-offers", str(self.tmp / "current.json"), "--output", str(self.tmp / "monthly.json"),
                               "--decisions", str(self.tmp / "decisions.json"),
-                              "--identities", str(self.tmp / "identities.json"), *extra], cwd=ROOT, capture_output=True, text=True)
+                              "--identities", str(self.tmp / "identities.json"),
+                              *(() if "--previous-verification" in extra else ("--previous-verification", str(self.tmp / "no-previous.json"))), *extra], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(out.returncode, 0, out.stderr)
         return json.loads((self.tmp / "monthly.json").read_text(encoding="utf-8")), json.loads((self.tmp / "history_verification.json").read_text(encoding="utf-8"))
 

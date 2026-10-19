@@ -21,7 +21,7 @@ from collections import defaultdict
 
 import math
 from history_approval_check import documented
-from history_identity import (REJECTED, REVIEW, VERIFIED, combine, compare, describe, key_status, raw_id_hash)
+from history_identity import (REJECTED, REVIEW, VERIFIED, carry_over_rejections, combine, compare, describe, key_status, raw_id_hash)
 from product_normalization import infer_pack, normalized_product_key
 
 URL = "https://dagligepriser.dk/data/latest-canonical.json"
@@ -160,7 +160,10 @@ def load_decisions(path: pathlib.Path) -> dict:
             if d.get("decision") in {"verified", "rejected"} and d.get("reviewed_by") and d.get("reviewed_on")}
 
 
-IDENTITY_FIELDS = ("name", "brand", "variant", "package_amount", "package_unit", "package_count", "category", "normalized_product_key")
+# single_package_amount/unit are needed by infer_pack(): package_amount of an offer is the TOTAL of a multipack (24 x 0.33 l = 7.92 l),
+# so without the single amount describe() would multiply count x total again.
+IDENTITY_FIELDS = ("name", "brand", "variant", "package_amount", "package_unit", "package_count", "category", "normalized_product_key",
+                   "single_package_amount", "single_package_unit")
 REGISTRY_PATH = "data_sources/history_offer_identities.json"
 
 
@@ -168,6 +171,8 @@ def identity_record(o):
     """Minimal public offer identity (the project's own offer data, no raw dagligepriser text) used to keep verifying history
     for products that temporarily have no active offer."""
     rec = {f: o.get(f) for f in IDENTITY_FIELDS if o.get(f) is not None}
+    if not (float(o.get("package_count") or 1) > 1):
+        rec.pop("single_package_amount", None); rec.pop("single_package_unit", None)  # only multipacks need them (count x single = total)
     rec["normalized_product_key"] = o.get("normalized_product_key") or normalized_product_key(o)
     return rec
 
@@ -188,8 +193,15 @@ def merge_registry(registry, offers):
         if not k:
             continue
         ident = lambda r: (r.get("name"), r.get("brand"), r.get("package_amount"), r.get("package_unit"), r.get("package_count"))
-        if all(ident(r) != ident(rec) for r in out.setdefault(k, [])):
+        same = [r for r in out.setdefault(k, []) if ident(r) == ident(rec)]
+        if not same:
             out[k].append(rec)
+        else:
+            # Additive only: an identity saved before single_package_* existed gets them from the same offer. Nothing is overwritten.
+            for r in same:
+                for f in ("single_package_amount", "single_package_unit"):
+                    if r.get(f) is None and rec.get(f) is not None:
+                        r[f] = rec[f]
     return {k: sorted(v, key=lambda r: json.dumps(r, sort_keys=True, ensure_ascii=False)) for k, v in sorted(out.items())}
 
 
@@ -212,6 +224,8 @@ def main():
                     help="human review decisions (hashes only, no raw text): promote review_required to verified or reject a raw product")
     ap.add_argument("--identities", default=REGISTRY_PATH,
                     help="registry of offer identities for all historical product keys (kept across runs; history is never dropped because an offer expired)")
+    ap.add_argument("--previous-verification", default="history_verification.json",
+                    help="the previously committed verification file; documented rejections are carried over when this run has no raw products for the key")
     ap.add_argument("--update-identities-only", action="store_true", help="only add the current offers to the identity registry and exit")
     ap.add_argument("--verification", help="public per-key verification status (default: history_verification.json next to the output)")
     ap.add_argument("--match-log", help="write per-key match documentation (method + raw product examples) to this PRIVATE path under data/private/; never committed")
@@ -425,6 +439,12 @@ def main():
             "manual_decisions_blocked": blocked_by_key.get(key, 0),
             "months": len(months_by_key.get(key, ())),
         }
+    prev_path = pathlib.Path(args.previous_verification)
+    try:
+        prev_keys = json.loads(prev_path.read_text(encoding="utf-8")).get("keys", {}) if prev_path.exists() else {}
+    except (ValueError, OSError):
+        prev_keys = {}
+    carried = carry_over_rejections(key_info, prev_keys)
     status_count = defaultdict(int)
     retained_inactive = sum(1 for info in key_info.values() if not info["active"] and info["status"] == VERIFIED)
     for info in key_info.values():

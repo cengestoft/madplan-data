@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-12T06:01:26+02:00",
+  "generated_at": "2026-10-19T05:57:12+02:00",
   "currency": "DKK",
   "country": "Denmark",
   "item_count": 200,
@@ -1259,19 +1259,19 @@
       "category": "frugt_og_gront",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 18,
+      "estimated_reference_price_dkk": 16,
       "expected_normal_range_dkk": {
         "low": 14,
-        "high": 22
+        "high": 19
       },
-      "estimated_unit_price_dkk": 18,
+      "estimated_unit_price_dkk": 16,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-19",
+      "previous_reference_price_dkk": 18,
+      "change_percent": -11.11,
+      "source_count": 3
     },
     {
       "id": "ref-064",
@@ -2599,19 +2599,19 @@
       "category": "konserves",
       "package_amount": 0.4,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 8,
+      "estimated_reference_price_dkk": 7,
       "expected_normal_range_dkk": {
         "low": 6,
-        "high": 11
+        "high": 9
       },
-      "estimated_unit_price_dkk": 20,
+      "estimated_unit_price_dkk": 17.5,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-12",
-      "previous_reference_price_dkk": 9,
-      "change_percent": -11.11,
-      "source_count": 1
+      "updated_at": "2026-10-19",
+      "previous_reference_price_dkk": 8,
+      "change_percent": -12.5,
+      "source_count": 4
     },
     {
       "id": "ref-131",

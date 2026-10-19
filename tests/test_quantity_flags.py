@@ -79,6 +79,7 @@ class QuantityFlagTest(unittest.TestCase):
 
 TODAY = dt.date(2026, 10, 13)
 FLAG_IDS = ("tilbudsugen-11335752", "tilbudsugen-11335755")
+STILL_UNVERIFIED = tuple(f["offer_id"] for f in load("data_sources/offer_quantity_flags.json")["flags"] if f["status"] == "unverified")
 
 
 def offer(oid, **kw):
@@ -189,6 +190,14 @@ class ConfirmedConsistencyTest(unittest.TestCase):
     def test_correct_confirmed_quantity_is_accepted_and_lifts_the_mark(self):
         o, _, res = self.lift()
         self.assertEqual(res, (1, []))
+        self.assertNotIn("quantity_status", o)
+
+    def test_light_store_record_without_normalized_fields_lifts_the_mark(self):
+        """Store files hold light records (no normalized_* fields): they are judged by the same normalization rules as in consistency_problems."""
+        o = offer("a", quantity_status="unverified", quantity_note=aqf.NOTE)
+        for k in ("normalized_package_count", "normalized_package_size", "normalized_product_key"):
+            o[k] = None
+        self.assertEqual(aqf.apply_to_offers([o], confirmed_flag(), TODAY), (1, []))
         self.assertNotIn("quantity_status", o)
 
     def test_correct_confirmed_quantity_for_a_different_pack_size(self):
@@ -309,13 +318,15 @@ class PipelineIntegrationTest(unittest.TestCase):
         self.assertEqual(r.returncode, 0, r.stderr[-400:])
         for name in ("current_offers.json", "stores/daglibrugsen.json"):
             got = self.offers(root, name)
-            for oid in FLAG_IDS:
+            for oid in STILL_UNVERIFIED:
                 self.assertEqual(got[oid]["quantity_status"], "unverified", (name, oid))
+            for oid in set(FLAG_IDS) - set(STILL_UNVERIFIED):  # a source-confirmed offer carries no mark
+                self.assertNotIn("quantity_status", got[oid], (name, oid))
         after = self.offers(root, "current_offers.json")
         for oid in FLAG_IDS:  # amounts, prices and keys exactly as delivered
             for k, v in before[oid].items():
                 self.assertEqual(after[oid][k], v, (oid, k))
-        unmarked = [i for i, o in after.items() if o.get("quantity_status") and i not in FLAG_IDS]
+        unmarked = [i for i, o in after.items() if o.get("quantity_status") and i not in STILL_UNVERIFIED]
         self.assertEqual(unmarked, [])
 
     def test_expired_offers_are_not_marked_again(self):

@@ -139,7 +139,9 @@ def apply_to_offers(offers, flags, today):
         else:  # confirmed: every quantity-dependent field must agree with the source-confirmed quantity on every non-expired offer
             if offer_status(o, today) == "expired":
                 continue
-            dev = confirmed_deviations(o, f["confirmed_quantity"])
+            # Store files hold light records without normalized_* fields; those are judged with the same normalization rules as in consistency_problems.
+            rec = o if o.get("normalized_package_size") is not None else normalize_record(o)[0]  # light record: derive them
+            dev = confirmed_deviations(rec, f["confirmed_quantity"])
             if dev:
                 problems.append(f"{o['id']}: confirmed quantity disagrees with field(s) {', '.join(dev)}; the mark stays and publication is "
                                 f"blocked until amount, unit price, volume, single package amount and product key are corrected together")

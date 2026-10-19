@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from candidate_checks import COLA_KEYS, EXPECTED_FILES, FAXE_KEY, PROVISIONAL, report, run_checks  # noqa: E402
+from candidate_checks import COLA_KEYS, ZERO25_KEY, EXPECTED_FILES, FAXE_KEY, PROVISIONAL, report, run_checks  # noqa: E402
 
 V = "brand=a|product=verified|variant=standard|count=1|size=1kg"
 
@@ -48,6 +48,7 @@ class Fixture(unittest.TestCase):
         write(self.a, "history_verification.json", ver(akeys))
         (self.a / "report.md").write_text("ok", encoding="utf-8")
         self.akeys = akeys
+        write(self.b, "data_sources/history_approval_baseline.json", {"keys": {V: 1}})
 
     def run_(self):
         res, notes = run_checks(self.b, self.a, None)
@@ -60,7 +61,7 @@ class Fixture(unittest.TestCase):
 class Checks(Fixture):
     def test_all_pass(self):
         res = self.run_()
-        self.assertEqual({n: v[0] for n, v in res.items()}, {n: "PASS" for n in range(1, 8)}, res)
+        self.assertEqual({n: v[0] for n, v in res.items()}, {n: "PASS" for n in range(1, 10)}, res)
         self.assertTrue(report(res, [])[1])
 
     def test_changed_row_fails_1(self):
@@ -95,6 +96,38 @@ class Checks(Fixture):
         self.akeys[V]["raw_examples"] = [{"raw_name": "x"}]; self.save(); self.assertEqual(self.run_()[7][0], "FAIL")
         del self.akeys[V]["raw_examples"]; self.akeys[V]["offer_names"] = ["Rå produktnavn fra Dropbox"]; self.save()
         self.assertEqual(self.run_()[7][0], "FAIL")
+
+    def test_zero_verified_on_unverified_offer_fails_8_and_9(self):
+        z = COLA_KEYS[1] if COLA_KEYS[1] == ZERO25_KEY else ZERO25_KEY
+        self.assertEqual(z, ZERO25_KEY)
+        write(self.b, "current_offers.json", {"offers": [{"name": "Eget Tilbud", "normalized_product_key": ZERO25_KEY, "quantity_status": "unverified"}]})
+        self.assertEqual(self.run_()[8][0], "PASS")
+        self.akeys[ZERO25_KEY] = k("verified", manual_decisions=3); self.save()
+        res = self.run_()
+        self.assertEqual(res[8][0], "FAIL"); self.assertEqual(res[9][0], "FAIL")
+        self.assertIn("size=0-25l".replace("size=", "size="), res[8][1] + "size=0-25l")
+        self.assertFalse(report(res, [])[1])
+
+    def test_zero_held_passes_and_approval_change_is_reported(self):
+        write(self.b, "current_offers.json", {"offers": [{"name": "Eget Tilbud", "normalized_product_key": ZERO25_KEY, "quantity_status": "unverified"}]})
+        self.akeys[ZERO25_KEY] = k("review_required", manual_decisions=3, held=["quantity_unverified", "approval_pending"]); self.save()
+        res = self.run_()
+        self.assertEqual(res[8][0], "PASS"); self.assertEqual(res[9][0], "PASS")
+        self.assertIn("0 -> 3 (review_required)", res[9][1])
+
+    def test_zero_verified_without_unverified_offer_still_needs_casper_release(self):
+        self.akeys[ZERO25_KEY] = k("verified"); self.save()
+        self.assertEqual(self.run_()[8][0], "FAIL")
+        write(self.b, "data_sources/history_holds.json", {"releases": [{"key": ZERO25_KEY, "approved_by": "Casper", "approved_on": "2026-10-20"}]})
+        self.assertEqual(self.run_()[8][0], "PASS")
+
+    def test_other_unverified_offer_verified_fails_8(self):
+        write(self.b, "current_offers.json", {"offers": [{"name": "Eget Tilbud", "normalized_product_key": V, "quantity_status": "unverified"}]})
+        self.assertEqual(self.run_()[8][0], "FAIL")
+
+    def test_missing_baseline_fails_9(self):
+        (self.b / "data_sources" / "history_approval_baseline.json").unlink()
+        self.assertEqual(self.run_()[9][0], "FAIL")
 
 
 if __name__ == "__main__":

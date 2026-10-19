@@ -126,6 +126,46 @@ class ImporterKeepsRejection(unittest.TestCase):
         self.assertEqual(reg["single_package_amount"], 0.33)
 
 
+class QuantityHold(unittest.TestCase):
+    """19 Oct 2026: a key built from an unconfirmed package size must not become verified history without Casper's release."""
+    def test_unverified_offer_holds_only_its_own_key(self):
+        from history_identity import compute_holds
+        offers = [{"normalized_product_key": COLA["zero25"], "quantity_status": "unverified"}, {"normalized_product_key": COLA["zero33"]}, {"normalized_product_key": "other"}]
+        held = compute_holds(offers, {}, lambda o: o.get("normalized_product_key"))
+        self.assertEqual(held, {COLA["zero25"]: ["quantity_unverified"]})
+
+    def test_hold_file_needs_casper_release(self):
+        from history_identity import compute_holds
+        key = lambda o: o.get("normalized_product_key")
+        doc = {"holds": [{"key": COLA["zero25"]}], "releases": [{"key": COLA["zero25"], "approved_by": "Claude", "approved_on": "2026-10-20"}]}
+        self.assertEqual(compute_holds([], doc, key), {COLA["zero25"]: ["approval_pending"]})
+        doc["releases"] = [{"key": COLA["zero25"], "approved_by": "Casper"}]  # no date
+        self.assertEqual(compute_holds([], doc, key), {COLA["zero25"]: ["approval_pending"]})
+        doc["releases"] = [{"key": COLA["zero25"], "approved_by": "Casper", "approved_on": "2026-10-20"}]
+        self.assertEqual(compute_holds([], doc, key), {})
+        # a release does not lift the automatic hold while the offer quantity is still unverified
+        self.assertEqual(compute_holds([{"normalized_product_key": COLA["zero25"], "quantity_status": "unverified"}], doc, key), {COLA["zero25"]: ["quantity_unverified"]})
+
+    def test_shipped_hold_file_covers_zero_and_is_unreleased(self):
+        doc = load("data_sources/history_holds.json")
+        self.assertEqual([h["key"] for h in doc["holds"]], [COLA["zero25"]])
+        self.assertEqual(doc["releases"], [])
+
+    def test_guard_blocks_verified_key_with_unverified_offer(self):
+        hist = {"records": [{"normalized_product_key": "v", "month": "2026-01", "source": "dagligepriser.dk"}], "verified_only": True, "raw_data_included": False, "credit": "dagligepriser.dk"}
+        ver = lambda st: {"keys": {COLA["zero25"]: {"status": st}, "v": {"status": "verified"}}, "raw_data_included": False}
+        bad = lambda st: [p for p in check(hist, {"keys": {}}, hist, ver(st), 1000, {}, {}, unverified_quantity_keys={COLA["zero25"]}) if "unverified package size" in p]
+        self.assertEqual(len(bad("verified")), 1)
+        self.assertEqual(bad("review_required"), [])
+
+    def test_importer_leaves_existing_data_and_other_keys_alone(self):
+        ver = load("history_verification.json")["keys"]
+        self.assertEqual(sum(1 for v in ver.values() if v.get("status") == "verified"), 97)
+        self.assertNotEqual(ver[COLA["zero25"]]["status"], "verified")
+        offers = {o["normalized_product_key"] for o in load("current_offers.json")["offers"] if o.get("quantity_status") == "unverified"}
+        self.assertEqual(offers, {COLA["zero25"]})  # today the hold affects exactly one product
+
+
 if __name__ == "__main__":
     unittest.main()
 

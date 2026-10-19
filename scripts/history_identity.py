@@ -242,6 +242,27 @@ def single_from_key(identity: dict):
     return (size if not size.is_integer() else int(size), unit) if abs(float(count) * size - float(total)) < 1e-6 else None
 
 
+def compute_holds(offers, holds_doc, keyfn) -> dict:
+    """{normalized_product_key: [reasons]} for keys that must NOT be promoted to `verified` history yet.
+    quantity_unverified: an ACTIVE offer of the key has quantity_status == "unverified" (the key was built from an unconfirmed package size).
+    approval_pending:    the key is listed in data_sources/history_holds.json and has no release signed off by Casper.
+    A hold never deletes anything: raw matches, provisional approvals and the offer data stay as they are; only the key status and the
+    published rows are held back (status review_required, no rows)."""
+    held = {}
+    for o in offers:
+        if o.get("quantity_status") == "unverified":
+            k = keyfn(o)
+            if k:
+                held.setdefault(k, set()).add("quantity_unverified")
+    doc = holds_doc or {}
+    released = {r.get("key") for r in doc.get("releases", []) if r.get("key") and r.get("approved_by") == "Casper" and r.get("approved_on")}
+    for h in doc.get("holds", []):
+        k = h.get("key")
+        if k and k not in released:
+            held.setdefault(k, set()).add("approval_pending")
+    return {k: sorted(v) for k, v in held.items()}
+
+
 def carry_over_rejections(key_info: dict, previous_keys: dict) -> list:
     """A documented rejection must never disappear silently. If a key was `rejected` in the previous verification file and the
     new run has NO raw products at all for it (no new evidence either way), the rejection is kept and marked carried_over.

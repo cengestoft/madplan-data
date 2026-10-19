@@ -19,6 +19,7 @@ from history_import_guard import ALLOWED_KEY_FIELDS, months_by_key  # noqa: E402
 COLA_KEYS = ["brand=coca-cola|product=cola|variant=standard|count=24|size=0-25l",
              "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l",
              "brand=coca-cola|product=cola|variant=zero|count=24|size=0-33l"]
+ZERO25_KEY = "brand=coca-cola|product=cola|variant=zero|count=24|size=0-25l"
 FAXE_KEY = "brand=faxe-kondi|product=sportssodavand-24-pk|variant=standard|count=24|size=0-33l"
 EXPECTED_FILES = {"monthly_price_history.json", "history_verification.json", "history_offer_identities.json", "price_history.json", "report.md", "diff.json"}
 PROVISIONAL = "provisional_until_checked_against_private_match_log"
@@ -165,12 +166,42 @@ def run_checks(before, after, main_ref=None):
         if p.is_file() and any(rx.search(p.read_text(encoding="utf-8", errors="ignore")) for rx in pat):
             problems.append(f"{p.name}: indeholder noget, der ligner et token/en hemmelighed")
     res[7] = ("PASS" if not problems else "FAIL", "6 forventede filer, ingen rådatafelter, ingen token-mønstre, offer_names kun fra egne data" if not problems else "; ".join(problems))
+
+    # 8 no verified key may rest on an offer whose package size is unverified (explicitly incl. Coca-Cola Zero 24 x 25 cl)
+    cur = load(before / "current_offers.json") if (before / "current_offers.json").exists() else {"offers": []}
+    unv = {o.get("normalized_product_key") for o in cur.get("offers", []) if o.get("quantity_status") == "unverified" and o.get("normalized_product_key")}
+    holds_p = before / "data_sources" / "history_holds.json"
+    holds = load(holds_p) if holds_p.exists() else {}
+    released = {r.get("key") for r in holds.get("releases", []) if r.get("approved_by") == "Casper" and r.get("approved_on")}
+    bad8 = sorted(k for k in unv if ak.get(k, {}).get("status") == "verified")
+    zero = ak.get(ZERO25_KEY, {})
+    zero_bad = zero.get("status") == "verified" and (ZERO25_KEY in unv or ZERO25_KEY not in released)
+    if zero_bad and ZERO25_KEY not in bad8: bad8.append(ZERO25_KEY)
+    held = sorted(k for k, v in ak.items() if v.get("held"))
+    res[8] = ("PASS" if not bad8 else "FAIL",
+              (f"{len(unv)} nøgle(r) med ubekræftet tilbudsmængde, ingen er verificeret; Zero 24 x 25 cl: {zero.get('status')}" + (f" (holdt: {zero.get('held')})" if zero.get("held") else "") + f"; holdte nøgler: {len(held)}")
+              if not bad8 else "verificeret på ubekræftet mængde/uden Caspers frigivelse: " + "; ".join(k.split("|", 1)[1] for k in bad8))
+
+    # 9 approval status changes vs the first candidate (keys + counts only)
+    base_p = before / "data_sources" / "history_approval_baseline.json"
+    if base_p.exists():
+        base = load(base_p).get("keys", {})
+        cur_ap = {k: v.get("manual_decisions", 0) for k, v in ak.items() if v.get("manual_decisions")}
+        diffs = sorted(k for k in set(base) | set(cur_ap) if base.get(k, 0) != cur_ap.get(k, 0))
+        promoted = [k for k in diffs if cur_ap.get(k, 0) > base.get(k, 0) and ak.get(k, {}).get("status") == "verified"]
+        desc = "; ".join(f"{k.split('|', 1)[1]}: {base.get(k, 0)} -> {cur_ap.get(k, 0)} ({ak.get(k, {}).get('status')})" for k in diffs)
+        res[9] = ("PASS" if not promoted else "FAIL",
+                  f"baseline {len(base)} nøgler/{sum(base.values())} godkendelser; kandidat {len(cur_ap)} nøgler/{sum(cur_ap.values())}; ændrede nøgler: {len(diffs)}" + (f" [{desc}]" if desc else "")
+                  + (f". Nyligt anvendte godkendelser har gjort {len(promoted)} nøgle(r) verificeret – kræver Caspers vurdering" if promoted else ""))
+    else:
+        res[9] = ("FAIL", "baseline-filen data_sources/history_approval_baseline.json mangler")
     return res, notes
 
 
 TITLES = {1: "3.485 eksisterende prisrækker uændrede", 2: "97 tidligere verificerede nøgler bevaret", 3: "Coca-Cola uden falske pakkestørrelseskonflikter",
           4: "Faxe Kondis afvisning bevaret", 5: "Ingen nye, udokumenterede godkendelser anvendt", 6: "De foreløbige godkendelser stadig foreløbige",
-          7: "Ingen rådata, private logs eller tokens i artifact"}
+          7: "Ingen rådata, private logs eller tokens i artifact",
+          8: "Ingen verificeret nøgle bygger på ubekræftet tilbudsmængde (inkl. Coca-Cola Zero 24 x 25 cl)", 9: "Ændringer i anvendte godkendelser rapporteret og ikke promoveret"}
 
 
 def report(res, notes):

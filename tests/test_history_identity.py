@@ -157,6 +157,20 @@ class ImporterEndToEnd(unittest.TestCase):
         self.assertEqual(out.returncode, 0, out.stderr)
         return json.loads((self.tmp / "monthly.json").read_text(encoding="utf-8")), json.loads((self.tmp / "history_verification.json").read_text(encoding="utf-8"))
 
+    def test_unverified_quantity_offer_is_held_and_others_unaffected(self):
+        cur = json.loads((self.tmp / "current.json").read_text(encoding="utf-8"))
+        havsalt = next(o for o in cur["offers"] if "Havsalt" in o["name"])
+        havsalt["quantity_status"] = "unverified"
+        (self.tmp / "current.json").write_text(json.dumps(cur), encoding="utf-8")
+        monthly, ver = self.run_import()
+        self.assertEqual(ver["keys"][havsalt["normalized_product_key"]]["status"], REVIEW)
+        self.assertEqual(ver["keys"][havsalt["normalized_product_key"]]["held"], ["quantity_unverified"])
+        self.assertEqual(ver["keys"][havsalt["normalized_product_key"]]["raw_products"]["verified"], 1)  # raw matches stay visible
+        self.assertEqual({r["normalized_product_key"] for r in monthly["records"]} & {havsalt["normalized_product_key"]}, set())
+        sour = next(o for o in cur["offers"] if "Sour" in o["name"])
+        self.assertEqual(ver["keys"][sour["normalized_product_key"]]["status"], VERIFIED)  # other products unaffected
+        self.assertNotIn("held", ver["keys"][sour["normalized_product_key"]])
+
     def test_only_verified_history_is_published(self):
         monthly, ver = self.run_import()
         statuses = {k.split("|")[1][8:]: v["status"] for k, v in ver["keys"].items()}

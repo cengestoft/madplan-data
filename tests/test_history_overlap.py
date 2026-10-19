@@ -77,7 +77,7 @@ class HistoryOverlapTest(unittest.TestCase):
         if verification is None:
             self.skipTest("no verification file yet")
         self.assertIs(verification.get("raw_data_included"), False)
-        allowed = {"active", "status", "offer_names", "raw_products", "methods", "conflict_fields", "missing_fields", "manual_decisions", "manual_decisions_blocked", "months", "carried_over"}
+        allowed = {"active", "status", "offer_names", "raw_products", "methods", "conflict_fields", "missing_fields", "manual_decisions", "manual_decisions_blocked", "months", "carried_over", "held"}
         for k, v in verification["keys"].items():
             self.assertLessEqual(set(v), allowed, k)
 

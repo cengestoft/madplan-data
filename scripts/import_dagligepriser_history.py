@@ -21,7 +21,7 @@ from collections import defaultdict
 
 import math
 from history_approval_check import documented
-from history_identity import (REJECTED, REVIEW, VERIFIED, carry_over_rejections, combine, compare, describe, key_status, raw_id_hash, single_from_key)
+from history_identity import (REJECTED, REVIEW, VERIFIED, carry_over_rejections, combine, compute_holds, compare, describe, key_status, raw_id_hash, single_from_key)
 from product_normalization import infer_pack, normalized_product_key
 
 URL = "https://dagligepriser.dk/data/latest-canonical.json"
@@ -232,6 +232,8 @@ def main():
                     help="registry of offer identities for all historical product keys (kept across runs; history is never dropped because an offer expired)")
     ap.add_argument("--previous-verification", default="history_verification.json",
                     help="the previously committed verification file; documented rejections are carried over when this run has no raw products for the key")
+    ap.add_argument("--holds", default="data_sources/history_holds.json",
+                    help="keys that must not become verified history until released (see compute_holds); optional file")
     ap.add_argument("--update-identities-only", action="store_true", help="only add the current offers to the identity registry and exit")
     ap.add_argument("--verification", help="public per-key verification status (default: history_verification.json next to the output)")
     ap.add_argument("--match-log", help="write per-key match documentation (method + raw product examples) to this PRIVATE path under data/private/; never committed")
@@ -257,6 +259,12 @@ def main():
         print(json.dumps({"identity_keys": len(registry), "active_keys": len(offer_keys)}))
         return
     history_keys = set(registry) | offer_keys
+    holds_path = pathlib.Path(args.holds)
+    try:
+        holds_doc = json.loads(holds_path.read_text(encoding="utf-8")) if holds_path.exists() else {}
+    except (ValueError, OSError):
+        holds_doc = {}
+    held = compute_holds(offers, holds_doc, lambda o: o.get("normalized_product_key") or normalized_product_key(o))
     hist_offers = [dict(r) for k in sorted(registry) for r in registry[k]]  # active and historical offer identities
 
     brands = sorted({str(o.get("brand")).strip() for o in hist_offers if o.get("brand")}, key=len, reverse=True)
@@ -414,6 +422,8 @@ def main():
                                                  "missing": verdict["missing"], "manual": verdict["manual"]}
             if verdict_cache[vkey]["status"] != VERIFIED:
                 continue
+            if key in held:
+                continue  # held key: raw matches and approvals are kept in the counts, but no row is published as verified history
             month = hist["date"][:7]
             buckets[(key, STORES[store_code], month)].append(price)
             months_by_key[key].add(month)
@@ -445,6 +455,11 @@ def main():
             "manual_decisions_blocked": blocked_by_key.get(key, 0),
             "months": len(months_by_key.get(key, ())),
         }
+    for key, reasons in held.items():
+        info = key_info.get(key)
+        if info and info["status"] == VERIFIED:
+            info["status"] = REVIEW
+            info["held"] = reasons
     prev_path = pathlib.Path(args.previous_verification)
     try:
         prev_keys = json.loads(prev_path.read_text(encoding="utf-8")).get("keys", {}) if prev_path.exists() else {}
@@ -501,7 +516,8 @@ def main():
     reconcile_manifest_file(output)
     print(json.dumps({"raw_product_count": len(products), "records": len(rows), "bytes": size, "skipped": skipped,
                       "non_offer_rows_dropped": non_offer_rows,
-                      "previous_verification_keys": len(prev_keys), "carried_over_rejections": len(carried), **summary}, ensure_ascii=False))
+                      "previous_verification_keys": len(prev_keys), "carried_over_rejections": len(carried),
+                      "held_keys": sum(1 for i in key_info.values() if i.get("held")), **summary}, ensure_ascii=False))
     if not summary["meets_required_overlap"]:
         print(f"WARNING: verified overlap {summary['verified_overlap']:.1%} is below the required {MIN_OVERLAP:.0%}; "
               f"{needed} more verified keys needed. Nothing was lowered or invented.")

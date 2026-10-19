@@ -106,3 +106,13 @@ Use that history for trend context, but use `price_history.json` for verified of
 
 Priority remains:
 verified current offer > verified future offer valid for target date > verified store-specific price > current reference price estimate.
+
+### `source_count`
+
+`source_count` is the number of documented store price observations used for the item (one observation = one store's price for the item on one observed day). It is not a count of independent data sources: several observations may come from the same price-comparison site. Items with `source_count` 1 rest on a single observation.
+
+An observation without a visible offer marker does not prove a normal/shelf price. Without explicit documentation of offer status or verifiable price history, the normal-price status is "not verified" and must be stated as such.
+
+### Pull request description for reference-price changes
+
+Every PR that changes a reference price lists, per changed item: source (URL), store, price, observation date, product identity (brand, variant, pack size), and offer status (offer marker, no marker, or unknown). Do not open a PR when the branch is identical to `main`.

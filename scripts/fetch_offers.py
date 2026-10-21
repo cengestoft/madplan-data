@@ -31,7 +31,7 @@ UA = source_probe.UA
 MAX_BYTES = 25 * 1024 * 1024
 DELAY = 2.0
 MAX_PAGES = 80
-MAX_REQUESTS = 450
+MAX_REQUESTS = 600
 COMPLETE_SHARE = 0.98
 
 
@@ -83,7 +83,8 @@ def fetch_chain(slug, url, today, get=http_get, sleep=time.sleep, budget=None):
     info = load(1)
     if info is None:
         return st, offers
-    st["total_reported"], st["last_page"] = info.get("totalNumberOfItems"), min(info.get("lastValidPageNumber") or 1, MAX_PAGES)
+    st["pages_needed"] = info.get("lastValidPageNumber") or 1  # ukappet: kun til overvågning, bruges ikke af importvagten
+    st["total_reported"], st["last_page"] = info.get("totalNumberOfItems"), min(st["pages_needed"], MAX_PAGES)
     total = st["total_reported"] or len(seen)
     done = lambda: len(seen) >= total * COMPLETE_SHARE
     last = st["last_page"]
@@ -161,7 +162,18 @@ def build_output(per_store, now=None):
             "stores": {st["store"]: store_entry(st, offers) for st, offers in per_store}}
 
 
-def build_guarded_output(per_store, now=None, prev_doc=None, today=None):
+def fetch_report(per_store, requests_left=None):
+    """Kun tal til overvågning (ingen tilbud): sider hentet og krævet pr. kæde, grænser og forbrugte forespørgsler.
+    Ligger uden for stores/import_report og læses ikke af importvagten."""
+    chains = {st["store"]: {"pages_fetched": st.get("pages_fetched", 0), "pages_needed": st.get("pages_needed"),
+                            "stopped": st.get("stopped")} for st, _ in per_store}
+    rep = {"page_limit": MAX_PAGES, "request_budget": MAX_REQUESTS, "chains": chains}
+    if requests_left is not None:
+        rep["requests_used"] = MAX_REQUESTS - requests_left
+    return rep
+
+
+def build_guarded_output(per_store, now=None, prev_doc=None, today=None, requests_left=None):
     """Samlet fil til privat lager. Kun navn, pris, butik og gyldighed (ingen billeder eller links).
     Importvagten (offer_guard) beslutter pr. butik, om nye data må erstatte forrige. Returnerer (fil eller None, rapport)."""
     now = now or dt.datetime.now(dt.timezone.utc)
@@ -172,7 +184,8 @@ def build_guarded_output(per_store, now=None, prev_doc=None, today=None):
     doc = {"generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "Tilbudsugen.dk",
            "source_url": "https://www.tilbudsugen.dk",
            "use": "Privat, ikke-kommerciel brug. Må kun deles med nærmeste familie. Angiv Tilbudsugen.dk som datakilde.",
-           "stores": body["stores"], "import_report": body["import_report"]}
+           "stores": body["stores"], "import_report": body["import_report"],
+           "fetch_report": fetch_report(per_store, requests_left)}
     return doc, summary
 
 
@@ -199,7 +212,7 @@ def main(get=http_get, sleep=time.sleep, argv=None):
             f.write("## Hent alle tilbudssider (prøvekørsel, intet gemmes)\n\n" + text + "\n")
     if out_path:
         prev = offer_guard.load_previous(out_path)
-        doc, summary = build_guarded_output(per_store, prev_doc=prev, today=today)
+        doc, summary = build_guarded_output(per_store, prev_doc=prev, today=today, requests_left=budget.left)
         for slug, r in summary["stores"].items():
             if r["status"] != "ok":
                 print("TILBAGEHOLDT %s: %s (accepteret %s, tidligere gyldige %s, væk %s)" % (

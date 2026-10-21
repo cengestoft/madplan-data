@@ -68,6 +68,31 @@ class FetchTests(unittest.TestCase):
         self.assertFalse(st["complete"])
         self.assertLessEqual(max(site.calls), fo.MAX_PAGES)
 
+    def test_pages_needed_is_uncapped_and_recorded(self):
+        site, st, offers = self.run_chain(80 * 30 + 600, True)
+        self.assertEqual(st["pages_needed"], -(-(80 * 30 + 600) // 30))   # 100 > MAX_PAGES: behovet ses trods klipning
+        self.assertEqual(st["last_page"], fo.MAX_PAGES)
+
+    def test_fetch_report_has_only_numbers_and_never_offers(self):
+        site, st, offers = self.run_chain(95, True)
+        rep = fo.fetch_report([(st, offers)], requests_left=fo.MAX_REQUESTS - 7)
+        self.assertEqual(rep["page_limit"], fo.MAX_PAGES)
+        self.assertEqual(rep["request_budget"], fo.MAX_REQUESTS)
+        self.assertEqual(rep["requests_used"], 7)
+        self.assertEqual(rep["chains"]["x"], {"pages_fetched": 2, "pages_needed": 4, "stopped": None})
+        self.assertNotIn("offers", json.dumps(rep))
+
+    def test_guarded_output_carries_fetch_report_without_changing_stores_or_import_report(self):
+        site, st, offers = self.run_chain(95, True)
+        ps = [(dict(st, store=s), offers) for s in "abcd"]
+        a, ra = fo.build_guarded_output(ps, dt.datetime(2026, 10, 16, 6, 0, tzinfo=dt.timezone.utc), None, TODAY)
+        b, rb = fo.build_guarded_output(ps, dt.datetime(2026, 10, 16, 6, 0, tzinfo=dt.timezone.utc), None, TODAY, requests_left=300)
+        self.assertIn("fetch_report", b)
+        self.assertEqual(b["fetch_report"]["requests_used"], fo.MAX_REQUESTS - 300)
+        self.assertEqual(a["stores"], b["stores"])
+        self.assertEqual(a["import_report"], b["import_report"])
+        self.assertEqual(ra, rb)
+
     def test_single_page_chain(self):
         site, st, offers = self.run_chain(20, False)
         self.assertEqual(site.calls, [1])

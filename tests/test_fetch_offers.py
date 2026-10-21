@@ -50,6 +50,24 @@ class FetchTests(unittest.TestCase):
         self.assertEqual(len(offers), 95)
         self.assertTrue(st["complete"])
 
+    def test_large_chain_above_old_45_page_limit_is_complete(self):
+        # Bilka havde 1339 af mere end 1350 tilbud hentet, fordi grænsen var 45 sider (~1350 tilbud) og kæden blev meldt ufuldstændig.
+        site, st, offers = self.run_chain(1800, True)
+        self.assertEqual(site.calls, [1, 60])
+        self.assertEqual(len(offers), 1800)
+        self.assertTrue(st["complete"])
+
+    def test_large_non_cumulative_chain_walks_all_pages(self):
+        site, st, offers = self.run_chain(1800, False)
+        self.assertGreaterEqual(len(offers), 1800 * fo.COMPLETE_SHARE)
+        self.assertTrue(st["complete"])
+        self.assertLessEqual(max(site.calls), 60)
+
+    def test_chain_above_page_cap_is_still_reported_incomplete(self):
+        site, st, offers = self.run_chain(80 * 30 + 600, True)
+        self.assertFalse(st["complete"])
+        self.assertLessEqual(max(site.calls), fo.MAX_PAGES)
+
     def test_single_page_chain(self):
         site, st, offers = self.run_chain(20, False)
         self.assertEqual(site.calls, [1])

@@ -1,3 +1,4 @@
+import datetime as dt
 import json, sys, tempfile, unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -55,7 +56,7 @@ class SuperDeals(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             p, q = Path(t, "in.json"), Path(t, "out.json")
             p.write_text(json.dumps({"stores": {"netto": {"offers": [x("Smør", 20.0, "0.5", "kg.", "pk.", 40.0)]}}}))
-            b.main(["--in", str(p), "--out", str(q)])
+            b.main(["--in", str(p), "--out", str(q)], now=dt.datetime.fromisoformat(NOW))
             self.assertEqual(json.loads(q.read_text())["super_deal_count"], 1)
             self.assertFalse(Path(str(q) + ".tmp").exists())
 

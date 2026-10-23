@@ -94,13 +94,13 @@ def build(file: dict, today: str, now_iso: str) -> dict:
     }
 
 
-def main(argv=None):
+def main(argv=None, now=None):
     p = argparse.ArgumentParser()
     p.add_argument("--in", dest="src", required=True)
     p.add_argument("--out", required=True)
     a = p.parse_args(argv)
     src = json.loads(Path(a.src).read_text(encoding="utf-8"))
-    now = dt.datetime.now(dt.timezone.utc)
+    now = now or dt.datetime.now(dt.timezone.utc)
     today = (now + dt.timedelta(hours=2)).date().isoformat()  # dansk dato er nok til udløbstjek; Worker tjekker igen
     doc = build(src, today, now.isoformat(timespec="seconds"))
     out = Path(a.out)

@@ -181,9 +181,9 @@ class LoadAndMainTests(unittest.TestCase):
         good = tf.FakeSite(40, True)
         with tempfile.TemporaryDirectory() as d:
             out = str(Path(d, "data", "offers.json"))
-            self.assertEqual(fo.main(good.get, lambda s: None, argv=["--out", out]), 0)
+            self.assertEqual(fo.main(good.get, lambda s: None, argv=["--out", out], today=TODAY), 0)
             before = Path(out).read_text()
-            self.assertEqual(fo.main(lambda u: (500, b""), lambda s: None, argv=["--out", out]), 1)
+            self.assertEqual(fo.main(lambda u: (500, b""), lambda s: None, argv=["--out", out], today=TODAY), 1)
             self.assertEqual(Path(out).read_text(), before)
             self.assertFalse(Path(out + ".tmp").exists())
 
@@ -191,7 +191,7 @@ class LoadAndMainTests(unittest.TestCase):
         import test_fetch_offers as tf
         with tempfile.TemporaryDirectory() as d:
             out = str(Path(d, "o.json"))
-            fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out])
+            fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out], today=TODAY)
             doc = json.loads(Path(out).read_text())
             self.assertEqual(doc["import_report"]["held"], [])
             for r in doc["import_report"]["stores"].values():

@@ -189,11 +189,12 @@ def build_guarded_output(per_store, now=None, prev_doc=None, today=None, request
     return doc, summary
 
 
-def main(get=http_get, sleep=time.sleep, argv=None):
+def main(get=http_get, sleep=time.sleep, argv=None, today=None):
     argv = sys.argv[1:] if argv is None else argv
     out_path = argv[argv.index("--out") + 1] if "--out" in argv else None
     status = json.loads((ROOT / "import_status.json").read_text(encoding="utf-8"))["sources"]
-    today, budget, results, per_store = dt.date.today(), Budget(), [], []
+    today = today or dt.date.today()
+    budget, results, per_store = Budget(), [], []
     for slug, key in source_probe.CHAINS.items():
         url = (status.get(key) or {}).get("source_url")
         if not url:

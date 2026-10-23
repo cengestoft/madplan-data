@@ -141,10 +141,10 @@ class OutputTests(unittest.TestCase):
         fo.source_probe.CHAINS = {"x": "bilka"}
         try:
             with tempfile.TemporaryDirectory() as d:
-                self.assertEqual(fo.main(site.get, lambda s: None, argv=[]), 0)
+                self.assertEqual(fo.main(site.get, lambda s: None, argv=[], today=TODAY), 0)
                 self.assertEqual(os.listdir(d), [])
                 path = os.path.join(d, "data", "offers.json")
-                self.assertEqual(fo.main(site.get, lambda s: None, argv=["--out", path]), 0)
+                self.assertEqual(fo.main(site.get, lambda s: None, argv=["--out", path], today=TODAY), 0)
                 with open(path, encoding="utf-8") as f:
                     data = json.load(f)
                 self.assertEqual(len(data["stores"]["x"]["offers"]), 40)

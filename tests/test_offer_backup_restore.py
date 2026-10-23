@@ -23,19 +23,19 @@ class BackupTests(unittest.TestCase):
     def test_backup_created_with_previous_valid_file_before_overwrite(self):
         with tempfile.TemporaryDirectory() as d:
             out = str(Path(d, "data", "offers.json"))
-            self.assertEqual(fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out]), 0)
+            self.assertEqual(fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out], today=TODAY), 0)
             self.assertFalse(Path(d, "data", "offers.previous.json").exists())   # første kørsel: intet at gemme
             first = Path(out).read_text()
-            self.assertEqual(fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out]), 0)
+            self.assertEqual(fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out], today=TODAY), 0)
             self.assertEqual(Path(d, "data", "offers.previous.json").read_text(), first)
 
     def test_blocked_run_leaves_file_and_backup_unchanged(self):
         with tempfile.TemporaryDirectory() as d:
             out = str(Path(d, "offers.json"))
-            fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out])
-            fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out])
+            fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out], today=TODAY)
+            fo.main(tf.FakeSite(40, True).get, lambda s: None, argv=["--out", out], today=TODAY)
             a, b = Path(out).read_text(), Path(d, "offers.previous.json").read_text()
-            self.assertEqual(fo.main(lambda u: (500, b""), lambda s: None, argv=["--out", out]), 1)
+            self.assertEqual(fo.main(lambda u: (500, b""), lambda s: None, argv=["--out", out], today=TODAY), 1)
             self.assertEqual((Path(out).read_text(), Path(d, "offers.previous.json").read_text()), (a, b))
 
     def test_invalid_current_file_never_overwrites_good_backup(self):

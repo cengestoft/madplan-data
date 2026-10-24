@@ -33,6 +33,30 @@ class SuperDeals(unittest.TestCase):
         self.assertEqual(run(x("Coca Cola Zero", 50.0, "7.92", "ltr.", "ds.", 6.3, "Coca Cola Zero"),
                               x("Pepsi Max", 50.0, "7.92", "ltr.", "ds.", 6.3, "Pepsi Max"))["super_deal_count"], 0)
 
+    def test_cola_24_med_stykstørrelse_pr_dåse_og_antal_i_navnet(self):
+        # Rigtigt format fra Tilbudsugen 24. okt.: 0,330 l er PR. dåse, antallet står i navnet
+        d = run(x("Cola 24 pk.", 65.0, "0.330", "ltr.", "ds.", 8.21, "Coca Cola"))
+        self.assertEqual([o["super_deal_rule"] for o in d["offers"]], ["cola_24_cans"])
+        o = d["offers"][0]
+        self.assertEqual((o["container"], o["package_count"]), ("can", 24))
+        self.assertIn("package_count_fra_navn_og_daasestoerrelse", o["derived"])
+
+    def test_cola_24_pr_dåse_grænse_zero_pepsi_og_flasker(self):
+        self.assertEqual(run(x("Cola 24 pk.", 69.0, "0.330", "ltr.", "ds.", 8.71, "Coca Cola"))["super_deal_count"], 0)       # ikke under 69
+        self.assertEqual(run(x("Cola 24 pk.", 65.0, "0.330", "ltr.", "ds.", 8.21, "Coca Cola Zero"))["super_deal_count"], 0)
+        self.assertEqual(run(x("Cola 24 pk.", 65.0, "0.330", "ltr.", "ds.", 8.21, "Pepsi Max"))["super_deal_count"], 0)
+        self.assertEqual(run(x("Cola 24 pk.", 65.0, "0.330", "ltr.", "fl.", 8.21, "Coca Cola"))["super_deal_count"], 0)        # flaske, ikke dåse
+
+    def test_cola_24_pr_dåse_gætter_ikke(self):
+        self.assertEqual(run(x("Cola", 65.0, "0.330", "ltr.", "ds.", 8.21, "Coca Cola"))["super_deal_count"], 0)              # intet antal i navnet
+        self.assertEqual(run(x("Cola 24 pk.", 65.0, "0.330", "ltr.", "ds.", 20.0, "Coca Cola"))["super_deal_count"], 0)       # enhedspris passer ikke
+        self.assertEqual(run(x("Cola 24 pk.", 65.0, "0.400", "ltr.", "ds.", 6.8, "Coca Cola"))["super_deal_count"], 0)         # ukendt dåsestørrelse
+        self.assertEqual(run(x("Cola 2 pk.", 10.0, "0.330", "ltr.", "ds.", 15.2, "Coca Cola"))["super_deal_count"], 0)          # for få
+
+    def test_cola_24_pr_dåse_25_cl(self):
+        d = run(x("Cola 24 pk.", 60.0, "0.250", "ltr.", "ds.", 10.0, "Coca Cola"))
+        self.assertEqual([o["package_count"] for o in d["offers"]], [24])
+
     def test_stor_flaske_under_11_kr_pr_liter(self):
         d = run(x("Coca Cola", 18.0, "1.5", "ltr.", "fl.", 10.0, "Coca Cola"))
         self.assertEqual([o["super_deal_rule"] for o in d["offers"]], ["cola_large_bottle"])

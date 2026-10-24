@@ -7,6 +7,7 @@ gemmes KUN dér, fordi Tilbudsugen-data kun må deles med den nærmeste familie.
 Reglerne er de samme, testede som i apply_super_deals.py (cola, smør, piskefløde, opvasketabs, toiletpapir).
 Tilbudsugen-filen mangler pakkeantal, beholder og kategori. De udledes KUN, når tallene går op, og markeres i `derived`:
   - dåse (enhed «ds.») + liter, hvor liter / 0,33 er et helt tal  -> package_count (24 dåser = 7,92 l)
+  - dåse (enhed «ds.») + størrelse pr. dåse (0,25 / 0,33 / 0,5 l) + antal i navnet («24 pk.») + kildens enhedspris passer -> package_count
   - flaske (enhed «fl.») + liter                                   -> volume_l
 Pant ligger ikke i kilden og indgår derfor ikke i priserne (reglerne kræver pris uden pant).
 Kan noget ikke udledes sikkert, bliver tilbuddet ikke et supertilbud (ingen gæt).
@@ -23,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from apply_super_deals import annotate  # noqa: E402
 
 CAN_L = 0.33
+CAN_SIZES = (0.25, 0.33, 0.5)   # dåsestørrelser i liter, når kilden giver størrelse pr. dåse
 TOL = 0.02
 QTYPE = {"ltr.": "l", "kg.": "kg", "stk.": "stk", "rl.": "stk", "par": "stk", "pk.": "stk"}
 CHAIN = {
@@ -60,7 +62,15 @@ def to_app_offer(slug: str, x: dict) -> dict | None:
     }
     if "cola" in low:
         o["category"], o["product_type"], o["source_category"] = "drikkevarer", "cola", "sodavand"
-        if uses == "ds." and unit == "l" and amount:
+        per_can = next((s for s in CAN_SIZES if abs(amount - s) <= 0.005), None)
+        m_pk = re.search(r"(\d{1,2})\s*(?:pk\b|stk\b|dåser?\b|x\b)", name, re.I)
+        if uses == "ds." and unit == "l" and per_can and m_pk and 6 <= int(m_pk.group(1)) <= 48:
+            # Filen giver størrelse PR. dåse (fx 0,33 l) og antallet står i navnet ("24 pk."). Kun hvis kildens enhedspris passer.
+            n, up = int(m_pk.group(1)), _num(x.get("unit_price_dkk"))
+            if up is None or abs(up - price / (n * per_can)) <= max(0.05, 0.03 * up):
+                o["container"], o["package_count"] = "can", n
+                derived.append("package_count_fra_navn_og_daasestoerrelse")
+        elif uses == "ds." and unit == "l" and amount:
             n = amount / CAN_L
             if abs(n - round(n)) <= TOL and round(n) >= 1:
                 o["container"], o["package_count"] = "can", int(round(n))

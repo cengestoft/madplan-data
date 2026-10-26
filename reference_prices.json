@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-19T05:57:12+02:00",
+  "generated_at": "2026-10-26T05:58:11+01:00",
   "currency": "DKK",
   "country": "Denmark",
   "item_count": 200,
@@ -1759,19 +1759,19 @@
       "category": "frugt_og_gront",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 22,
+      "estimated_reference_price_dkk": 12,
       "expected_normal_range_dkk": {
-        "low": 16,
-        "high": 28
+        "low": 12,
+        "high": 22
       },
-      "estimated_unit_price_dkk": 22,
+      "estimated_unit_price_dkk": 12,
       "confidence": "medium",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-05",
-      "previous_reference_price_dkk": null,
-      "change_percent": null,
-      "source_count": 1
+      "updated_at": "2026-10-26",
+      "previous_reference_price_dkk": 22,
+      "change_percent": -45.45,
+      "source_count": 3
     },
     {
       "id": "ref-089",
@@ -2319,19 +2319,19 @@
       "category": "morgenmad",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 10,
+      "estimated_reference_price_dkk": 9,
       "expected_normal_range_dkk": {
-        "low": 8,
-        "high": 17
+        "low": 7.95,
+        "high": 10
       },
-      "estimated_unit_price_dkk": 10,
+      "estimated_unit_price_dkk": 9,
       "confidence": "high",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-12",
-      "previous_reference_price_dkk": 16,
-      "change_percent": -37.5,
-      "source_count": 2
+      "updated_at": "2026-10-26",
+      "previous_reference_price_dkk": 10,
+      "change_percent": -10,
+      "source_count": 3
     },
     {
       "id": "ref-117",

@@ -10,7 +10,7 @@ Dette dokument er den fælles kilde til arbejdsregler for ChatGPT, Claude og and
 
 ## Godkendelse og sikkerhed
 - Læsning, analyse og forslag er tilladt. Udfør ikke merge, deploy, publicering, aktivering af workflows, ændring af cron, ændring af produktionsdata eller ændring/sletning af eksisterende priser uden brugerens udtrykkelige godkendelse til den konkrete handling.
-- Særligt: ændr ikke data i Cloudflare/D1 eller relaterede repositories som bivirkning.
+- Særligt: ændr ikke data i Cloudflare (appens lagring er en Durable Object, ikke D1) eller relaterede repositories som bivirkning.
 - Kodeændringer skal som udgangspunkt foreslås i særskilt branch og draft PR; aldrig direkte på main uden udtrykkelig godkendelse.
 - Udfør ikke sletning, overskrivning, force-push eller migration uden særskilt godkendelse.
 - Beskyt hemmeligheder: aldrig tokens, adgangskoder, private URL-nøgler eller persondata i Git, PR-beskrivelser, logs eller AI-overdragelser. Henvis til hemmelighedsnavne, ikke værdier.

@@ -1,0 +1,31 @@
+name: Report valid upcoming offers
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: promote-future-offers
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Report documented active offers without changing snapshots
+        run: |
+          {
+            echo '### Internal snapshot promotion report'
+            echo 'This report does not fetch offers or change snapshots. The app offer feed is maintained separately in madplan-tilbud.'
+            echo '```json'
+            python scripts/promote_future_offers.py
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

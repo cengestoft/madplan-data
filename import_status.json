@@ -118,7 +118,7 @@
   "notes": [
     "ABC Lavpris is now handled at chain level; local branch differences may exist and special/local offers should open the retailer flyer.",
     "Piskefløde entries in store data are normalized to category 'mejeri' and food_relevance 'high'.",
-    "2026-10-30: SNAPSHOTS STALE; see snapshot_freshness. Prior publication_guard records historical data and does not establish current freshness."
+    "2026-10-30: INTERNAL SNAPSHOTS STALE; see snapshot_freshness and data_sources/SNAPSHOTS.md. Historical publication_guard figures do not establish current freshness or app importer status."
   ],
   "publication_guard": {
     "status": "pass",
@@ -149,18 +149,18 @@
     "status": "stale_unverified",
     "current_generated_at": "2026-10-13T21:22:29+02:00",
     "next_week_generated_at": "2026-10-14T13:01:58+02:00",
-    "cause": "No scheduled publishing workflow verified in madplan-data; data-quality.yml validates snapshots but never imports or publishes offers. Exact scheduler failure not yet established.",
+    "cause": "The internal current_offers.json and next_week_offers.json snapshots retain their original generation dates. Their age does not establish a failure of the separate daily app importer in madplan-tilbud; see data_sources/SNAPSHOTS.md.",
     "actions_taken": [
       "Recorded stale state in a draft PR; original timestamps and offers preserved."
     ],
     "missing": [
-      "Verify actual scheduled importer and its run history",
-      "Fetch and validate current offers before republishing",
-      "Brugsen, Nemlig.com and Wolt Market pending",
-      "Netto coverage 1; Bilka 6 expired by 2026-10-15; 365discount coverage 5",
-      "Resolve stale publication_guard figures"
+      "Review internal snapshots before any separately approved refresh or promotion",
+      "Brugsen, Nemlig.com and Wolt Market pending in this internal snapshot",
+      "Historical snapshot coverage: Netto 1; Bilka 6 expired by 2026-10-15; 365discount 5",
+      "Reconcile historical publication_guard figures before reusing them as a publication check"
     ],
-    "next_run": "unknown — no verified scheduled snapshot importer",
-    "safe_to_use_as_fresh": false
+    "next_run": "No scheduled refresh of these internal snapshots verified; the proposed report is manual-only and does not import or publish.",
+    "safe_to_use_as_fresh": false,
+    "scope": "internal_snapshots_only"
   }
 }

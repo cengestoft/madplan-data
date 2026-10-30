@@ -22,8 +22,10 @@ jobs:
           python-version: "3.12"
       - name: Report documented active offers without changing snapshots
         run: |
-          echo '### Internal snapshot promotion report' >> "$GITHUB_STEP_SUMMARY"
-          echo 'This report does not fetch offers or change snapshots. The app offer feed is maintained separately in madplan-tilbud.' >> "$GITHUB_STEP_SUMMARY"
-          echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          python scripts/promote_future_offers.py >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo '### Internal snapshot promotion report'
+            echo 'This report does not fetch offers or change snapshots. The app offer feed is maintained separately in madplan-tilbud.'
+            echo '```json'
+            python scripts/promote_future_offers.py
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

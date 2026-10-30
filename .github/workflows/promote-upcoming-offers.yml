@@ -1,65 +1,29 @@
-name: Prepare valid upcoming offers
+name: Report valid upcoming offers
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: promote-future-offers
   cancel-in-progress: false
 
 jobs:
-  prepare:
+  report:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Promote only documented active offers
-        run: python scripts/promote_future_offers.py --write
-      - name: Keep next-week file future-only
+      - name: Report documented active offers without changing snapshots
         run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          from datetime import datetime, date
-          from zoneinfo import ZoneInfo
-          p = Path('next_week_offers.json')
-          doc = json.loads(p.read_text(encoding='utf-8'))
-          today = datetime.now(ZoneInfo('Europe/Copenhagen')).date()
-          doc['offers'] = [
-              o for o in doc['offers']
-              if o.get('valid_from') and date.fromisoformat(o['valid_from']) > today
-          ]
-          doc['offer_count'] = len(doc['offers'])
-          p.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          PY
-      - name: Check no future offers became current early
-        run: |
-          python - <<'PY'
-          import json, sys
-          from pathlib import Path
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          today = datetime.now(ZoneInfo("Europe/Copenhagen")).date()
-          current = json.loads(Path("current_offers.json").read_text())
-          future = json.loads(Path("next_week_offers.json").read_text())
-          assert all(not o.get("valid_from") or __import__("datetime").date.fromisoformat(o["valid_from"]) <= today for o in current["offers"])
-          assert all(__import__("datetime").date.fromisoformat(o["valid_from"]) > today for o in future["offers"]), "Future file contains started offers: needs review"
-          PY
-      - name: Open a reviewable PR if data changed
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Promote offers whose documented dates are active"
-          branch: automation/promote-verified-offers
-          delete-branch: true
-          title: "Promote date-verified upcoming offers"
-          body: "Automated date-only promotion. Review before merging. Missing valid_to never promoted. No history or Supertilbud files modified."
-          add-paths: |
-            current_offers.json
-            next_week_offers.json
+          echo '### Internal snapshot promotion report' >> "$GITHUB_STEP_SUMMARY"
+          echo 'This report does not fetch offers or change snapshots. The app offer feed is maintained separately in madplan-tilbud.' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          python scripts/promote_future_offers.py >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

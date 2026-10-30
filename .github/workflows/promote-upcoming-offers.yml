@@ -36,7 +36,7 @@ jobs:
               if o.get('valid_from') and date.fromisoformat(o['valid_from']) > today
           ]
           doc['offer_count'] = len(doc['offers'])
-          p.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\\n', encoding='utf-8')
+          p.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           PY
       - name: Check no future offers became current early
         run: |

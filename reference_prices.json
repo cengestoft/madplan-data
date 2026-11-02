@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-26T05:58:11+01:00",
+  "generated_at": "2026-11-02T06:00:27+01:00",
   "currency": "DKK",
   "country": "Denmark",
   "item_count": 200,
@@ -2459,19 +2459,19 @@
       "category": "bagning",
       "package_amount": 1,
       "package_unit": "kg",
-      "estimated_reference_price_dkk": 10,
+      "estimated_reference_price_dkk": 8,
       "expected_normal_range_dkk": {
         "low": 7.5,
         "high": 17.5
       },
-      "estimated_unit_price_dkk": 10,
+      "estimated_unit_price_dkk": 8,
       "confidence": "high",
       "price_type": "estimated_normal_price",
       "use_for": "budgeting_and_non_offer_items",
-      "updated_at": "2026-10-12",
-      "previous_reference_price_dkk": 14,
-      "change_percent": -28.57,
-      "source_count": 2
+      "updated_at": "2026-11-02",
+      "previous_reference_price_dkk": 10,
+      "change_percent": -20,
+      "source_count": 8
     },
     {
       "id": "ref-124",

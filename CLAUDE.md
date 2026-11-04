@@ -10,5 +10,6 @@ Hvis du arbejder via claude.ai i browseren, skal du kontrollere, at denne fil og
 - Brug klikbare valg (AskUserQuestion) til valg og godkendelser. Tillad flere valg samtidig som standard. Brug enkeltvalg kun, når mulighederne udelukker hinanden.
 - Giv altid mulighed for eget svar ("Andet").
 - Skriv "(Anbefalet)" efter de anbefalede valg. Flere må være anbefalet.
-- Forudvalgte valg er aldrig godkendelse.
-- Brug en tydelig bekræftelse, forklar kort konsekvensen, og udfør intet, der kræver godkendelse, før Casper har bekræftet.
+- Forudvalgte valg er aldrig godkendelse. Forudvælg de anbefalede valg, hvis brugerfladen understøtter det.
+- Brug en tydelig bekræftelsesknap, når det er teknisk muligt, forklar kort konsekvensen, og udfør intet, der kræver godkendelse, før Casper har bekræftet.
+- Understøtter brugerfladen ikke klikbare valg, brug den bedste tekstbaserede løsning: nummererede valg med (Anbefalet) og en tydelig bekræftelseslinje.

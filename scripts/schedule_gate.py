@@ -4,8 +4,8 @@
 GitHub Actions-cron er altid UTC. Workflowet udløses derfor 3 gange (06:03, 07:03 og 08:03 UTC), og dette trin afgør,
 om kørslen skal gennemføres:
   - manuel kørsel (workflow_dispatch): altid ja
-  - planlagt kørsel: kun hvis klokken er 8 eller 9 i København OG dagens hentning ikke allerede er sket
-Resultat: præcis én hentning om dagen (ca. 08.03 dansk tid), og en reserve en time senere, hvis GitHub er forsinket.
+  - planlagt kørsel: fra kl. 08 i København, hvis dagens hentning endnu ikke er sket
+Resultat: højst én vellykket hentning pr. dansk dato; forsinkede GitHub-kørsler efter kl. 09 kan også hente, hvis dagens fil mangler.
 Output er et fast vokabular (ingen indhold): run=yes|no og reason.
 """
 import datetime as dt
@@ -16,7 +16,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 CPH = ZoneInfo("Europe/Copenhagen")
-WINDOW_HOURS = (8, 9)
+START_HOUR = 8
 
 
 def last_fetch_date(path):
@@ -36,7 +36,7 @@ def decide(event, now_utc, last_date):
     if event != "schedule":
         return True, "manuel"
     local = now_utc.astimezone(CPH)
-    if local.hour not in WINDOW_HOURS:
+    if local.hour < START_HOUR:
         return False, "udenfor_tidsrum"
     if last_date == local.date():
         return False, "allerede_hentet"

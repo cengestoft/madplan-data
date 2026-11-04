@@ -77,9 +77,7 @@ class FileTests(unittest.TestCase):
                 sg.main(["--event", "schedule", "--last", str(Path(d, "x.json"))], now=U("2026-07-10T06:03:00"))
             finally:
                 del os.environ["GITHUB_OUTPUT"]
-            self.assertEqual(out.read_text(), "run=yes
-reason=planlagt
-")
+            self.assertEqual(out.read_text(), "run=yes\nreason=planlagt\n")
 
 
 if __name__ == "__main__":

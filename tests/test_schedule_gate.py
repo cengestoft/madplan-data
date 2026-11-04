@@ -38,7 +38,9 @@ class DecideTests(unittest.TestCase):
     def test_delayed_github_run_after_09_is_accepted_once(self):
         self.assertEqual(sg.decide("schedule", U("2026-11-04T10:35:00"), dt.date(2026, 11, 2)), (True, "planlagt"))
         self.assertEqual(sg.decide("schedule", U("2026-11-04T10:35:00"), dt.date(2026, 11, 4)), (False, "allerede_hentet"))
-        self.assertEqual(sg.decide("schedule", U("2026-11-04T06:30:00"), None), (False, "udenfor_tidsrum"))\n\n    def test_exactly_one_fetch_per_day_all_of_2026_and_2027_even_if_first_cron_runs(self):
+        self.assertEqual(sg.decide("schedule", U("2026-11-04T06:30:00"), None), (False, "udenfor_tidsrum"))
+
+    def test_exactly_one_fetch_per_day_all_of_2026_and_2027_even_if_first_cron_runs(self):
         for n in range(730):
             day = dt.date(2026, 1, 1) + dt.timedelta(days=n)
             fetched, runs = None, []
@@ -75,7 +77,9 @@ class FileTests(unittest.TestCase):
                 sg.main(["--event", "schedule", "--last", str(Path(d, "x.json"))], now=U("2026-07-10T06:03:00"))
             finally:
                 del os.environ["GITHUB_OUTPUT"]
-            self.assertEqual(out.read_text(), "run=yes\nreason=planlagt\n")
+            self.assertEqual(out.read_text(), "run=yes
+reason=planlagt
+")
 
 
 if __name__ == "__main__":

@@ -16,6 +16,14 @@ Dette dokument er den fælles kilde til arbejdsregler for ChatGPT, Claude og and
 - Beskyt hemmeligheder: aldrig tokens, adgangskoder, private URL-nøgler eller persondata i Git, PR-beskrivelser, logs eller AI-overdragelser. Henvis til hemmelighedsnavne, ikke værdier.
 - Ved brugerkrævet godkendelse: afslut med et tydeligt afsnit 'GODKENDELSE' med nøjagtigt hvad der ændres, og hvad der ikke ændres.
 
+## Valg og godkendelse (fast brugerregel, Casper 4. nov. 2026)
+Gælder alle beslutninger, hvor Casper skal vælge eller godkende, for både Claude og ChatGPT.
+- Brug klikbare valgfelter, når værktøjet kan (Claude: AskUserQuestion). Tillad flere valg samtidigt som standard; brug kun enkeltvalg, når mulighederne udelukker hinanden (fx Godkend/Afvis). Giv altid mulighed for et eget svar.
+- Skriv "(Anbefalet)" i parentes direkte efter de anbefalede muligheder; flere må være anbefalet. Forvælg dem kun, hvis brugerfladen kan det. Et forudvalg er aldrig en godkendelse.
+- Brug en tydelig bekræftelse, forklar kort konsekvensen af valgene, og udfør intet, der kræver godkendelse, før Casper har bekræftet.
+- Understøtter værktøjet det ikke, brug nummererede valg i tekst og bed om svar med numre.
+- Supplerer de øvrige godkendelsesregler i denne fil; erstatter dem ikke.
+
 ## Datakvalitet
 - Opfind aldrig varepris, pakningsstørrelse, kilde, gyldighedsperiode eller tilbud. Bevar null/uvist, hvor dokumentation mangler.
 - Kontroller tilbuddenes gyldighedsdato, kilde, alder og interne konsistens før anvendelse. Skeln mellem datafiler til appen og interne snapshots.

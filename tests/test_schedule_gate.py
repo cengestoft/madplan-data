@@ -19,7 +19,8 @@ class DecideTests(unittest.TestCase):
         self.assertEqual(sg.decide("schedule", U("2026-07-10T07:03:00"), dt.date(2026, 7, 9)), (True, "planlagt"))   # reserve, hvis første udeblev
 
     def test_summer_third_cron_recovers_if_prior_runs_missed(self):
-        self.assertEqual(sg.decide("schedule", U("2026-07-10T08:03:00"), None), (True, "planlagt"))\n        self.assertEqual(sg.decide("schedule", U("2026-07-10T08:03:00"), dt.date(2026, 7, 10)), (False, "allerede_hentet"))
+        self.assertEqual(sg.decide("schedule", U("2026-07-10T08:03:00"), None), (True, "planlagt"))
+        self.assertEqual(sg.decide("schedule", U("2026-07-10T08:03:00"), dt.date(2026, 7, 10)), (False, "allerede_hentet"))
 
     def test_winter_first_cron_is_too_early_second_runs(self):
         self.assertEqual(sg.decide("schedule", U("2026-01-12T06:03:00"), None), (False, "udenfor_tidsrum"))   # 07:03 dansk
@@ -34,7 +35,10 @@ class DecideTests(unittest.TestCase):
         self.assertEqual(sg.decide("schedule", U("2026-03-29T06:03:00"), None)[0], True)
         self.assertEqual(sg.decide("schedule", U("2026-03-28T06:03:00"), None)[0], False)
 
-    def test_delayed_github_run_after_09_is_accepted_once(self):\n        self.assertEqual(sg.decide("schedule", U("2026-11-04T10:35:00"), dt.date(2026, 11, 2)), (True, "planlagt"))\n        self.assertEqual(sg.decide("schedule", U("2026-11-04T10:35:00"), dt.date(2026, 11, 4)), (False, "allerede_hentet"))\n        self.assertEqual(sg.decide("schedule", U("2026-11-04T06:30:00"), None), (False, "udenfor_tidsrum"))\n\n    def test_exactly_one_fetch_per_day_all_of_2026_and_2027_even_if_first_cron_runs(self):
+    def test_delayed_github_run_after_09_is_accepted_once(self):
+        self.assertEqual(sg.decide("schedule", U("2026-11-04T10:35:00"), dt.date(2026, 11, 2)), (True, "planlagt"))
+        self.assertEqual(sg.decide("schedule", U("2026-11-04T10:35:00"), dt.date(2026, 11, 4)), (False, "allerede_hentet"))
+        self.assertEqual(sg.decide("schedule", U("2026-11-04T06:30:00"), None), (False, "udenfor_tidsrum"))\n\n    def test_exactly_one_fetch_per_day_all_of_2026_and_2027_even_if_first_cron_runs(self):
         for n in range(730):
             day = dt.date(2026, 1, 1) + dt.timedelta(days=n)
             fetched, runs = None, []

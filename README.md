@@ -24,25 +24,15 @@ Følgende kæder indgår:
 - 365discount
 - Lidl
 
-## Automatik
+## Tilbudskilder og opdatering
 
-ChatGPT opdaterer tilbudsdata automatisk tre gange om ugen dansk tid:
-- onsdag kl. 13:00: første scan af næste uges offentliggjorte tilbud
-- fredag kl. 08:00: hovedscan efter flere kæder har skiftet/offentliggjort ny avis
-- søndag kl. 08:00: endelig synkronisering efter bl.a. Lidl og resterende uge-skift
+**Appens aktive tilbud kommer fra det private repository `cengestoft/madplan-tilbud`, ikke fra `current_offers.json` eller `next_week_offers.json` i dette repository.** Den private daglige GitHub Actions-kørsel (`daily-offers.yml`) er planlagt omkring kl. 08 dansk tid og vedligeholder `data/offers.json`, `data/super_deals.json` og `data/offer_keys.json`. Se `data_sources/SNAPSHOTS.md` og det private repos `README-DRIFT.md` for drift og kontrol. En planlagt kørsel er ikke i sig selv dokumentation for vellykket import til Worker eller appdatabase.
 
-Ved hver kørsel:
-1. aktuelle tilbud gennemgås
-2. gyldighed kontrolleres
-3. fødevarer og relevante dagligvarer normaliseres
-4. kg-/literpris beregnes, når data tillader det
-5. butiksspecifikke filer opdateres
-6. `current_offers.json` opdateres med tilbud, der er gyldige nu
-7. `next_week_offers.json` opdateres med offentliggjorte tilbud, der først bliver gyldige senere
-8. et historisk uge-snapshot gemmes
-9. `monthly_price_history.json` opdateres med månedlige aggregater; `price_history.json` er kun manifest
+`current_offers.json` og `next_week_offers.json` er **ældre interne snapshots** og bliver **ikke automatisk opdateret onsdag kl. 13, fredag kl. 08 og søndag kl. 08** af den aktive private tilbudskæde. De kan være forældede og må ikke præsenteres som appens aktuelle tilbud. De bevares, fordi interne scripts og muligvis eksterne værktøjer stadig bruger dem; afhængighederne er ikke fuldt afklaret.
 
-Manglende priser eller størrelser må ikke gættes. De skal være `null` eller tydeligt markeret som ikke-verificerede.
+`scripts/check_freshness.py --informational` rapporterer alderen på det interne `current_offers.json` uden at få data-quality-workflowet til at fejle. Uden flaget kan scriptet fortsat give fejlstatus for gamle snapshots. Friskhed af de private tilbudsfiler kontrolleres separat (maks. 30 timer og sammenhæng mellem filernes tidsstempler).
+
+Der må ikke kopieres private Tilbudsugen-data til dette offentlige repository. Manglende gyldighedsdatoer og priser må ikke gættes.
 
 ## Filer
 
@@ -63,14 +53,14 @@ Vigtige felter:
 - `valid_to`
 - `food_relevance`
 
-Claude skal kun behandle et tilbud som aktuelt, hvis dags dato ligger inden for `valid_from` og `valid_to`.
+For interne snapshots må Claude kun behandle et tilbud som aktuelt, hvis gyldighedsperioden er dokumenteret og dækker den relevante dato. Brug ikke dette snapshot som appens live-tilbudskilde.
 
 ### next_week_offers.json
 Samlet datasæt med tilbud, som allerede er offentliggjort, men først bliver gyldige senere.
 
 Claude må bruge denne fil til planlægning af kommende uge, men må ikke behandle tilbuddene som aktuelle før `valid_from`.
 
-Hvis brugeren spørger om "næste uge", skal Claude læse både `current_offers.json` og `next_week_offers.json` og vælge tilbud efter de konkrete gyldighedsdatoer.
+Ved historisk analyse af disse interne snapshots skal Claude filtrere på dokumenterede gyldighedsdatoer. Til aktuelle eller kommende tilbud i appen bruges den aktive private tilbudskilde.
 
 ### stores/
 Butiksspecifikke filer:
@@ -146,15 +136,14 @@ Når Claude laver en madplan, bør rækkefølgen være:
 
 1. læs `household_profile.json`
 2. læs `pantry.json`
-3. læs `current_offers.json`
-4. læs `next_week_offers.json` hvis planen gælder en kommende periode
-5. filtrér tilbud efter de konkrete datoer for madplanen
-6. sammenlign `unit_price_dkk`, når muligt
-7. brug `price_history.json` som sekundær vurdering
-8. match relevante tilbud mod `recipes/recipes.json`
-9. prioriter retter, der bruger samme råvarer på tværs af flere dage
-10. begræns antal butikker
-11. beregn samlet indkøbspris
+3. hent verificerede, aktuelle tilbud fra den aktive private tilbudskilde (ikke de gamle interne snapshots)
+4. filtrér tilbud efter de dokumenterede gyldighedsdatoer for madplanens periode
+5. sammenlign `unit_price_dkk`, når muligt
+6. brug `price_history.json` som sekundær vurdering
+7. match relevante tilbud mod `recipes/recipes.json`
+8. prioriter retter, der bruger samme råvarer på tværs af flere dage
+9. begræns antal butikker
+10. beregn samlet indkøbspris
 
 ## Standard madplans-output
 
@@ -210,13 +199,13 @@ Hvis `completeness: false`:
 - opfind aldrig manglende priser
 - marker usikkerhed tydeligt
 
-## Hovedkilde til Claude
+## Historiske og interne snapshots
 
-Claude kan læse den samlede aktuelle fil her:
+Claude kan læse det historiske/interne snapshot her (ikke appens aktuelle tilbud):
 
 https://raw.githubusercontent.com/cengestoft/madplan-data/main/current_offers.json
 
-Næste uges offentliggjorte tilbud:
+Internt snapshot for tidligere offentliggjorte kommende tilbud (kan være forældet):
 
 https://raw.githubusercontent.com/cengestoft/madplan-data/main/next_week_offers.json
 
@@ -224,20 +213,11 @@ Supplerende filer ligger i samme repository og bør bruges sammen med denne fil.
 
 ## Arbejdsdeling
 
-ChatGPT:
-- indsamler og vedligeholder tilbudsdata
-- opdaterer GitHub
-- bygger pris-historik
-- udvider datastrukturen
+**Automatisk tilbudsimport:** GitHub Actions i det private `cengestoft/madplan-tilbud` henter tilbud og genererer de private tilbudsfiler. Overvågningen kontrollerer filernes alder og sammenhæng; den bekræfter ikke i sig selv, at Worker og appdatabase er synkroniseret.
 
-Claude:
-- bruger dataene i appen
-- laver madplaner
-- laver indkøbslister
-- optimerer pris, butikker, økologi og madspild
-- foreslår alternativer og bytter retter ud efter behov
+**ChatGPT og Claude:** kan gennemgå datakvalitet, foreslå forbedringer, analysere tilbud og udarbejde madplaner og indkøbslister. Ændringer i kode, dokumentation, workflows, import eller produktionsdata kræver brugerens udtrykkelige godkendelse. En automatiseret kørsel følger sin særskilt godkendte opsætning og tidsplan.
 
-Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede og sammenlignelige data.
+Målet er et system, hvor appen arbejder ud fra friske, strukturerede og sammenlignelige data fra den aktive private tilbudskilde.
 
 
 ## Referencepriser

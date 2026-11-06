@@ -137,14 +137,13 @@ Når Claude laver en madplan, bør rækkefølgen være:
 1. læs `household_profile.json`
 2. læs `pantry.json`
 3. hent verificerede, aktuelle tilbud fra den aktive private tilbudskilde (ikke de gamle interne snapshots)
-4. filtrér tilbud efter den konkrete planlægningsperiode
-5. filtrér tilbud efter de konkrete datoer for madplanen
-6. sammenlign `unit_price_dkk`, når muligt
-7. brug `price_history.json` som sekundær vurdering
-8. match relevante tilbud mod `recipes/recipes.json`
-9. prioriter retter, der bruger samme råvarer på tværs af flere dage
-10. begræns antal butikker
-11. beregn samlet indkøbspris
+4. filtrér tilbud efter de dokumenterede gyldighedsdatoer for madplanens periode
+5. sammenlign `unit_price_dkk`, når muligt
+6. brug `price_history.json` som sekundær vurdering
+7. match relevante tilbud mod `recipes/recipes.json`
+8. prioriter retter, der bruger samme råvarer på tværs af flere dage
+9. begræns antal butikker
+10. beregn samlet indkøbspris
 
 ## Standard madplans-output
 
@@ -200,7 +199,7 @@ Hvis `completeness: false`:
 - opfind aldrig manglende priser
 - marker usikkerhed tydeligt
 
-## Hovedkilde til Claude
+## Historiske og interne snapshots
 
 Claude kan læse det historiske/interne snapshot her (ikke appens aktuelle tilbud):
 
@@ -214,20 +213,11 @@ Supplerende filer ligger i samme repository og bør bruges sammen med denne fil.
 
 ## Arbejdsdeling
 
-ChatGPT:
-- indsamler og vedligeholder tilbudsdata
-- opdaterer GitHub
-- bygger pris-historik
-- udvider datastrukturen
+**Automatisk tilbudsimport:** GitHub Actions i det private `cengestoft/madplan-tilbud` henter tilbud og genererer de private tilbudsfiler. Overvågningen kontrollerer filernes alder og sammenhæng; den bekræfter ikke i sig selv, at Worker og appdatabase er synkroniseret.
 
-Claude:
-- bruger dataene i appen
-- laver madplaner
-- laver indkøbslister
-- optimerer pris, butikker, økologi og madspild
-- foreslår alternativer og bytter retter ud efter behov
+**ChatGPT og Claude:** kan gennemgå datakvalitet, foreslå forbedringer, analysere tilbud og udarbejde madplaner og indkøbslister. Ændringer i kode, dokumentation, workflows, import eller produktionsdata kræver brugerens udtrykkelige godkendelse. En automatiseret kørsel følger sin særskilt godkendte opsætning og tidsplan.
 
-Målet er et system, hvor appen altid kan arbejde ud fra friske, strukturerede og sammenlignelige data.
+Målet er et system, hvor appen arbejder ud fra friske, strukturerede og sammenlignelige data fra den aktive private tilbudskilde.
 
 
 ## Referencepriser

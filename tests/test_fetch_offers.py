@@ -64,13 +64,13 @@ class FetchTests(unittest.TestCase):
         self.assertLessEqual(max(site.calls), 60)
 
     def test_chain_above_page_cap_is_still_reported_incomplete(self):
-        site, st, offers = self.run_chain(80 * 30 + 600, True)
+        site, st, offers = self.run_chain((fo.MAX_PAGES + 20) * 30, True)
         self.assertFalse(st["complete"])
         self.assertLessEqual(max(site.calls), fo.MAX_PAGES)
 
     def test_pages_needed_is_uncapped_and_recorded(self):
-        site, st, offers = self.run_chain(80 * 30 + 600, True)
-        self.assertEqual(st["pages_needed"], -(-(80 * 30 + 600) // 30))   # 100 > MAX_PAGES: behovet ses trods klipning
+        site, st, offers = self.run_chain((fo.MAX_PAGES + 20) * 30, True)
+        self.assertEqual(st["pages_needed"], fo.MAX_PAGES + 20)
         self.assertEqual(st["last_page"], fo.MAX_PAGES)
 
     def test_fetch_report_has_only_numbers_and_never_offers(self):

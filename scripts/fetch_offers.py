@@ -30,7 +30,7 @@ import source_probe  # noqa: E402
 UA = source_probe.UA
 MAX_BYTES = 25 * 1024 * 1024
 DELAY = 2.0
-MAX_PAGES = 80
+MAX_PAGES = 100
 MAX_REQUESTS = 600
 COMPLETE_SHARE = 0.98
 
